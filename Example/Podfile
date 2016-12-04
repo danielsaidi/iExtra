@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'iExtra_Example' do
+  pod 'iExtra', :path => '../'
+
+  target 'iExtra_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 0.10.0'
+    pod 'Nimble', '~> 5.0.0'
+  end
+end
