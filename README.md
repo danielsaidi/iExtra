@@ -7,9 +7,20 @@
 
 
 
-## Example
+## About iExtra
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+iExtra is a Swift library that contains most of the general functionality that
+I use in my various apps. There is no real focus, just a bag of bytes.
+
+
+
+## Demo Project
+
+To run the demo project, clone the repo and run `pod install` from the Example
+directory first. You can then open the generated iExtra.xcworkspace file.
+
+For now, the demo is just the host application used to run the unit test suite.
+It has no testable stuff.
 
 
 
@@ -21,14 +32,13 @@ iExtra requires iOS 8 or later.
 
 ## Installation
 
-iExtra is not yet available through [CocoaPods](http://cocoapods.org). To install
-it once it is, simply add the following line to your Podfile:
+iExtra is not yet available through [CocoaPods](http://cocoapods.org). Instead,
+install it by pointing the pod to this repository.
+
 
 ```ruby
 pod "iExtra"
 ```
-
-Until then, install with CocoaPods using the git pointer.
 
 
 
