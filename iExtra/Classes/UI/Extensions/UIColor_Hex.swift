@@ -13,11 +13,11 @@ public extension UIColor {
     
     // MARK: - Initialization
     
-    public convenience init(hex: Int) {
+    public convenience init(hex: Int, alpha: CGFloat = 1.0) {
         let red = CGFloat((hex >> 16) & 0xff) / 255
         let green = CGFloat((hex >> 08) & 0xff) / 255
         let blue = CGFloat((hex >> 00) & 0xff) / 255
-        self.init(red: red, green: green, blue: blue, alpha: 1)
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     public convenience init(hexString hex: String) {
@@ -64,6 +64,14 @@ public extension UIColor {
     
     
     
+    // MARK: - Public Properties
+    
+    public var hexString: String {
+        return hexString(withAlpha: false)
+    }
+    
+    
+    
     // MARK: - Public Functions
     
     public func hexString(withAlpha: Bool) -> String {
@@ -85,15 +93,16 @@ public extension UIColor {
             ? String(format: alphaFormat, red, green, blue, alpha)
             : String(format: nonAlphaFormat, red, green, blue)
     }
-    
-    
-    
-    // MARK: - Private Functions
+}
+
+
+// MARK: - Private Functions
+
+fileprivate extension UIColor {
     
     func removeHash(in string: String) -> String {
         guard string.hasPrefix("#") else { return string }
         let index = string.characters.index(string.startIndex, offsetBy: 1)
         return string.substring(from: index)
     }
-    
 }
