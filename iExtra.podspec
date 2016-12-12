@@ -9,24 +9,20 @@
 Pod::Spec.new do |s|
   s.name             = 'iExtra'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of iExtra.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'iExtra contains a bunch of extra stuff for the iOS framework.
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+iExtra is a Swift library that contains a bunch of extra stuff for the iOS framework.
+There is no main focus; all general features I build for my various apps end up here
+in order to make the code in my apps app-specific.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/iExtra'
+  s.homepage         = 'https://github.com/danielsaidi/iExtra'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Daniel Saidi' => 'daniel.saidi@bookbeat.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/iExtra.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
+  s.source           = { :git => 'https://github.com/danielsaidi/iExtra.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 

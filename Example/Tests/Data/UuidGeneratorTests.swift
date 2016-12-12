@@ -2,7 +2,7 @@
 //  UuidGenerator.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2016-12-04.
+//  Created by Daniel Saidi on 2016-12-12.
 //  Copyright © 2016 CocoaPods. All rights reserved.
 //
 
