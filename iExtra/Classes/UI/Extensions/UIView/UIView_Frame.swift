@@ -10,19 +10,19 @@ import UIKit
 
 public extension CGRect {
     
-    public var frameAbove: CGRect {
+    public var rectAbove: CGRect {
         return CGRect(x: origin.x, y: origin.y - size.height, width: size.width, height: size.height)
     }
     
-    public var frameBelow: CGRect {
+    public var rectBelow: CGRect {
         return CGRect(x: origin.x, y: origin.y + size.height, width: size.width, height: size.height)
     }
     
-    public var frameLeft: CGRect {
+    public var rectLeft: CGRect {
         return CGRect(x: origin.x - size.width, y: origin.y, width: size.width, height: size.height)
     }
     
-    public var frameRight: CGRect {
+    public var rectRight: CGRect {
         return CGRect(x: origin.x + size.width, y: origin.y, width: size.width, height: size.height)
     }
 }
@@ -30,11 +30,11 @@ public extension CGRect {
 
 public extension UIView {
     
-    public var frameAbove: CGRect { return frame.frameAbove }
+    public var frameAbove: CGRect { return frame.rectAbove }
     
-    public var frameBelow: CGRect { return frame.frameBelow }
+    public var frameBelow: CGRect { return frame.rectBelow }
     
-    public var frameLeft: CGRect { return frame.frameLeft }
+    public var frameLeft: CGRect { return frame.rectLeft }
     
-    public var frameRight: CGRect { return frame.frameRight }
+    public var frameRight: CGRect { return frame.rectRight }
 }
