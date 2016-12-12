@@ -69,6 +69,9 @@
 		432A07FD61CD6DC9DDEF9FBD30C7B3B7 /* STPopupActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7284FA82C62012BD34B6E7DBD18F4F0 /* STPopupActionSheetPresenter.swift */; };
 		43B99F06587ACD844A4D09A0ED9FB66B /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE6A9EC3BF50E062F6AEBCF0A1040 /* Stringers.swift */; };
 		45256E062C6E65C9BA796625DACBEAA8 /* ThreadingOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3196B8268BA1ACCFCAD9C8EDD16597 /* ThreadingOperator.swift */; };
+		45B87FFE1DFF3F2F00EFCD57 /* UISlider_HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FFD1DFF3F2F00EFCD57 /* UISlider_HitTest.swift */; };
+		45B880001DFF3FBF00EFCD57 /* UIView_Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FFF1DFF3FBF00EFCD57 /* UIView_Empty.swift */; };
+		45E8873E1DFF407F0081A5C4 /* UIView_HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8873D1DFF407F0081A5C4 /* UIView_HitTest.swift */; };
 		4AC46F546CE65BC488A5715FD287F07A /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C4F085290C0D2DF45DFCB1EDE20913 /* ExampleMetadata.swift */; };
 		4B1AAD13845DE5FFF2F28A4C8D1ABF9C /* UIView_Screenshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B34E78E55B3CC19B2403BF060E657195 /* UIView_Screenshot.swift */; };
 		4BC547080E89F57B54DE12F75F106874 /* Url_QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96D75E7B49C914DE0DE33A258D679C5 /* Url_QueryParameters.swift */; };
@@ -328,6 +331,9 @@
 		41ACB6E3405688E8384079DA0C941991 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E69B8A93FF8FF4F27B01D2146E962E /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		43DBA69638C49ABC74C8E560383BEFAC /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
+		45B87FFD1DFF3F2F00EFCD57 /* UISlider_HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISlider_HitTest.swift; sourceTree = "<group>"; };
+		45B87FFF1DFF3FBF00EFCD57 /* UIView_Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Empty.swift; sourceTree = "<group>"; };
+		45E8873D1DFF407F0081A5C4 /* UIView_HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_HitTest.swift; sourceTree = "<group>"; };
 		466EF2A2BBCEC440DEDA0A011D300B2C /* UIViewController_NavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController_NavigationBar.swift; sourceTree = "<group>"; };
 		4872745CE5BE898ED7C5B6C8772EDE46 /* UIApplication_Review.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication_Review.swift; sourceTree = "<group>"; };
 		49D7D01BDABDD2C1220AB1258CDCB78E /* BlurredNavigationSearchController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BlurredNavigationSearchController.swift; sourceTree = "<group>"; };
@@ -581,6 +587,7 @@
 				3AA1CD7C252CA616942C8D29B04DE25E /* UINavigationBar_Transparent.swift */,
 				A78C44D5EF05D92B9D8CAF20F433D4FA /* UIScrollView_Scroll.swift */,
 				9DF3339B0CE011CD77B0E7D4660CE5C2 /* UISlider_Extensions.swift */,
+				45B87FFD1DFF3F2F00EFCD57 /* UISlider_HitTest.swift */,
 				B03266ACCDCE8F663D56A80A292601B9 /* UITableView_Dequeue.swift */,
 				25824BCBD65C8D36699E36734884F7C7 /* UITableView_Register.swift */,
 				7B2C94482B08A12C9FD4EA38B8051D7E /* UITableView_UndockHeaderView.swift */,
@@ -588,8 +595,10 @@
 				05CA9A1029C300202B85CEA21F4C6D14 /* UITableViewHeaderFooterView_ReuseIdentifier.swift */,
 				63B66FF743B72AE668941C53979A8100 /* UITextView_Padding.swift */,
 				06A598CFF76E6752F12B734EE2AEA3F8 /* UIView_Bounce.swift */,
+				45B87FFF1DFF3FBF00EFCD57 /* UIView_Empty.swift */,
 				DB48E580762E8821E43D26123F421FD1 /* UIView_Frame.swift */,
 				1D5641EC1171ADA1DAA2B307644757ED /* UIView_FullSize.swift */,
+				45E8873D1DFF407F0081A5C4 /* UIView_HitTest.swift */,
 				7A04DF12A369942FEB4BE821FCB6E607 /* UIView_Move.swift */,
 				F3C6B01979D0EB8933C07BD2B5B215EE /* UIView_Nib.swift */,
 				FB150B7E26DA3FE85F12164205138BC1 /* UIView_Round.swift */,
@@ -1499,9 +1508,11 @@
 				0A49C37BCEB7593765E72C353FF8C2D1 /* NoCancellingSearchController.swift in Sources */,
 				A6F31236E0FAA538E89D9FF2D2349B90 /* NSObject_ClassName.swift in Sources */,
 				B1FE763B27C58F5D370164CFDE141AAB /* ParallaxEffect.swift in Sources */,
+				45E8873E1DFF407F0081A5C4 /* UIView_HitTest.swift in Sources */,
 				696D82F40AA808A3C9CA2EF9222B77AB /* ParallaxEffectDefault.swift in Sources */,
 				D4B95ECB8E4A30685439FE4E1355D424 /* PopoverActionSheetPresenter.swift in Sources */,
 				DCD286125B4E18856D6A239B4195B164 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
+				45B880001DFF3FBF00EFCD57 /* UIView_Empty.swift in Sources */,
 				2D683FDB851EA30A40D78B6E86B03C09 /* RemoteNotificationService.swift in Sources */,
 				00F99507946B62C1506A66ED38A56221 /* RemoteNotificationServiceDefault.swift in Sources */,
 				3245AC6F08975B87C7E3AA3F870EB4DD /* RoundButton.swift in Sources */,
@@ -1525,6 +1536,7 @@
 				0F5E6DEA4E98426935CADE7966B00294 /* UIColor_Hex.swift in Sources */,
 				4CCF5487FB9622DD1B1AF338E4D31864 /* UIColor_Random.swift in Sources */,
 				7D5A9D09357C4A689439936A84C752FF /* UIEdgeInsets_Init.swift in Sources */,
+				45B87FFE1DFF3F2F00EFCD57 /* UISlider_HitTest.swift in Sources */,
 				0BED2A615DD2ECB510A50CF54D84C506 /* UIImage_Combine.swift in Sources */,
 				F403ECB9443448B40E14E9C926215A4A /* UIImage_Padded.swift in Sources */,
 				EE15EC74ECBF8DD639EB3FC59273738F /* UIImage_Resized.swift in Sources */,
