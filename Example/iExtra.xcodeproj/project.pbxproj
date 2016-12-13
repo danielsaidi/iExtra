@@ -158,9 +158,9 @@
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
 				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
 				45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */,
+				455547511E00A9D600A9477A /* String_ContainsTests.swift */,
 				45B87FDB1DFF3E5900EFCD57 /* String_UrlEncodeTests.swift */,
 				45B87FDC1DFF3E5900EFCD57 /* Url_QueryParametersTests.swift */,
-				455547511E00A9D600A9477A /* String_ContainsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

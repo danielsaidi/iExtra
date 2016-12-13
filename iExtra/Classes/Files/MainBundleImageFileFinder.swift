@@ -6,6 +6,14 @@
 //  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This class will find all images in the app bundle and
+ remove any retina variations. The class can only find
+ images that are not placed in asset folders.
+ 
+ */
+
 import Foundation
 
 public class MainBundleImageFileFinder: MainBundleFileFinder {
