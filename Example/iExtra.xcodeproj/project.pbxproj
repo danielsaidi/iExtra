@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		451857DD1DF4972C006DF9D3 /* UuidGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451857DB1DF49717006DF9D3 /* UuidGeneratorTests.swift */; };
 		4555474B1E00A2AC00A9477A /* Array_RemoveObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */; };
+		455547501E00A8AB00A9477A /* Collection_ShuffleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555474E1E00A89600A9477A /* Collection_ShuffleTests.swift */; };
 		4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF241DF3775B003D940A /* KeychainBasedDeviceIdentifierTests.swift */; };
 		4561CF421DF3778C003D940A /* IoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF281DF3775B003D940A /* IoCTests.swift */; };
 		4561CF431DF3778F003D940A /* KeychainServiceTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2A1DF3775B003D940A /* KeychainServiceTestClass.swift */; };
@@ -61,6 +62,7 @@
 		1173FA6AA02DAC51DB0DB55B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		3D341B7124E17395A39E9A69 /* Pods_iExtra_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iExtra_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		451857DB1DF49717006DF9D3 /* UuidGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UuidGeneratorTests.swift; sourceTree = "<group>"; };
+		4555474E1E00A89600A9477A /* Collection_ShuffleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection_ShuffleTests.swift; sourceTree = "<group>"; };
 		4561CF241DF3775B003D940A /* KeychainBasedDeviceIdentifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainBasedDeviceIdentifierTests.swift; sourceTree = "<group>"; };
 		4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject_ClassNameTests.swift; sourceTree = "<group>"; };
 		4561CF281DF3775B003D940A /* IoCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IoCTests.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */,
 				45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */,
 				45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */,
+				4555474E1E00A89600A9477A /* Collection_ShuffleTests.swift */,
 				45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */,
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
 				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
@@ -558,6 +561,7 @@
 				4561CF431DF3778F003D940A /* KeychainServiceTestClass.swift in Sources */,
 				4561CF441DF37794003D940A /* UITableView_DequeueTests.swift in Sources */,
 				45B8800F1DFF404000EFCD57 /* UIView_NibTests.swift in Sources */,
+				455547501E00A8AB00A9477A /* Collection_ShuffleTests.swift in Sources */,
 				45B87FD01DFF3E3600EFCD57 /* UINavigationBar_TransparentTests.swift in Sources */,
 				45E887AA1E008B2F0081A5C4 /* Numeric_RandomTests.swift in Sources */,
 				45B8800C1DFF404000EFCD57 /* UIView_EmptyTests.swift in Sources */,
