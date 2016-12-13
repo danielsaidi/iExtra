@@ -18,14 +18,30 @@ class Array_ElementsOfTypeTests: QuickSpec {
             
             it("ignores invalid types") {
                 let array: [Any] = [1, "foo", CGFloat(10)]
-                let result = array.elementsOfType(type: TestBaseClass.self)
+                let result = array.elements(ofType: TestBaseClass.self)
                 
                 expect(result.count).to(equal(0))
             }
             
+            it("returns int") {
+                let array: [Any] = [20, "foo", CGFloat(10)]
+                let result = array.elements(ofType: Int.self)
+                
+                expect(result.count).to(equal(1))
+                expect(result.first!).to(equal(20))
+            }
+            
+            it("returns string") {
+                let array: [Any] = [1, "foo", CGFloat(10)]
+                let result = array.elements(ofType: String.self)
+                
+                expect(result.count).to(equal(1))
+                expect(result.first!).to(equal("foo"))
+            }
+            
             it("returns sub classes only") {
                 let array: [Any] = [1, TestBaseClass(), TestSubClass()]
-                let result = array.elementsOfType(type: TestSubClass.self)
+                let result = array.elements(ofType: TestSubClass.self)
                 
                 expect(result.count).to(equal(1))
                 expect(result.first!.name).to(equal("sub"))
@@ -33,7 +49,7 @@ class Array_ElementsOfTypeTests: QuickSpec {
             
             it("returns sub classes for base class") {
                 let array: [Any] = ["foo", TestBaseClass(), TestSubClass()]
-                let result = array.elementsOfType(type: TestBaseClass.self)
+                let result = array.elements(ofType: TestBaseClass.self)
                 
                 expect(result.count).to(equal(2))
                 expect(result.first!.name).to(equal("base"))
@@ -61,3 +77,5 @@ fileprivate class TestSubClass: TestBaseClass {
         name = "sub"
     }
 }
+
+

@@ -34,6 +34,8 @@
 		45B8800F1DFF404000EFCD57 /* UIView_NibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF341DF3775B003D940A /* UIView_NibTests.swift */; };
 		45B880101DFF404000EFCD57 /* UIView_VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF351DF3775B003D940A /* UIView_VisibilityTests.swift */; };
 		45E887991DFFCD950081A5C4 /* Array_ElementsOfTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */; };
+		45E8879C1E0078860081A5C4 /* Array_RandomElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */; };
+		45E887AA1E008B2F0081A5C4 /* Numeric_RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -84,6 +86,8 @@
 		45B880021DFF3FF400EFCD57 /* UIView_HitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_HitTests.swift; sourceTree = "<group>"; };
 		45B880031DFF3FF400EFCD57 /* UIView_RoundTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_RoundTests.swift; sourceTree = "<group>"; };
 		45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_ElementsOfTypeTests.swift; sourceTree = "<group>"; };
+		45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_RandomElementTests.swift; sourceTree = "<group>"; };
+		45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_RandomTests.swift; sourceTree = "<group>"; };
 		5B205D95EABB73FDF9F26DA3 /* iExtra.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iExtra.podspec; path = ../iExtra.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iExtra_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExtra_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -141,8 +145,10 @@
 			isa = PBXGroup;
 			children = (
 				45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */,
+				45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */,
 				45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */,
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
+				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
 				45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */,
 				45B87FDB1DFF3E5900EFCD57 /* String_UrlEncodeTests.swift */,
 				45B87FDC1DFF3E5900EFCD57 /* Url_QueryParametersTests.swift */,
@@ -377,7 +383,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = CocoaPods;
+				ORGANIZATIONNAME = "Daniel Saidi";
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -550,6 +556,7 @@
 				4561CF441DF37794003D940A /* UITableView_DequeueTests.swift in Sources */,
 				45B8800F1DFF404000EFCD57 /* UIView_NibTests.swift in Sources */,
 				45B87FD01DFF3E3600EFCD57 /* UINavigationBar_TransparentTests.swift in Sources */,
+				45E887AA1E008B2F0081A5C4 /* Numeric_RandomTests.swift in Sources */,
 				45B8800C1DFF404000EFCD57 /* UIView_EmptyTests.swift in Sources */,
 				45B87FFB1DFF3EC600EFCD57 /* UISlider_Extensions_ValuePercentageTests.swift in Sources */,
 				45B87FFC1DFF3EC600EFCD57 /* UISlider_HitTests.swift in Sources */,
@@ -559,6 +566,7 @@
 				45B87FE81DFF3E5F00EFCD57 /* NSObject_ClassNameTests.swift in Sources */,
 				4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				4561CF461DF37798003D940A /* UITableViewCell_ReuseIdentifierTests.swift in Sources */,
+				45E8879C1E0078860081A5C4 /* Array_RandomElementTests.swift in Sources */,
 				45B87FE61DFF3E5F00EFCD57 /* String_UrlEncodeTests.swift in Sources */,
 				45B87FCF1DFF3E3200EFCD57 /* UIColor_HexTests.swift in Sources */,
 				4561CF471DF37798003D940A /* UITableViewHeaderFooterView_ReuseIdentifierTests.swift in Sources */,

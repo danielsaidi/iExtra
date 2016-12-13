@@ -11,7 +11,7 @@ import Foundation
 
 public extension Array {
     
-    public func elementsOfType<T>(type:T.Type) -> [T] {
-        return self.filter({ $0 is T }).map({ $0 as! T })
+    public func elements<T>(ofType: T.Type) -> [T] {
+        return filter({ $0 is T }).map({ $0 as! T })
     }
 }
