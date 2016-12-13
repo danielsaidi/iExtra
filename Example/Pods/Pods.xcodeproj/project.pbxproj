@@ -61,6 +61,7 @@
 		4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547581E00AEEE00A9477A /* HintManager.swift */; };
 		4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547591E00AEEE00A9477A /* HintManagerBase.swift */; };
 		4555475D1E00AEEE00A9477A /* LoggingHintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */; };
+		455547601E00B0F100A9477A /* CGRect_Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555475F1E00B0F100A9477A /* CGRect_Rects.swift */; };
 		45E8876E1DFF52D00081A5C4 /* UIAlertController_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887401DFF52D00081A5C4 /* UIAlertController_Alert.swift */; };
 		45E8876F1DFF52D00081A5C4 /* UIAlertController_SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887411DFF52D00081A5C4 /* UIAlertController_SourceView.swift */; };
 		45E887701DFF52D00081A5C4 /* UIApplication_Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887431DFF52D00081A5C4 /* UIApplication_Review.swift */; };
@@ -334,6 +335,7 @@
 		455547581E00AEEE00A9477A /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		455547591E00AEEE00A9477A /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
 		4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingHintManager.swift; sourceTree = "<group>"; };
+		4555475F1E00B0F100A9477A /* CGRect_Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect_Rects.swift; sourceTree = "<group>"; };
 		45E887401DFF52D00081A5C4 /* UIAlertController_Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController_Alert.swift; sourceTree = "<group>"; };
 		45E887411DFF52D00081A5C4 /* UIAlertController_SourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController_SourceView.swift; sourceTree = "<group>"; };
 		45E887431DFF52D00081A5C4 /* UIApplication_Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication_Review.swift; sourceTree = "<group>"; };
@@ -769,6 +771,7 @@
 			isa = PBXGroup;
 			children = (
 				081AAE9487A20A2D67511885BC1705B3 /* Authorization */,
+				4555475E1E00B0DA00A9477A /* CoreGraphics */,
 				C7CA1384BE2636C591218E64A29276A5 /* Data */,
 				26FB4E33EC0D7FAF2077AA2AF9552CB0 /* Date */,
 				E9576B9186369F971A31AE6BE7C5B0B1 /* Device */,
@@ -804,6 +807,14 @@
 				4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		4555475E1E00B0DA00A9477A /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				4555475F1E00B0F100A9477A /* CGRect_Rects.swift */,
+			);
+			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		45E8873F1DFF52D00081A5C4 /* UIAlertController */ = {
@@ -1594,6 +1605,7 @@
 				45E8876F1DFF52D00081A5C4 /* UIAlertController_SourceView.swift in Sources */,
 				B6988E260BDB51A40A1B22B5FE22E94C /* IapManagerDefault.swift in Sources */,
 				C8446C6EE916A61E97994E6AC41395CE /* IdGenerator.swift in Sources */,
+				455547601E00B0F100A9477A /* CGRect_Rects.swift in Sources */,
 				618964C30F5C3B15C5BEB9D5A72D1926 /* iExtra-dummy.m in Sources */,
 				45E887AE1E00A1D50081A5C4 /* Array_RemoveObject.swift in Sources */,
 				2F9D67D1C56E093AA54B6360620C3C3C /* IoC.swift in Sources */,

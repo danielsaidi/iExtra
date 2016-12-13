@@ -2,7 +2,7 @@
 //  Array_RemoveObjectTests.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2016-12-13.
+//  Created by Daniel Saidi on 2016-12-13.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 

@@ -8,26 +8,6 @@
 
 import UIKit
 
-public extension CGRect {
-    
-    public var rectAbove: CGRect {
-        return CGRect(x: origin.x, y: origin.y - size.height, width: size.width, height: size.height)
-    }
-    
-    public var rectBelow: CGRect {
-        return CGRect(x: origin.x, y: origin.y + size.height, width: size.width, height: size.height)
-    }
-    
-    public var rectLeft: CGRect {
-        return CGRect(x: origin.x - size.width, y: origin.y, width: size.width, height: size.height)
-    }
-    
-    public var rectRight: CGRect {
-        return CGRect(x: origin.x + size.width, y: origin.y, width: size.width, height: size.height)
-    }
-}
-
-
 public extension UIView {
     
     public var frameAbove: CGRect { return frame.rectAbove }
