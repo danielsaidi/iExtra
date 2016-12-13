@@ -58,6 +58,9 @@
 		43B99F06587ACD844A4D09A0ED9FB66B /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE6A9EC3BF50E062F6AEBCF0A1040 /* Stringers.swift */; };
 		45256E062C6E65C9BA796625DACBEAA8 /* ThreadingOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3196B8268BA1ACCFCAD9C8EDD16597 /* ThreadingOperator.swift */; };
 		4555474D1E00A7E800A9477A /* Collection_Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */; };
+		4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547581E00AEEE00A9477A /* HintManager.swift */; };
+		4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547591E00AEEE00A9477A /* HintManagerBase.swift */; };
+		4555475D1E00AEEE00A9477A /* LoggingHintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */; };
 		45E8876E1DFF52D00081A5C4 /* UIAlertController_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887401DFF52D00081A5C4 /* UIAlertController_Alert.swift */; };
 		45E8876F1DFF52D00081A5C4 /* UIAlertController_SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887411DFF52D00081A5C4 /* UIAlertController_SourceView.swift */; };
 		45E887701DFF52D00081A5C4 /* UIApplication_Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887431DFF52D00081A5C4 /* UIApplication_Review.swift */; };
@@ -328,6 +331,9 @@
 		41E69B8A93FF8FF4F27B01D2146E962E /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		43DBA69638C49ABC74C8E560383BEFAC /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
 		4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection_Shuffle.swift; sourceTree = "<group>"; };
+		455547581E00AEEE00A9477A /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
+		455547591E00AEEE00A9477A /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
+		4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingHintManager.swift; sourceTree = "<group>"; };
 		45E887401DFF52D00081A5C4 /* UIAlertController_Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController_Alert.swift; sourceTree = "<group>"; };
 		45E887411DFF52D00081A5C4 /* UIAlertController_SourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController_SourceView.swift; sourceTree = "<group>"; };
 		45E887431DFF52D00081A5C4 /* UIApplication_Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication_Review.swift; sourceTree = "<group>"; };
@@ -775,6 +781,7 @@
 				D0034C367BF977D31DFD0D3D42FE5D2C /* Maps */,
 				13E08C4DFD7C43973A1EC85F4D69DF7F /* Navigation */,
 				D1B5BFB3D8A72CE1AC76A74718CC740F /* Notifications */,
+				455547571E00AEEE00A9477A /* Onboarding */,
 				75790DF88AEDA4EEFD4166CD2E385D08 /* Threading */,
 				F8B22EC8589BA8DB212B010558011261 /* UI */,
 			);
@@ -787,6 +794,16 @@
 				9D9CFF97A2D41D7CB20A427D5386C7A6 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		455547571E00AEEE00A9477A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				455547581E00AEEE00A9477A /* HintManager.swift */,
+				455547591E00AEEE00A9477A /* HintManagerBase.swift */,
+				4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		45E8873F1DFF52D00081A5C4 /* UIAlertController */ = {
@@ -1525,6 +1542,7 @@
 				9D83F43C34141AC156AE8EB576EA49FA /* ActionSheetEnableItem.swift in Sources */,
 				2DDE11D38C19F001961FA1F55E7B9762 /* ActionSheetItem.swift in Sources */,
 				13FE643D8FE030716230DBAB2E2BED48 /* ActionSheetItemSection.swift in Sources */,
+				4555475D1E00AEEE00A9477A /* LoggingHintManager.swift in Sources */,
 				75EDD682AF1ABF7FB9513093A3A13320 /* ActionSheetLinkItem.swift in Sources */,
 				E9BFA49704DCE1EB2B2F80C40B71F3CB /* ActionSheetOkItem.swift in Sources */,
 				9A17C0075A7B559E75791ADEB4989A62 /* ActionSheetPresenter.swift in Sources */,
@@ -1555,9 +1573,11 @@
 				45E887881DFF52D00081A5C4 /* UIView_HitTest.swift in Sources */,
 				10655FF09307FEADD5C2EE49B66136A3 /* FadingViewControllerTransition.swift in Sources */,
 				45E8877B1DFF52D00081A5C4 /* UIScrollView_Scroll.swift in Sources */,
+				4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */,
 				3FAE7AC38D1B762FE776C3684757EEDC /* FileFinder.swift in Sources */,
 				45E8876E1DFF52D00081A5C4 /* UIAlertController_Alert.swift in Sources */,
 				45E887921DFF52D00081A5C4 /* UIViewController_RequiredTextField.swift in Sources */,
+				4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */,
 				45E8877C1DFF52D00081A5C4 /* UISlider_Extensions.swift in Sources */,
 				7D11668E15229C363544550DD9524FB4 /* Float_Format.swift in Sources */,
 				6412FFB4A39645A8A62C4D76F291B65E /* FloatingMenu.swift in Sources */,
