@@ -2,11 +2,11 @@
 //  Array_RandomElement.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2016-03-08.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2016-03-09.
+//  Copyright © 2016 Appamini. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 public extension Array {
     

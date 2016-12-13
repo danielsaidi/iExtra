@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 public extension Array {
     
     public func elements<T>(ofType: T.Type) -> [T] {

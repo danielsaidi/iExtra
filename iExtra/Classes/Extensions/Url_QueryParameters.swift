@@ -6,8 +6,7 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
-
+import Foundation
 
 public extension URL {
     

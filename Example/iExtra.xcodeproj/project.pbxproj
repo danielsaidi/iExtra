@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		451857DD1DF4972C006DF9D3 /* UuidGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451857DB1DF49717006DF9D3 /* UuidGeneratorTests.swift */; };
+		4555474B1E00A2AC00A9477A /* Array_RemoveObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */; };
 		4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF241DF3775B003D940A /* KeychainBasedDeviceIdentifierTests.swift */; };
 		4561CF421DF3778C003D940A /* IoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF281DF3775B003D940A /* IoCTests.swift */; };
 		4561CF431DF3778F003D940A /* KeychainServiceTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2A1DF3775B003D940A /* KeychainServiceTestClass.swift */; };
@@ -88,6 +89,7 @@
 		45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_ElementsOfTypeTests.swift; sourceTree = "<group>"; };
 		45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_RandomElementTests.swift; sourceTree = "<group>"; };
 		45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_RandomTests.swift; sourceTree = "<group>"; };
+		45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_RemoveObjectTests.swift; sourceTree = "<group>"; };
 		5B205D95EABB73FDF9F26DA3 /* iExtra.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = iExtra.podspec; path = ../iExtra.podspec; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* iExtra_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExtra_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			children = (
 				45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */,
 				45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */,
+				45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */,
 				45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */,
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
 				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
@@ -562,6 +565,7 @@
 				45B87FFC1DFF3EC600EFCD57 /* UISlider_HitTests.swift in Sources */,
 				451857DD1DF4972C006DF9D3 /* UuidGeneratorTests.swift in Sources */,
 				45B8800E1DFF404000EFCD57 /* UIView_RoundTests.swift in Sources */,
+				4555474B1E00A2AC00A9477A /* Array_RemoveObjectTests.swift in Sources */,
 				45B87FF91DFF3EC600EFCD57 /* UISlider_Extensions_PercentageAtPointTests.swift in Sources */,
 				45B87FE81DFF3E5F00EFCD57 /* NSObject_ClassNameTests.swift in Sources */,
 				4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
