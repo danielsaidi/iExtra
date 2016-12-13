@@ -10,10 +10,9 @@ import Foundation
 
 public extension String {
     
-    public func contains(string: String, caseInsensitive: Bool) -> Bool {
-        let str = self
+    public func contains(other: String, caseInsensitive: Bool) -> Bool {
         return caseInsensitive
-            ? str.lowercased().contains(string.lowercased())
-            : str.contains(string)
+            ? self.lowercased().contains(other.lowercased())
+            : self.contains(other)
     }
 }
