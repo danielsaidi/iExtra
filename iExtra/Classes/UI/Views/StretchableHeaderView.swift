@@ -63,7 +63,7 @@ open class StretchableHeaderView: UIView {
     open func setup(in tableView: UITableView) {
         guard self == tableView.tableHeaderView else { return }
         let height = frame.size.height
-        tableView.tableHeaderView = nil
+        tableView.tableHeaderView = UIView.empty
         tableView.addSubview(self)
         tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -height)
