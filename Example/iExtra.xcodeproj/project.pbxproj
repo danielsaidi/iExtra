@@ -24,7 +24,6 @@
 		45B87FE61DFF3E5F00EFCD57 /* String_UrlEncodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FDB1DFF3E5900EFCD57 /* String_UrlEncodeTests.swift */; };
 		45B87FE71DFF3E5F00EFCD57 /* Url_QueryParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FDC1DFF3E5900EFCD57 /* Url_QueryParametersTests.swift */; };
 		45B87FE81DFF3E5F00EFCD57 /* NSObject_ClassNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */; };
-		45B87FE91DFF3E6200EFCD57 /* Float_FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */; };
 		45B87FF71DFF3EC600EFCD57 /* UISlider_Extensions_ButtonPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FEB1DFF3EBD00EFCD57 /* UISlider_Extensions_ButtonPositionTests.swift */; };
 		45B87FF81DFF3EC600EFCD57 /* UISlider_Extensions_ButtonSizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FEC1DFF3EBD00EFCD57 /* UISlider_Extensions_ButtonSizeTests.swift */; };
 		45B87FF91DFF3EC600EFCD57 /* UISlider_Extensions_PercentageAtPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FED1DFF3EBD00EFCD57 /* UISlider_Extensions_PercentageAtPointTests.swift */; };
@@ -36,6 +35,10 @@
 		45B8800E1DFF404000EFCD57 /* UIView_RoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B880031DFF3FF400EFCD57 /* UIView_RoundTests.swift */; };
 		45B8800F1DFF404000EFCD57 /* UIView_NibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF341DF3775B003D940A /* UIView_NibTests.swift */; };
 		45B880101DFF404000EFCD57 /* UIView_VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF351DF3775B003D940A /* UIView_VisibilityTests.swift */; };
+		45C8B5F01E01EC240092F1E3 /* AdaptiveFileSizePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5E81E01EC200092F1E3 /* AdaptiveFileSizePresenterTests.swift */; };
+		45C8B5F21E01EC240092F1E3 /* DirectoryFileManagerDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5EA1E01EC200092F1E3 /* DirectoryFileManagerDefaultTests.swift */; };
+		45C8B5F31E01EC240092F1E3 /* FileSizeBytesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5EB1E01EC200092F1E3 /* FileSizeBytesPresenterTests.swift */; };
+		45C8B5FC1E01EF870092F1E3 /* Numeric_FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5FA1E01EF740092F1E3 /* Numeric_FormatTests.swift */; };
 		45E887991DFFCD950081A5C4 /* Array_ElementsOfTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */; };
 		45E8879C1E0078860081A5C4 /* Array_RandomElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */; };
 		45E887AA1E008B2F0081A5C4 /* Numeric_RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */; };
@@ -77,7 +80,6 @@
 		4561CF351DF3775B003D940A /* UIView_VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_VisibilityTests.swift; sourceTree = "<group>"; };
 		45B87FCB1DFF3E2A00EFCD57 /* UIColor_HexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_HexTests.swift; sourceTree = "<group>"; };
 		45B87FCC1DFF3E2A00EFCD57 /* UINavigationBar_TransparentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_TransparentTests.swift; sourceTree = "<group>"; };
-		45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float_FormatTests.swift; sourceTree = "<group>"; };
 		45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Base64Tests.swift; sourceTree = "<group>"; };
 		45B87FDB1DFF3E5900EFCD57 /* String_UrlEncodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_UrlEncodeTests.swift; sourceTree = "<group>"; };
 		45B87FDC1DFF3E5900EFCD57 /* Url_QueryParametersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url_QueryParametersTests.swift; sourceTree = "<group>"; };
@@ -90,6 +92,10 @@
 		45B880011DFF3FF400EFCD57 /* UIView_EmptyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_EmptyTests.swift; sourceTree = "<group>"; };
 		45B880021DFF3FF400EFCD57 /* UIView_HitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_HitTests.swift; sourceTree = "<group>"; };
 		45B880031DFF3FF400EFCD57 /* UIView_RoundTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_RoundTests.swift; sourceTree = "<group>"; };
+		45C8B5E81E01EC200092F1E3 /* AdaptiveFileSizePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveFileSizePresenterTests.swift; sourceTree = "<group>"; };
+		45C8B5EA1E01EC200092F1E3 /* DirectoryFileManagerDefaultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefaultTests.swift; sourceTree = "<group>"; };
+		45C8B5EB1E01EC200092F1E3 /* FileSizeBytesPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizeBytesPresenterTests.swift; sourceTree = "<group>"; };
+		45C8B5FA1E01EF740092F1E3 /* Numeric_FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_FormatTests.swift; sourceTree = "<group>"; };
 		45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_ElementsOfTypeTests.swift; sourceTree = "<group>"; };
 		45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_RandomElementTests.swift; sourceTree = "<group>"; };
 		45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_RandomTests.swift; sourceTree = "<group>"; };
@@ -154,8 +160,8 @@
 				45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */,
 				45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */,
 				4555474E1E00A89600A9477A /* Collection_ShuffleTests.swift */,
-				45B87FD91DFF3E5900EFCD57 /* Float_FormatTests.swift */,
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
+				45C8B5FA1E01EF740092F1E3 /* Numeric_FormatTests.swift */,
 				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
 				45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */,
 				455547511E00A9D600A9477A /* String_ContainsTests.swift */,
@@ -245,6 +251,16 @@
 			path = UISlider;
 			sourceTree = "<group>";
 		};
+		45C8B5E71E01EC200092F1E3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				45C8B5E81E01EC200092F1E3 /* AdaptiveFileSizePresenterTests.swift */,
+				45C8B5EA1E01EC200092F1E3 /* DirectoryFileManagerDefaultTests.swift */,
+				45C8B5EB1E01EC200092F1E3 /* FileSizeBytesPresenterTests.swift */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +307,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				45C8B5E71E01EC200092F1E3 /* Files */,
 				451857DA1DF4970D006DF9D3 /* Data */,
 				4561CF231DF3775B003D940A /* Device */,
 				4561CF251DF3775B003D940A /* Extensions */,
@@ -566,6 +583,7 @@
 				45B8800F1DFF404000EFCD57 /* UIView_NibTests.swift in Sources */,
 				455547501E00A8AB00A9477A /* Collection_ShuffleTests.swift in Sources */,
 				45B87FD01DFF3E3600EFCD57 /* UINavigationBar_TransparentTests.swift in Sources */,
+				45C8B5FC1E01EF870092F1E3 /* Numeric_FormatTests.swift in Sources */,
 				45E887AA1E008B2F0081A5C4 /* Numeric_RandomTests.swift in Sources */,
 				45B8800C1DFF404000EFCD57 /* UIView_EmptyTests.swift in Sources */,
 				45B87FFB1DFF3EC600EFCD57 /* UISlider_Extensions_ValuePercentageTests.swift in Sources */,
@@ -575,16 +593,18 @@
 				4555474B1E00A2AC00A9477A /* Array_RemoveObjectTests.swift in Sources */,
 				45B87FF91DFF3EC600EFCD57 /* UISlider_Extensions_PercentageAtPointTests.swift in Sources */,
 				45B87FE81DFF3E5F00EFCD57 /* NSObject_ClassNameTests.swift in Sources */,
+				45C8B5F31E01EC240092F1E3 /* FileSizeBytesPresenterTests.swift in Sources */,
+				45C8B5F21E01EC240092F1E3 /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				4561CF461DF37798003D940A /* UITableViewCell_ReuseIdentifierTests.swift in Sources */,
 				45E8879C1E0078860081A5C4 /* Array_RandomElementTests.swift in Sources */,
 				45B87FE61DFF3E5F00EFCD57 /* String_UrlEncodeTests.swift in Sources */,
+				45C8B5F01E01EC240092F1E3 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				45B87FCF1DFF3E3200EFCD57 /* UIColor_HexTests.swift in Sources */,
 				4561CF471DF37798003D940A /* UITableViewHeaderFooterView_ReuseIdentifierTests.swift in Sources */,
 				4561CF421DF3778C003D940A /* IoCTests.swift in Sources */,
 				455547531E00A9D800A9477A /* String_ContainsTests.swift in Sources */,
 				45B87FF81DFF3EC600EFCD57 /* UISlider_Extensions_ButtonSizeTests.swift in Sources */,
-				45B87FE91DFF3E6200EFCD57 /* Float_FormatTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
