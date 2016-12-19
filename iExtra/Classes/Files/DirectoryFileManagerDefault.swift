@@ -2,8 +2,8 @@
 //  DirectoryFileManagerDefault.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2015-11-15.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2016-12-19.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -13,13 +13,15 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     
     // MARK: - Initialization
     
-    public init(directoryUrl: URL) {
-        self.directory = directoryUrl
+    public init(directory: FileManager.SearchPathDirectory, fileManager: AppFileManager) {
+        self.directory = FileManager.default.urls(for: directory, in: .userDomainMask).last!
+        self.manager = fileManager
         super.init()
     }
     
-    public init(searchPathDirectory: FileManager.SearchPathDirectory) {
-        self.directory = FileManager.default.urls(for: searchPathDirectory, in: .userDomainMask).last!
+    public init(directoryUrl: URL, fileManager: AppFileManager) {
+        self.directory = directoryUrl
+        self.manager = fileManager
         super.init()
     }
     
@@ -29,82 +31,71 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     
     public let directory: URL
     
-    private var manager: FileManager {
-        return FileManager.default
-    }
+    fileprivate let manager: AppFileManager
     
     
     
     // MARK: - Public Functions
     
-    open func createFile(withName name: String, contents: Data?) -> Bool {
-        let fileUrl = directory.appendingPathComponent(name)
-        return manager.createFile(atPath: fileUrl.path, contents: contents, attributes: nil)
+    open func createFile(named name: String, contents: Data?) -> Bool {
+        let url = directory.appendingPathComponent(name)
+        return manager.createFile(at: url, contents: contents)
     }
     
-    open func fileExists(at url: URL) -> Bool {
-        return manager.fileExists(atPath: url.path)
+    open func fileExists(named name: String) -> Bool {
+        return getUrlForFile(named: name) != nil
     }
     
-    public func getAttributesForFile(at url: URL) -> [FileAttributeKey : Any]? {
-        do {
-            return try manager.attributesOfItem(atPath: url.path)
-        } catch {
-            return nil
+    open func getAttributesForFile(named name: String) -> [FileAttributeKey : Any]? {
+        guard let url = getUrlForFile(named: name) else { return nil }
+        return manager.getAttributesForFile(at: url)
+    }
+    
+    open func getExistingFileNames(in collection: [String]) -> [String] {
+        let fileNames = getFileNames()
+        return collection.filter { fileNames.contains($0) }
+    }
+    
+    open func getFileNames() -> [String] {
+        let urls = manager.getContentsOfDirectory(at: directory)
+        return urls.map { $0.lastPathComponent }
+    }
+    
+    open func getFileNames(matching fileNamePatterns: [String]) -> [String] {
+        let fileNamePatterns = fileNamePatterns.map { $0.lowercased() }
+        return getFileNames().filter {
+            let fileName = $0.lowercased()
+            return fileNamePatterns.filter { fileName.contains($0) }.first != nil
         }
     }
     
-    open func getInvalidFilePointers(in collection: [FilePointer]) -> [FilePointer] {
-        let fileUrls = getFileUrls()
-        let fileNames = fileUrls.map { $0.lastPathComponent }
-        return collection.filter { !fileNames.contains($0.fileName) }
+    open func getNonExistingFileNames(in collection: [String]) -> [String] {
+        let fileNames = getFileNames()
+        return collection.filter { !fileNames.contains($0) }
     }
     
-    open func getFileUrls() -> [URL] {
-        do {
-            return try manager.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-        } catch let error as Error {
-            return [URL]()
-        }
+    open func getSizeOfFile(named name: String) -> UInt64? {
+        guard let attributes = getAttributesForFile(named: name) else { return nil }
+        return attributes[.size] as? UInt64
     }
     
-    public func getUnreferencedFilesUrls(for pointers: [FilePointer]) -> [URL] {
-        let fileUrls = getFileUrls()
-        let pointerFileNames = pointers.map { $0.fileName }
-        return fileUrls.filter { !pointerFileNames.contains($0.lastPathComponent) }
+    open func getSizeOfFiles() -> UInt64 {
+        let allUrls = getFileNames().map { getUrlForFile(named: $0) }
+        let urls = allUrls.filter { $0 != nil }.map { $0! }
+        return urls.reduce(0) { $0 + (manager.getSizeOfFile(at: $1) ?? 0) }
     }
     
-    open func getFileUrls(matching fileNamePatterns: [String]) -> [URL] {
-        return getFileUrls().filter {
-            let fileName = $0.lastPathComponent.lowercased()
-            return fileNamePatterns.first { fileName.contains($0.lowercased()) } != nil
-        }
+    open func getUrlForFile(named name: String) -> URL? {
+        let urls = manager.getContentsOfDirectory(at: directory)
+        return urls.first { $0.lastPathComponent == name }
     }
     
-    public func getSizeOfFile(at url: URL) -> UInt64? {
-        guard let attributes = getAttributesForFile(at: url) else { return nil }
-        return attributes[FileAttributeKey.size] as? UInt64
+    open func getUnreferencedFileNames(forReferences refs: [String]) -> [String] {
+        return getFileNames().filter { !refs.contains($0) }
     }
     
-    open func getUrlForFile(withName name: String) -> URL? {
-        return getFileUrls().first { $0.lastPathComponent == name }
-    }
-    
-    open func getValidFilePointers(in collection: [FilePointer]) -> [FilePointer] {
-        let fileUrls = getFileUrls()
-        let fileNames = fileUrls.map { $0.lastPathComponent }
-        return collection.filter { fileNames.contains($0.fileName) }
-    }
-    
-    open func removeFile(at url: URL) -> Bool {
-        guard fileExists(at: url) else {
-            return false
-        }
-        do {
-            try manager.removeItem(at: url)
-            return true
-        } catch let error as Error {
-            return false
-        }
+    open func removeFile(named name: String) -> Bool {
+        guard let url = getUrlForFile(named: name) else { return false }
+        return manager.removeFile(at: url)
     }
 }

@@ -58,15 +58,17 @@
 		43B99F06587ACD844A4D09A0ED9FB66B /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE6A9EC3BF50E062F6AEBCF0A1040 /* Stringers.swift */; };
 		45256E062C6E65C9BA796625DACBEAA8 /* ThreadingOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3196B8268BA1ACCFCAD9C8EDD16597 /* ThreadingOperator.swift */; };
 		454D98191E0862E5002B127E /* StretchableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D98181E0862E5002B127E /* StretchableHeaderView.swift */; };
+		454D981F1E0865C1002B127E /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981A1E0865C1002B127E /* AppFileManager.swift */; };
+		454D98201E0865C1002B127E /* AppFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981B1E0865C1002B127E /* AppFileManagerDefault.swift */; };
+		454D98211E0865C1002B127E /* DirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981C1E0865C1002B127E /* DirectoryFileManager.swift */; };
+		454D98221E0865C1002B127E /* DirectoryFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981D1E0865C1002B127E /* DirectoryFileManagerDefault.swift */; };
+		454D98231E0865C1002B127E /* FilteredDirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981E1E0865C1002B127E /* FilteredDirectoryFileManager.swift */; };
 		4555474D1E00A7E800A9477A /* Collection_Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */; };
 		4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547581E00AEEE00A9477A /* HintManager.swift */; };
 		4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547591E00AEEE00A9477A /* HintManagerBase.swift */; };
 		4555475D1E00AEEE00A9477A /* LoggingHintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */; };
 		455547601E00B0F100A9477A /* CGRect_Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555475F1E00B0F100A9477A /* CGRect_Rects.swift */; };
 		45C8B5DF1E01EBD70092F1E3 /* AdaptiveFileSizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5D71E01EBD70092F1E3 /* AdaptiveFileSizePresenter.swift */; };
-		45C8B5E21E01EBD70092F1E3 /* DirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5DA1E01EBD70092F1E3 /* DirectoryFileManager.swift */; };
-		45C8B5E31E01EBD70092F1E3 /* DirectoryFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5DB1E01EBD70092F1E3 /* DirectoryFileManagerDefault.swift */; };
-		45C8B5E41E01EBD70092F1E3 /* FilePointer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5DC1E01EBD70092F1E3 /* FilePointer.swift */; };
 		45C8B5E51E01EBD70092F1E3 /* FileSizeBytesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5DD1E01EBD70092F1E3 /* FileSizeBytesPresenter.swift */; };
 		45C8B5E61E01EBD70092F1E3 /* FileSizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5DE1E01EBD70092F1E3 /* FileSizePresenter.swift */; };
 		45C8B5F71E01EF0F0092F1E3 /* Numeric_Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8B5F61E01EF0F0092F1E3 /* Numeric_Format.swift */; };
@@ -338,15 +340,17 @@
 		41E69B8A93FF8FF4F27B01D2146E962E /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		43DBA69638C49ABC74C8E560383BEFAC /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
 		454D98181E0862E5002B127E /* StretchableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchableHeaderView.swift; sourceTree = "<group>"; };
+		454D981A1E0865C1002B127E /* AppFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
+		454D981B1E0865C1002B127E /* AppFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFileManagerDefault.swift; sourceTree = "<group>"; };
+		454D981C1E0865C1002B127E /* DirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManager.swift; sourceTree = "<group>"; };
+		454D981D1E0865C1002B127E /* DirectoryFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefault.swift; sourceTree = "<group>"; };
+		454D981E1E0865C1002B127E /* FilteredDirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredDirectoryFileManager.swift; sourceTree = "<group>"; };
 		4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection_Shuffle.swift; sourceTree = "<group>"; };
 		455547581E00AEEE00A9477A /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		455547591E00AEEE00A9477A /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
 		4555475A1E00AEEE00A9477A /* LoggingHintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggingHintManager.swift; sourceTree = "<group>"; };
 		4555475F1E00B0F100A9477A /* CGRect_Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect_Rects.swift; sourceTree = "<group>"; };
 		45C8B5D71E01EBD70092F1E3 /* AdaptiveFileSizePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveFileSizePresenter.swift; sourceTree = "<group>"; };
-		45C8B5DA1E01EBD70092F1E3 /* DirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManager.swift; sourceTree = "<group>"; };
-		45C8B5DB1E01EBD70092F1E3 /* DirectoryFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefault.swift; sourceTree = "<group>"; };
-		45C8B5DC1E01EBD70092F1E3 /* FilePointer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePointer.swift; sourceTree = "<group>"; };
 		45C8B5DD1E01EBD70092F1E3 /* FileSizeBytesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizeBytesPresenter.swift; sourceTree = "<group>"; };
 		45C8B5DE1E01EBD70092F1E3 /* FileSizePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizePresenter.swift; sourceTree = "<group>"; };
 		45C8B5F61E01EF0F0092F1E3 /* Numeric_Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_Format.swift; sourceTree = "<group>"; };
@@ -645,12 +649,14 @@
 			isa = PBXGroup;
 			children = (
 				45C8B5D71E01EBD70092F1E3 /* AdaptiveFileSizePresenter.swift */,
-				45C8B5DA1E01EBD70092F1E3 /* DirectoryFileManager.swift */,
-				45C8B5DB1E01EBD70092F1E3 /* DirectoryFileManagerDefault.swift */,
-				45C8B5DC1E01EBD70092F1E3 /* FilePointer.swift */,
+				454D981A1E0865C1002B127E /* AppFileManager.swift */,
+				454D981B1E0865C1002B127E /* AppFileManagerDefault.swift */,
+				454D981C1E0865C1002B127E /* DirectoryFileManager.swift */,
+				454D981D1E0865C1002B127E /* DirectoryFileManagerDefault.swift */,
+				A260257A8C5B0CD06471B061678A8DC8 /* FileFinder.swift */,
 				45C8B5DD1E01EBD70092F1E3 /* FileSizeBytesPresenter.swift */,
 				45C8B5DE1E01EBD70092F1E3 /* FileSizePresenter.swift */,
-				A260257A8C5B0CD06471B061678A8DC8 /* FileFinder.swift */,
+				454D981E1E0865C1002B127E /* FilteredDirectoryFileManager.swift */,
 				D503715559B5A3BB8B9A16BAED45A547 /* MainBundleFileFinder.swift */,
 				51C0BE498FB4E6500B71D4D144F7F84D /* MainBundleImageFileFinder.swift */,
 			);
@@ -1573,6 +1579,7 @@
 				D2CCA4FBB4897A7B465EB11497B8DB02 /* ActionSheetCancelItem.swift in Sources */,
 				676DC5F3DF220A137864E7C1ECB79DED /* ActionSheetDismissStyle.swift in Sources */,
 				9D83F43C34141AC156AE8EB576EA49FA /* ActionSheetEnableItem.swift in Sources */,
+				454D98231E0865C1002B127E /* FilteredDirectoryFileManager.swift in Sources */,
 				2DDE11D38C19F001961FA1F55E7B9762 /* ActionSheetItem.swift in Sources */,
 				13FE643D8FE030716230DBAB2E2BED48 /* ActionSheetItemSection.swift in Sources */,
 				4555475D1E00AEEE00A9477A /* LoggingHintManager.swift in Sources */,
@@ -1590,6 +1597,7 @@
 				55740345AE527988250DD9EEE83CD084 /* Array_Group.swift in Sources */,
 				4555474D1E00A7E800A9477A /* Collection_Shuffle.swift in Sources */,
 				F85A4C7ACBEA45DF2EB56F0208BA8D28 /* AuthorizationService.swift in Sources */,
+				454D98201E0865C1002B127E /* AppFileManagerDefault.swift in Sources */,
 				81D696283C08778628B1D075E7226344 /* AutoSizeTableViewController.swift in Sources */,
 				76E7380AF549A7F4F88BDEDFCC420304 /* BiometricsAuthorizationService.swift in Sources */,
 				45E8877A1DFF52D00081A5C4 /* UINavigationBar_Transparent.swift in Sources */,
@@ -1598,6 +1606,7 @@
 				576D93E9D7208D09F7CF59926E4636D2 /* CLLocationCoordinate2D_Valid.swift in Sources */,
 				DDF1056D344C84D2EEAEAEE86AA10DA3 /* CLPlacemark_AddressDescription.swift in Sources */,
 				CE493CA52C0AAD92E34146090B765AA9 /* Coordinate.swift in Sources */,
+				454D981F1E0865C1002B127E /* AppFileManager.swift in Sources */,
 				3DC82365DCC33E931254908AC75BC280 /* Date_Compare.swift in Sources */,
 				E20300A040B5F53280B404CED31535AF /* Date_Init.swift in Sources */,
 				512D5275E7E56285EB8DE2D21765BCCD /* DateSerializer.swift in Sources */,
@@ -1606,10 +1615,10 @@
 				9CABE1BDD43451A1AD2D1D6B3EE35CF9 /* DeviceIdentifier.swift in Sources */,
 				45E887881DFF52D00081A5C4 /* UIView_HitTest.swift in Sources */,
 				10655FF09307FEADD5C2EE49B66136A3 /* FadingViewControllerTransition.swift in Sources */,
-				45C8B5E41E01EBD70092F1E3 /* FilePointer.swift in Sources */,
 				45E8877B1DFF52D00081A5C4 /* UIScrollView_Scroll.swift in Sources */,
 				4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */,
 				3FAE7AC38D1B762FE776C3684757EEDC /* FileFinder.swift in Sources */,
+				454D98211E0865C1002B127E /* DirectoryFileManager.swift in Sources */,
 				45E8876E1DFF52D00081A5C4 /* UIAlertController_Alert.swift in Sources */,
 				45E887921DFF52D00081A5C4 /* UIViewController_RequiredTextField.swift in Sources */,
 				4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */,
@@ -1654,7 +1663,6 @@
 				45E887911DFF52D00081A5C4 /* UIViewController_Nib.swift in Sources */,
 				99737FC61BD4C3A9A1454EDD1D48D09C /* MainBundleFileFinder.swift in Sources */,
 				87C3857B3E998D1DB71C07B17860A5BA /* MainBundleImageFileFinder.swift in Sources */,
-				45C8B5E31E01EBD70092F1E3 /* DirectoryFileManagerDefault.swift in Sources */,
 				CAD124D8BD4662D99E7267CF56EC64FF /* MapAnnotation.swift in Sources */,
 				422D4FE95E8BF23BB4AD8246C7BCE472 /* MapBadgeView.swift in Sources */,
 				45E887761DFF52D00081A5C4 /* UIImage_Padded.swift in Sources */,
@@ -1691,6 +1699,7 @@
 				DCD286125B4E18856D6A239B4195B164 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
 				45E887701DFF52D00081A5C4 /* UIApplication_Review.swift in Sources */,
 				2D683FDB851EA30A40D78B6E86B03C09 /* RemoteNotificationService.swift in Sources */,
+				454D98221E0865C1002B127E /* DirectoryFileManagerDefault.swift in Sources */,
 				00F99507946B62C1506A66ED38A56221 /* RemoteNotificationServiceDefault.swift in Sources */,
 				3245AC6F08975B87C7E3AA3F870EB4DD /* RoundButton.swift in Sources */,
 				D21FC638BA03DD344F2E568B65869978 /* SKProduct_PriceDescription.swift in Sources */,
@@ -1701,7 +1710,6 @@
 				5B5DE885E64E3C6AEED93C868469BB5F /* String_Contains.swift in Sources */,
 				3B536DBD45B55028494D4E38B277B31B /* String_Replace.swift in Sources */,
 				2D962432D87C32717E9C613634305C19 /* String_UrlEncode.swift in Sources */,
-				45C8B5E21E01EBD70092F1E3 /* DirectoryFileManager.swift in Sources */,
 				60B7436FDAD4BB332E9288D210D46105 /* SystemNotificationService.swift in Sources */,
 				C4C2DE5B06132652BC25B11E761FE836 /* SystemNotificationServiceDefault.swift in Sources */,
 				45E8877F1DFF52D00081A5C4 /* UITableView_Register.swift in Sources */,

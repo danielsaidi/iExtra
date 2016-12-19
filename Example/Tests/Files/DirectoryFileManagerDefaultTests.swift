@@ -2,8 +2,8 @@
 //  DirectoryFileManagerDefaultTests.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2015-11-15.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2016-12-19.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -14,23 +14,18 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
     
     override func spec() {
         
-        describe("default application file manager") {
+        describe("default directory file manager") {
             
-            var manager: DirectoryFileManager!
-            let fileNames = ["file1", "file2"]
-            
-            
-            func createFiles() {
-                fileNames.forEach { let _ = manager.createFile(withName: $0, contents: nil) }
-            }
-            
+            var fileManager: TestFileManager!
+            let url1 = URL(string: "http://test/fo.o")!
+            let url2 = URL(string: "http://test/ba.r")!
+            var manager: DirectoryFileManagerDefault!
+            var invalidManager: DirectoryFileManagerDefault!
             
             beforeEach {
-                manager = DirectoryFileManagerDefault(searchPathDirectory: .documentDirectory)
-            }
-            
-            afterEach {
-                fileNames.forEach { let _ = manager.removeFile(at: manager.directory.appendingPathComponent($0)) }
+                fileManager = TestFileManager()
+                manager = DirectoryFileManagerDefault(directory: .documentDirectory, fileManager: fileManager)
+                invalidManager = DirectoryFileManagerDefault(directoryUrl: url1, fileManager: fileManager)
             }
             
             
@@ -38,242 +33,254 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
             context("document folder url") {
                 
                 it("is resolved for test simulator") {
-                    let simulatorPattern = "Library/Developer/CoreSimulator/Devices"
-                    let simulatorMatch = manager.directory.path.contains(simulatorPattern)
-                    let devicePattern = "/var/mobile/Containers"
-                    let deviceMatch = manager.directory.path.contains(devicePattern)
-                    let match = simulatorMatch || deviceMatch
-                    
-                    expect(match).to(beTrue())
+                    let isDocumentDir = isDocumentDirectoryUrl(manager.directory)
+                    expect(isDocumentDir).to(beTrue())
                 }
             }
             
             
             context("when creating files") {
                 
+                it("fails if file could not be created") {
+                    let didCreate = manager.createFile(named: "fo.o", contents: nil)
+                    expect(didCreate).to(beFalse())
+                }
+                
                 it("can create empty file") {
-                    let name = "file1"
-                    let didCreate = manager.createFile(withName: name, contents: nil)
+                    let didCreate = manager.createFile(named: "ba.r", contents: nil)
                     expect(didCreate).to(beTrue())
+                    expect(fileManager.createdFileContent).to(beNil())
+                    expect(isDocumentDirectoryUrl(fileManager.createdFileUrl!)).to(beTrue())
+                    expect(fileManager.createdFileUrl?.lastPathComponent).to(equal("ba.r"))
                 }
                 
                 it("can create non-empty file") {
-                    let name = "file1"
-                    let didCreate = manager.createFile(withName: name, contents: Data())
+                    let data = "test".data(using: .utf8)
+                    let didCreate = manager.createFile(named: "ba.r", contents: data)
                     expect(didCreate).to(beTrue())
+                    expect(String(data: fileManager.createdFileContent!, encoding: .utf8)).to(equal("test"))
+                    expect(isDocumentDirectoryUrl(fileManager.createdFileUrl!)).to(beTrue())
+                    expect(fileManager.createdFileUrl?.lastPathComponent).to(equal("ba.r"))
                 }
             }
             
             
-            context("when checking if files exists at url") {
+            context("when checking if file exists") {
                 
                 it("finds existing file") {
-                    createFiles()
-                    let url = manager.directory.appendingPathComponent("file1")
-                    let exists = manager.fileExists(at: url)
-                    expect(exists).to(beTrue())
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    expect(manager.fileExists(named: "fo.o")).to(beTrue())
+                    expect(manager.fileExists(named: "ba.r")).to(beTrue())
                 }
                 
                 it("does not find non-existing file") {
-                    let url = manager.directory.appendingPathComponent("file1")
-                    let exists = manager.fileExists(at: url)
-                    expect(exists).to(beFalse())
+                    expect(manager.fileExists(named: "fo.o")).to(beFalse())
+                    expect(manager.fileExists(named: "ba.r")).to(beFalse())
                 }
             }
             
-            
-            context("when getting attributes of file at url") {
+    
+            context("when getting attributes for file") {
                 
                 it("returns nil if file does not exist") {
-                    let url = URL(string: "file:///foo/bar")!
-                    let attributes = manager.getAttributesForFile(at: url)
-                    
+                    let attributes = manager.getAttributesForFile(named: "ba.r")
                     expect(attributes).to(beNil())
                 }
                 
-                it("returns attributes if file exists") {
-                    createFiles()
-                    let url = manager.getUrlForFile(withName: "file1")!
-                    let attributes = manager.getAttributesForFile(at: url)
-                    
-                    expect(attributes).toNot(beNil())
+                it("returns nil if invalid file exists") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    fileManager.attributes = [.size : 40]
+                    let attributes = manager.getAttributesForFile(named: "fo.o")
+                    expect(attributes).to(beNil())
                 }
                 
-                it("returns valid attributes if file exists") {
-                    createFiles()
-                    let url = manager.getUrlForFile(withName: "file1")!
-                    let attributes = manager.getAttributesForFile(at: url)!
-                    let attribute = attributes[FileAttributeKey.size] as! UInt64
-                    expect(attribute).to(equal(0))
+                it("returns attributes if valid file exists") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    fileManager.attributes = [.size : 40]
+                    let attributes = manager.getAttributesForFile(named: "ba.r")
+                    expect(attributes?.count).to(equal(1))
                 }
             }
             
             
-            context("when getting invalid file pointers") {
+            context("when getting existing file names in collection") {
                 
-                it("returns no pointers if all files exist") {
-                    createFiles()
-                    let pointers = [TestPointer("file1"), TestPointer("file2")]
-                    let result = manager.getInvalidFilePointers(in: pointers)
-                    
-                    expect(result.count).to(equal(0))
+                it("returns no file names if filder does not exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = invalidManager.getExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(0))
                 }
                 
-                it("returns all pointers if no files exist") {
-                    let pointers = [TestPointer("file1"), TestPointer("file2")]
-                    let result = manager.getInvalidFilePointers(in: pointers)
-                    let fileNames = result.map { $0.fileName }
-                    
-                    expect(result.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
+                it("returns no file names if no files exist") {
+                    let references = manager.getExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(0))
                 }
                 
-                it("returns some pointers if some files exist") {
-                    createFiles()
-                    let pointers = [TestPointer("file1"), TestPointer("foo")]
-                    let result = manager.getInvalidFilePointers(in: pointers)
-                    
-                    expect(result.count).to(equal(1))
-                    expect(result.first!.fileName).to(equal("foo"))
-                }
-            }
-            
-            
-            context("when getting file urls") {
-                
-                it("returns urls for existing files") {
-                    createFiles()
-                    let urls = manager.getFileUrls()
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
+                it("returns single existing file") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getExistingFileNames(in: ["fo.o", "baz"])
+                    expect(references.count).to(equal(1))
+                    expect(references.first).to(equal("fo.o"))
                 }
                 
-                it("returns no urls for no existing files") {
-                    let urls = manager.getFileUrls()
-                    expect(urls.count).to(equal(0))
+                it("returns multiple existing files") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(2))
+                    expect(references.first).to(equal("fo.o"))
+                    expect(references.last).to(equal("ba.r"))
+                }
+                
+                it("returns no file names if none exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getExistingFileNames(in: ["fo.ol", "baz"])
+                    expect(references.count).to(equal(0))
                 }
             }
             
             
-            context("when getting file urls matching pattern") {
+            context("when getting file names") {
                 
-                it("returns single match if single file matches single pattern") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["file1"])
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(1))
-                    expect(fileNames).to(contain("file1"))
+                it("returns no file names if folder does not exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = invalidManager.getFileNames()
+                    expect(fileNames.count).to(equal(0))
                 }
                 
-                it("returns multiple matches if multiple files match single pattern") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["file"])
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
+                it("returns no file names if no files exist") {
+                    let fileNames = manager.getFileNames()
+                    expect(fileNames.count).to(equal(0))
                 }
                 
-                it("returns single match if single file matches multiple patterns") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["file1", "foo"])
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(1))
-                    expect(fileNames).to(contain("file1"))
-                }
-                
-                it("returns multiple matches if multiple files match multiple patterns") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["file1", "file2"])
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
-                }
-                
-                it("returns case insensitive matches") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["fiLe1", "FilE2"])
-                    let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
-                }
-                
-                it("returns no match if no files matches single pattern") {
-                    createFiles()
-                    let urls = manager.getFileUrls(matching: ["foo"])
-                    expect(urls.count).to(equal(0))
-                }
-                
-                it("returns no match if no files matches multiple pattern") {
-                    let urls = manager.getFileUrls(matching: ["foo", "bar"])
-                    expect(urls.count).to(equal(0))
+                it("returns names of existing files") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = manager.getFileNames()
+                    expect(fileNames.count).to(equal(2))
+                    expect(fileNames.first).to(equal(url1.lastPathComponent))
+                    expect(fileNames.last).to(equal(url2.lastPathComponent))
                 }
             }
             
             
-            context("when getting size of file at url") {
+            context("when getting file names matching pattern") {
+                
+                it("returns no file names if folder does not exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = invalidManager.getFileNames(matching: [""])
+                    expect(fileNames.count).to(equal(0))
+                }
+                
+                it("returns no file names if no files exist") {
+                    let fileNames = manager.getFileNames(matching: [""])
+                    expect(fileNames.count).to(equal(0))
+                }
+                
+                it("returns single file name matching single case insensitive pattern") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = manager.getFileNames(matching: ["fo"])
+                    expect(fileNames.count).to(equal(1))
+                    expect(fileNames.first).to(equal(url1.lastPathComponent))
+                }
+                
+                it("returns single file name matching one of several case insensitive patterns") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = manager.getFileNames(matching: ["fAo", "ba"])
+                    expect(fileNames.count).to(equal(1))
+                    expect(fileNames.first).to(equal(url2.lastPathComponent))
+                }
+                
+                it("returns many file names matching many case insensitive patterns") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let fileNames = manager.getFileNames(matching: ["fo", "ba"])
+                    expect(fileNames.count).to(equal(2))
+                    expect(fileNames.first).to(equal(url1.lastPathComponent))
+                    expect(fileNames.last).to(equal(url2.lastPathComponent))
+                }
+            }
+            
+            
+            context("when getting non-existing file names in collection") {
+                
+                it("returns all file names if folder does not exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = invalidManager.getNonExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(2))
+                    expect(references.first).to(equal("fo.o"))
+                    expect(references.last).to(equal("ba.r"))
+                }
+                
+                it("returns all file names if no files exist") {
+                    let references = manager.getNonExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(2))
+                    expect(references.first).to(equal("fo.o"))
+                    expect(references.last).to(equal("ba.r"))
+                }
+                
+                it("returns single non-existing file names") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getNonExistingFileNames(in: ["fo.o", "baz"])
+                    expect(references.count).to(equal(1))
+                    expect(references.first).to(equal("baz"))
+                }
+                
+                it("returns multiple non-existing file names") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getNonExistingFileNames(in: ["fo.ol", "baz"])
+                    expect(references.count).to(equal(2))
+                    expect(references.first).to(equal("fo.ol"))
+                    expect(references.last).to(equal("baz"))
+                }
+                
+                it("returns no file names if all exist") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let references = manager.getNonExistingFileNames(in: ["fo.o", "ba.r"])
+                    expect(references.count).to(equal(0))
+                }
+            }
+            
+            
+            context("when getting size of file") {
                 
                 it("returns nil if file does not exist") {
-                    let url = URL(string: "file:///foo/bar")!
-                    let size = manager.getSizeOfFile(at: url)
-                    
+                    let size = manager.getSizeOfFile(named: "ba.r")
                     expect(size).to(beNil())
                 }
                 
-                it("returns zero size if empty file exists") {
-                    createFiles()
-                    let url = manager.getUrlForFile(withName: "file1")!
-                    let size = manager.getSizeOfFile(at: url)
-                    
-                    expect(size).to(equal(0))
+                it("returns nil if invalid file exists") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    fileManager.attributes = [.size : 40]
+                    let size = manager.getSizeOfFile(named: "fo.o")
+                    expect(size).to(beNil())
                 }
                 
-                it("returns non-zero size if empty file exists") {
-                    let fileName = fileNames.first!
-                    let content = "content".data(using: .utf8)
-                    let _ = manager.createFile(withName: fileName, contents: content)
-                    let url = manager.getUrlForFile(withName: fileName)!
-                    let size = manager.getSizeOfFile(at: url)
-                    
-                    expect(size).to(equal(7))
+                it("returns size if valid file exists") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    fileManager.attributes = [.size : UInt64(40)]
+                    let size = manager.getSizeOfFile(named: "ba.r")
+                    expect(size).to(equal(40))
                 }
             }
             
             
-            context("when getting unreferenced file urls") {
+            context("when getting size of files matching") {
                 
-                it("returns no files if all files are referred") {
-                    createFiles()
-                    let pointers = fileNames.map { TestPointer($0) }
-                    let result = manager.getUnreferencedFilesUrls(for: pointers)
-                    
-                    expect(result.count).to(equal(0))
+                it("returns zero if no files exist") {
+                    let attributes = manager.getSizeOfFiles()
+                    expect(attributes).to(equal(0))
                 }
                 
-                it("returns all files if no file is referred") {
-                    createFiles()
-                    let pointers = [TestPointer("foo.mp3")]
-                    let result = manager.getUnreferencedFilesUrls(for: pointers)
-                    
-                    expect(result.count).to(equal(fileNames.count))
-                    let fileNames = result.map { $0.lastPathComponent }
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
+                it("returns zero for no file size") {
+                    fileManager.fileSize = 0
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let size = manager.getSizeOfFiles()
+                    expect(size).to(equal(0))
                 }
                 
-                it("returns some files if some files are referred") {
-                    createFiles()
-                    let pointers = [TestPointer("foo.mp3"), TestPointer("file2")]
-                    let result = manager.getUnreferencedFilesUrls(for: pointers)
-                    
-                    expect(result.count).to(equal(1))
-                    let fileNames = result.map { $0.lastPathComponent }
-                    expect(fileNames).to(contain("file1"))
+                it("returns total file size for all files") {
+                    fileManager.fileSize = 10
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let size = manager.getSizeOfFiles()
+                    expect(size).to(equal(20))
                 }
             }
             
@@ -281,67 +288,72 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
             context("when getting url for file") {
                 
                 it("returns url if file exists") {
-                    createFiles()
-                    let name = "file1"
-                    let url = manager.getUrlForFile(withName: name)!
-                    expect(url.lastPathComponent).to(equal(name))
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    expect(manager.getUrlForFile(named: "fo.o")).to(equal(url1))
+                    expect(manager.getUrlForFile(named: "ba.r")).to(equal(url2))
                 }
                 
                 it("returns no url if file does not exist") {
-                    let name = "file1"
-                    let url = manager.getUrlForFile(withName: name)
+                    let url = manager.getUrlForFile(named: "fo.o")
                     expect(url).to(beNil())
                 }
             }
             
             
-            context("when getting valid file pointers") {
+            context("when getting unreferenced file names") {
                 
-                it("returns all pointers if all files exist") {
-                    createFiles()
-                    let pointers = [TestPointer("file1"), TestPointer("file2")]
-                    let result = manager.getValidFilePointers(in: pointers)
-                    let fileNames = result.map { $0.fileName }
-                    
-                    expect(result.count).to(equal(2))
-                    expect(fileNames).to(contain("file1"))
-                    expect(fileNames).to(contain("file2"))
+                it("returns no file names for non-existing folder") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let urls = invalidManager.getUnreferencedFileNames(forReferences: ["fo.o", "ba.r"])
+                    expect(urls.count).to(equal(0))
                 }
                 
-                it("returns no pointers if no files exist") {
-                    let pointers = [TestPointer("file1"), TestPointer("file2")]
-                    let result = manager.getValidFilePointers(in: pointers)
-                    
-                    expect(result.count).to(equal(0))
+                it("returns no file names for no existing files") {
+                    let urls = manager.getUnreferencedFileNames(forReferences: ["fo.o", "ba.r"])
+                    expect(urls.count).to(equal(0))
                 }
                 
-                it("returns some pointers if some files exist") {
-                    createFiles()
-                    let pointers = [TestPointer("file1"), TestPointer("foo")]
-                    let result = manager.getValidFilePointers(in: pointers)
-                    
-                    expect(result.count).to(equal(1))
-                    expect(result.first!.fileName).to(equal("file1"))
+                it("returns single unreferenced file name") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let urls = manager.getUnreferencedFileNames(forReferences: ["fo.o"])
+                    expect(urls.count).to(equal(1))
+                    expect(urls.first).to(equal(url2.lastPathComponent))
+                }
+                
+                it("returns many unreferenced file names") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let urls = manager.getUnreferencedFileNames(forReferences: ["baz"])
+                    expect(urls.count).to(equal(2))
+                    expect(urls.first).to(equal(url1.lastPathComponent))
+                    expect(urls.last).to(equal(url2.lastPathComponent))
+                }
+                
+                it("returns no file names if all names are included in reference list") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let urls = manager.getUnreferencedFileNames(forReferences: ["fo.o", "ba.r"])
+                    expect(urls.count).to(equal(0))
                 }
             }
             
             
-            context("when removing file at url") {
+            context("when removing file") {
                 
-                it("can remove existing file") {
-                    let name = "foo"
-                    let didCreate = manager.createFile(withName: name, contents: nil)
-                    let url = manager.directory.appendingPathComponent(name)
-                    let didRemove = manager.removeFile(at: url)
-                    expect(didCreate).to(beTrue())
-                    expect(didRemove).to(beTrue())
+                it("fails if file could not be removed") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let didCreate = manager.removeFile(named: "fo.o")
+                    expect(didCreate).to(beFalse())
                 }
                 
-                it("can not remove non-existing file") {
-                    let name = "foo"
-                    let url = manager.directory.appendingPathComponent(name)
-                    let didRemove = manager.removeFile(at: url)
-                    expect(didRemove).to(beFalse())
+                it("fails if file does not exist") {
+                    let didCreate = manager.removeFile(named: "ba.r")
+                    expect(didCreate).to(beFalse())
+                }
+                
+                it("can remove existing file") {
+                    fileManager.contentsOfDirectory = [url1, url2]
+                    let didCreate = manager.removeFile(named: "ba.r")
+                    expect(didCreate).to(beTrue())
+                    expect(fileManager.removedFileUrl!).to(equal(url2))
                 }
             }
         }
@@ -349,14 +361,55 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
 }
 
 
-fileprivate class TestPointer: NSObject, FilePointer {
-    
-    init(_ fileName: String) {
-        self.fileName = fileName
-        super.init()
-    }
-    
-    let fileName: String
+
+fileprivate func isDocumentDirectoryUrl(_ url: URL) -> Bool {
+    let simulatorPattern = "Library/Developer/CoreSimulator/Devices"
+    let simulatorMatch = url.path.contains(simulatorPattern)
+    let devicePattern = "/var/mobile/Containers"
+    let deviceMatch = url.path.contains(devicePattern)
+    return simulatorMatch || deviceMatch
+}
+
+fileprivate func isValidTestFileUrl(_ url: URL) -> Bool {
+    return !url.absoluteString.contains("fo.o")
 }
 
 
+
+fileprivate class TestFileManager: AppFileManager {
+    
+    var attributes: [FileAttributeKey : Any]?
+    var contentsOfDirectory = [URL]()
+    var createdFileUrl: URL?
+    var createdFileContent: Data?
+    var fileSize: UInt64?
+    var removedFileUrl: URL?
+    
+    func createFile(at url: URL, contents: Data?) -> Bool {
+        guard isValidTestFileUrl(url) else { return false }
+        createdFileUrl = url
+        createdFileContent = contents
+        return true
+    }
+    
+    func getAttributesForFile(at url: URL) -> [FileAttributeKey : Any]? {
+        return isValidTestFileUrl(url) ? attributes : nil
+    }
+    
+    func getContentsOfDirectory(at url: URL) -> [URL] {
+        return isDocumentDirectoryUrl(url) ? contentsOfDirectory : [URL]()
+    }
+    
+    func removeFile(at url: URL) -> Bool {
+        guard isValidTestFileUrl(url) else { return false }
+        removedFileUrl = url
+        return true
+    }
+    
+    
+    
+    func fileExists(at url: URL) -> Bool { return false }
+    
+    func getSizeOfFile(at url: URL) -> UInt64? { return fileSize ?? 0 }
+    
+}
