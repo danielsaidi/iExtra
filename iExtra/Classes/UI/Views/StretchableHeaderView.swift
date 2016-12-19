@@ -40,6 +40,12 @@ open class StretchableHeaderView: UIView {
         setup()
     }
     
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let scrollView = superview as? UIScrollView else { return }
+        handleScroll(in: scrollView)
+    }
+    
     
     
     // MARK: - Properties
@@ -61,7 +67,8 @@ open class StretchableHeaderView: UIView {
         tableView.addSubview(self)
         tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
         tableView.contentOffset = CGPoint(x: 0, y: -height)
-        baseHeight = height
+        baseHeight = baseHeight ?? height
+        handleScroll(in: tableView)
     }
 }
 
