@@ -22,6 +22,6 @@ public extension UIImage {
         draw(in: rect, blendMode: .destinationIn, alpha: 1.0)
         let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return tintedImage!
+        return tintedImage ?? UIImage()
     }
 }

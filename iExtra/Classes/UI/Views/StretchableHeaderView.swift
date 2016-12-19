@@ -60,7 +60,8 @@ open class StretchableHeaderView: UIView {
         frame = getNewFrame(in: scrollView)
     }
     
-    open func setup(in tableView: UITableView) {
+    open func setup(in tableView: UITableView?) {
+        guard let tableView = tableView else { return }
         guard self == tableView.tableHeaderView else { return }
         let height = frame.size.height
         tableView.tableHeaderView = UIView.empty
