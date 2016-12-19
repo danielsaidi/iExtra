@@ -57,6 +57,7 @@
 		432A07FD61CD6DC9DDEF9FBD30C7B3B7 /* STPopupActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7284FA82C62012BD34B6E7DBD18F4F0 /* STPopupActionSheetPresenter.swift */; };
 		43B99F06587ACD844A4D09A0ED9FB66B /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14CFE6A9EC3BF50E062F6AEBCF0A1040 /* Stringers.swift */; };
 		45256E062C6E65C9BA796625DACBEAA8 /* ThreadingOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3196B8268BA1ACCFCAD9C8EDD16597 /* ThreadingOperator.swift */; };
+		454D98191E0862E5002B127E /* StretchableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D98181E0862E5002B127E /* StretchableHeaderView.swift */; };
 		4555474D1E00A7E800A9477A /* Collection_Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */; };
 		4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547581E00AEEE00A9477A /* HintManager.swift */; };
 		4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547591E00AEEE00A9477A /* HintManagerBase.swift */; };
@@ -336,6 +337,7 @@
 		41ACB6E3405688E8384079DA0C941991 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41E69B8A93FF8FF4F27B01D2146E962E /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		43DBA69638C49ABC74C8E560383BEFAC /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
+		454D98181E0862E5002B127E /* StretchableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchableHeaderView.swift; sourceTree = "<group>"; };
 		4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection_Shuffle.swift; sourceTree = "<group>"; };
 		455547581E00AEEE00A9477A /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		455547591E00AEEE00A9477A /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
@@ -1165,6 +1167,7 @@
 				419CE4967423F90720E832111A069049 /* AutoSizeTableViewController.swift */,
 				F830BDAA1F86D919213AF2321FC5C6E1 /* RoundButton.swift */,
 				EBAA3B67080AC82FD70C0CD594D45DD1 /* FloatingMenu */,
+				454D98181E0862E5002B127E /* StretchableHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1672,6 +1675,7 @@
 				1E93D3C0580FCC86F063ABFFA6DFD7DA /* NavigationService.swift in Sources */,
 				45E887771DFF52D00081A5C4 /* UIImage_Resized.swift in Sources */,
 				3370D59C6856E653961DDAA1241CEB9A /* NavigationServiceActionSheet.swift in Sources */,
+				454D98191E0862E5002B127E /* StretchableHeaderView.swift in Sources */,
 				45E8878F1DFF52D00081A5C4 /* UIViewController_Alert.swift in Sources */,
 				B0B80B71FF3C2C05C7F3B92799546C8A /* NoCancellingSearchBar.swift in Sources */,
 				0A49C37BCEB7593765E72C353FF8C2D1 /* NoCancellingSearchController.swift in Sources */,
