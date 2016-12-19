@@ -63,6 +63,7 @@
 		454D98211E0865C1002B127E /* DirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981C1E0865C1002B127E /* DirectoryFileManager.swift */; };
 		454D98221E0865C1002B127E /* DirectoryFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981D1E0865C1002B127E /* DirectoryFileManagerDefault.swift */; };
 		454D98231E0865C1002B127E /* FilteredDirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D981E1E0865C1002B127E /* FilteredDirectoryFileManager.swift */; };
+		454D98361E088792002B127E /* UIButton_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454D98351E088792002B127E /* UIButton_Init.swift */; };
 		4555474D1E00A7E800A9477A /* Collection_Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */; };
 		4555475B1E00AEEE00A9477A /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547581E00AEEE00A9477A /* HintManager.swift */; };
 		4555475C1E00AEEE00A9477A /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455547591E00AEEE00A9477A /* HintManagerBase.swift */; };
@@ -345,6 +346,7 @@
 		454D981C1E0865C1002B127E /* DirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManager.swift; sourceTree = "<group>"; };
 		454D981D1E0865C1002B127E /* DirectoryFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefault.swift; sourceTree = "<group>"; };
 		454D981E1E0865C1002B127E /* FilteredDirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredDirectoryFileManager.swift; sourceTree = "<group>"; };
+		454D98351E088792002B127E /* UIButton_Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Init.swift; sourceTree = "<group>"; };
 		4555474C1E00A7E800A9477A /* Collection_Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection_Shuffle.swift; sourceTree = "<group>"; };
 		455547581E00AEEE00A9477A /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		455547591E00AEEE00A9477A /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
@@ -610,6 +612,7 @@
 			children = (
 				45E8873F1DFF52D00081A5C4 /* UIAlertController */,
 				45E887421DFF52D00081A5C4 /* UIApplication */,
+				454D98351E088792002B127E /* UIButton_Init.swift */,
 				45E887451DFF52D00081A5C4 /* UIColor */,
 				45E887481DFF52D00081A5C4 /* UIEdgeInsets_Init.swift */,
 				45E887491DFF52D00081A5C4 /* UIImage */,
@@ -1299,12 +1302,12 @@
 		F8B22EC8589BA8DB212B010558011261 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				99C5C6AA97545C543B2C169F3FF760C9 /* UIAlertControllerPresenter.swift */,
 				5CF32C969C71048F408AEB009B9D4B0E /* ActionSheets */,
 				02D5868C3BBBA4AE2A660E5C2C513801 /* Extensions */,
 				80B9042326665122AFCF948D5466D7EE /* Parallax */,
 				7BB3207489D56989A9833FE4BF3EBAD2 /* Search */,
 				D2BE0296FA184DA55D14A41523F2BC1F /* Transitions */,
+				99C5C6AA97545C543B2C169F3FF760C9 /* UIAlertControllerPresenter.swift */,
 				D0CB3499C8571F6C6A6E4F306E388825 /* Views */,
 			);
 			path = UI;
@@ -1578,6 +1581,7 @@
 				87B453C4283F4BBFE5478B107F634291 /* ActionSheetAppearance.swift in Sources */,
 				D2CCA4FBB4897A7B465EB11497B8DB02 /* ActionSheetCancelItem.swift in Sources */,
 				676DC5F3DF220A137864E7C1ECB79DED /* ActionSheetDismissStyle.swift in Sources */,
+				454D98361E088792002B127E /* UIButton_Init.swift in Sources */,
 				9D83F43C34141AC156AE8EB576EA49FA /* ActionSheetEnableItem.swift in Sources */,
 				454D98231E0865C1002B127E /* FilteredDirectoryFileManager.swift in Sources */,
 				2DDE11D38C19F001961FA1F55E7B9762 /* ActionSheetItem.swift in Sources */,
