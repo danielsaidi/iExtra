@@ -35,6 +35,8 @@ open class StretchableHeaderView: UIView {
     
     // MARK: - Properties
     
+    public private(set) var displayHeightScaleFactor: CGFloat = 1
+    
     fileprivate var initialHeight: CGFloat!
     
     
@@ -44,8 +46,9 @@ open class StretchableHeaderView: UIView {
     open func handleScroll(in scrollView: UIScrollView) {
         clipsToBounds = true
         setup(in: scrollView as? UITableView)
-        guard initialHeight != nil else { return }
+        guard let initialHeight = initialHeight else { return }
         frame = getNewFrame(in: scrollView)
+        displayHeightScaleFactor = -scrollView.contentOffset.y / initialHeight
     }
     
     open func setup(in tableView: UITableView?) {
