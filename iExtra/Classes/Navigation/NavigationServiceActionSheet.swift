@@ -1,5 +1,5 @@
 //
-//  NavigationServiceAlert.swift
+//  ExternalMapServicePicker.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public final class NavigationServiceAlert: NSObject {
+public final class ExternalMapServicePicker: NSObject {
     
     
     // MARK: Localizable properties
@@ -22,24 +22,27 @@ public final class NavigationServiceAlert: NSObject {
     
     // MARK: Public functions
     
-    public static func present(in vc: UIViewController, completion: @escaping ((_ service: NavigationService?) -> Void)) {
+    public static func present(in vc: UIViewController, from: UIView?, completion: @escaping ((_ service: ExternalMapService?) -> Void)) {
         
-        let title = NavigationServiceAlert.title
-        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let title = ExternalMapServicePicker.title
+        let style: UIAlertControllerStyle = from == nil ? .alert : .actionSheet
         
-        let appleTitle = NavigationServiceAlert.appleButtonTitle
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: style)
+        alert.sourceView = from
+        
+        let appleTitle = ExternalMapServicePicker.appleButtonTitle
         let appleAction = UIAlertAction(title: appleTitle, style: .default) { action in
-            completion(AppleMapsNavigationService())
+            completion(AppleMapsService())
         }
         alert.addAction(appleAction)
         
-        let googleTitle = NavigationServiceAlert.googleButtonTitle
+        let googleTitle = ExternalMapServicePicker.googleButtonTitle
         let googleAction = UIAlertAction(title: googleTitle, style: .default) { action in
-            completion(GoogleMapsNavigationService())
+            completion(GoogleMapsService())
         }
         alert.addAction(googleAction)
         
-        let cancelTitle = NavigationServiceAlert.cancelButtonTitle
+        let cancelTitle = ExternalMapServicePicker.cancelButtonTitle
         let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel) { action in
             completion(nil)
         }
