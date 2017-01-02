@@ -35,7 +35,8 @@ open class StretchableHeaderView: UIView {
     
     // MARK: - Properties
     
-    public private(set) var displayHeightScaleFactor: CGFloat = 1
+    public fileprivate(set) var displayHeight: CGFloat = 0
+    public fileprivate(set) var displayHeightFactor: CGFloat = 1
     
     fileprivate var initialHeight: CGFloat!
     
@@ -48,19 +49,16 @@ open class StretchableHeaderView: UIView {
         setup(in: scrollView as? UITableView)
         guard let initialHeight = initialHeight else { return }
         frame = getNewFrame(in: scrollView)
-        displayHeightScaleFactor = -scrollView.contentOffset.y / initialHeight
+        updateDisplayHeight(in: scrollView)
     }
     
     open func setup(in tableView: UITableView?) {
         guard initialHeight == nil else { return }
         guard let tableView = tableView else { return }
         guard self == tableView.tableHeaderView else { return }
-        let height = frame.size.height
-        tableView.tableHeaderView = UIView.empty
-        tableView.addSubview(self)
-        tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -height)
-        initialHeight = initialHeight ?? height
+        initialHeight = frame.size.height
+        autoresizingMask = [.flexibleWidth]
+        setup(tableView: tableView)
         handleScroll(in: tableView)
     }
 }
@@ -82,5 +80,18 @@ fileprivate extension StretchableHeaderView {
         rect.origin.y = scrollView.contentOffset.y
         rect.size.height = -scrollView.contentOffset.y
         return rect
+    }
+    
+    func updateDisplayHeight(in scrollView: UIScrollView) {
+        displayHeight = max(0, -scrollView.contentOffset.y)
+        displayHeightFactor = displayHeight / initialHeight
+    }
+    
+    func setup(tableView: UITableView) {
+        let height = frame.size.height
+        tableView.tableHeaderView = UIView.empty
+        tableView.addSubview(self)
+        tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
+        tableView.contentOffset = CGPoint(x: 0, y: -height)
     }
 }
