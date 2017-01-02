@@ -31,8 +31,8 @@ class UIView_EmptyTests: QuickSpec {
             it("has minimum size") {
                 let view = UIView.empty
                 let size = view.frame.size
-                expect(size.width).to(equal(1))
-                expect(size.height).to(equal(1))
+                expect(size.width).to(equal(0.01))
+                expect(size.height).to(equal(0.01))
             }
         }
     }
