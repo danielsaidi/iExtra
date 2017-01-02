@@ -47,7 +47,8 @@ open class AppFileManagerDefault: NSObject, AppFileManager {
     
     open func getSizeOfFile(at url: URL) -> UInt64? {
         guard let attributes = getAttributesForFile(at: url) else { return nil }
-        return attributes[FileAttributeKey.size] as? UInt64
+        let number = attributes[FileAttributeKey.size] as? NSNumber
+        return number?.uint64Value
     }
     
     open func removeFile(at url: URL) -> Bool {

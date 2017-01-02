@@ -101,7 +101,7 @@ class AppFileManagerDefaultTests: QuickSpec {
                 it("returns valid attributes if file exists") {
                     createFiles()
                     let attributes = manager.getAttributesForFile(at: url(for: "file1"))!
-                    let attribute = attributes[FileAttributeKey.size] as! UInt64
+                    let attribute = attributes[FileAttributeKey.size] as? NSNumber
                     expect(attribute).to(equal(0))
                 }
             }
