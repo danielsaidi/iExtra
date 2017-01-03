@@ -246,16 +246,16 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
                     expect(size).to(beNil())
                 }
                 
-                it("returns nil if invalid file exists") {
+                it("returns zero size from manager") {
                     fileManager.contentsOfDirectory = [url1, url2]
-                    fileManager.attributes = [.size : 40]
+                    fileManager.fileSize = 0
                     let size = manager.getSizeOfFile(named: "fo.o")
-                    expect(size).to(beNil())
+                    expect(size).to(equal(0))
                 }
                 
-                it("returns size if valid file exists") {
+                it("returns non-zero size from manager") {
                     fileManager.contentsOfDirectory = [url1, url2]
-                    fileManager.attributes = [.size : UInt64(40)]
+                    fileManager.fileSize = 40
                     let size = manager.getSizeOfFile(named: "ba.r")
                     expect(size).to(equal(40))
                 }
@@ -400,6 +400,8 @@ fileprivate class TestFileManager: AppFileManager {
         return isDocumentDirectoryUrl(url) ? contentsOfDirectory : [URL]()
     }
     
+    func getSizeOfFile(at url: URL) -> UInt64? { return fileSize }
+    
     func removeFile(at url: URL) -> Bool {
         guard isValidTestFileUrl(url) else { return false }
         removedFileUrl = url
@@ -407,9 +409,6 @@ fileprivate class TestFileManager: AppFileManager {
     }
     
     
-    
     func fileExists(at url: URL) -> Bool { return false }
-    
-    func getSizeOfFile(at url: URL) -> UInt64? { return fileSize ?? 0 }
     
 }

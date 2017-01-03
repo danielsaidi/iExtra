@@ -75,8 +75,8 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     }
     
     open func getSizeOfFile(named name: String) -> UInt64? {
-        guard let attributes = getAttributesForFile(named: name) else { return nil }
-        return attributes[.size] as? UInt64
+        guard let url = getUrlForFile(named: name) else { return nil }
+        return manager.getSizeOfFile(at: url)
     }
     
     open func getSizeOfFiles() -> UInt64 {
