@@ -13,10 +13,11 @@ public final class ExternalMapServicePicker: NSObject {
     
     // MARK: Localizable properties
     
-    static var appleButtonTitle = "Apple Maps"
-    static var cancelButtonTitle = "Cancel"
-    static var googleButtonTitle = "Google Maps"
-    static var title = "Which app would you like to use?"
+    public static var appleButtonTitle = "Apple Maps"
+    public static var cancelButtonTitle = "Cancel"
+    public static var googleButtonTitle = "Google Maps"
+    public static var title = "Which app would you like to use?"
+    public static var message: String? = nil
     
     
     
@@ -25,9 +26,10 @@ public final class ExternalMapServicePicker: NSObject {
     public static func present(in vc: UIViewController, from: UIView?, completion: @escaping ((_ service: ExternalMapService?) -> Void)) {
         
         let title = ExternalMapServicePicker.title
+        let message = ExternalMapServicePicker.message
         let style: UIAlertControllerStyle = from == nil ? .alert : .actionSheet
         
-        let alert = UIAlertController(title: title, message: nil, preferredStyle: style)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         alert.sourceView = from
         
         let appleTitle = ExternalMapServicePicker.appleButtonTitle
