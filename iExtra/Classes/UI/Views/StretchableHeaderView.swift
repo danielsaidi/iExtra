@@ -20,78 +20,135 @@
 import UIKit
 
 
-open class StretchableHeaderView: UIView {
 
+open class StretchableTableViewHeader: StretchableScrollViewHeader {
+    
+    
+    // MARK: - Properties
+    
+    public var shouldAutosizeToFitSubview = false
+
+    
+    
+    // MARK: - Functions
+    
+    open override func handleScroll(in scrollView: UIScrollView) {
+        setup(in: scrollView)
+        guard let baseHeight = baseHeight else { return }
+        frame = getNewFrame(in: scrollView)
+        super.handleScroll(in: scrollView)
+    }
+    
+    open override func setup(in scrollView: UIScrollView) {
+        guard self.scrollView == nil else { return }
+        guard let tableView = scrollView as? UITableView else { return }
+        guard self == tableView.tableHeaderView else { return }
+        autoresizingMask = [.flexibleWidth]
+        tableView.tableHeaderView = UIView.empty
+        tableView.addSubview(self)
+        super.setup(in: scrollView)
+    }
+}
+
+
+
+// MARK: - Internal Functions
+
+extension StretchableTableViewHeader {
+    
+    func getNewFrame(in scrollView: UIScrollView) -> CGRect {
+        let width = scrollView.bounds.width
+        var rect = CGRect(x: 0, y: -baseHeight, width: width, height: baseHeight)
+        guard isStretching else { return rect }
+        rect.origin.y = scrollView.contentOffset.y
+        rect.size.height = -scrollView.contentOffset.y
+        return rect
+    }
+    
+    override func handleAutoSizing() {
+        guard shouldAutosizeToFitSubview else { return }
+        guard let subview = subviews.first else { return }
+        let height = subview.frame.size.height
+        guard baseHeight != height else { return }
+        frame.size.height = height
+        super.handleAutoSizing()
+    }
+}
+
+
+
+
+open class StretchableScrollViewHeader: UIView {
+    
     
     // MARK: - View Lifecycle
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        guard let scrollView = superview as? UIScrollView else { return }
+        clipsToBounds = true
+        guard let scrollView = scrollView else { return }
         handleScroll(in: scrollView)
+        handleAutoSizing()
     }
     
     
     
     // MARK: - Properties
     
-    public fileprivate(set) var displayHeight: CGFloat = 0
-    public fileprivate(set) var displayHeightFactor: CGFloat = 1
+    public fileprivate(set) var baseHeight: CGFloat!
     
-    fileprivate var initialHeight: CGFloat!
+    public var displayHeight: CGFloat {
+        guard let view = scrollView else { return frame.size.height }
+        return max(0, -view.contentOffset.y)
+    }
+    
+    public var displayHeightFactor: CGFloat {
+        guard let view = scrollView else { return 1 }
+        return displayHeight / baseHeight
+    }
+    
+    public var isStretching: Bool {
+        guard let view = scrollView else { return false }
+        return view.contentOffset.y < -baseHeight
+    }
+    
+    
+    
+    // MARK: - Properties
+    
+    fileprivate weak var scrollView: UIScrollView?
     
     
     
     // MARK: - Public Functions
     
     open func handleScroll(in scrollView: UIScrollView) {
-        clipsToBounds = true
-        setup(in: scrollView as? UITableView)
-        guard let initialHeight = initialHeight else { return }
-        frame = getNewFrame(in: scrollView)
-        updateDisplayHeight(in: scrollView)
+        guard superview != scrollView else { return }
+        /////
     }
     
-    open func setup(in tableView: UITableView?) {
-        guard initialHeight == nil else { return }
-        guard let tableView = tableView else { return }
-        guard self == tableView.tableHeaderView else { return }
-        initialHeight = frame.size.height
-        autoresizingMask = [.flexibleWidth]
-        setup(tableView: tableView)
-        handleScroll(in: tableView)
+    open func setup(in scrollView: UIScrollView) {
+        self.scrollView = scrollView
+        updateBaseHeight()
+        handleScroll(in: scrollView)
     }
 }
 
 
 
-// MARK: - Private Functions
+// MARK: - Internal Functions
 
-fileprivate extension StretchableHeaderView {
+extension StretchableScrollViewHeader {
     
-    func isStretching(in scrollView: UIScrollView) -> Bool {
-        return scrollView.contentOffset.y < -initialHeight
+    func handleAutoSizing() {
+        guard baseHeight != frame.size.height else { return }
+        updateBaseHeight()
     }
     
-    func getNewFrame(in scrollView: UIScrollView) -> CGRect {
-        let width = scrollView.bounds.width
-        var rect = CGRect(x: 0, y: -initialHeight, width: width, height: initialHeight)
-        guard isStretching(in: scrollView) else { return rect }
-        rect.origin.y = scrollView.contentOffset.y
-        rect.size.height = -scrollView.contentOffset.y
-        return rect
-    }
-    
-    func updateDisplayHeight(in scrollView: UIScrollView) {
-        displayHeight = max(0, -scrollView.contentOffset.y)
-        displayHeightFactor = displayHeight / initialHeight
-    }
-    
-    func setup(tableView: UITableView) {
+    func updateBaseHeight() {
         let height = frame.size.height
-        tableView.tableHeaderView = UIView.empty
-        tableView.addSubview(self)
-        tableView.contentInset = UIEdgeInsets(top: height, left: 0, bottom: 0, right: 0)
-        tableView.contentOffset = CGPoint(x: 0, y: -height)
+        baseHeight = height
+        scrollView?.contentOffset = CGPoint(x: 0, y: -height)
+        scrollView?.contentInset.top = height
     }
 }
