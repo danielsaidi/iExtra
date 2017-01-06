@@ -1,6 +1,6 @@
 //
 //  SystemNotificationServiceDefault.swift
-//  pinny
+//  iExtra
 //
 //  Created by Daniel Saidi on 2016-09-29.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
