@@ -16,7 +16,7 @@ open class GoogleMapsService: ExternalMapServiceBase {
     }
     
     open override func getUrl(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) -> URL? {
-        let string = "http://maps.apple.com/maps?saddr=\(from.latitude),\(from.longitude)&daddr=\(to.latitude),\(to.longitude)"
+        let string = "http://maps.google.com/maps?saddr=\(from.latitude),\(from.longitude)&daddr=\(to.latitude),\(to.longitude)"
         return URL(string: string)
     }
 }
