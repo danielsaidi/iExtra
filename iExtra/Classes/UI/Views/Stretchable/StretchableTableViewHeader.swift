@@ -55,7 +55,7 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
         updateFrame(in: scrollView)
     }
     
-    open override func setup(with scrollView: UIScrollView) {
+    public override func setup(with scrollView: UIScrollView) {
         guard let tableView = scrollView as? UITableView else { return }
         guard self == tableView.tableHeaderView else { return }
         autoresizingMask = [.flexibleWidth]

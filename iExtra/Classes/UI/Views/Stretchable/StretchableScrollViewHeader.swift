@@ -10,24 +10,22 @@
  
  When this view is used as a scroll view header, it will
  stretch out when the user pulls down on the scroll view,
- then scroll away as the user scrolls.
+ then scroll away as the user scrolls in the scroll view.
  
  This view must not be placed in the scroll view that it
  will be the header of. Instead, place it under (z-index)
  the scroll view and align their top and width.
  
- If the view uses auto layout to define its height, call
- `setup(with:heightConstraint:)` once all required views
- are available. If not, call `setup(with:)` instead.
- 
  Once everything is setup, simply call `handleScroll(in:)`
- in the `scrollViewDidScroll(:)` delegate function. This
- will make the header scroll with the scroll view.
+ in `scrollViewDidScroll(:)` to make the view handle the
+ scroll event. If you are using auto layout to determine
+ the height of the view, make sure to set the constraint
+ parameter as well, otherwise any height changes will be
+ applied to the frame instead of the constraint.
  
- If you want to enable a parallax effect when you scroll,
- set the parallaxFactor property to a value greater than
- zero. The higher the value, the slower the view scrolls
- relative to the scroll view.
+ If you want a parallax effect when you scroll, just set
+ the `parallaxFactor` property to a value greater than 0.
+ The higher the value, the slower the header scrolls.
  
  */
 
@@ -91,7 +89,7 @@ open class StretchableScrollViewHeader: UIView {
         updateOffset(for: scrollView)
     }
     
-    open func setup(with scrollView: UIScrollView) {
+    public func setup(with scrollView: UIScrollView) {
         guard scrollView != self.scrollView else { return }
         self.scrollView = scrollView
         updateBaseHeight()
