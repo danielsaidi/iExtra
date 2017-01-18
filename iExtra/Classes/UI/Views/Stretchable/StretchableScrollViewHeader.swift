@@ -77,8 +77,6 @@ open class StretchableScrollViewHeader: UIView {
     
     
     // MARK: - Properties
-    
-    fileprivate weak var heightConstraint: NSLayoutConstraint?
 
     fileprivate weak var scrollView: UIScrollView?
     
@@ -86,10 +84,10 @@ open class StretchableScrollViewHeader: UIView {
     
     // MARK: - Public Functions
     
-    open func handleScroll(in scrollView: UIScrollView) {
+    open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         setup(with: scrollView)
         guard isSetup else { return }
-        updateHeight(for: scrollView)
+        updateHeight(for: scrollView, usingHeightConstraint: constraint)
         updateOffset(for: scrollView)
     }
     
@@ -98,11 +96,6 @@ open class StretchableScrollViewHeader: UIView {
         self.scrollView = scrollView
         updateBaseHeight()
         handleScroll(in: scrollView)
-    }
-    
-    open func setup(with scrollView: UIScrollView, heightConstraint: NSLayoutConstraint?) {
-        self.heightConstraint = heightConstraint
-        setup(with: scrollView)
     }
 }
 
@@ -120,10 +113,10 @@ extension StretchableScrollViewHeader {
         scrollView?.contentInset.top = height
     }
     
-    func updateHeight(for scrollView: UIScrollView) {
+    func updateHeight(for scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         guard isStretching else { return }
         let newHeight = -scrollView.contentOffset.y
-        if let constraint = heightConstraint {
+        if let constraint = constraint {
             constraint.constant = newHeight
         } else {
             frame.size.height = newHeight

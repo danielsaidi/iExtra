@@ -50,7 +50,7 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
     
     // MARK: - Functions
     
-    open override func handleScroll(in scrollView: UIScrollView) {
+    open override func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         super.handleScroll(in: scrollView)
         updateFrame(in: scrollView)
     }
