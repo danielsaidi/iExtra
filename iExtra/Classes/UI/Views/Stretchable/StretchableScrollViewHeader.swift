@@ -18,8 +18,7 @@
  
  If the view uses auto layout to define its height, call
  `setup(with:heightConstraint:)` once all required views
- are available. If it does not use auto layout, call the
- `setup(with:)` function instead.
+ are available. If not, call `setup(with:)` instead.
  
  Once everything is setup, simply call `handleScroll(in:)`
  in the `scrollViewDidScroll(:)` delegate function. This
@@ -64,6 +63,10 @@ open class StretchableScrollViewHeader: UIView {
         return displayHeight / baseHeight
     }
     
+    public var isSetup: Bool {
+        return baseHeight != nil
+    }
+    
     public var isStretching: Bool {
         guard let view = scrollView else { return false }
         return view.contentOffset.y < -baseHeight
@@ -85,6 +88,7 @@ open class StretchableScrollViewHeader: UIView {
     
     open func handleScroll(in scrollView: UIScrollView) {
         setup(with: scrollView)
+        guard isSetup else { return }
         updateHeight(for: scrollView)
         updateOffset(for: scrollView)
     }
