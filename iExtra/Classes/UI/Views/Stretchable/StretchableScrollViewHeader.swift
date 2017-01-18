@@ -44,24 +44,17 @@ open class StretchableScrollViewHeader: UIView {
     
     public fileprivate(set) var baseHeight: CGFloat!
     
-    public var displayHeight: CGFloat {
-        guard let view = scrollView else { return frame.size.height }
-        return max(0, -view.contentOffset.y)
-    }
+    public fileprivate(set) var displayHeight: CGFloat = 0
     
     public var displayHeightFactor: CGFloat {
-        guard let view = scrollView else { return 1 }
-        return displayHeight / baseHeight
+        return displayHeight / (baseHeight ?? 1)
     }
     
     public var isSetup: Bool {
         return baseHeight != nil
     }
     
-    public var isStretching: Bool {
-        guard let view = scrollView else { return false }
-        return view.contentOffset.y < -baseHeight
-    }
+    public fileprivate(set) var isStretching = false
     
     public var parallaxFactor: CGFloat = 0
     
@@ -78,8 +71,14 @@ open class StretchableScrollViewHeader: UIView {
     open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         setup(with: scrollView)
         guard isSetup else { return }
+        
+        isStretching = scrollView.contentOffset.y < -baseHeight
+        
         updateHeight(for: scrollView, usingHeightConstraint: constraint)
         updateOffset(for: scrollView)
+        
+        
+        displayHeight = max(0, -scrollView.contentOffset.y)
     }
     
     public func setup(with scrollView: UIScrollView) {
