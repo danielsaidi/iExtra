@@ -8,24 +8,27 @@
 
 /*
  
- When this view is setup as a scrollview header, it will
- stretch out whenever the user pulls down the scrollview,
- then scroll away when the user scrolls.
+ When this view is used as a scroll view header, it will
+ stretch out when the user pulls down on the scroll view,
+ then scroll away as the user scrolls.
  
- This view must not be placed within the scrollview that
- it is meant to be the header of. Instead place the view
- below the scrollview and align the top and width of the
- two views.
+ This view must not be placed in the scroll view that it
+ will be the header of. Instead, place it under (z-index)
+ the scroll view and align their top and width.
  
- If the view doesn't use autolayout, you can just set it
- up by calling `setup(with:)`. If it does use autolayout,
- you must call `setup(with:heightConstraint:)` instead.
+ If the view uses auto layout to define its height, call
+ `setup(with:heightConstraint:)` once all required views
+ are available. If it does not use auto layout, call the
+ `setup(with:)` function instead.
  
- Once the view is setup, simply call `handleScroll(in:)`
- in the `scrollViewDidScroll(:)` delegate function.
+ Once everything is setup, simply call `handleScroll(in:)`
+ in the `scrollViewDidScroll(:)` delegate function. This
+ will make the header scroll with the scroll view.
  
- To make the view scroll slower than the scrollview, set
- the `parallaxFactor` property to a value greater than 1.
+ If you want to enable a parallax effect when you scroll,
+ set the parallaxFactor property to a value greater than
+ zero. The higher the value, the slower the view scrolls
+ relative to the scroll view.
  
  */
 
@@ -66,7 +69,7 @@ open class StretchableScrollViewHeader: UIView {
         return view.contentOffset.y < -baseHeight
     }
     
-    public var parallaxFactor: CGFloat = 2.0
+    public var parallaxFactor: CGFloat = 2
     
     
     
@@ -127,6 +130,7 @@ extension StretchableScrollViewHeader {
     }
     
     func updateOffset(for scrollView: UIScrollView) {
+        let parallaxFactor = max(0, self.parallaxFactor + 1)
         let offset = isStretching ? 0 : -scrollView.contentOffset.y - baseHeight
         frame.origin.y = offset / parallaxFactor
     }

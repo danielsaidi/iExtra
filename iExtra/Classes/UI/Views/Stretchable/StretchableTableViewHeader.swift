@@ -10,7 +10,7 @@
  
  This view inherits `StretchableScrollViewHeader` and is
  meant to be used together with a table view, instead of
- a scrollview.
+ with a scroll view.
  
  This view must be the tableHeaderView of the table view.
  Unlike `StretchableScrollViewHeader`, you must not call

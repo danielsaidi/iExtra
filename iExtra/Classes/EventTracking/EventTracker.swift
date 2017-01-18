@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol EventTracker {
+public protocol EventTracker {
     func trackAction(_ name: String, inCategory category: String, label: String)
     func trackAction(_ name: String, inCategory category: String, label: String, value: Int)
     func trackScreen(_ name: String)
