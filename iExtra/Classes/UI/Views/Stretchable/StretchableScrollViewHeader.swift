@@ -23,6 +23,11 @@
  parameter as well, otherwise any height changes will be
  applied to the frame instead of the constraint.
  
+ Any setup is automatically done when the header view is
+ scrolled for the first time. If `scrollViewDidScroll(:)`
+ is not automatically triggered when the view is created,
+ you may have to call it manually the very first time.
+ 
  If you want a parallax effect when you scroll, just set
  the `parallaxFactor` property to a value greater than 0.
  The higher the value, the slower the header scrolls.
@@ -33,18 +38,6 @@ import UIKit
 
 
 open class StretchableScrollViewHeader: UIView {
-    
-    
-    // MARK: - View Lifecycle
-    
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        clipsToBounds = true
-        guard let scrollView = scrollView else { return }
-        handleScroll(in: scrollView)
-        //handleAutoSizing()
-    }
-    
     
     
     // MARK: - Properties
