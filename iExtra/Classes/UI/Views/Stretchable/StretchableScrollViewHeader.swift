@@ -116,12 +116,12 @@ extension StretchableScrollViewHeader {
     }
     
     func updateHeight(for scrollView: UIScrollView) {
-        let newHeight = isStretching ? -scrollView.contentOffset.y : baseHeight
-        guard let height = newHeight else { return }
+        guard isStretching else { return }
+        let newHeight = -scrollView.contentOffset.y
         if let constraint = heightConstraint {
-            constraint.constant = height
+            constraint.constant = newHeight
         } else {
-            frame.size.height = height
+            frame.size.height = newHeight
         }
     }
     
