@@ -69,7 +69,7 @@ open class StretchableScrollViewHeader: UIView {
         return view.contentOffset.y < -baseHeight
     }
     
-    public var parallaxFactor: CGFloat = 2
+    public var parallaxFactor: CGFloat = 0
     
     
     
@@ -85,7 +85,6 @@ open class StretchableScrollViewHeader: UIView {
     
     open func handleScroll(in scrollView: UIScrollView) {
         setup(with: scrollView)
-        guard superview != scrollView else { return }
         updateHeight(for: scrollView)
         updateOffset(for: scrollView)
     }
@@ -98,11 +97,8 @@ open class StretchableScrollViewHeader: UIView {
     }
     
     open func setup(with scrollView: UIScrollView, heightConstraint: NSLayoutConstraint?) {
-        guard scrollView != self.scrollView else { return }
         self.heightConstraint = heightConstraint
-        self.scrollView = scrollView
-        updateBaseHeight()
-        handleScroll(in: scrollView)
+        setup(with: scrollView)
     }
 }
 
