@@ -43,9 +43,8 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
     
     open override func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         setup(in: scrollView as? UITableView)
-        handleAutoSizing()
+        handleAutoSizing(in: scrollView)
         super.handleScroll(in: scrollView)
-        updateFrame(in: scrollView)
     }
 }
 
@@ -55,29 +54,25 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
 
 extension StretchableTableViewHeader {
     
-    public func setup(in tableView: UITableView?) {
+    func setup(in tableView: UITableView?) {
         guard let tableView = tableView else { return }
         guard self == tableView.tableHeaderView else { return }
-        autoresizingMask = [.flexibleWidth]
+        
         tableView.tableHeaderView = UIView.empty
-        tableView.addSubview(self)
+        tableView.backgroundColor = .clear
+        tableView.superview!.insertSubview(self, belowSubview: tableView)
+        frame.origin.y = tableView.frame.origin.y
+        frame.size.width = tableView.frame.size.width
+        autoresizingMask = [.flexibleWidth]
     }
     
-    func updateFrame(in scrollView: UIScrollView) {
-        guard let baseHeight = baseHeight else { return }
-        let width = scrollView.bounds.width
-        frame = CGRect(x: 0, y: -baseHeight, width: width, height: baseHeight)
-        guard isStretching else { return }
-        frame.origin.y = scrollView.contentOffset.y
-        frame.size.height = -scrollView.contentOffset.y
-    }
-    
-    func handleAutoSizing() {
+    func handleAutoSizing(in scrollView: UIScrollView) {
         guard shouldAutosizeToFitSubview else { return }
         guard let subview = subviews.first else { return }
         let height = subview.frame.size.height
         guard baseHeight != height else { return }
         frame.size.height = height
+        updateBaseHeight(for: scrollView)
     }
 }
 

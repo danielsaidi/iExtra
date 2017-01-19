@@ -64,7 +64,7 @@ open class StretchableScrollViewHeader: UIView {
     
     open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         updateBaseHeight(for: scrollView)
-        isStretching = scrollView.contentOffset.y < -baseHeight
+        isStretching = scrollView.contentOffset.y < -(baseHeight + 0.5)
         updateHeight(for: scrollView, usingHeightConstraint: constraint)
         updateOffset(for: scrollView)
         displayHeight = max(0, -scrollView.contentOffset.y)
@@ -76,6 +76,10 @@ open class StretchableScrollViewHeader: UIView {
 // MARK: - Internal Functions
 
 extension StretchableScrollViewHeader {
+    
+    func resetOffset() {
+        frame.origin.y = 0
+    }
     
     func updateBaseHeight(for scrollView: UIScrollView) {
         guard !isStretching else { return }
@@ -98,7 +102,7 @@ extension StretchableScrollViewHeader {
     }
     
     func updateOffset(for scrollView: UIScrollView) {
-        guard !isStretching else { return }
+        guard !isStretching else { return resetOffset() }
         let parallaxFactor = max(0, self.parallaxFactor + 1)
         let offset = -scrollView.contentOffset.y - baseHeight
         frame.origin.y = offset / parallaxFactor
