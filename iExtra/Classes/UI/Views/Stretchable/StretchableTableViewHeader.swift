@@ -13,19 +13,18 @@
  with a scroll view.
  
  This view must be the tableHeaderView of the table view.
- Unlike `StretchableScrollViewHeader`, you must not call
- a setup function to get it properly configured. It will
- be done automatically when the table view scrolls.
+ It will then detach itself from the table view and move
+ below the table view, allowing it to stretch and scroll
+ slower than the table view.
  
- Since table header views have a fixed size, you must do
+ Since table view headers have a fixed size, you must do
  some adjustments if the view uses autolayout or resizes
- in any other way, otherwise the table will not adapt to
- any size changes. First, wrap the header content within
- a wrapper view that resizes to fit the content. Second,
- set the `shouldAutosizeToFitSubview` property to true.
+ in any other way. To get auto layout to work, just wrap
+ the header view content in a view that uses auto layout
+ to automatically resize the wrapper view to its content,
+ then set `shouldAutosizeToFitSubview` property to true.
  
  */
-
 
 import UIKit
 
