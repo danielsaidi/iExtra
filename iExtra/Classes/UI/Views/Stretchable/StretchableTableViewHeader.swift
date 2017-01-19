@@ -26,9 +26,8 @@
  
  */
 
+
 import UIKit
-
-
 
 open class StretchableTableViewHeader: StretchableScrollViewHeader {
     
@@ -36,7 +35,7 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
     // MARK: - Properties
     
     public var shouldAutosizeToFitSubview = false
-
+    
     
     
     // MARK: - Functions
@@ -58,7 +57,7 @@ extension StretchableTableViewHeader {
         guard let tableView = tableView else { return }
         guard self == tableView.tableHeaderView else { return }
         
-        tableView.tableHeaderView = UIView.empty
+        tableView.tableHeaderView = nil
         tableView.backgroundColor = .clear
         tableView.superview!.insertSubview(self, belowSubview: tableView)
         frame.origin.y = tableView.frame.origin.y
@@ -70,10 +69,8 @@ extension StretchableTableViewHeader {
         guard shouldAutosizeToFitSubview else { return }
         guard let subview = subviews.first else { return }
         let height = subview.frame.size.height
-        guard baseHeight != height else { return }
+        guard shouldResize(toHeight: height) else { return }
         frame.size.height = height
         updateBaseHeight(for: scrollView)
     }
 }
-
-

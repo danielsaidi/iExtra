@@ -36,7 +36,6 @@
 
 import UIKit
 
-
 open class StretchableScrollViewHeader: UIView {
     
     
@@ -59,10 +58,23 @@ open class StretchableScrollViewHeader: UIView {
     public var parallaxFactor: CGFloat = 0
     
     
+    fileprivate weak var scrollView: UIScrollView?
+    fileprivate weak var heightConstraint: NSLayoutConstraint?
+    
+    
     
     // MARK: - Public Functions
     
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+        guard let scrollView = self.scrollView else { return }
+        handleScroll(in: scrollView, usingHeightConstraint: heightConstraint)
+    }
+    
     open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
+        self.scrollView = scrollView
+        self.heightConstraint = constraint
+        
         updateBaseHeight(for: scrollView)
         isStretching = scrollView.contentOffset.y < -(baseHeight + 0.5)
         updateHeight(for: scrollView, usingHeightConstraint: constraint)
@@ -81,11 +93,15 @@ extension StretchableScrollViewHeader {
         frame.origin.y = 0
     }
     
+    func shouldResize(toHeight: CGFloat) -> Bool {
+        let baseHeight = self.baseHeight ?? 0
+        return abs(baseHeight - toHeight) > 0.5     // TODO: Fix this 0.5 bug
+    }
+    
     func updateBaseHeight(for scrollView: UIScrollView) {
         guard !isStretching else { return }
         let height = frame.size.height
-        let baseHeight = self.baseHeight ?? 0
-        guard abs(baseHeight - height) > 0.5 else { return }
+        guard shouldResize(toHeight: height) else { return }
         self.baseHeight = height
         scrollView.contentOffset = CGPoint(x: 0, y: -height)
         scrollView.contentInset.top = height
