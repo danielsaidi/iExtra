@@ -33,15 +33,6 @@ import UIKit
 open class StretchableTableViewHeader: StretchableScrollViewHeader {
     
     
-    // MARK: - View Lifecycle
-    
-    open override func layoutSubviews() {
-        super.layoutSubviews()
-        handleAutoSizing()
-    }
-    
-    
-    
     // MARK: - Properties
     
     public var shouldAutosizeToFitSubview = false
@@ -51,17 +42,10 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
     // MARK: - Functions
     
     open override func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
+        setup(in: scrollView as? UITableView)
+        handleAutoSizing()
         super.handleScroll(in: scrollView)
         updateFrame(in: scrollView)
-    }
-    
-    public override func setup(with scrollView: UIScrollView) {
-        guard let tableView = scrollView as? UITableView else { return }
-        guard self == tableView.tableHeaderView else { return }
-        autoresizingMask = [.flexibleWidth]
-        tableView.tableHeaderView = UIView.empty
-        tableView.addSubview(self)
-        super.setup(with: scrollView)
     }
 }
 
@@ -70,6 +54,14 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
 // MARK: - Internal Functions
 
 extension StretchableTableViewHeader {
+    
+    public func setup(in tableView: UITableView?) {
+        guard let tableView = tableView else { return }
+        guard self == tableView.tableHeaderView else { return }
+        autoresizingMask = [.flexibleWidth]
+        tableView.tableHeaderView = UIView.empty
+        tableView.addSubview(self)
+    }
     
     func updateFrame(in scrollView: UIScrollView) {
         guard let baseHeight = baseHeight else { return }
@@ -86,8 +78,6 @@ extension StretchableTableViewHeader {
         let height = subview.frame.size.height
         guard baseHeight != height else { return }
         frame.size.height = height
-        guard baseHeight != frame.size.height else { return }
-        updateBaseHeight()
     }
 }
 

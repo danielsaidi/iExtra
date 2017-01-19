@@ -60,32 +60,14 @@ open class StretchableScrollViewHeader: UIView {
     
     
     
-    // MARK: - Properties
-
-    fileprivate weak var scrollView: UIScrollView?
-    
-    
-    
     // MARK: - Public Functions
     
     open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
-        setup(with: scrollView)
-        guard isSetup else { return }
-        
+        updateBaseHeight(for: scrollView)
         isStretching = scrollView.contentOffset.y < -baseHeight
-        
         updateHeight(for: scrollView, usingHeightConstraint: constraint)
         updateOffset(for: scrollView)
-        
-        
         displayHeight = max(0, -scrollView.contentOffset.y)
-    }
-    
-    public func setup(with scrollView: UIScrollView) {
-        guard scrollView != self.scrollView else { return }
-        self.scrollView = scrollView
-        updateBaseHeight()
-        handleScroll(in: scrollView)
     }
 }
 
@@ -95,21 +77,23 @@ open class StretchableScrollViewHeader: UIView {
 
 extension StretchableScrollViewHeader {
     
-    func updateBaseHeight() {
+    func updateBaseHeight(for scrollView: UIScrollView) {
+        guard !isStretching else { return }
         let height = frame.size.height
-        guard baseHeight != height else { return }
-        baseHeight = height
-        scrollView?.contentOffset = CGPoint(x: 0, y: -height)
-        scrollView?.contentInset.top = height
+        let baseHeight = self.baseHeight ?? 0
+        guard abs(baseHeight - height) > 0.5 else { return }
+        self.baseHeight = height
+        scrollView.contentOffset = CGPoint(x: 0, y: -height)
+        scrollView.contentInset.top = height
     }
     
     func updateHeight(for scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
         guard isStretching else { return }
-        let newHeight = -scrollView.contentOffset.y
+        let height = -scrollView.contentOffset.y
         if let constraint = constraint {
-            constraint.constant = newHeight
+            constraint.constant = height
         } else {
-            frame.size.height = newHeight
+            frame.size.height = height
         }
     }
     
