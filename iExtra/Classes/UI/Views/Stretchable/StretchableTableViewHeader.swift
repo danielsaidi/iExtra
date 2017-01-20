@@ -8,7 +8,7 @@
 
 /*
  
- This view inherits `StretchableScrollViewHeader` and is
+ This view inherits `StretchableScrollViewHeader`. It is
  meant to be used together with a table view, instead of
  with a scroll view.
  
@@ -30,18 +30,8 @@ import UIKit
 
 open class StretchableTableViewHeader: StretchableScrollViewHeader {
     
-    
-    // MARK: - Properties
-    
-    public var shouldAutosizeToFitSubview = false
-    
-    
-    
-    // MARK: - Functions
-    
-    open override func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
+    open override func handleScroll(in scrollView: UIScrollView) {
         setup(in: scrollView as? UITableView)
-        handleAutoSizing(in: scrollView)
         super.handleScroll(in: scrollView)
     }
 }
@@ -55,21 +45,6 @@ extension StretchableTableViewHeader {
     func setup(in tableView: UITableView?) {
         guard let tableView = tableView else { return }
         guard self == tableView.tableHeaderView else { return }
-        
         tableView.tableHeaderView = nil
-        tableView.backgroundColor = .clear
-        tableView.superview!.insertSubview(self, belowSubview: tableView)
-        frame.origin.y = tableView.frame.origin.y
-        frame.size.width = tableView.frame.size.width
-        autoresizingMask = [.flexibleWidth]
-    }
-    
-    func handleAutoSizing(in scrollView: UIScrollView) {
-        guard shouldAutosizeToFitSubview else { return }
-        guard let subview = subviews.first else { return }
-        let height = subview.frame.size.height
-        guard shouldResize(toHeight: height) else { return }
-        frame.size.height = height
-        updateBaseHeight(for: scrollView)
     }
 }
