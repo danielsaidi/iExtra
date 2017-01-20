@@ -1,9 +1,9 @@
 //
 //  StretchableTableViewHeader.swift
-//  iExtra
+//  BBCore
 //
-//  Created by Daniel Saidi on 2017-01-06.
-//  Copyright (c) 2017 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2017-01-19.
+//  Copyright © 2017 BookBeat. All rights reserved.
 //
 
 /*

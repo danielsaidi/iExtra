@@ -2,8 +2,8 @@
 //  StretchableScrollViewHeader.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2017-01-06.
-//  Copyright (c) 2017 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2017-01-19.
+//  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -57,9 +57,17 @@ open class StretchableScrollViewHeader: UIView {
     
     public var parallaxFactor: CGFloat = 0
     
+    public var tappableViews = [UIView?]()
+    
+    
+    
+    // MARK: - Private Properties
     
     fileprivate weak var scrollView: UIScrollView?
+    
     fileprivate weak var heightConstraint: NSLayoutConstraint?
+    
+    fileprivate var tapView: StretchableScrollViewHeaderTapView?
     
     
     
@@ -67,19 +75,23 @@ open class StretchableScrollViewHeader: UIView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
-        guard let scrollView = self.scrollView else { return }
-        handleScroll(in: scrollView, usingHeightConstraint: heightConstraint)
+        guard let view = scrollView else { return }
+        handleScroll(in: view, usingHeightConstraint: heightConstraint)
     }
     
     open func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
+        
         self.scrollView = scrollView
         self.heightConstraint = constraint
         
+        createTapView(in: scrollView)
         updateBaseHeight(for: scrollView)
-        isStretching = scrollView.contentOffset.y < -(baseHeight + 0.5)
+        isStretching = scrollView.contentOffset.y.rounded() < -baseHeight.rounded()
         updateHeight(for: scrollView, usingHeightConstraint: constraint)
         updateOffset(for: scrollView)
         displayHeight = max(0, -scrollView.contentOffset.y)
+        adjustTapViewHeight(for: scrollView)
+        print(baseHeight)
     }
 }
 
@@ -89,13 +101,27 @@ open class StretchableScrollViewHeader: UIView {
 
 extension StretchableScrollViewHeader {
     
-    func resetOffset() {
-        frame.origin.y = 0
+    func adjustTapViewHeight(for scrollView: UIScrollView) {
+        tapView?.frame = scrollView.frame
+        tapView?.frame.size.height = displayHeight
+    }
+    
+    func createTapView(in scrollView: UIScrollView) {
+        guard tapView == nil else { return }
+        let view = StretchableScrollViewHeaderTapView()
+        view.header = self
+        view.isUserInteractionEnabled  = true
+        scrollView.superview!.insertSubview(view, aboveSubview: scrollView)
+        tapView = view
+    }
+    
+    func resetOffset(for scrollView: UIScrollView) {
+        frame.origin.y = scrollView.frame.origin.y
     }
     
     func shouldResize(toHeight: CGFloat) -> Bool {
         let baseHeight = self.baseHeight ?? 0
-        return abs(baseHeight - toHeight) > 0.5     // TODO: Fix this 0.5 bug
+        return abs(baseHeight - toHeight) >= 1
     }
     
     func updateBaseHeight(for scrollView: UIScrollView) {
@@ -118,7 +144,7 @@ extension StretchableScrollViewHeader {
     }
     
     func updateOffset(for scrollView: UIScrollView) {
-        guard !isStretching else { return resetOffset() }
+        guard !isStretching else { return resetOffset(for: scrollView) }
         let parallaxFactor = max(0, self.parallaxFactor + 1)
         let offset = -scrollView.contentOffset.y - baseHeight
         frame.origin.y = offset / parallaxFactor
