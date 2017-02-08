@@ -18,4 +18,8 @@ public extension UIView {
     public static var defaultNibName: String {
         return className
     }
+    
+    public static func loadNib(owner: Any) -> Any? {
+        return Bundle.main.loadNibNamed(defaultNibName, owner: owner, options: nil)?[0]
+    }
 }

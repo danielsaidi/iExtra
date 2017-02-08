@@ -8,13 +8,13 @@
 
 import CoreLocation
 
-open class LocationServiceDefault: NSObject, LocationService, CLLocationManagerDelegate {
+open class LocationServiceDefault: NSObject, LocationService {
     
 
     // MARK: - Properties
     
-    private var hasWarnedForMissingPermissions = false
-    lazy private var locationManager = CLLocationManager()
+    fileprivate var hasWarnedForMissingPermissions = false
+    lazy fileprivate var locationManager = CLLocationManager()
     
     
     
@@ -33,18 +33,19 @@ open class LocationServiceDefault: NSObject, LocationService, CLLocationManagerD
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
     }
-    
-    
-    
-    // MARK: CLLocationManagerDelegate
+}
 
+
+
+// MARK: CLLocationManagerDelegate
+
+extension LocationServiceDefault: CLLocationManagerDelegate {
+    
     open func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if (status == .notDetermined) {
-            return
-        }
+        guard status != .notDetermined else { return }
         
-        let enabled = (status == .authorizedAlways || status == .authorizedWhenInUse)
-        if (!enabled && !hasWarnedForMissingPermissions) {
+        let enabled = status == .authorizedAlways || status == .authorizedWhenInUse
+        if !enabled && !hasWarnedForMissingPermissions {
             hasWarnedForMissingPermissions = true
             LocationServiceErrorAlert.present()
         }
