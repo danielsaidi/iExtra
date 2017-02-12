@@ -48,13 +48,6 @@ fileprivate extension BlurredNavigationSearchController {
     }
     
     func setup(withBlurEffect effect: UIBlurEffect) {
-        delegate = self
-        searchBar.delegate = self
-        searchResultsUpdater = self
-        
-        hidesNavigationBarDuringPresentation = false
-        dimsBackgroundDuringPresentation = true
-        
         searchResultsController?.view.backgroundColor = UIColor.clear
         let tableView = searchResultsController?.view as? UITableView
         tableView?.separatorEffect = UIVibrancyEffect(blurEffect: effect)

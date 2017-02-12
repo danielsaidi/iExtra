@@ -25,21 +25,33 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setup()
     }
     
     public override init(searchResultsController: UIViewController?) {
         super.init(searchResultsController: searchResultsController)
+        setup()
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
     
     
     
     // MARK: - Properties
     
-    fileprivate weak var vc: UIViewController?
+    public var shouldHandleSearchBar = true
+    
+    public weak var vc: UIViewController? {
+        didSet {
+            vc?.definesPresentationContext = true
+            let color = vc?.view.backgroundColor
+            view.backgroundColor = color
+            searchResultsController?.view.backgroundColor = color
+        }
+    }
     
     
     
@@ -52,9 +64,14 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
     
     open func present(in vc: UIViewController) {
         self.vc = vc
-        vc.definesPresentationContext = true
-        vc.navigationItem.titleView = searchBar
-        searchBar.becomeFirstResponder()
+        
+        if shouldHandleSearchBar {
+            vc.navigationItem.titleView = searchBar
+        }
+        
+        delay(0.1) {
+            self.searchBar.becomeFirstResponder()
+        }
     }
     
     
@@ -78,6 +95,21 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
 
 
 
+// MARK: - Private Functions
+
+fileprivate extension NavigationSearchController {
+    
+    func setup() {
+        delegate = self
+        searchBar.delegate = self
+        searchResultsUpdater = self
+        hidesNavigationBarDuringPresentation = false
+        dimsBackgroundDuringPresentation = true
+    }
+}
+
+
+
 // MARK: - UISearchControllerDelegate
 
 extension NavigationSearchController: UISearchControllerDelegate {
@@ -89,7 +121,11 @@ extension NavigationSearchController: UISearchControllerDelegate {
     }
     
     public func willDismissSearchController(_ searchController: UISearchController) {
-        vc?.navigationItem.titleView = nil
+        
+        if shouldHandleSearchBar {
+            vc?.navigationItem.titleView = nil
+        }
+        
         let fadeOut = { searchController.view.alpha = 0 }
         UIView.animate(withDuration: 0.5, animations: fadeOut) {
             finished in searchController.view.alpha = 1
