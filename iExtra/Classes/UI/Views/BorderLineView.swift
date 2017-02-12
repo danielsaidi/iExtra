@@ -37,7 +37,7 @@ fileprivate extension BorderLineView {
         guard frame.size.width == 1 else { return }
         frame.size.width = 0.5
         if frame.origin.x > 0 {
-            frame.origin.x -= 0.5
+            frame.origin.x += 0.5
         }
     }
 }
