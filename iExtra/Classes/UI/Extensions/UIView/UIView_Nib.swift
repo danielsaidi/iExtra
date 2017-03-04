@@ -20,6 +20,11 @@ public extension UIView {
     }
     
     public static func loadNib(owner: Any) -> Any? {
+        print("UIView loadNib(owner: Any) is deprecated")
+        return initWithDefaultNib(owner: owner)
+    }
+    
+    public static func initWithDefaultNib(owner: Any) -> Any? {
         return Bundle.main.loadNibNamed(defaultNibName, owner: owner, options: nil)?[0]
     }
 }

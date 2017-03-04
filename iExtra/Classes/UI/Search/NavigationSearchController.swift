@@ -44,7 +44,7 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
     
     public var shouldHandleSearchBar = true
     
-    public weak var vc: UIViewController? {
+    fileprivate weak var vc: UIViewController? {
         didSet {
             vc?.definesPresentationContext = true
             let color = vc?.view.backgroundColor
@@ -72,6 +72,10 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
         delay(0.1) {
             self.searchBar.becomeFirstResponder()
         }
+    }
+    
+    open func setup(in vc: UIViewController) {
+        self.vc = vc
     }
     
     
