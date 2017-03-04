@@ -37,13 +37,11 @@ class UINavigationBar_TransparentTests: QuickSpec {
     
     
     private func assertNonTransparent(_ bar: UINavigationBar) {
-        expect(bar.isTranslucent).to(beFalse())
         expect(bar.backgroundImage(for: .default)).to(beNil())
         expect(bar.shadowImage).to(beNil())
     }
     
     private func assertTransparent(_ bar: UINavigationBar) {
-        expect(bar.isTranslucent).to(beTrue())
         expect(bar.backgroundImage(for: .default)).toNot(beNil())
         expect(bar.shadowImage).toNot(beNil())
     }

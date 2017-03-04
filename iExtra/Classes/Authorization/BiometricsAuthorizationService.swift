@@ -9,7 +9,6 @@
 import UIKit
 import LocalAuthentication
 
-
 public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     
     
@@ -20,19 +19,11 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     fileprivate static var cache = [String : Bool]()
     
     
-    
     // MARK: Public functions
     
-    public func authorize(action: String, reason: String, completion: @escaping (Bool) -> ()) {
-        if (!canAuthorize(action: action)) {
-            completion(false)
-            return
-        }
-        
-        if (isAuthorized(forAction: action)) {
-            completion(true)
-            return
-        }
+    public func authorize(action: String, reason: String, completion: @escaping AuthorizationResult) {
+        guard canAuthorize(action: action) else { return completion(false) }
+        guard !isAuthorized(forAction: action) else { return completion(true) }
         
         LAContext().evaluatePolicy(policy, localizedReason: reason, reply: { (success, error) in
             self.setIsAuthorized(success, forAction: action)
@@ -42,8 +33,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     
     public func canAuthorize(action: String) -> Bool {
         var error: NSError?
-        let context = LAContext()
-        return (context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error))
+        return (LAContext().canEvaluatePolicy(policy, error: &error))
     }
     
     public func isAuthorized(forAction action: String) -> Bool {
@@ -54,16 +44,18 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     public func resetAuthorization(forAction action: String) {
         setIsAuthorized(false, forAction: action)
     }
+}
+
+
+// MARK: Private functions
+
+fileprivate extension BiometricsAuthorizationService {
     
-    
-    
-    // MARK: Private functions
-    
-    private func authKey(forAction action: String) -> String {
+    func authKey(forAction action: String) -> String {
         return "authorization_action_\(action)"
     }
     
-    private func setIsAuthorized(_ authorized: Bool, forAction action: String) {
+    func setIsAuthorized(_ authorized: Bool, forAction action: String) {
         let key = authKey(forAction: action)
         BiometricsAuthorizationService.cache[key] = authorized
     }

@@ -8,8 +8,11 @@
 
 import UIKit
 
+public typealias AuthorizationResult = (_ success: Bool) -> ()
+
 public protocol AuthorizationService: class {
-    func authorize(action: String, reason: String, completion: @escaping (_ success: Bool) -> ())
+    
+    func authorize(action: String, reason: String, completion: @escaping AuthorizationResult)
     func canAuthorize(action: String) -> Bool
     func isAuthorized(forAction action: String) -> Bool
     func resetAuthorization(forAction action: String)
