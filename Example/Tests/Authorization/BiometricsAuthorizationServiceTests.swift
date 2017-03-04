@@ -21,9 +21,19 @@ class BiometricsAuthorizationServiceTests: QuickSpec {
         }
         
         
-        context("when checking if authorized") {
+        context("when checking if user is authorized") {
             
-            it("returns false if no previous authorization is cached") {
+            it("says no if no previous authorization is cached") {
+                expect(service.isAuthorized(forAction: "foo")).to(equal(false))
+            }
+        }
+        
+        
+        context("when resetting authorization") {
+            
+            it("considers user to not be previously authorized") {
+                service.resetAuthorization(forAction: "foo")
+                
                 expect(service.isAuthorized(forAction: "foo")).to(equal(false))
             }
         }
