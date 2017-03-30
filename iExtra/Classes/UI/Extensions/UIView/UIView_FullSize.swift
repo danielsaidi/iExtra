@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Use addSubview(_:fill) instead")
 public extension UIView {
     
     public func makeFullSize(in view: UIView) {

@@ -1,5 +1,5 @@
 //
-//  UIView_AddSubview.swift
+//  UIView_Subview.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-02-08.
