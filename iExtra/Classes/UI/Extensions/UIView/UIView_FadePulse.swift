@@ -13,14 +13,19 @@ public extension UIView {
     fileprivate var key: String { return "fadePulse" }
     
     public func fadePulse(fromAlpha: Double, toAlpha: Double, withDuration duration: Double, times: Int) {
+        let pulse = fadePulseAnimation(fromAlpha: fromAlpha, toAlpha: toAlpha, withDuration: duration, times: times)
+        layer.add(pulse, forKey: key)
+    }
+    
+    public func fadePulseAnimation(fromAlpha: Double, toAlpha: Double, withDuration duration: Double, times: Int) -> CABasicAnimation {
         let pulse = CABasicAnimation(keyPath: "opacity")
-        pulse.duration = duration
+        pulse.duration = duration / 2
         pulse.fromValue = fromAlpha
         pulse.toValue = toAlpha
         pulse.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         pulse.autoreverses = true
         pulse.repeatCount = Float(times)
-        layer.add(pulse, forKey: key)
+        return pulse
     }
     
     public func startFadePulse(fromAlpha: Double, toAlpha: Double, withDuration duration: Double) {
