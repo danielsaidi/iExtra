@@ -76,6 +76,7 @@
 		4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */; };
 		4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA01E8CFB2900ECC18E /* RoundButton.swift */; };
 		4558DBA41E8CFC5E00ECC18E /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA31E8CFC5E00ECC18E /* AnimatedLabel.swift */; };
+		45A90BBD1E9518600097F54B /* Set_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A90BBC1E9518600097F54B /* Set_Group.swift */; };
 		4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF877D206C63111AE6D373E279AEB9E /* ExternalMapServiceBase.swift */; };
 		47FF072E4D2BDE2759931B0B846BD5D0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D0E6360F5879FA9408D6392D73B5E /* DSL.swift */; };
 		49AB0F336CD7A544259A65DA1136C30B /* UIView_Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDC92F9544235EB120169394296E4E /* UIView_Shadow.swift */; };
@@ -388,6 +389,7 @@
 		4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ScalePulse.swift; sourceTree = "<group>"; };
 		4558DBA01E8CFB2900ECC18E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		4558DBA31E8CFC5E00ECC18E /* AnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
+		45A90BBC1E9518600097F54B /* Set_Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_Group.swift; sourceTree = "<group>"; };
 		4687C3154E9647F2C75EAC9C00B6AEB6 /* RemoteNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationService.swift; sourceTree = "<group>"; };
 		46FCB309DDCD0F3151825292492F197D /* HintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		48E09D18327AAAD8153182BF5645685D /* UIColor_Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor_Hex.swift; sourceTree = "<group>"; };
@@ -912,6 +914,7 @@
 				BE76352F25B7F8A596760AE08CE1AF8C /* String_Replace.swift */,
 				EE5BCFDD9082EFC7C913AC74C3388CD6 /* String_UrlEncode.swift */,
 				DF995393646911EFA30F4C24B56A1ACD /* Url_QueryParameters.swift */,
+				45A90BBC1E9518600097F54B /* Set_Group.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1724,6 +1727,7 @@
 				35CFB7228E7012466E4F07B3D15147B3 /* SlidingViewControllerTransition.swift in Sources */,
 				3B58B26678AECD280E7E008BCFE0A4EE /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
 				2A8F65EA70E8E60A15F409B0964A529D /* STPopupActionSheetPresenter.swift in Sources */,
+				45A90BBD1E9518600097F54B /* Set_Group.swift in Sources */,
 				6FC9E343CCAA6D7654958C072F1DCF42 /* StretchableScrollViewHeader.swift in Sources */,
 				9DECE9F4EF37476F178677E3BF9B2070 /* StretchableScrollViewHeaderTapView.swift in Sources */,
 				335FDA21C209A60D60AB982B0F3C42A5 /* StretchableTableViewHeader.swift in Sources */,

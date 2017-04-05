@@ -21,6 +21,8 @@
 		4561CF431DF3778F003D940A /* KeychainServiceTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2A1DF3775B003D940A /* KeychainServiceTestClass.swift */; };
 		4561CF441DF37794003D940A /* UITableView_DequeueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2E1DF3775B003D940A /* UITableView_DequeueTests.swift */; };
 		4561CF451DF37794003D940A /* UITableView_RegisterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2F1DF3775B003D940A /* UITableView_RegisterTests.swift */; };
+		45A90BC01E9518A50097F54B /* Array_GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A90BBE1E95189E0097F54B /* Array_GroupTests.swift */; };
+		45A90BC31E9518F30097F54B /* Set_GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A90BC11E9518D90097F54B /* Set_GroupTests.swift */; };
 		45B87FCF1DFF3E3200EFCD57 /* UIColor_HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FCB1DFF3E2A00EFCD57 /* UIColor_HexTests.swift */; };
 		45B87FD01DFF3E3600EFCD57 /* UINavigationBar_TransparentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FCC1DFF3E2A00EFCD57 /* UINavigationBar_TransparentTests.swift */; };
 		45B87FE51DFF3E5F00EFCD57 /* String_Base64Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */; };
@@ -84,6 +86,8 @@
 		4561CF2F1DF3775B003D940A /* UITableView_RegisterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView_RegisterTests.swift; sourceTree = "<group>"; };
 		4561CF341DF3775B003D940A /* UIView_NibTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_NibTests.swift; sourceTree = "<group>"; };
 		4561CF351DF3775B003D940A /* UIView_VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_VisibilityTests.swift; sourceTree = "<group>"; };
+		45A90BBE1E95189E0097F54B /* Array_GroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array_GroupTests.swift; sourceTree = "<group>"; };
+		45A90BC11E9518D90097F54B /* Set_GroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_GroupTests.swift; sourceTree = "<group>"; };
 		45B87FCB1DFF3E2A00EFCD57 /* UIColor_HexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_HexTests.swift; sourceTree = "<group>"; };
 		45B87FCC1DFF3E2A00EFCD57 /* UINavigationBar_TransparentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_TransparentTests.swift; sourceTree = "<group>"; };
 		45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Base64Tests.swift; sourceTree = "<group>"; };
@@ -163,12 +167,14 @@
 			isa = PBXGroup;
 			children = (
 				45E887971DFFCD7A0081A5C4 /* Array_ElementsOfTypeTests.swift */,
+				45A90BBE1E95189E0097F54B /* Array_GroupTests.swift */,
 				45E8879A1E00786D0081A5C4 /* Array_RandomElementTests.swift */,
 				45E887AB1E00A1C50081A5C4 /* Array_RemoveObjectTests.swift */,
 				4555474E1E00A89600A9477A /* Collection_ShuffleTests.swift */,
 				4561CF261DF3775B003D940A /* NSObject_ClassNameTests.swift */,
 				45C8B5FA1E01EF740092F1E3 /* Numeric_FormatTests.swift */,
 				45E887A81E008B1B0081A5C4 /* Numeric_RandomTests.swift */,
+				45A90BC11E9518D90097F54B /* Set_GroupTests.swift */,
 				45B87FDA1DFF3E5900EFCD57 /* String_Base64Tests.swift */,
 				455547511E00A9D600A9477A /* String_ContainsTests.swift */,
 				45B87FDB1DFF3E5900EFCD57 /* String_UrlEncodeTests.swift */,
@@ -582,6 +588,7 @@
 			files = (
 				45B880101DFF404000EFCD57 /* UIView_VisibilityTests.swift in Sources */,
 				45B87FFA1DFF3EC600EFCD57 /* UISlider_Extensions_ValueAtPointTests.swift in Sources */,
+				45A90BC31E9518F30097F54B /* Set_GroupTests.swift in Sources */,
 				4561CF451DF37794003D940A /* UITableView_RegisterTests.swift in Sources */,
 				45B87FE71DFF3E5F00EFCD57 /* Url_QueryParametersTests.swift in Sources */,
 				45B87FE51DFF3E5F00EFCD57 /* String_Base64Tests.swift in Sources */,
@@ -613,6 +620,7 @@
 				45C8B5F01E01EC240092F1E3 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				45B87FCF1DFF3E3200EFCD57 /* UIColor_HexTests.swift in Sources */,
 				45BCF63A1E6B5A04008ABBAA /* BiometricsAuthorizationServiceTests.swift in Sources */,
+				45A90BC01E9518A50097F54B /* Array_GroupTests.swift in Sources */,
 				4561CF421DF3778C003D940A /* IoCTests.swift in Sources */,
 				454D982B1E08665C002B127E /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				455547531E00A9D800A9477A /* String_ContainsTests.swift in Sources */,
