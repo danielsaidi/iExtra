@@ -2,7 +2,7 @@
 //  BiometricsAuthorizationServiceTests.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2017-03-04.
+//  Created by Daniel Saidi on 2017-03-04.
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 

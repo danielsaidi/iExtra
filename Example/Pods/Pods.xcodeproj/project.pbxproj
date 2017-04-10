@@ -76,6 +76,8 @@
 		4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */; };
 		4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA01E8CFB2900ECC18E /* RoundButton.swift */; };
 		4558DBA41E8CFC5E00ECC18E /* AnimatedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA31E8CFC5E00ECC18E /* AnimatedLabel.swift */; };
+		4567A6BB1E95367A00E8F312 /* UIButton_ImageMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6BA1E95367A00E8F312 /* UIButton_ImageMargin.swift */; };
+		4567A6C11E95370000E8F312 /* UIButton_Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6C01E95370000E8F312 /* UIButton_Target.swift */; };
 		45A90BBD1E9518600097F54B /* Set_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A90BBC1E9518600097F54B /* Set_Group.swift */; };
 		4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF877D206C63111AE6D373E279AEB9E /* ExternalMapServiceBase.swift */; };
 		47FF072E4D2BDE2759931B0B846BD5D0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D0E6360F5879FA9408D6392D73B5E /* DSL.swift */; };
@@ -389,6 +391,8 @@
 		4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ScalePulse.swift; sourceTree = "<group>"; };
 		4558DBA01E8CFB2900ECC18E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		4558DBA31E8CFC5E00ECC18E /* AnimatedLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedLabel.swift; sourceTree = "<group>"; };
+		4567A6BA1E95367A00E8F312 /* UIButton_ImageMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_ImageMargin.swift; sourceTree = "<group>"; };
+		4567A6C01E95370000E8F312 /* UIButton_Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Target.swift; sourceTree = "<group>"; };
 		45A90BBC1E9518600097F54B /* Set_Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_Group.swift; sourceTree = "<group>"; };
 		4687C3154E9647F2C75EAC9C00B6AEB6 /* RemoteNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationService.swift; sourceTree = "<group>"; };
 		46FCB309DDCD0F3151825292492F197D /* HintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
@@ -869,6 +873,8 @@
 			children = (
 				452540801E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift */,
 				452540811E8E7E5F004E75A2 /* UIButton_Init.swift */,
+				4567A6BA1E95367A00E8F312 /* UIButton_ImageMargin.swift */,
+				4567A6C01E95370000E8F312 /* UIButton_Target.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1692,6 +1698,7 @@
 				267FBCE96CC42C7E38F1D12CE3DDE7B9 /* KeychainService.swift in Sources */,
 				3E579BAB50720BF8DDE7BA232F242790 /* KeychainServiceDefault.swift in Sources */,
 				83090DF87AE757C44383EC66C9CDCEDE /* KeychainWrapper.swift in Sources */,
+				4567A6BB1E95367A00E8F312 /* UIButton_ImageMargin.swift in Sources */,
 				72662CCBA196CA8FB7481EE3124460CA /* KeychainWriter.swift in Sources */,
 				F0C3ED9CD9B0BF18F30D053E6FE62F53 /* LinearFloatingSubmenuPresenter.swift in Sources */,
 				EC1A0C4B6CA6528612438BD385B5360B /* LinearTravellingMapCamera.swift in Sources */,
@@ -1772,6 +1779,7 @@
 				CA6CE7AEC1AC389303B5B04E7F6791C6 /* UIView_Move.swift in Sources */,
 				64336633EECF83850FFE488179B6F7A3 /* UIView_Nib.swift in Sources */,
 				079EE8FECC38A94DE5152526B20991D6 /* UIView_ReuseIdentifier.swift in Sources */,
+				4567A6C11E95370000E8F312 /* UIButton_Target.swift in Sources */,
 				3FEB9321ED286BE696F6166492FECEA4 /* UIView_Round.swift in Sources */,
 				4558DBA41E8CFC5E00ECC18E /* AnimatedLabel.swift in Sources */,
 				5F732C165075E199EABE79E54911504B /* UIView_Screenshot.swift in Sources */,

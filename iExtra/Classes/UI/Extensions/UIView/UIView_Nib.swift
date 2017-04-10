@@ -11,6 +11,9 @@ import UIKit
 
 public extension UIView {
     
+    
+    // MARK: - Static Properties
+    
     public static var defaultNib: UINib {
         return UINib(nibName: defaultNibName, bundle: nil)
     }
@@ -19,12 +22,17 @@ public extension UIView {
         return className
     }
     
-    public static func loadNib(owner: Any) -> Any? {
-        print("UIView loadNib(owner: Any) is deprecated")
-        return initWithDefaultNib(owner: owner)
+    
+    // MARK: - Static Functions
+    
+    public static func initWithDefaultNib(owner: Any) -> Self {
+        return initWithDefaultNibTyped(owner: owner)
     }
     
-    public static func initWithDefaultNib(owner: Any) -> Any? {
-        return Bundle.main.loadNibNamed(defaultNibName, owner: owner, options: nil)?[0]
+    public static func initWithDefaultNibTyped<T>(owner: Any) -> T {
+        let bundle = Bundle.main
+        let nib = defaultNibName
+        let nibs = bundle.loadNibNamed(nib, owner: owner, options: nil)
+        return nibs?[0] as! T
     }
 }

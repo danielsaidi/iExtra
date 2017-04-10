@@ -2,7 +2,7 @@
 //  Array_GroupTests.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2017-04-05.
+//  Created by Daniel Saidi on 2017-04-05.
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
