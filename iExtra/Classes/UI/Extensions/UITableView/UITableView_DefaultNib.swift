@@ -30,9 +30,9 @@ public extension UITableView {
         return dequeueReusableCell(withIdentifier: id) as? T
     }
     
-    public func dequeueCellWithDefaultNib<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T? {
+    public func dequeueCellWithDefaultNib<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T! {
         let id = T.defaultReuseIdentifier
-        return dequeueReusableCell(withIdentifier: id, for: indexPath) as? T
+        return dequeueReusableCell(withIdentifier: id, for: indexPath) as! T
     }
     
     public func dequeueHeaderFooterViewWithDefaultNib<T: ReusableTableViewHeaderFooterView>() -> T? {

@@ -99,11 +99,6 @@ class UITableView_DefaultNibTests: QuickSpec {
                     let cell: RegisterTestCell? = table.dequeueCellWithDefaultNib()
                     expect(cell).toNot(beNil())
                 }
-                
-                it("returns nil for incorrect type") {
-                    let cell: RegisterTestCellAlternate? = table.dequeueCellWithDefaultNib()
-                    expect(cell).to(beNil())
-                }
             }
             
             
@@ -122,12 +117,6 @@ class UITableView_DefaultNibTests: QuickSpec {
                     let cell: RegisterTestCell? = table.dequeueCellWithDefaultNib(at: path)
                     expect(cell).toNot(beNil())
                 }
-                
-                it("returns nil for incorrect type") {
-                    let path = IndexPath(row: 0, section: 0)
-                    let cell: RegisterTestCellAlternate? = table.dequeueCellWithDefaultNib(at: path)
-                    expect(cell).to(beNil())
-                }
             }
             
             
@@ -142,11 +131,6 @@ class UITableView_DefaultNibTests: QuickSpec {
                 it("returns cell for correct type") {
                     let cell: RegisterTestView? = table.dequeueHeaderFooterViewWithDefaultNib()
                     expect(cell).toNot(beNil())
-                }
-                
-                it("returns nil for incorrect type") {
-                    let cell: RegisterTestViewAlternate? = table.dequeueHeaderFooterViewWithDefaultNib()
-                    expect(cell).to(beNil())
                 }
             }
         }

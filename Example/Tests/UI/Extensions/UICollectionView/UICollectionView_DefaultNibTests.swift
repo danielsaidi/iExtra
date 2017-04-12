@@ -63,7 +63,7 @@ class UICollectionView_DefaultNibTests: QuickSpec {
                 
                 it("uses default reuse identifier and path") {
                     let path = IndexPath(row: 1, section: 2)
-                    let _: RegisterTestCell? = view.dequeueCellWithDefaultNib(at: path)
+                    let _: RegisterTestCell = view.dequeueCellWithDefaultNib(at: path)
                     let expectedId = RegisterTestCell.defaultReuseIdentifier
                     expect(view.executedWithIndexPath).to(equal(path))
                     expect(view.executedWithIdentifier).to(equal(expectedId))
@@ -71,14 +71,8 @@ class UICollectionView_DefaultNibTests: QuickSpec {
                 
                 it("returns cell for correct type") {
                     let path = IndexPath(row: 0, section: 0)
-                    let cell: RegisterTestCell? = view.dequeueCellWithDefaultNib(at: path)
+                    let cell: RegisterTestCell = view.dequeueCellWithDefaultNib(at: path)
                     expect(cell).toNot(beNil())
-                }
-                
-                it("returns nil for incorrect type") {
-                    let path = IndexPath(row: 0, section: 0)
-                    let cell: RegisterTestCellAlternate? = view.dequeueCellWithDefaultNib(at: path)
-                    expect(cell).to(beNil())
                 }
             }
         }
