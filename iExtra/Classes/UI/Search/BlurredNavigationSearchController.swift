@@ -26,6 +26,15 @@ open class BlurredNavigationSearchController : NavigationSearchController {
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
+    
+    
+    // MARK: - Public functions
+    
+    open override func present(in vc: UIViewController) {
+        super.present(in: vc)
+        view.backgroundColor = .clear
+        searchResultsController?.view.backgroundColor = .clear
+    }
 }
 
 
