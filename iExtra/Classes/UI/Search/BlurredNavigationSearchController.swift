@@ -15,25 +15,16 @@ open class BlurredNavigationSearchController : NavigationSearchController {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setup(withBlurEffect: applyBlurEffect())
+        setup(withBlurEffect: blurEffect(withStyle: .dark, alpha: 1.0))
     }
     
     public init(searchResultsController: UIViewController?, blurStyle: UIBlurEffectStyle, blurAlpha: CGFloat) {
         super.init(searchResultsController: searchResultsController)
-        setup(withBlurEffect: applyBlurEffect(withBlurStyle: blurStyle, alpha: blurAlpha))
+        setup(withBlurEffect: blurEffect(withStyle: blurStyle, alpha: blurAlpha))
     }
     
     public override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    }
-    
-    
-    // MARK: - Public functions
-    
-    open override func present(in vc: UIViewController) {
-        super.present(in: vc)
-        view.backgroundColor = .clear
-        searchResultsController?.view.backgroundColor = .clear
     }
 }
 
@@ -42,11 +33,7 @@ open class BlurredNavigationSearchController : NavigationSearchController {
 
 fileprivate extension BlurredNavigationSearchController {
     
-    func applyBlurEffect() -> UIBlurEffect {
-        return applyBlurEffect(withBlurStyle: .dark, alpha: 1.0)
-    }
-    
-    func applyBlurEffect(withBlurStyle style: UIBlurEffectStyle, alpha: CGFloat) -> UIBlurEffect {
+    func blurEffect(withStyle style: UIBlurEffectStyle, alpha: CGFloat) -> UIBlurEffect {
         let blurEffect = UIBlurEffect(style: style)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = view.frame

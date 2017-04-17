@@ -18,7 +18,11 @@
 
 import UIKit
 
-open class NavigationSearchController : UISearchController, UISearchBarDelegate, UISearchResultsUpdating {
+
+open class NavigationSearchControllerBarButtonItem: UIBarButtonItem {}
+
+
+open class NavigationSearchController: UISearchController, UISearchBarDelegate, UISearchResultsUpdating {
     
     
     // MARK: - Initialization
@@ -42,16 +46,16 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
     
     // MARK: - Properties
     
-    public var shouldHandleSearchBar = true
-    
     fileprivate weak var vc: UIViewController? {
         didSet {
             vc?.definesPresentationContext = true
-            let color = vc?.view.backgroundColor
-            view.backgroundColor = color
-            searchResultsController?.view.backgroundColor = color
+            vc?.navigationItem.titleView = searchBar
+            vcRightButton = vc?.navigationItem.rightBarButtonItem
+            vc?.navigationItem.rightBarButtonItem = createCancelButton()
         }
     }
+    
+    fileprivate weak var vcRightButton: UIBarButtonItem?
     
     
     
@@ -62,25 +66,19 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
         super.dismiss(animated: true)
     }
     
-    open func present(in vc: UIViewController) {
+    open func present(in vc: UIViewController, makeFirstResponder: Bool = false) {
         self.vc = vc
-        
-        if shouldHandleSearchBar {
-            vc.navigationItem.titleView = searchBar
-        }
-        
-        delay(0.1) {
-            self.searchBar.becomeFirstResponder()
-        }
-    }
-    
-    open func setup(in vc: UIViewController) {
-        self.vc = vc
+        delay(0.5) { self.isActive = true }
+        delay(1.0) { self.searchBar.becomeFirstResponder() }
     }
     
     
     
     // MARK: - UISearchBarDelegate
+    
+    open func cancelButtonTapped() {
+        isActive = false
+    }
     
     open func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         isActive = false
@@ -103,12 +101,17 @@ open class NavigationSearchController : UISearchController, UISearchBarDelegate,
 
 fileprivate extension NavigationSearchController {
     
+    func createCancelButton() -> UIBarButtonItem {
+        return NavigationSearchControllerBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+    }
+    
     func setup() {
         delegate = self
-        searchBar.delegate = self
         searchResultsUpdater = self
-        hidesNavigationBarDuringPresentation = false
+        searchBar.delegate = self
+        searchBar.showsCancelButton = false
         dimsBackgroundDuringPresentation = true
+        hidesNavigationBarDuringPresentation = false
     }
 }
 
@@ -118,17 +121,9 @@ fileprivate extension NavigationSearchController {
 
 extension NavigationSearchController: UISearchControllerDelegate {
     
-    public func didPresentSearchController(_ searchController: UISearchController) {
-        DispatchQueue.main.async {
-            searchController.searchBar.becomeFirstResponder()
-        }
-    }
-    
     public func willDismissSearchController(_ searchController: UISearchController) {
-        
-        if shouldHandleSearchBar {
-            vc?.navigationItem.titleView = nil
-        }
+        vc?.navigationItem.titleView = nil
+        vc?.navigationItem.rightBarButtonItem = vcRightButton
         
         let fadeOut = { searchController.view.alpha = 0 }
         UIView.animate(withDuration: 0.5, animations: fadeOut) {
