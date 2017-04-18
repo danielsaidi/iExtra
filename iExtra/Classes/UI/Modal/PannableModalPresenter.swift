@@ -28,23 +28,43 @@ public final class PannableModalPresenter: NSObject {
     
     fileprivate static var cache = [PannableModalPresenter]()
     
+    fileprivate var fromStatusBarStyle: UIStatusBarStyle?
+    
     fileprivate var panGesture: UIPanGestureRecognizer?
+    
+    fileprivate var toStatusBarStyle: UIStatusBarStyle?
     
     fileprivate let transition = InteractiveModalTransition()
     
     fileprivate weak var viewController: UIViewController?
     
-
+    
     
     // MARK: - Public Functions
     
-    public static func present(vc: UIViewController, from: UIViewController) {
+    public static func disablePanGesture(for vc: UIViewController) {
+        presenter(for: vc)?.panGesture?.isEnabled = false
+    }
+    
+    public static func enablePanGesture(for vc: UIViewController) {
+        presenter(for: vc)?.panGesture?.isEnabled = true
+    }
+    
+    public static func present(vc: UIViewController, from: UIViewController, statusBarStyle: UIStatusBarStyle? = nil) {
         let presenter = PannableModalPresenter()
         presenter.viewController = vc
+        presenter.fromStatusBarStyle = UIApplication.shared.statusBarStyle
+        presenter.toStatusBarStyle = statusBarStyle ?? presenter.fromStatusBarStyle
+        
         vc.transitioningDelegate = presenter
         from.present(vc, animated: true) {
             presenter.addPanGesture(to: vc.view)
+            presenter.setStatusBarStyle(presenter.toStatusBarStyle)
         }
+    }
+    
+    public static func presenter(for vc: UIViewController) -> PannableModalPresenter? {
+        return cache.first { $0.viewController == vc }
     }
 }
 
@@ -85,10 +105,12 @@ extension PannableModalPresenter {
         let downwardMovementPercent = fminf(downwardMovement, 1.0)
         let progress = CGFloat(downwardMovementPercent)
         
+        adjustStatusBar(for: translation.y)
+        
         switch pan.state {
         case .began:
             transition.hasStarted = true
-            viewController?.dismiss(animated: true, completion: nil)
+            viewController?.dismiss(animated: true)
         case .changed:
             transition.shouldFinish = progress > percentThreshold
             transition.update(progress)
@@ -98,6 +120,7 @@ extension PannableModalPresenter {
         case .ended:
             transition.hasStarted = false
             transition.shouldFinish ? transition.finish() : transition.cancel()
+            adjustStatusBar(for: transition.shouldFinish)
         default:
             break
         }
@@ -117,6 +140,22 @@ fileprivate extension PannableModalPresenter {
         view.addGestureRecognizer(pan)
         panGesture = pan
     }
+    
+    func adjustStatusBar(for translation: CGFloat) {
+        let style = translation > 70 ? fromStatusBarStyle : toStatusBarStyle
+        setStatusBarStyle(style)
+    }
+    
+    func adjustStatusBar(for isDismissing: Bool) {
+        let style = isDismissing ? fromStatusBarStyle : toStatusBarStyle
+        setStatusBarStyle(style)
+    }
+    
+    func setStatusBarStyle(_ style: UIStatusBarStyle?) {
+        guard let style = style else { return }
+        guard fromStatusBarStyle != toStatusBarStyle else { return }
+        UIApplication.shared.statusBarStyle = style
+    }
 }
 
 
@@ -126,6 +165,7 @@ fileprivate extension PannableModalPresenter {
 extension PannableModalPresenter: PannableModalDismissAnimatorDelegate {
     
     func dismissAnimatorDidDismiss(_ animator: PannableModalDismissAnimator) {
+        setStatusBarStyle(fromStatusBarStyle)
         PannableModalPresenter.destroy(presenter: self)
     }
 }
