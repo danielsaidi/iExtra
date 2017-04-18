@@ -11,14 +11,6 @@ import Foundation
 public class HintManagerBase: NSObject, HintManager {
     
     
-    // MARK: Initialization
-    
-    public override init() {
-        super.init()
-    }
-    
-    
-    
     // MARK: Properties
     
     weak public var delegate: HintManagerDelegate?
@@ -30,6 +22,7 @@ public class HintManagerBase: NSObject, HintManager {
     public var incorrectBehaviorCountTrigger = 5
     
     private var incorrectBehaviorCount = 0
+    
     private var timer: Timer!
     
     

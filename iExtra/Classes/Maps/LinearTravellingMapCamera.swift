@@ -49,18 +49,17 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     // MARK: Private functions
     
     private func travel(inDirection vector: CGPoint) {
-        if (!isTravelling || mapView == nil) {
-            return
-        }
+        guard let mapView = mapView else { return }
+        guard !isTravelling else { return }
         
-        if let coord = mapView?.centerCoordinate {
-            let x = coord.latitude + CLLocationDegrees(vector.x)
-            let y = coord.longitude + CLLocationDegrees(vector.y)
-            centerCoordinate = CLLocationCoordinate2D(latitude: x, longitude: y)
-            mapView?.setCamera(self, animated: true)
-            delay(updateInterval) {
-                self.travel(inDirection: vector)
-            }
+        let center = mapView.centerCoordinate
+        let x = center.latitude + CLLocationDegrees(vector.x)
+        let y = center.longitude + CLLocationDegrees(vector.y)
+        centerCoordinate = CLLocationCoordinate2D(latitude: x, longitude: y)
+        mapView.setCamera(self, animated: true)
+        
+        delay(updateInterval) {
+            self.travel(inDirection: vector)
         }
     }
 }

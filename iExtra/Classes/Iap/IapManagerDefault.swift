@@ -29,7 +29,7 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
     
     open weak var delegate: IapManagerDelegate?
     
-    open var canMakePayments:Bool {
+    open var canMakePayments: Bool {
         return SKPaymentQueue.canMakePayments()
     }
     
@@ -50,7 +50,7 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
         paymentQueue.add(payment)
     }
     
-    open func requestProducts(withIds ids:[String]) {
+    open func requestProducts(withIds ids: [String]) {
         let request = SKProductsRequest(productIdentifiers: Set(ids))
         request.delegate = self
         request.start()

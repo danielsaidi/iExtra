@@ -9,6 +9,7 @@
 import Foundation
 
 public protocol DateSerializer {
+    
     func deserialize(_ string: String) -> Date?
     func serialize(_ date: Date) -> String
 }

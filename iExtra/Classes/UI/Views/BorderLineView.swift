@@ -14,7 +14,6 @@ public class BorderLineView: UIView {
     // MARK: - Functions
     
     override public func layoutSubviews() {
-        
         adjustHeight()
         adjustWidth()
     }

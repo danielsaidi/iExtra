@@ -71,6 +71,7 @@
 		452540831E8E7E5F004E75A2 /* UIButton_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540811E8E7E5F004E75A2 /* UIButton_Init.swift */; };
 		452540851E8E7E92004E75A2 /* UIImageView_ImageFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540841E8E7E92004E75A2 /* UIImageView_ImageFade.swift */; };
 		452540871E8E7EE6004E75A2 /* UIView_DripPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */; };
+		45529B6F1EA60DC100D4DFE8 /* CGRect_Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B6E1EA60DC100D4DFE8 /* CGRect_Rects.swift */; };
 		4558DB911E8CF26F00ECC18E /* UIView_FadePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */; };
 		4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */; };
 		4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA01E8CFB2900ECC18E /* RoundButton.swift */; };
@@ -134,7 +135,6 @@
 		72662CCBA196CA8FB7481EE3124460CA /* KeychainWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4243B67F5188640971BFDAE6D279DE57 /* KeychainWriter.swift */; };
 		72D3A1C6058B13C825B26852191F6B2D /* BeGreaterThanOrEqualTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279BE6E3C37A283E4B6CF245D2BA87FF /* BeGreaterThanOrEqualTo.swift */; };
 		74FC7798ECE45688307334ACB26448E6 /* UIView_Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26423E17EA28C30A835420ED56CDB151 /* UIView_Subview.swift */; };
-		75135002ADE790D5618563605FDDA8CD /* LoggingHintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09574833F2004450B71EF40F6FE6E389 /* LoggingHintManager.swift */; };
 		75D8DC7FAC0A3FEDFE3997A81DA0A374 /* QuickSelectedTestSuiteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E9CD0D0763712CAB16EB2EC0322261 /* QuickSelectedTestSuiteBuilder.swift */; };
 		768986A7247FDE1D5E944CB3798A24F3 /* ActionSheetEnableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0857B53A306231ABB71E9B1055D4B8B /* ActionSheetEnableItem.swift */; };
 		77FEE8FCC6BF798871177A0753A0EB74 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C68EBB8E1AA009644526A1E43172EC /* BeVoid.swift */; };
@@ -174,7 +174,6 @@
 		9DECE9F4EF37476F178677E3BF9B2070 /* StretchableScrollViewHeaderTapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868AABE42BD919B6D838481B55542224 /* StretchableScrollViewHeaderTapView.swift */; };
 		9E8784B8952EC212BB07A103F2872188 /* UIViewController_Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB9E49EFCEA4C6F506A870BF60478B5 /* UIViewController_Root.swift */; };
 		A052AEF900A59700B2056A1575B82C1A /* Array_ElementsOfType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848C658CC1BFB63BC961968A388DC0F /* Array_ElementsOfType.swift */; };
-		A0617A18CA9A4BABAB2CB0214E018445 /* CGRect_Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC557B23448917D83DA2EFF19D15FB1 /* CGRect_Rects.swift */; };
 		A123150C4D3981886E17DB2CAC3CD1DA /* Array_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3830A8E17F62717D5677D1A5D6B8FC /* Array_Group.swift */; };
 		A1DA2DF3B0203F701CD4B7C7114387A2 /* ActionSheetSelectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9699BB82B64F21A40D91FF3F99A869F /* ActionSheetSelectItem.swift */; };
 		A274138513EFA91404DACB43052038AF /* NMBObjCMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE134C970257401B63634789F76E1D99 /* NMBObjCMatcher.swift */; };
@@ -308,7 +307,6 @@
 		04E9CD0D0763712CAB16EB2EC0322261 /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		078FA24BE80F1306229035228D7CCF92 /* FloatingMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatingMenu.swift; sourceTree = "<group>"; };
 		0848C658CC1BFB63BC961968A388DC0F /* Array_ElementsOfType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array_ElementsOfType.swift; sourceTree = "<group>"; };
-		09574833F2004450B71EF40F6FE6E389 /* LoggingHintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LoggingHintManager.swift; sourceTree = "<group>"; };
 		097DCDDF9A25FEFB6D961A9D6023B648 /* UIView_Bounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Bounce.swift; sourceTree = "<group>"; };
 		09FAD1AAA869861319540FA777038FE7 /* Pods-iExtra_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iExtra_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		09FCD2114BB3916E797131165B4033B8 /* AdapterProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AdapterProtocols.swift; path = Sources/Nimble/Adapters/AdapterProtocols.swift; sourceTree = "<group>"; };
@@ -386,6 +384,7 @@
 		452540811E8E7E5F004E75A2 /* UIButton_Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Init.swift; sourceTree = "<group>"; };
 		452540841E8E7E92004E75A2 /* UIImageView_ImageFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView_ImageFade.swift; sourceTree = "<group>"; };
 		452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_DripPulse.swift; sourceTree = "<group>"; };
+		45529B6E1EA60DC100D4DFE8 /* CGRect_Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect_Rects.swift; sourceTree = "<group>"; };
 		4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_FadePulse.swift; sourceTree = "<group>"; };
 		4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ScalePulse.swift; sourceTree = "<group>"; };
 		4558DBA01E8CFB2900ECC18E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -428,7 +427,6 @@
 		6778B35F731CACE8A16DE3FB29296715 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
 		677F8677F8BCFDF17B200E582CA90DCC /* LocationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		67BA806EF4F2226EC87A134DFB3E0CD2 /* KeychainBasedDeviceIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainBasedDeviceIdentifier.swift; sourceTree = "<group>"; };
-		6AC557B23448917D83DA2EFF19D15FB1 /* CGRect_Rects.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CGRect_Rects.swift; sourceTree = "<group>"; };
 		6AD24AD5356066B5BBAEB04D4D6CA2C3 /* MainBundleImageFileFinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainBundleImageFileFinder.swift; sourceTree = "<group>"; };
 		6B7BB02F65BE637AEFE1993FA596FACB /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
 		6BFD142E366265060C7305FA73FFE05C /* SourceLocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SourceLocation.swift; path = Sources/Nimble/Utils/SourceLocation.swift; sourceTree = "<group>"; };
@@ -647,7 +645,6 @@
 			isa = PBXGroup;
 			children = (
 				344FC901E3A1E00B9391723C0D899E11 /* Authorization */,
-				FF6A69442214FD8068A850B0B7E145FC /* CoreGraphics */,
 				244BB205DDE185660A5982C606D0338C /* Data */,
 				9A3659FE49557D265C981FED047BEEB2 /* Date */,
 				92337B7F32FAE1F3AACCA78DBAE5D774 /* Device */,
@@ -918,16 +915,17 @@
 				4F3830A8E17F62717D5677D1A5D6B8FC /* Array_Group.swift */,
 				D62D066C8A492408E56ABE41D63A496A /* Array_RandomElement.swift */,
 				3DF4EBBC23AC6FBC1A69964C773A9976 /* Array_RemoveObject.swift */,
+				45529B6E1EA60DC100D4DFE8 /* CGRect_Rects.swift */,
 				4B3C8CE0EFE5EB63F8C709B39C1367C9 /* Collection_Shuffle.swift */,
 				E11319908721A527AA904F0D54C25F1B /* NSObject_ClassName.swift */,
 				A2E065B8E62957CFA10B4BFB60BFE296 /* Numeric_Format.swift */,
 				3C4E0657A1E3B58C5D264C71144F5DD4 /* Numeric_Random.swift */,
+				45A90BBC1E9518600097F54B /* Set_Group.swift */,
 				F690E932F611C4105F26896B1ABC9C10 /* String_Base64.swift */,
 				13E3D1406EAAE3A0A915A36842D999FE /* String_Contains.swift */,
 				BE76352F25B7F8A596760AE08CE1AF8C /* String_Replace.swift */,
 				EE5BCFDD9082EFC7C913AC74C3388CD6 /* String_UrlEncode.swift */,
 				DF995393646911EFA30F4C24B56A1ACD /* Url_QueryParameters.swift */,
-				45A90BBC1E9518600097F54B /* Set_Group.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1305,7 +1303,6 @@
 			children = (
 				46FCB309DDCD0F3151825292492F197D /* HintManager.swift */,
 				3744D502913D6FF8C001B7AF622CF800 /* HintManagerBase.swift */,
-				09574833F2004450B71EF40F6FE6E389 /* LoggingHintManager.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -1404,14 +1401,6 @@
 				59E823FAA086D8F6FCE2314C5BF48516 /* UIView_Visibility.swift */,
 			);
 			path = UIView;
-			sourceTree = "<group>";
-		};
-		FF6A69442214FD8068A850B0B7E145FC /* CoreGraphics */ = {
-			isa = PBXGroup;
-			children = (
-				6AC557B23448917D83DA2EFF19D15FB1 /* CGRect_Rects.swift */,
-			);
-			path = CoreGraphics;
 			sourceTree = "<group>";
 		};
 		FF7C048999C4E09D21D437D32AC021E1 /* UIColor */ = {
@@ -1663,7 +1652,6 @@
 				452540821E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift in Sources */,
 				854CAFEF11E3711DBBCA025A40492E65 /* BorderLineView.swift in Sources */,
 				390072FA26B05D964885DE08D34409C8 /* BottomGradientView.swift in Sources */,
-				A0617A18CA9A4BABAB2CB0214E018445 /* CGRect_Rects.swift in Sources */,
 				F8FA22E9BABE4C718E529299B79756B9 /* CLLocationCoordinate2D_Valid.swift in Sources */,
 				602DB9785E936A8F3EF4E8D125F7491E /* CLPlacemark_AddressDescription.swift in Sources */,
 				452540831E8E7E5F004E75A2 /* UIButton_Init.swift in Sources */,
@@ -1714,7 +1702,6 @@
 				579F0F414EAE1295B7ED322AE526B5B7 /* LocationService.swift in Sources */,
 				4AB30657718E6C07273D4C417E3FD437 /* LocationServiceDefault.swift in Sources */,
 				26ADB37C19EBD1AEAD8CBA0FF10A67D9 /* LocationServiceErrorAlert.swift in Sources */,
-				75135002ADE790D5618563605FDDA8CD /* LoggingHintManager.swift in Sources */,
 				4196BF5F9322583C1AF79A2387FF66F5 /* MainBundleFileFinder.swift in Sources */,
 				D9B9CDCE52DDAAD7C20EB3562AD2BF86 /* MainBundleImageFileFinder.swift in Sources */,
 				04365AC908F9F233E6FCC267B5B65833 /* MapAnnotation.swift in Sources */,
@@ -1749,6 +1736,7 @@
 				335FDA21C209A60D60AB982B0F3C42A5 /* StretchableTableViewHeader.swift in Sources */,
 				49EE330911EA184AA064ABF9BC7FE012 /* String_Base64.swift in Sources */,
 				64EF0DBFC810E012E0E553B322A4ED98 /* String_Contains.swift in Sources */,
+				45529B6F1EA60DC100D4DFE8 /* CGRect_Rects.swift in Sources */,
 				516F8E97A5B5C83FAAF9A5623C5A703A /* String_Replace.swift in Sources */,
 				8C2F827F587C1E0AC4650D091A97F63C /* String_UrlEncode.swift in Sources */,
 				8E90A674D66DBC1573A5E9C8A1E33247 /* SystemNotificationService.swift in Sources */,

@@ -13,7 +13,7 @@ open class SlidingViewControllerTransition: NSObject, UIViewControllerAnimatedTr
     
     // MARK: - Initialization
     
-    public init (duration: Double = 0.2, vector: CGPoint = CGPoint(x: 5, y: 0), isForward: Bool) {
+    public init(duration: Double = 0.2, vector: CGPoint = CGPoint(x: 5, y: 0), isForward: Bool) {
         self.duration = duration
         self.isForward = isForward
         self.vector = vector

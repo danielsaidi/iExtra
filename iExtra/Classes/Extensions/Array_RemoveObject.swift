@@ -10,7 +10,7 @@ import Foundation
 
 public extension Array where Element : Equatable {
     
-    public mutating func remove(object : Element) {
+    public mutating func remove(object: Element) {
         guard let index = self.index(of: object) else { return }
         remove(at: index)
     }

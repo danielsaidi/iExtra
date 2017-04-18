@@ -12,7 +12,6 @@ public extension String {
     
     public func urlEncoded() -> String {
         let url = addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
-        let and = url.replacingOccurrences(of: "&", with: "%26")
-        return and
+        return url.replacingOccurrences(of: "&", with: "%26")
     }
 }

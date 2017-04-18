@@ -17,25 +17,24 @@ public class DateSerializerDefault: NSObject, DateSerializer {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.dateFormat = getDateFormat(for: string)
-        let result = dateFormatter.date(from: string)
-        
-        return result
+        return dateFormatter.date(from: string)
     }
     
     public func serialize(_ date: Date) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
         dateFormatter.dateFormat = getDateFormat(for: ".")
-        let result = dateFormatter.string(from: date)
-        
-        return result
+        return dateFormatter.string(from: date)
     }
+}
+
+
+
+// MARK: Private methods
+
+fileprivate extension DateSerializerDefault {
     
-    
-    
-    // MARK: Private methods
-    
-    private func getDateFormat(for string:String) -> String {
+    func getDateFormat(for string: String) -> String {
         let dateFormatWithSeconds = "yyyy-MM-dd'T'HH:mm:ssZ"
         let dateFormatWithSecondFragments = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
         let hasFragments = string.range(of: ".") != nil

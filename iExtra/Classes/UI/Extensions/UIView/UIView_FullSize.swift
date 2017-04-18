@@ -8,9 +8,9 @@
 
 import UIKit
 
-@available(*, deprecated, message: "Use addSubview(_:fill) instead")
 public extension UIView {
     
+    @available(*, deprecated, message: "Use addSubview(_:fill) instead")
     public func makeFullSize(in view: UIView) {
         let width = getConstraint(for: .width, in: view)
         let height = getConstraint(for: .height, in: view)

@@ -13,7 +13,7 @@ open class FadingViewControllerTransition: NSObject, UIViewControllerAnimatedTra
     
     // MARK: - Initialization
     
-    public init (duration: Double = 0.2) {
+    public init(duration: Double = 0.2) {
         self.duration = duration
         super.init()
     }
