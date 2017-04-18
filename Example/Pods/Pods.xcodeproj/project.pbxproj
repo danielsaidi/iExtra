@@ -72,6 +72,9 @@
 		452540851E8E7E92004E75A2 /* UIImageView_ImageFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540841E8E7E92004E75A2 /* UIImageView_ImageFade.swift */; };
 		452540871E8E7EE6004E75A2 /* UIView_DripPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */; };
 		45529B6F1EA60DC100D4DFE8 /* CGRect_Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B6E1EA60DC100D4DFE8 /* CGRect_Rects.swift */; };
+		45529B741EA6260400D4DFE8 /* InteractiveModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */; };
+		45529B751EA6260400D4DFE8 /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */; };
+		45529B761EA6260400D4DFE8 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */; };
 		4558DB911E8CF26F00ECC18E /* UIView_FadePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */; };
 		4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */; };
 		4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA01E8CFB2900ECC18E /* RoundButton.swift */; };
@@ -385,6 +388,9 @@
 		452540841E8E7E92004E75A2 /* UIImageView_ImageFade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView_ImageFade.swift; sourceTree = "<group>"; };
 		452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_DripPulse.swift; sourceTree = "<group>"; };
 		45529B6E1EA60DC100D4DFE8 /* CGRect_Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGRect_Rects.swift; sourceTree = "<group>"; };
+		45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveModalTransition.swift; sourceTree = "<group>"; };
+		45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalDismissAnimator.swift; sourceTree = "<group>"; };
+		45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalPresenter.swift; sourceTree = "<group>"; };
 		4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_FadePulse.swift; sourceTree = "<group>"; };
 		4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ScalePulse.swift; sourceTree = "<group>"; };
 		4558DBA01E8CFB2900ECC18E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -875,6 +881,16 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
+		45529B701EA6260400D4DFE8 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */,
+				45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */,
+				45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		4558DB9F1E8CFB2900ECC18E /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -971,6 +987,7 @@
 			children = (
 				AF48A081A761CF747727024C3F074A7A /* ActionSheets */,
 				DF57BACAA3B849405AF17DDC84B87465 /* Extensions */,
+				45529B701EA6260400D4DFE8 /* Modal */,
 				0456E715AA6C5C4FE0771690C4E12E9E /* Parallax */,
 				ED388EDEB8DD6CED6853BCE5CCAFF5E8 /* Search */,
 				D91932EA72982EDE4E6A411DACE25BF3 /* Transitions */,
@@ -1626,7 +1643,9 @@
 			files = (
 				4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */,
 				102ADF622BC949BD2BF788417CCDC303 /* ActionSheet.swift in Sources */,
+				45529B741EA6260400D4DFE8 /* InteractiveModalTransition.swift in Sources */,
 				F5D9C2BCF9394DF2646B7E9BF0275AFD /* ActionSheetAppearance.swift in Sources */,
+				45529B751EA6260400D4DFE8 /* PannableModalDismissAnimator.swift in Sources */,
 				F448203E9AB8B3DD0466458AEE8430AB /* ActionSheetCancelItem.swift in Sources */,
 				4D8A77AE93D35433DB43B631D7658434 /* ActionSheetDismissStyle.swift in Sources */,
 				768986A7247FDE1D5E944CB3798A24F3 /* ActionSheetEnableItem.swift in Sources */,
@@ -1763,6 +1782,7 @@
 				B26BF9CE1F07621047E7C3E9CC84BC69 /* UIScrollView_Scroll.swift in Sources */,
 				586962CF0DD765D97D1AE12234C67BF9 /* UISearchBar_Style.swift in Sources */,
 				F8BD84A90FAB94D23A71F316AEFC4981 /* UISlider_Extensions.swift in Sources */,
+				45529B761EA6260400D4DFE8 /* PannableModalPresenter.swift in Sources */,
 				4CD5920E562A45F9811CF6EEDC8F0FA7 /* UISlider_HitTest.swift in Sources */,
 				1FB0665D647451A14E5F2B73D29A3B5C /* UITableView_UndockHeaderView.swift in Sources */,
 				BB03F61EB4CEDEA834CCA042FC667DBB /* UITextView_Padding.swift in Sources */,
