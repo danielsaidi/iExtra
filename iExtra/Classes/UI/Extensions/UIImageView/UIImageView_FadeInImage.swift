@@ -1,5 +1,5 @@
 //
-//  UIImageView_ImageFade.swift
+//  UIImageView_FadeInImage.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-03-31.
