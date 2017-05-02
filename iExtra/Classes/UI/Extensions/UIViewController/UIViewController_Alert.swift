@@ -8,13 +8,21 @@
 
 import UIKit
 
+public typealias AlertAction = (UIAlertAction) -> ()
+
 public extension UIViewController {
     
-    func alert(title: String, message: String, buttonText: String) {
-        alert(title: title, message: message, buttonText: buttonText, action: nil)
-    }
-    
-    func alert(title: String, message: String, buttonText: String, action: ((UIAlertAction) -> ())?) {
-        UIAlertController.alert(title: title, message: message, buttonText: buttonText, from: self, action: action)
+    func alert(title: String, message: String, cancelText: String? = nil, actionText: String, action: AlertAction? = nil) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        if let cancelText = cancelText {
+            let cancel = UIAlertAction(title: cancelText, style: .cancel)
+            alert.addAction(cancel)
+        }
+        
+        let action = UIAlertAction(title: actionText, style: .default, handler: action)
+        alert.addAction(action)
+        
+        present(alert, animated: true, completion: nil)
     }
 }

@@ -44,7 +44,6 @@
 		22D46A50A3042259B6D7E080877411BB /* NavigationServiceActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D52B96DBFC173B36F92F4BADF0C084 /* NavigationServiceActionSheet.swift */; };
 		23607732489F71C31735E51D9110DF06 /* UIImage_Resized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E96F0BB69204163BB2B4DFCAE26244B /* UIImage_Resized.swift */; };
 		267FBCE96CC42C7E38F1D12CE3DDE7B9 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64EC3AF8B6DBF5B1A1410356BE083D /* KeychainService.swift */; };
-		26ADB37C19EBD1AEAD8CBA0FF10A67D9 /* LocationServiceErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737C8735187AF7E8A9F451582ED77363 /* LocationServiceErrorAlert.swift */; };
 		28DCADBFD9517F41AFF602393AA5B1C1 /* KeychainBasedDeviceIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BA806EF4F2226EC87A134DFB3E0CD2 /* KeychainBasedDeviceIdentifier.swift */; };
 		296C8DD8D0F4E0B4AA5114CE63F2A0A9 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F57F6238DD8E65A2E507CDCF1ED792C2 /* QuickSpec.m */; };
 		2A8F65EA70E8E60A15F409B0964A529D /* STPopupActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E946B0F75C877258F9857AA21B2E39 /* STPopupActionSheetPresenter.swift */; };
@@ -57,7 +56,6 @@
 		359E82606F2ED866D46CFD34587B7E1B /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F88D3827CC4AEE39397E1F761A2C0D3 /* Filter.swift */; };
 		35CFB7228E7012466E4F07B3D15147B3 /* SlidingViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D56B62F632389B979CF7745777428285 /* SlidingViewControllerTransition.swift */; };
 		390072FA26B05D964885DE08D34409C8 /* BottomGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A17AF43E6AB4C4605A02D39B9D50A91 /* BottomGradientView.swift */; };
-		39DB761E0BEF8CFC0927F4D4016F1E7F /* UIAlertController_Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FD4805937F3A0F735B0FBC2E609CF6 /* UIAlertController_Alert.swift */; };
 		3A3BAC860555FCC23053116E0692561E /* ThrowError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C7E9F063000B004BCB218F18B209FD /* ThrowError.swift */; };
 		3B58B26678AECD280E7E008BCFE0A4EE /* SlowPulsingFloatingMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC961D046E4EA6FCB8ED84942DAE1550 /* SlowPulsingFloatingMenuPresenter.swift */; };
 		3CD216AA62460995E34B178CF72A6041 /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B196F4C4AC8DB18D97751A9526F6FE4 /* NMBExpectation.swift */; };
@@ -92,7 +90,6 @@
 		49D16EF0930E87C7FED18D088DD3666C /* DSL+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137E96807DA4EB6CAEDAF1D57ED5E96A /* DSL+Wait.swift */; };
 		49EE330911EA184AA064ABF9BC7FE012 /* String_Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = F690E932F611C4105F26896B1ABC9C10 /* String_Base64.swift */; };
 		4A291B1F2A82434D6C95077E4ABFC57B /* UIImage_Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8365468558F92F080099381580A7BA88 /* UIImage_Color.swift */; };
-		4AB30657718E6C07273D4C417E3FD437 /* LocationServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6600D087FC39B8871FAFF61B9595F1D /* LocationServiceDefault.swift */; };
 		4B3A693297094D7B5038FF4F8966417B /* AdaptiveFileSizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE91A004B79832560BEA950C3DABE327 /* AdaptiveFileSizePresenter.swift */; };
 		4B5CCDCA1E63BD65344C0280AB7F3A71 /* XCTestSuite+QuickTestSuiteBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4927062CFEE82AD9E83CD9BF2FE507 /* XCTestSuite+QuickTestSuiteBuilder.m */; };
 		4B8D6C26A3F8E2FC5C8B6D9B77C98F66 /* UIImage_Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36E215F7FA4717387EE58F24CCAB4E52 /* UIImage_Tint.swift */; };
@@ -107,7 +104,6 @@
 		529ABDC3221073C3A044E8534BA985A7 /* Pods-iExtra_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA85C39216080EFAA8A5A9AD3D20BB6 /* Pods-iExtra_Example-dummy.m */; };
 		549C14A985EB7DFAC722930D9F736E78 /* Array_RandomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62D066C8A492408E56ABE41D63A496A /* Array_RandomElement.swift */; };
 		577E362C8144E41DBCCAB2FAA53A7D94 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942BD99070DF457A24467A12BDC720AA /* Closures.swift */; };
-		579F0F414EAE1295B7ED322AE526B5B7 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677F8677F8BCFDF17B200E582CA90DCC /* LocationService.swift */; };
 		586962CF0DD765D97D1AE12234C67BF9 /* UISearchBar_Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E21C25594B75D8B29D555891D9E9EBB /* UISearchBar_Style.swift */; };
 		5926D215544465F8703008034A2FF86F /* ExternalMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCDC8AD772930F79F70467A75FAB5DA /* ExternalMapService.swift */; };
 		5A09588CBF30F81F7F781030B27FC68A /* World+DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E748E9F710BCA6D1F04B7B71BEFB4E4 /* World+DSL.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -435,7 +431,6 @@
 		633448E40095D22210DECD3CF11E5C44 /* Pods-iExtra_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iExtra_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		6628AAA5F7FAD1C7E929BB088163C312 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6778B35F731CACE8A16DE3FB29296715 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
-		677F8677F8BCFDF17B200E582CA90DCC /* LocationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		67BA806EF4F2226EC87A134DFB3E0CD2 /* KeychainBasedDeviceIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainBasedDeviceIdentifier.swift; sourceTree = "<group>"; };
 		6AD24AD5356066B5BBAEB04D4D6CA2C3 /* MainBundleImageFileFinder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MainBundleImageFileFinder.swift; sourceTree = "<group>"; };
 		6B7BB02F65BE637AEFE1993FA596FACB /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
@@ -453,7 +448,6 @@
 		71FAB05D213106449E12FBAA0A730F69 /* RemoteNotificationServiceDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationServiceDefault.swift; sourceTree = "<group>"; };
 		7263154B631BBF37B7EBCDA130CFA7B4 /* Nimble-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-umbrella.h"; sourceTree = "<group>"; };
 		7311F821F615F7FBAC5624B5CD6E3A2E /* IapManagerDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IapManagerDefault.swift; sourceTree = "<group>"; };
-		737C8735187AF7E8A9F451582ED77363 /* LocationServiceErrorAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationServiceErrorAlert.swift; sourceTree = "<group>"; };
 		7493D08CF5C80BC4A8C13CB7F8B3255C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75BEA92B375F624F52ED828BCB818F5F /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		762D191A6BE53E7B27B424CBA479316D /* AuthorizationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
@@ -516,7 +510,6 @@
 		B52D281C0987457C10CF9E16882F685E /* Pods-iExtra_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-iExtra_Tests.modulemap"; sourceTree = "<group>"; };
 		B5643BEE67FD725DC07F9293B5F86838 /* KeychainReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainReader.swift; sourceTree = "<group>"; };
 		B5C7E9F063000B004BCB218F18B209FD /* ThrowError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThrowError.swift; path = Sources/Nimble/Matchers/ThrowError.swift; sourceTree = "<group>"; };
-		B6600D087FC39B8871FAFF61B9595F1D /* LocationServiceDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationServiceDefault.swift; sourceTree = "<group>"; };
 		B73EC711F2A4FE5EA90B9B88186710AA /* TravellingMapCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TravellingMapCamera.swift; sourceTree = "<group>"; };
 		B8779AD2B6A72B845AC08BA800A966FC /* BeLessThanOrEqual.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThanOrEqual.swift; path = Sources/Nimble/Matchers/BeLessThanOrEqual.swift; sourceTree = "<group>"; };
 		B949C3686717D4FFDC296A862E2768D8 /* UIImage_Rotated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImage_Rotated.swift; sourceTree = "<group>"; };
@@ -533,7 +526,6 @@
 		C54AE4E99A3E5E63A66AF3BABE32D376 /* Pods-iExtra_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iExtra_Example-umbrella.h"; sourceTree = "<group>"; };
 		C5C13F92151E2D3C87BD102DB9CDA296 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		C757F91F39B2366B779C97AD77CE9BBC /* FloatingMenuPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FloatingMenuPresenter.swift; sourceTree = "<group>"; };
-		C7FD4805937F3A0F735B0FBC2E609CF6 /* UIAlertController_Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIAlertController_Alert.swift; sourceTree = "<group>"; };
 		C8C4F085290C0D2DF45DFCB1EDE20913 /* ExampleMetadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleMetadata.swift; path = Sources/Quick/ExampleMetadata.swift; sourceTree = "<group>"; };
 		C9C8BE2969A73C21D7ACD5E6E6E57352 /* Pods-iExtra_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iExtra_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		C9CF8DE94169987612C63723676E7BE9 /* MatcherProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatcherProtocols.swift; path = Sources/Nimble/Matchers/MatcherProtocols.swift; sourceTree = "<group>"; };
@@ -1102,7 +1094,6 @@
 		8E7D3308A6128046104A49468E4BA737 /* UIAlertController */ = {
 			isa = PBXGroup;
 			children = (
-				C7FD4805937F3A0F735B0FBC2E609CF6 /* UIAlertController_Alert.swift */,
 				CBA2D06AFE02FAA9841914990A1089BA /* UIAlertController_SourceView.swift */,
 			);
 			path = UIAlertController;
@@ -1277,9 +1268,6 @@
 				F36DE1B43AE5548ECCEB4EBC38FCDB39 /* CLLocationCoordinate2D_Valid.swift */,
 				5F0AB4DE08B7C3083EBEC305A652F2EA /* CLPlacemark_AddressDescription.swift */,
 				9ACCE9BE784993F0DBA4643BB4AE1397 /* Coordinate.swift */,
-				677F8677F8BCFDF17B200E582CA90DCC /* LocationService.swift */,
-				B6600D087FC39B8871FAFF61B9595F1D /* LocationServiceDefault.swift */,
-				737C8735187AF7E8A9F451582ED77363 /* LocationServiceErrorAlert.swift */,
 			);
 			path = Geo;
 			sourceTree = "<group>";
@@ -1732,9 +1720,6 @@
 				72662CCBA196CA8FB7481EE3124460CA /* KeychainWriter.swift in Sources */,
 				F0C3ED9CD9B0BF18F30D053E6FE62F53 /* LinearFloatingSubmenuPresenter.swift in Sources */,
 				EC1A0C4B6CA6528612438BD385B5360B /* LinearTravellingMapCamera.swift in Sources */,
-				579F0F414EAE1295B7ED322AE526B5B7 /* LocationService.swift in Sources */,
-				4AB30657718E6C07273D4C417E3FD437 /* LocationServiceDefault.swift in Sources */,
-				26ADB37C19EBD1AEAD8CBA0FF10A67D9 /* LocationServiceErrorAlert.swift in Sources */,
 				4196BF5F9322583C1AF79A2387FF66F5 /* MainBundleFileFinder.swift in Sources */,
 				D9B9CDCE52DDAAD7C20EB3562AD2BF86 /* MainBundleImageFileFinder.swift in Sources */,
 				04365AC908F9F233E6FCC267B5B65833 /* MapAnnotation.swift in Sources */,
@@ -1778,7 +1763,6 @@
 				029E24AE316AE01BC8794892138E5BC0 /* SystemNotificationServiceDefault.swift in Sources */,
 				5BDFBC9CA6D864D6255F760ADB275773 /* ThreadingOperator.swift in Sources */,
 				66DFE5A24F42F6844910FFB17EE5BE85 /* TravellingMapCamera.swift in Sources */,
-				39DB761E0BEF8CFC0927F4D4016F1E7F /* UIAlertController_Alert.swift in Sources */,
 				CA94CC262B344C9C9632CB3F5C5B3D53 /* UIAlertController_SourceView.swift in Sources */,
 				FC5A4E2A361046084BD5BD875E20D67A /* UIAlertControllerPresenter.swift in Sources */,
 				70A617FB7BFD8D0DF5E239E9FAF02DE6 /* UIApplication_Review.swift in Sources */,
