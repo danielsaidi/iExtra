@@ -51,7 +51,7 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
             vc?.definesPresentationContext = true
             vc?.navigationItem.titleView = searchBar
             vcRightButton = vc?.navigationItem.rightBarButtonItem
-            vc?.navigationItem.rightBarButtonItem = createCancelButton()
+            addManualCancelButton()
         }
     }
     
@@ -100,6 +100,11 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
 // MARK: - Private Functions
 
 fileprivate extension NavigationSearchController {
+    
+    func addManualCancelButton() {
+        guard UIDevice.current.userInterfaceIdiom == .pad else { return }
+        vc?.navigationItem.rightBarButtonItem = createCancelButton()
+    }
     
     func createCancelButton() -> UIBarButtonItem {
         return NavigationSearchControllerBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))

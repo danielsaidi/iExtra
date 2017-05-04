@@ -8,6 +8,13 @@
 
 import UIKit
 
+
+public protocol CanUpdateNavigationBar {
+    
+    func updateNavigationBar()
+}
+
+
 public extension UIViewController {
 
     public func makeNavigationBarTransparent() {

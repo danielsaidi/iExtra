@@ -28,7 +28,6 @@
 		102ADF622BC949BD2BF788417CCDC303 /* ActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7F0A942EA0ABE052A8E5C54BA870DC /* ActionSheet.swift */; };
 		14039EA7D1C621988D93BFFF4108531E /* Numeric_Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E065B8E62957CFA10B4BFB60BFE296 /* Numeric_Format.swift */; };
 		15E3722F69B0A9FAB4E82F907D705782 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */; };
-		15F2FB7D0FA36AFD48BD5206A394DD2B /* UINavigationBar_Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE09A6B0E79AE10AF6FD9AFA7AC434A /* UINavigationBar_Transparent.swift */; };
 		1718EDAAA0AEFE2E8177DA242C464CE6 /* UIViewController_NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C3308E23EBE37880C2A8EB76456B20 /* UIViewController_NavigationBar.swift */; };
 		1761B5C391C1555029416B3D7BC1106F /* PostNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2924A23B93CE2EE3F172F9114D77AB /* PostNotification.swift */; };
 		1908D6C8B69E6CCB9B24785DAF5F9257 /* PopoverActionSheetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B36532858D7A959FAD9D85604F0D532 /* PopoverActionSheetPresenter.swift */; };
@@ -79,6 +78,10 @@
 		455C23311EB1C3950005D48F /* UIImage_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C23301EB1C3950005D48F /* UIImage_Async.swift */; };
 		455C23351EB1C66B0005D48F /* UIImageView_FadeInImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C23341EB1C66B0005D48F /* UIImageView_FadeInImage.swift */; };
 		455C233C1EB1CA440005D48F /* UIImageView_Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455C233B1EB1CA440005D48F /* UIImageView_Async.swift */; };
+		4564AE5C1EBA883F0033B46A /* UINavigationBar_BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564AE5A1EBA883F0033B46A /* UINavigationBar_BackButton.swift */; };
+		4564AE5D1EBA883F0033B46A /* UINavigationBar_Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564AE5B1EBA883F0033B46A /* UINavigationBar_Transparent.swift */; };
+		4564AE631EBAF65B0033B46A /* InputStepperToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564AE621EBAF65B0033B46A /* InputStepperToolbar.swift */; };
+		4564AE681EBAFED70033B46A /* ExpandedTapAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4564AE671EBAFED70033B46A /* ExpandedTapAreaButton.swift */; };
 		4567A6BB1E95367A00E8F312 /* UIButton_ImageMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6BA1E95367A00E8F312 /* UIButton_ImageMargin.swift */; };
 		4567A6C11E95370000E8F312 /* UIButton_Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6C01E95370000E8F312 /* UIButton_Target.swift */; };
 		4567A70C1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A70A1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift */; };
@@ -395,6 +398,10 @@
 		455C23301EB1C3950005D48F /* UIImage_Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage_Async.swift; sourceTree = "<group>"; };
 		455C23341EB1C66B0005D48F /* UIImageView_FadeInImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView_FadeInImage.swift; sourceTree = "<group>"; };
 		455C233B1EB1CA440005D48F /* UIImageView_Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView_Async.swift; sourceTree = "<group>"; };
+		4564AE5A1EBA883F0033B46A /* UINavigationBar_BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_BackButton.swift; sourceTree = "<group>"; };
+		4564AE5B1EBA883F0033B46A /* UINavigationBar_Transparent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_Transparent.swift; sourceTree = "<group>"; };
+		4564AE621EBAF65B0033B46A /* InputStepperToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStepperToolbar.swift; sourceTree = "<group>"; };
+		4564AE671EBAFED70033B46A /* ExpandedTapAreaButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedTapAreaButton.swift; sourceTree = "<group>"; };
 		4567A6BA1E95367A00E8F312 /* UIButton_ImageMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_ImageMargin.swift; sourceTree = "<group>"; };
 		4567A6C01E95370000E8F312 /* UIButton_Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Target.swift; sourceTree = "<group>"; };
 		4567A70A1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView_DefaultNib.swift; sourceTree = "<group>"; };
@@ -536,7 +543,6 @@
 		CD865047A234F8BF597FF232BE3FD058 /* BeLogical.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLogical.swift; path = Sources/Nimble/Matchers/BeLogical.swift; sourceTree = "<group>"; };
 		CF2822A9446BE6DA2D1C1A5E863D3514 /* FadingViewControllerTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FadingViewControllerTransition.swift; sourceTree = "<group>"; };
 		CF76C77090DF51D2A45CD69CBEFBFFF0 /* Nimble.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nimble.h; path = Sources/Nimble/Nimble.h; sourceTree = "<group>"; };
-		CFE09A6B0E79AE10AF6FD9AFA7AC434A /* UINavigationBar_Transparent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UINavigationBar_Transparent.swift; sourceTree = "<group>"; };
 		D009D8503B75AACA552741C349E8F871 /* Nimble-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nimble-prefix.pch"; sourceTree = "<group>"; };
 		D1260816C673416C924BA0CFAF4558FF /* MKMapView_LegalLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapView_LegalLabel.swift; sourceTree = "<group>"; };
 		D16268EE556DA4D854C0C5D4302C8CBB /* AppleMapsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppleMapsService.swift; sourceTree = "<group>"; };
@@ -891,6 +897,7 @@
 			isa = PBXGroup;
 			children = (
 				4558DBA01E8CFB2900ECC18E /* RoundButton.swift */,
+				4564AE671EBAFED70033B46A /* ExpandedTapAreaButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -910,6 +917,23 @@
 				455C23341EB1C66B0005D48F /* UIImageView_FadeInImage.swift */,
 			);
 			path = UIImageView;
+			sourceTree = "<group>";
+		};
+		4564AE591EBA883F0033B46A /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				4564AE5A1EBA883F0033B46A /* UINavigationBar_BackButton.swift */,
+				4564AE5B1EBA883F0033B46A /* UINavigationBar_Transparent.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
+		4564AE611EBAF64F0033B46A /* Toolbars */ = {
+			isa = PBXGroup;
+			children = (
+				4564AE621EBAF65B0033B46A /* InputStepperToolbar.swift */,
+			);
+			path = Toolbars;
 			sourceTree = "<group>";
 		};
 		4567A7091E9BD8E500E8F312 /* UICollectionView */ = {
@@ -1111,13 +1135,14 @@
 		9533132D2F5628BDCFF9BC43A4D7D3D5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4558DB9F1E8CFB2900ECC18E /* Buttons */,
-				4558DBA11E8CFB2900ECC18E /* Labels */,
 				1C1F08CF8F30EAAA64442161E5C9D2F2 /* AutoSizeTableViewController.swift */,
 				2BAF83FDDC3A5C0B2C4A394AAC73151B /* BorderLineView.swift */,
 				9A17AF43E6AB4C4605A02D39B9D50A91 /* BottomGradientView.swift */,
+				4558DB9F1E8CFB2900ECC18E /* Buttons */,
 				0553F9508F5E0B9F1FF557A1814FB1B7 /* FloatingMenu */,
+				4558DBA11E8CFB2900ECC18E /* Labels */,
 				26FEF6102C6314F2066FF96538B09092 /* Stretchable */,
+				4564AE611EBAF64F0033B46A /* Toolbars */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1356,7 +1381,7 @@
 				2A7EDF1B21B3D595C458F33473258628 /* UIEdgeInsets_Init.swift */,
 				723A5702BD257C3E409BE6B2BE4B461A /* UIImage */,
 				455C23331EB1C66B0005D48F /* UIImageView */,
-				CFE09A6B0E79AE10AF6FD9AFA7AC434A /* UINavigationBar_Transparent.swift */,
+				4564AE591EBA883F0033B46A /* UINavigationBar */,
 				2700D3CBA9C78F768E7B3FE6F8996C4C /* UIScrollView_Scroll.swift */,
 				0E21C25594B75D8B29D555891D9E9EBB /* UISearchBar_Style.swift */,
 				DDF1AB987C64499A1B24ACE5356B54BF /* UISlider */,
@@ -1657,8 +1682,10 @@
 				EAEFC748B07B43C4928FF54976DE68E2 /* ActionSheetOkItem.swift in Sources */,
 				2F84F82014FC6C82C3B738927AA597A3 /* ActionSheetPresenter.swift in Sources */,
 				EFDCBDB9FDCAFB0E061C39F6A51D3D98 /* ActionSheetRadioButtonItem.swift in Sources */,
+				4564AE681EBAFED70033B46A /* ExpandedTapAreaButton.swift in Sources */,
 				A1DA2DF3B0203F701CD4B7C7114387A2 /* ActionSheetSelectItem.swift in Sources */,
 				4B3A693297094D7B5038FF4F8966417B /* AdaptiveFileSizePresenter.swift in Sources */,
+				4564AE631EBAF65B0033B46A /* InputStepperToolbar.swift in Sources */,
 				D070717C0E695D9ECF1C240AB024CC23 /* AppFileManager.swift in Sources */,
 				1C9971134F22B817424A56114C8693AD /* AppFileManagerDefault.swift in Sources */,
 				E1B44B83551BF9B1C4B06E192335E604 /* AppleMapsService.swift in Sources */,
@@ -1705,6 +1732,7 @@
 				B980CC3093E615F40856B90F7E241EA9 /* HintManager.swift in Sources */,
 				0BFBC6B652F134227255130955679C47 /* HintManagerBase.swift in Sources */,
 				78DD11034FB1A7FBE3A06A141A081062 /* IapManager.swift in Sources */,
+				4564AE5D1EBA883F0033B46A /* UINavigationBar_Transparent.swift in Sources */,
 				B6EDC495A934EDC106684C6CFD581A10 /* IapManagerDefault.swift in Sources */,
 				D1B89CF9CA3A03303F21DB7703F348BA /* IdGenerator.swift in Sources */,
 				B5F38A0349BF837AF47C507520F6B806 /* iExtra-dummy.m in Sources */,
@@ -1775,10 +1803,10 @@
 				F412AC959FCF779083F8BC16882122E1 /* UIImage_Padded.swift in Sources */,
 				4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */,
 				23607732489F71C31735E51D9110DF06 /* UIImage_Resized.swift in Sources */,
+				4564AE5C1EBA883F0033B46A /* UINavigationBar_BackButton.swift in Sources */,
 				5E7A1811222F879E3C459E65810E927C /* UIImage_Rotated.swift in Sources */,
 				4B8D6C26A3F8E2FC5C8B6D9B77C98F66 /* UIImage_Tint.swift in Sources */,
 				4567A70C1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift in Sources */,
-				15F2FB7D0FA36AFD48BD5206A394DD2B /* UINavigationBar_Transparent.swift in Sources */,
 				B26BF9CE1F07621047E7C3E9CC84BC69 /* UIScrollView_Scroll.swift in Sources */,
 				586962CF0DD765D97D1AE12234C67BF9 /* UISearchBar_Style.swift in Sources */,
 				F8BD84A90FAB94D23A71F316AEFC4981 /* UISlider_Extensions.swift in Sources */,
