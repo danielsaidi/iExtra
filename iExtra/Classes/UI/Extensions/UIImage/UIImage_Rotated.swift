@@ -5,7 +5,7 @@
 //  Created by Daniel Saidi on 2016-01-12.
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
-// Source: http://stackoverflow.com/questions/27092354/rotating-uiimage-in-swift
+//  Source: http://stackoverflow.com/questions/27092354/rotating-uiimage-in-swift
 //
 
 import UIKit
@@ -19,7 +19,7 @@ public extension UIImage {
     public func rotated(byDegrees degrees: CGFloat, flipped flip: Bool) -> UIImage? {
         
         let degreesToRadians: (CGFloat) -> CGFloat = {
-            return $0 / 180.0 * CGFloat(M_PI)
+            return $0 / 180.0 * CGFloat(Double.pi)
         }
         
         // Calculate the size of the rotated view's containing box for our drawing space

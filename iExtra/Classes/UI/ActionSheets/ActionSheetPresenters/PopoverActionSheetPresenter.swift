@@ -18,7 +18,6 @@
  */
 
 import UIKit
-import iExtra
 
 open class PopoverActionSheetPresenter: NSObject, ActionSheetPresenter {
     

@@ -6,6 +6,15 @@
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This is an easy way to load images asynchronously.
+ However, production apps should probably use more
+ sophisticated ways to do this, with cached images
+ etc. Have a look at Kingfisher or any similar lib.
+ 
+ */
+
 import UIKit
 
 public typealias AsyncImageResult = (_ image: UIImage?, _ error: Error?) -> ()

@@ -14,17 +14,17 @@ public class DateSerializerDefault: NSObject, DateSerializer {
     // MARK: Public methods
     
     public func deserialize(_ string: String) -> Date? {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        dateFormatter.dateFormat = getDateFormat(for: string)
-        return dateFormatter.date(from: string)
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = getDateFormat(for: string).string
+        return formatter.date(from: string)
     }
     
-    public func serialize(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        dateFormatter.dateFormat = getDateFormat(for: ".")
-        return dateFormatter.string(from: date)
+    public func serialize(_ date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = format
+        return formatter.string(from: date)
     }
 }
 
@@ -34,10 +34,8 @@ public class DateSerializerDefault: NSObject, DateSerializer {
 
 fileprivate extension DateSerializerDefault {
     
-    func getDateFormat(for string: String) -> String {
-        let dateFormatWithSeconds = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let dateFormatWithSecondFragments = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSSZ"
+    func getDateFormat(for string: String) -> DateSerializerFormat {
         let hasFragments = string.range(of: ".") != nil
-        return hasFragments ? dateFormatWithSecondFragments : dateFormatWithSeconds
+        return hasFragments ? .dateTimeWithFragments : .dateTime
     }
 }

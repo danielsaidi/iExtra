@@ -6,6 +6,15 @@
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This is an easy way to load images asynchronously.
+ However, production apps should probably use more
+ sophisticated ways to do this, with cached images
+ etc. Have a look at Kingfisher or any similar lib.
+ 
+ */
+
 import UIKit
 
 public extension UIImageView {
@@ -23,7 +32,6 @@ public extension UIImageView {
 fileprivate extension UIImageView {
     
     func setupAsyncTag() -> Int {
-        guard tag == 0 else { return 0 }
         tag = Int.random(in: 1...10000)
         return tag
     }

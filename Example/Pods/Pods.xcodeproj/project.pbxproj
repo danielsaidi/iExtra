@@ -86,6 +86,8 @@
 		4567A6C11E95370000E8F312 /* UIButton_Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6C01E95370000E8F312 /* UIButton_Target.swift */; };
 		4567A70C1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A70A1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift */; };
 		4567A71E1E9C351600E8F312 /* UITableView_DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A71D1E9C351600E8F312 /* UITableView_DefaultNib.swift */; };
+		45686A401EBC5EB000019206 /* DateSerializerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */; };
+		45686A431EBC684C00019206 /* SystemUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A421EBC684C00019206 /* SystemUrl.swift */; };
 		45A90BBD1E9518600097F54B /* Set_Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A90BBC1E9518600097F54B /* Set_Group.swift */; };
 		4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF877D206C63111AE6D373E279AEB9E /* ExternalMapServiceBase.swift */; };
 		47FF072E4D2BDE2759931B0B846BD5D0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D0E6360F5879FA9408D6392D73B5E /* DSL.swift */; };
@@ -406,6 +408,8 @@
 		4567A6C01E95370000E8F312 /* UIButton_Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Target.swift; sourceTree = "<group>"; };
 		4567A70A1E9BD8E500E8F312 /* UICollectionView_DefaultNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView_DefaultNib.swift; sourceTree = "<group>"; };
 		4567A71D1E9C351600E8F312 /* UITableView_DefaultNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView_DefaultNib.swift; sourceTree = "<group>"; };
+		45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSerializerFormat.swift; sourceTree = "<group>"; };
+		45686A421EBC684C00019206 /* SystemUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUrl.swift; sourceTree = "<group>"; };
 		45A90BBC1E9518600097F54B /* Set_Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_Group.swift; sourceTree = "<group>"; };
 		4687C3154E9647F2C75EAC9C00B6AEB6 /* RemoteNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationService.swift; sourceTree = "<group>"; };
 		46FCB309DDCD0F3151825292492F197D /* HintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
@@ -667,6 +671,7 @@
 				A94A1D58C41DF57E55A3280B0BF0AA9B /* Navigation */,
 				FD4132DDD9CB068E232782F5F5F62C93 /* Notifications */,
 				D95EA6C177314FA9DAF421F34EF23872 /* Onboarding */,
+				45686A411EBC683200019206 /* System */,
 				8B42CFD2D4689559E0C17239191582CC /* Threading */,
 				718D7DBCD08FFCBE314632D8E8DBFA08 /* UI */,
 			);
@@ -944,6 +949,14 @@
 			path = UICollectionView;
 			sourceTree = "<group>";
 		};
+		45686A411EBC683200019206 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				45686A421EBC684C00019206 /* SystemUrl.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		46F8941F13CD6AADFE535430F94D8F7D /* FloatingMenuBackgroundPresenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -1154,6 +1167,7 @@
 				6E19E72A5398C6F0E4A34C57536C6093 /* Date_Init.swift */,
 				D403FA7E26FF073AA7FE67BB443CA269 /* DateSerializer.swift */,
 				CBBEB78320AF1E4D54E7DA16D5DEF946 /* DateSerializerDefault.swift */,
+				45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -1706,6 +1720,7 @@
 				452540831E8E7E5F004E75A2 /* UIButton_Init.swift in Sources */,
 				C9C9C0D5946A9DB96FACC6CEE4F0C217 /* Collection_Shuffle.swift in Sources */,
 				D3B916354B432A55219387F42CFD1DF9 /* Coordinate.swift in Sources */,
+				45686A401EBC5EB000019206 /* DateSerializerFormat.swift in Sources */,
 				6DE73CCE1682AFD21DA073C6598C2EB2 /* Date_Compare.swift in Sources */,
 				BBDEC483480660598285845BEDE6FDA6 /* Date_Init.swift in Sources */,
 				AAC1C296BAEB197A70FFF2B1AC421E39 /* DateSerializer.swift in Sources */,
@@ -1830,6 +1845,7 @@
 				49AB0F336CD7A544259A65DA1136C30B /* UIView_Shadow.swift in Sources */,
 				4558DB911E8CF26F00ECC18E /* UIView_FadePulse.swift in Sources */,
 				6BB2E93B15DE0FA25B7E4122E3239796 /* UIView_Visibility.swift in Sources */,
+				45686A431EBC684C00019206 /* SystemUrl.swift in Sources */,
 				B0D1D785200F670FEF2CE6DBF5156A5D /* UIViewController_Alert.swift in Sources */,
 				1718EDAAA0AEFE2E8177DA242C464CE6 /* UIViewController_NavigationBar.swift in Sources */,
 				9C9BEFC0B4CED4A78421CE1A9CD778F6 /* UIViewController_Nib.swift in Sources */,

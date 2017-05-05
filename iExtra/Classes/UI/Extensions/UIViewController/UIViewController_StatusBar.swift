@@ -8,21 +8,29 @@
 
 import UIKit
 
-
 public extension UIViewController {
     
+    
+    // MARK: - Properties
+    
     public var statusBarStyle: UIStatusBarStyle {
-        get { return UIApplication.shared.statusBarStyle }
-        set { UIApplication.shared.statusBarStyle = newValue }
+        get { return app.statusBarStyle }
+        set { app.statusBarStyle = newValue }
+    }
+    
+    fileprivate var app: UIApplication {
+        return UIApplication.shared
     }
     
     
+    // MARK: - Functions
+    
     public func hideStatusBar() {
-        UIApplication.shared.setStatusBarHidden(true, with: .none)
+        app.setStatusBarHidden(true, with: .none)
     }
     
     public func showStatusBar() {
-        UIApplication.shared.setStatusBarHidden(false, with: .none)
+        app.setStatusBarHidden(false, with: .none)
     }
 }
 
