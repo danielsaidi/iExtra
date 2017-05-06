@@ -69,8 +69,8 @@ open class FloatingMenu: UIView {
     open var shadowOffset = CGSize(width: 1, height: 1)
     open var shadowRadius = 1.0
     
-    private(set) var primaryButton: UIButton!
-    private(set) var submenus = [FloatingSubmenu]()
+    public private(set) var primaryButton: UIButton!
+    public private(set) var submenus = [FloatingSubmenu]()
     
     
     

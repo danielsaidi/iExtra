@@ -39,7 +39,7 @@ fileprivate extension BlurredNavigationSearchController {
         blurView.frame = view.frame
         blurView.alpha = alpha
         view.insertSubview(blurView, at: 0)
-        blurView.makeFullSize(in: view)
+        view.addSubview(blurView, fill: true)
         return blurEffect
     }
     
