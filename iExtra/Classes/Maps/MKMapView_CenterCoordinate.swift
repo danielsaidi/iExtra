@@ -11,7 +11,7 @@ import MapKit
 public extension MKMapView {
     
     public func center(onAnnotations annotations: [MKAnnotation], padding: CGFloat, animated: Bool) {
-        var coordinates = annotations.map { $0.coordinate }
+        let coordinates = annotations.map { $0.coordinate }
         center(onCoordinates: coordinates, padding: padding, animated: animated)
     }
     
@@ -29,8 +29,8 @@ public extension MKMapView {
     public func center(onCoordinates coordinates: [CLLocationCoordinate2D], padding: CGFloat, animated: Bool) {
         guard coordinates.count > 0 else { return }
         var rect = MKMapRectNull
-        var points = coordinates.map { MKMapPointForCoordinate($0) }
-        var rects = points.map { MKMapRectMake($0.x, $0.y, 0.1, 0.1) }
+        let points = coordinates.map { MKMapPointForCoordinate($0) }
+        let rects = points.map { MKMapRectMake($0.x, $0.y, 0.1, 0.1) }
         rects.forEach { rect = MKMapRectUnion(rect, $0) }
         let insets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         setVisibleMapRect(rect, edgePadding: insets, animated: animated)

@@ -23,7 +23,6 @@ public extension UITableView {
     
     public func dockHeaderView(from nc: UINavigationController) {
         let bar = nc.navigationBar
-        let subviews = bar.subviews
         guard let view = findHeaderView(in: bar.subviews) else { return }
         view.removeFromSuperview()
         tableHeaderView = view

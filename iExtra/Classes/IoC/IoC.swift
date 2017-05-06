@@ -25,10 +25,10 @@ public final class IoC {
     }
     
     public static func resolve<T, A>(arguments arg1: A) -> T {
-        return try! _container.resolve(arguments: arg1)
+        return _container.resolve(arguments: arg1)
     }
     
     public static func resolve<T, A, B>(arguments arg1: A, _ arg2: B) -> T {
-        return try! _container.resolve(arguments: arg1, arg2)
+        return _container.resolve(arguments: arg1, arg2)
     }
 }

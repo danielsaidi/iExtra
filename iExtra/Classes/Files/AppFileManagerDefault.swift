@@ -40,7 +40,7 @@ open class AppFileManagerDefault: NSObject, AppFileManager {
     open func getContentsOfDirectory(at url: URL) -> [URL] {
         do {
             return try manager.contentsOfDirectory(at: url, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
-        } catch let error as Error {
+        } catch {
             return [URL]()
         }
     }
@@ -56,7 +56,7 @@ open class AppFileManagerDefault: NSObject, AppFileManager {
         do {
             try manager.removeItem(at: url)
             return true
-        } catch let error as Error {
+        } catch {
             return false
         }
     }

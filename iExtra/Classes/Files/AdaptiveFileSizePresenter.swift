@@ -34,7 +34,7 @@ public class AdaptiveFileSizePresenter: FileSizeBytesPresenter {
             label = labels.remove(at: 0)
         }
         
-        var sizeText = size.format(withDecimals: 2)
+        let sizeText = size.format(withDecimals: 2)
         
         return "\(sizeText) \(label)"
     }
