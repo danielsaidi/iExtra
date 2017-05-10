@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import AVFoundation
+import iExtra
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let url = Bundle.main.url(forResource: "example", withExtension: "mp3")!
+        ap = try! AVAudioPlayer(contentsOf: url)
+        ap.play()
+        ap.volume = 0
     }
+    
+    var ap: AVAudioPlayer!
 
+    @IBAction func fadeOut(_ sender: Any) {
+        print(Date())
+        ap.fadeVolume(to: 1, duration: 2) {
+            print(Date())
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

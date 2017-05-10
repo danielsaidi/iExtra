@@ -102,6 +102,7 @@
 		4567A71E1E9C351600E8F312 /* UITableView_DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A71D1E9C351600E8F312 /* UITableView_DefaultNib.swift */; };
 		45686A401EBC5EB000019206 /* DateSerializerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */; };
 		45686A431EBC684C00019206 /* SystemUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A421EBC684C00019206 /* SystemUrl.swift */; };
+		45864A7A1EC3A274004B3831 /* HasVolume_Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45864A791EC3A274004B3831 /* HasVolume_Fade.swift */; };
 		4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF877D206C63111AE6D373E279AEB9E /* ExternalMapServiceBase.swift */; };
 		47FF072E4D2BDE2759931B0B846BD5D0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D0E6360F5879FA9408D6392D73B5E /* DSL.swift */; };
 		49AB0F336CD7A544259A65DA1136C30B /* UIView_Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDC92F9544235EB120169394296E4E /* UIView_Shadow.swift */; };
@@ -424,6 +425,7 @@
 		4567A71D1E9C351600E8F312 /* UITableView_DefaultNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableView_DefaultNib.swift; sourceTree = "<group>"; };
 		45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSerializerFormat.swift; sourceTree = "<group>"; };
 		45686A421EBC684C00019206 /* SystemUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUrl.swift; sourceTree = "<group>"; };
+		45864A791EC3A274004B3831 /* HasVolume_Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasVolume_Fade.swift; sourceTree = "<group>"; };
 		4687C3154E9647F2C75EAC9C00B6AEB6 /* RemoteNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationService.swift; sourceTree = "<group>"; };
 		46FCB309DDCD0F3151825292492F197D /* HintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		48E09D18327AAAD8153182BF5645685D /* UIColor_Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor_Hex.swift; sourceTree = "<group>"; };
@@ -660,6 +662,7 @@
 		01B3D62AE2D20ABF9DF1B2AE017C5DF2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				45864A781EC3A26A004B3831 /* Audio */,
 				344FC901E3A1E00B9391723C0D899E11 /* Authorization */,
 				244BB205DDE185660A5982C606D0338C /* Data */,
 				9A3659FE49557D265C981FED047BEEB2 /* Date */,
@@ -990,6 +993,14 @@
 				45686A421EBC684C00019206 /* SystemUrl.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		45864A781EC3A26A004B3831 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				45864A791EC3A274004B3831 /* HasVolume_Fade.swift */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 		46F8941F13CD6AADFE535430F94D8F7D /* FloatingMenuBackgroundPresenters */ = {
@@ -1768,6 +1779,7 @@
 				942D88D700C387E2FEFD094A204138CE /* EventTracker.swift in Sources */,
 				5926D215544465F8703008034A2FF86F /* ExternalMapService.swift in Sources */,
 				4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */,
+				45864A7A1EC3A274004B3831 /* HasVolume_Fade.swift in Sources */,
 				B5A2571E445BA64E2E0FBFBD64B2A741 /* FadingViewControllerTransition.swift in Sources */,
 				A4FAEB9B9CB81BB829CB2D73139F12B6 /* FileFinder.swift in Sources */,
 				70C23CBC28F3E675E473B5C9D8B30E8E /* FileSizeBytesPresenter.swift in Sources */,

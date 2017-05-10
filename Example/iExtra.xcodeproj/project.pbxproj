@@ -34,6 +34,7 @@
 		4561CF451DF37794003D940A /* UITableView_DefaultNibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2F1DF3775B003D940A /* UITableView_DefaultNibTests.swift */; };
 		4567A6BF1E9536C200E8F312 /* UIButton_ImageMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A6BD1E9536B100E8F312 /* UIButton_ImageMarginTests.swift */; };
 		4567A7141E9BD94600E8F312 /* UICollectionView_DefaultNibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567A7101E9BD94100E8F312 /* UICollectionView_DefaultNibTests.swift */; };
+		45864A7C1EC3A300004B3831 /* example.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 45864A7B1EC3A300004B3831 /* example.mp3 */; };
 		45B87FCF1DFF3E3200EFCD57 /* UIColor_HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FCB1DFF3E2A00EFCD57 /* UIColor_HexTests.swift */; };
 		45B87FD01DFF3E3600EFCD57 /* UINavigationBar_TransparentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FCC1DFF3E2A00EFCD57 /* UINavigationBar_TransparentTests.swift */; };
 		45B87FF71DFF3EC600EFCD57 /* UISlider_Extensions_ButtonPositionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B87FEB1DFF3EBD00EFCD57 /* UISlider_Extensions_ButtonPositionTests.swift */; };
@@ -102,6 +103,7 @@
 		4561CF351DF3775B003D940A /* UIView_VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_VisibilityTests.swift; sourceTree = "<group>"; };
 		4567A6BD1E9536B100E8F312 /* UIButton_ImageMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_ImageMarginTests.swift; sourceTree = "<group>"; };
 		4567A7101E9BD94100E8F312 /* UICollectionView_DefaultNibTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView_DefaultNibTests.swift; sourceTree = "<group>"; };
+		45864A7B1EC3A300004B3831 /* example.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = example.mp3; sourceTree = "<group>"; };
 		45B87FCB1DFF3E2A00EFCD57 /* UIColor_HexTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_HexTests.swift; sourceTree = "<group>"; };
 		45B87FCC1DFF3E2A00EFCD57 /* UINavigationBar_TransparentTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_TransparentTests.swift; sourceTree = "<group>"; };
 		45B87FEB1DFF3EBD00EFCD57 /* UISlider_Extensions_ButtonPositionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISlider_Extensions_ButtonPositionTests.swift; sourceTree = "<group>"; };
@@ -340,6 +342,7 @@
 		607FACD21AFB9204008FA782 /* Example for iExtra */ = {
 			isa = PBXGroup;
 			children = (
+				45864A7B1EC3A300004B3831 /* example.mp3 */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				45864A7C1EC3A300004B3831 /* example.mp3 in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
