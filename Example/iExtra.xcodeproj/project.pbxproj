@@ -26,6 +26,8 @@
 		45575CE21EC2E5C000DA62BF /* Set_GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CA21EC2E2F800DA62BF /* Set_GroupTests.swift */; };
 		45575CE31EC2E5C800DA62BF /* String_UrlEncodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CA61EC2E2F800DA62BF /* String_UrlEncodeTests.swift */; };
 		45575CE41EC2E5CA00DA62BF /* Url_QueryParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CA71EC2E2F800DA62BF /* Url_QueryParametersTests.swift */; };
+		45575CE91EC2E8F800DA62BF /* Bool_RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CE71EC2E8E600DA62BF /* Bool_RandomTests.swift */; };
+		45575CF41EC32F4600DA62BF /* Sequence_BatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CF21EC32F3300DA62BF /* Sequence_BatchTests.swift */; };
 		4561CF401DF37780003D940A /* KeychainBasedDeviceIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF241DF3775B003D940A /* KeychainBasedDeviceIdentifierTests.swift */; };
 		4561CF421DF3778C003D940A /* IoCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF281DF3775B003D940A /* IoCTests.swift */; };
 		4561CF431DF3778F003D940A /* KeychainServiceTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4561CF2A1DF3775B003D940A /* KeychainServiceTestClass.swift */; };
@@ -90,6 +92,8 @@
 		45575CA51EC2E2F800DA62BF /* String_ContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_ContainsTests.swift; sourceTree = "<group>"; };
 		45575CA61EC2E2F800DA62BF /* String_UrlEncodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_UrlEncodeTests.swift; sourceTree = "<group>"; };
 		45575CA71EC2E2F800DA62BF /* Url_QueryParametersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url_QueryParametersTests.swift; sourceTree = "<group>"; };
+		45575CE71EC2E8E600DA62BF /* Bool_RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool_RandomTests.swift; sourceTree = "<group>"; };
+		45575CF21EC32F3300DA62BF /* Sequence_BatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence_BatchTests.swift; sourceTree = "<group>"; };
 		4561CF241DF3775B003D940A /* KeychainBasedDeviceIdentifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainBasedDeviceIdentifierTests.swift; sourceTree = "<group>"; };
 		4561CF281DF3775B003D940A /* IoCTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IoCTests.swift; sourceTree = "<group>"; };
 		4561CF2A1DF3775B003D940A /* KeychainServiceTestClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainServiceTestClass.swift; sourceTree = "<group>"; };
@@ -190,10 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				45575C991EC2E2F800DA62BF /* Array */,
+				45575CE71EC2E8E600DA62BF /* Bool_RandomTests.swift */,
 				45575C9E1EC2E2F800DA62BF /* Collection_ShuffleTests.swift */,
 				45575C9F1EC2E2F800DA62BF /* NSObject_ClassNameTests.swift */,
 				45575CA01EC2E2F800DA62BF /* Numeric_FormatTests.swift */,
 				45575CA11EC2E2F800DA62BF /* Numeric_RandomTests.swift */,
+				45575CF21EC32F3300DA62BF /* Sequence_BatchTests.swift */,
 				45575CA21EC2E2F800DA62BF /* Set_GroupTests.swift */,
 				45575CA31EC2E2F800DA62BF /* String */,
 				45575CA71EC2E2F800DA62BF /* Url_QueryParametersTests.swift */,
@@ -645,6 +651,8 @@
 				45575CDA1EC2E5BB00DA62BF /* Array_ElementsOfTypeTests.swift in Sources */,
 				45575CDF1EC2E5C000DA62BF /* NSObject_ClassNameTests.swift in Sources */,
 				45575CDD1EC2E5BB00DA62BF /* Array_RemoveObjectTests.swift in Sources */,
+				45575CE91EC2E8F800DA62BF /* Bool_RandomTests.swift in Sources */,
+				45575CF41EC32F4600DA62BF /* Sequence_BatchTests.swift in Sources */,
 				45C8B5F31E01EC240092F1E3 /* FileSizeBytesPresenterTests.swift in Sources */,
 				45575CD81EC2E4F500DA62BF /* String_Base64Tests.swift in Sources */,
 				452C9BC01E323E5300CC5746 /* UIView_ReuseIdentifierTests.swift in Sources */,

@@ -83,6 +83,8 @@
 		45575CD31EC2E32700DA62BF /* String_Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CC41EC2E32700DA62BF /* String_Replace.swift */; };
 		45575CD41EC2E32700DA62BF /* String_UrlEncode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CC51EC2E32700DA62BF /* String_UrlEncode.swift */; };
 		45575CD51EC2E32700DA62BF /* Url_QueryParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CC61EC2E32700DA62BF /* Url_QueryParameters.swift */; };
+		45575CE61EC2E8AB00DA62BF /* Bool_Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CE51EC2E8AB00DA62BF /* Bool_Random.swift */; };
+		45575CF11EC32EA500DA62BF /* Sequence_Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45575CF01EC32EA500DA62BF /* Sequence_Batch.swift */; };
 		4558DB911E8CF26F00ECC18E /* UIView_FadePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */; };
 		4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */; };
 		4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4558DBA01E8CFB2900ECC18E /* RoundButton.swift */; };
@@ -403,6 +405,8 @@
 		45575CC41EC2E32700DA62BF /* String_Replace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Replace.swift; sourceTree = "<group>"; };
 		45575CC51EC2E32700DA62BF /* String_UrlEncode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_UrlEncode.swift; sourceTree = "<group>"; };
 		45575CC61EC2E32700DA62BF /* Url_QueryParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url_QueryParameters.swift; sourceTree = "<group>"; };
+		45575CE51EC2E8AB00DA62BF /* Bool_Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bool_Random.swift; sourceTree = "<group>"; };
+		45575CF01EC32EA500DA62BF /* Sequence_Batch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence_Batch.swift; sourceTree = "<group>"; };
 		4558DB8F1E8CF26F00ECC18E /* UIView_FadePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_FadePulse.swift; sourceTree = "<group>"; };
 		4558DB901E8CF26F00ECC18E /* UIView_ScalePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_ScalePulse.swift; sourceTree = "<group>"; };
 		4558DBA01E8CFB2900ECC18E /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -1001,6 +1005,7 @@
 			isa = PBXGroup;
 			children = (
 				45575CB51EC2E32700DA62BF /* Array */,
+				45575CE51EC2E8AB00DA62BF /* Bool_Random.swift */,
 				45575CBA1EC2E32700DA62BF /* CGRect_Rects.swift */,
 				45575CBB1EC2E32700DA62BF /* Collection_Shuffle.swift */,
 				45575CBC1EC2E32700DA62BF /* NSObject_ClassName.swift */,
@@ -1008,6 +1013,7 @@
 				45575CC01EC2E32700DA62BF /* Set_Group.swift */,
 				45575CC11EC2E32700DA62BF /* String */,
 				45575CC61EC2E32700DA62BF /* Url_QueryParameters.swift */,
+				45575CF01EC32EA500DA62BF /* Sequence_Batch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1750,6 +1756,7 @@
 				45686A401EBC5EB000019206 /* DateSerializerFormat.swift in Sources */,
 				45575CD51EC2E32700DA62BF /* Url_QueryParameters.swift in Sources */,
 				6DE73CCE1682AFD21DA073C6598C2EB2 /* Date_Compare.swift in Sources */,
+				45575CE61EC2E8AB00DA62BF /* Bool_Random.swift in Sources */,
 				BBDEC483480660598285845BEDE6FDA6 /* Date_Init.swift in Sources */,
 				AAC1C296BAEB197A70FFF2B1AC421E39 /* DateSerializer.swift in Sources */,
 				45575CD21EC2E32700DA62BF /* String_Contains.swift in Sources */,
@@ -1869,6 +1876,7 @@
 				5F732C165075E199EABE79E54911504B /* UIView_Screenshot.swift in Sources */,
 				49AB0F336CD7A544259A65DA1136C30B /* UIView_Shadow.swift in Sources */,
 				4558DB911E8CF26F00ECC18E /* UIView_FadePulse.swift in Sources */,
+				45575CF11EC32EA500DA62BF /* Sequence_Batch.swift in Sources */,
 				6BB2E93B15DE0FA25B7E4122E3239796 /* UIView_Visibility.swift in Sources */,
 				45686A431EBC684C00019206 /* SystemUrl.swift in Sources */,
 				B0D1D785200F670FEF2CE6DBF5156A5D /* UIViewController_Alert.swift in Sources */,
