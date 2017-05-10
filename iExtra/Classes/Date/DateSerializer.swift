@@ -13,10 +13,3 @@ public protocol DateSerializer {
     func deserialize(_ string: String) -> Date?
     func serialize(_ date: Date, format: String) -> String
 }
-
-public extension DateSerializer {
-    
-    func serialize(_ date: Date, format: DateSerializerFormat) -> String {
-        return serialize(date, format: format.string)
-    }
-}
