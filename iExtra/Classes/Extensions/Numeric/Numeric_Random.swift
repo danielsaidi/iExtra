@@ -18,21 +18,21 @@ public extension Int {
 
 public extension Float {
     
-    public static func random(in range: ClosedRange<Int>) -> Float {
-        return Float(Int.random(in: range))
+    public static func random(in range: ClosedRange<Double>) -> Float {
+        return Float(Double.random(in: range))
     }
 }
 
 public extension Double {
     
-    public static func random(in range: ClosedRange<Int>) -> Double {
-        return Double(Int.random(in: range))
+    public static func random(in range: ClosedRange<Double>) -> Double {
+        return Double(arc4random()) / Double(UINT32_MAX) * Swift.abs(range.upperBound - range.lowerBound) + min(range.lowerBound, range.upperBound)
     }
 }
 
 public extension CGFloat {
     
-    public static func random(in range: ClosedRange<Int>) -> CGFloat {
-        return CGFloat(Int.random(in: range))
+    public static func random(in range: ClosedRange<Double>) -> CGFloat {
+        return CGFloat(Double.random(in: range))
     }
 }
