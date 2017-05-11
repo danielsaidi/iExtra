@@ -11,16 +11,14 @@ import UIKit
 public extension UIApplication {
     
     public static var buildNumber: String {
-        let bundle = Bundle.main
         let key = "CFBundleVersion"
-        let version = bundle.infoDictionary?[key] as? String
-        return version ?? ""
+        let value = Bundle.main.infoDictionary?[key]
+        return value as? String ?? ""
     }
     
     public static var versionNumber: String {
-        let bundle = Bundle.main
         let key = "CFBundleShortVersionString"
-        let version = bundle.infoDictionary?[key] as? String
-        return version ?? "0.0.0"
+        let value = Bundle.main.infoDictionary?[key]
+        return value as? String ?? "0.0.0"
     }
 }

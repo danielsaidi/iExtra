@@ -14,18 +14,21 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let url = Bundle.main.url(forResource: "example", withExtension: "mp3")!
-        ap = try! AVAudioPlayer(contentsOf: url)
-        ap.play()
-        ap.volume = 0
+        urls = [
+            UIApplicationOpenSettingsURLString
+        ]
     }
     
-    var ap: AVAudioPlayer!
+    var urls: [String]!
+    var index = 0
+    
 
     @IBAction func fadeOut(_ sender: Any) {
-        print(Date())
-        ap.fadeVolume(to: 1, duration: 2) {
-            print(Date())
+        let urlObj = URL(string:UIApplicationOpenSettingsURLString)!
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(urlObj)
+        } else {
+            
         }
     }
     override func didReceiveMemoryWarning() {

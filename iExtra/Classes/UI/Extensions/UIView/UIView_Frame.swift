@@ -17,4 +17,13 @@ public extension UIView {
     public var frameLeft: CGRect { return frame.rectLeft }
     
     public var frameRight: CGRect { return frame.rectRight }
+    
+    
+    public var screenFrameAbove: CGRect { return frame.screenFrameAbove }
+    
+    public var screenFrameBelow: CGRect { return frame.screenFrameBelow }
+    
+    public var screenFrameLeft: CGRect { return frame.screenFrameLeft }
+    
+    public var screenFrameRight: CGRect { return frame.screenFrameRight }
 }
