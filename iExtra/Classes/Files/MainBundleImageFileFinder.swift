@@ -53,12 +53,9 @@ public class MainBundleImageFileFinder: MainBundleFileFinder {
     }
     
     private func isBaseImageName(_ fileName:String) -> Bool {
-        var isResolutionDuplicate = fileName.range(of: "@") != nil
-        isResolutionDuplicate = isResolutionDuplicate || fileName.range(of: "_2x") != nil
-        isResolutionDuplicate = isResolutionDuplicate || fileName.range(of: "_3x") != nil
-        let isDeviceDuplicate = fileName.range(of: "~ipad") != nil
-        let isDuplicate = isResolutionDuplicate || isDeviceDuplicate
-        
-        return !isDuplicate
+        return fileName.range(of: "@") != nil
+            || fileName.range(of: "_2x") != nil
+            || fileName.range(of: "_3x") != nil
+            || fileName.range(of: "~ipad") != nil
     }
 }

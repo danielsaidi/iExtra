@@ -65,6 +65,11 @@
 		452540821E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540801E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift */; };
 		452540831E8E7E5F004E75A2 /* UIButton_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540811E8E7E5F004E75A2 /* UIButton_Init.swift */; };
 		452540871E8E7EE6004E75A2 /* UIView_DripPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */; };
+		454C6F491EC42B69003DC726 /* SequenceAssetFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F481EC42B69003DC726 /* SequenceAssetFinder.swift */; };
+		454C6F4C1EC42C45003DC726 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F4B1EC42C45003DC726 /* Translator.swift */; };
+		454C6F4E1EC42C8E003DC726 /* i18nNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F4D1EC42C8E003DC726 /* i18nNotifications.swift */; };
+		454C6F501EC42CD3003DC726 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F4F1EC42CD3003DC726 /* LanguageService.swift */; };
+		454C6F521EC42D00003DC726 /* InstantLanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F511EC42D00003DC726 /* InstantLanguageService.swift */; };
 		45529B741EA6260400D4DFE8 /* InteractiveModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */; };
 		45529B751EA6260400D4DFE8 /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */; };
 		45529B761EA6260400D4DFE8 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */; };
@@ -388,6 +393,11 @@
 		452540801E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_BackgroundColor.swift; sourceTree = "<group>"; };
 		452540811E8E7E5F004E75A2 /* UIButton_Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Init.swift; sourceTree = "<group>"; };
 		452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_DripPulse.swift; sourceTree = "<group>"; };
+		454C6F481EC42B69003DC726 /* SequenceAssetFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceAssetFinder.swift; sourceTree = "<group>"; };
+		454C6F4B1EC42C45003DC726 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
+		454C6F4D1EC42C8E003DC726 /* i18nNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18nNotifications.swift; sourceTree = "<group>"; };
+		454C6F4F1EC42CD3003DC726 /* LanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
+		454C6F511EC42D00003DC726 /* InstantLanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantLanguageService.swift; sourceTree = "<group>"; };
 		45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveModalTransition.swift; sourceTree = "<group>"; };
 		45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalDismissAnimator.swift; sourceTree = "<group>"; };
 		45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalPresenter.swift; sourceTree = "<group>"; };
@@ -671,6 +681,7 @@
 				52DFEB2F9E62F92BB371E4A3B45E30C7 /* Extensions */,
 				B59920A3AC82D0EEFE06173290D66C62 /* Files */,
 				CF24D7C95E4F92B7719F5A17C73376B0 /* Geo */,
+				454C6F4A1EC42C2B003DC726 /* i18n */,
 				8CD6536538A2D4992CEB0647E03C08C0 /* Iap */,
 				7B0722A04A19FB258D27FE268FFB37B6 /* IoC */,
 				6EBC7995B6A7682F368894D1113E9A3D /* Keychain */,
@@ -893,6 +904,17 @@
 				4567A6C01E95370000E8F312 /* UIButton_Target.swift */,
 			);
 			path = UIButton;
+			sourceTree = "<group>";
+		};
+		454C6F4A1EC42C2B003DC726 /* i18n */ = {
+			isa = PBXGroup;
+			children = (
+				454C6F4B1EC42C45003DC726 /* Translator.swift */,
+				454C6F4D1EC42C8E003DC726 /* i18nNotifications.swift */,
+				454C6F4F1EC42CD3003DC726 /* LanguageService.swift */,
+				454C6F511EC42D00003DC726 /* InstantLanguageService.swift */,
+			);
+			path = i18n;
 			sourceTree = "<group>";
 		};
 		45529B701EA6260400D4DFE8 /* Modal */ = {
@@ -1289,6 +1311,7 @@
 				8400C17EE07E469B0DBD465E8C5F179E /* FilteredDirectoryFileManager.swift */,
 				14FB7671B131B1C6A3B693438BD3089F /* MainBundleFileFinder.swift */,
 				6AD24AD5356066B5BBAEB04D4D6CA2C3 /* MainBundleImageFileFinder.swift */,
+				454C6F481EC42B69003DC726 /* SequenceAssetFinder.swift */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -1783,10 +1806,12 @@
 				B5A2571E445BA64E2E0FBFBD64B2A741 /* FadingViewControllerTransition.swift in Sources */,
 				A4FAEB9B9CB81BB829CB2D73139F12B6 /* FileFinder.swift in Sources */,
 				70C23CBC28F3E675E473B5C9D8B30E8E /* FileSizeBytesPresenter.swift in Sources */,
+				454C6F521EC42D00003DC726 /* InstantLanguageService.swift in Sources */,
 				E78C583FA69A615851C4F45BDE420096 /* FileSizePresenter.swift in Sources */,
 				07C656CF3B4E8257C9143355BDF41F34 /* FilteredDirectoryFileManager.swift in Sources */,
 				437530B8EC3C1A7EB9ED7A4EA50EAB3D /* FloatingMenu.swift in Sources */,
 				946AC2E9D4D1BCEE61557AA50EE92120 /* FloatingMenuBackgroundPresenter.swift in Sources */,
+				454C6F491EC42B69003DC726 /* SequenceAssetFinder.swift in Sources */,
 				4567A71E1E9C351600E8F312 /* UITableView_DefaultNib.swift in Sources */,
 				A9126B125310EA1D0358AD07E5A26C77 /* FloatingMenuPresenter.swift in Sources */,
 				3E4261D97EE91F0466C7613147D7A6BC /* FloatingSubmenu.swift in Sources */,
@@ -1855,9 +1880,11 @@
 				969ABB22E394789A649736D6B7F20303 /* UIColor_Random.swift in Sources */,
 				9BCE4F82E36642111DDC1F88346D311B /* UIEdgeInsets_Init.swift in Sources */,
 				4A291B1F2A82434D6C95077E4ABFC57B /* UIImage_Color.swift in Sources */,
+				454C6F501EC42CD3003DC726 /* LanguageService.swift in Sources */,
 				820832504326C4CA18322F3D4A783AF9 /* UIImage_Combine.swift in Sources */,
 				F412AC959FCF779083F8BC16882122E1 /* UIImage_Padded.swift in Sources */,
 				4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */,
+				454C6F4E1EC42C8E003DC726 /* i18nNotifications.swift in Sources */,
 				23607732489F71C31735E51D9110DF06 /* UIImage_Resized.swift in Sources */,
 				45575CC91EC2E32700DA62BF /* Array_RandomElement.swift in Sources */,
 				4564AE5C1EBA883F0033B46A /* UINavigationBar_BackButton.swift in Sources */,
@@ -1875,6 +1902,7 @@
 				74FC7798ECE45688307334ACB26448E6 /* UIView_Subview.swift in Sources */,
 				BF9468DAC76C4368B1AF348B477190C5 /* UIView_Bounce.swift in Sources */,
 				8EC5FD29FBBC4FEB0A5767B083C720B1 /* UIView_Empty.swift in Sources */,
+				454C6F4C1EC42C45003DC726 /* Translator.swift in Sources */,
 				DFD1D155D168509ABCA0779DA23D8339 /* UIView_Frame.swift in Sources */,
 				C9241E95C638DACDECB18C108C58AE9E /* UIView_FullSize.swift in Sources */,
 				DD831F3176BF8E043B7D37D72E719F6D /* UIView_HitTest.swift in Sources */,

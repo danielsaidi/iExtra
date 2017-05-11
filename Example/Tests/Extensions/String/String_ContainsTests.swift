@@ -19,12 +19,12 @@ class String_ContainsTests: QuickSpec {
             context("with case-sensitive check") {
                 
                 it("finds existing string") {
-                    let result = "foo".contains(other: "foo", caseInsensitive: false)
+                    let result = "foo".contains("foo", caseInsensitive: false)
                     expect(result).to(beTrue())
                 }
                 
                 it("does not find non-existing string") {
-                    let result = "foo".contains(other: "foO", caseInsensitive: false)
+                    let result = "foo".contains("foO", caseInsensitive: false)
                     expect(result).to(beFalse())
                 }
             }
@@ -32,17 +32,17 @@ class String_ContainsTests: QuickSpec {
             context("with case-insensitive check") {
                 
                 it("finds existing string case-sensitively") {
-                    let result = "foo".contains(other: "foo", caseInsensitive: true)
+                    let result = "foo".contains("foo", caseInsensitive: true)
                     expect(result).to(beTrue())
                 }
                 
                 it("finds existing string case-insensitively") {
-                    let result = "foo".contains(other: "foO", caseInsensitive: true)
+                    let result = "foo".contains("foO", caseInsensitive: true)
                     expect(result).to(beTrue())
                 }
                 
                 it("does not find non-existing string case-sensitively") {
-                    let result = "foo".contains(other: "foot", caseInsensitive: true)
+                    let result = "foo".contains("foot", caseInsensitive: true)
                     expect(result).to(beFalse())
                 }
             }
