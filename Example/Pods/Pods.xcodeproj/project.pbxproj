@@ -85,6 +85,10 @@
 		454C6F7C1EC503BE003DC726 /* UIView_Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F7B1EC503BE003DC726 /* UIView_Shake.swift */; };
 		454C6F7E1EC50417003DC726 /* UIView_SizeToFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F7D1EC50417003DC726 /* UIView_SizeToFit.swift */; };
 		454C6F801EC50480003DC726 /* UIView_Wobble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F7F1EC50480003DC726 /* UIView_Wobble.swift */; };
+		454C6F861EC5792E003DC726 /* Pannable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F851EC5792E003DC726 /* Pannable.swift */; };
+		454C6F881EC595F0003DC726 /* PannableDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F871EC595F0003DC726 /* PannableDirection.swift */; };
+		454C6F8A1EC59674003DC726 /* PannableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F891EC59674003DC726 /* PannableView.swift */; };
+		454C6F8C1EC5A7EC003DC726 /* PannableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454C6F8B1EC5A7EC003DC726 /* PannableImageView.swift */; };
 		45529B741EA6260400D4DFE8 /* InteractiveModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */; };
 		45529B751EA6260400D4DFE8 /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */; };
 		45529B761EA6260400D4DFE8 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */; };
@@ -427,6 +431,10 @@
 		454C6F7B1EC503BE003DC726 /* UIView_Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Shake.swift; sourceTree = "<group>"; };
 		454C6F7D1EC50417003DC726 /* UIView_SizeToFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_SizeToFit.swift; sourceTree = "<group>"; };
 		454C6F7F1EC50480003DC726 /* UIView_Wobble.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_Wobble.swift; sourceTree = "<group>"; };
+		454C6F851EC5792E003DC726 /* Pannable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pannable.swift; sourceTree = "<group>"; };
+		454C6F871EC595F0003DC726 /* PannableDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableDirection.swift; sourceTree = "<group>"; };
+		454C6F891EC59674003DC726 /* PannableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableView.swift; sourceTree = "<group>"; };
+		454C6F8B1EC5A7EC003DC726 /* PannableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableImageView.swift; sourceTree = "<group>"; };
 		45529B711EA6260400D4DFE8 /* InteractiveModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveModalTransition.swift; sourceTree = "<group>"; };
 		45529B721EA6260400D4DFE8 /* PannableModalDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalDismissAnimator.swift; sourceTree = "<group>"; };
 		45529B731EA6260400D4DFE8 /* PannableModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalPresenter.swift; sourceTree = "<group>"; };
@@ -954,6 +962,17 @@
 			path = CGRect;
 			sourceTree = "<group>";
 		};
+		454C6F841EC57902003DC726 /* Pannable */ = {
+			isa = PBXGroup;
+			children = (
+				454C6F851EC5792E003DC726 /* Pannable.swift */,
+				454C6F871EC595F0003DC726 /* PannableDirection.swift */,
+				454C6F891EC59674003DC726 /* PannableView.swift */,
+				454C6F8B1EC5A7EC003DC726 /* PannableImageView.swift */,
+			);
+			path = Pannable;
+			sourceTree = "<group>";
+		};
 		45529B701EA6260400D4DFE8 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
@@ -1257,6 +1276,7 @@
 				4558DB9F1E8CFB2900ECC18E /* Buttons */,
 				0553F9508F5E0B9F1FF557A1814FB1B7 /* FloatingMenu */,
 				4558DBA11E8CFB2900ECC18E /* Labels */,
+				454C6F841EC57902003DC726 /* Pannable */,
 				26FEF6102C6314F2066FF96538B09092 /* Stretchable */,
 				4564AE611EBAF64F0033B46A /* Toolbars */,
 			);
@@ -1873,6 +1893,7 @@
 				A9126B125310EA1D0358AD07E5A26C77 /* FloatingMenuPresenter.swift in Sources */,
 				3E4261D97EE91F0466C7613147D7A6BC /* FloatingSubmenu.swift in Sources */,
 				F3B07BB86CAD20F413CA12A87E14A36D /* FloatingSubmenuPresenter.swift in Sources */,
+				454C6F8C1EC5A7EC003DC726 /* PannableImageView.swift in Sources */,
 				7CB875E2B2A534345B3D8AAEB9D69460 /* GoogleMapsService.swift in Sources */,
 				B980CC3093E615F40856B90F7E241EA9 /* HintManager.swift in Sources */,
 				0BFBC6B652F134227255130955679C47 /* HintManagerBase.swift in Sources */,
@@ -1907,6 +1928,7 @@
 				AE46061FB2A63C1B03F1E471D9E38EB3 /* MKMapView_CenterCoordinate.swift in Sources */,
 				454C6F801EC50480003DC726 /* UIView_Wobble.swift in Sources */,
 				F820C35AC9D490EE633C4E46C52AD94E /* MKMapView_LegalLabel.swift in Sources */,
+				454C6F8A1EC59674003DC726 /* PannableView.swift in Sources */,
 				2CD825E316C058755000774C4040AFA2 /* MKMapView_StatusBarStyle.swift in Sources */,
 				B6D0EF2390457772A132207F238D68E1 /* NavigationSearchController.swift in Sources */,
 				454C6F6A1EC4FE98003DC726 /* UIImage_Shadow.swift in Sources */,
@@ -1947,6 +1969,7 @@
 				820832504326C4CA18322F3D4A783AF9 /* UIImage_Combine.swift in Sources */,
 				F412AC959FCF779083F8BC16882122E1 /* UIImage_Padded.swift in Sources */,
 				4558DB921E8CF26F00ECC18E /* UIView_ScalePulse.swift in Sources */,
+				454C6F881EC595F0003DC726 /* PannableDirection.swift in Sources */,
 				454C6F4E1EC42C8E003DC726 /* i18nNotifications.swift in Sources */,
 				23607732489F71C31735E51D9110DF06 /* UIImage_Resized.swift in Sources */,
 				45575CC91EC2E32700DA62BF /* Array_RandomElement.swift in Sources */,
@@ -1990,6 +2013,7 @@
 				452540871E8E7EE6004E75A2 /* UIView_DripPulse.swift in Sources */,
 				9E8784B8952EC212BB07A103F2872188 /* UIViewController_Root.swift in Sources */,
 				5BF6C79A15EFE4A8098713520F75DFAB /* UIViewController_StatusBar.swift in Sources */,
+				454C6F861EC5792E003DC726 /* Pannable.swift in Sources */,
 				CE4CA4C50EDC57A2A47A870CBA7E74BB /* UuidGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Do not use this one anymore.")
 public class UIAlertControllerPresenter {
     
     private static var alertWindow: UIWindow?
