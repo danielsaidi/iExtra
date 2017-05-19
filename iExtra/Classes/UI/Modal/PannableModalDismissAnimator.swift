@@ -54,7 +54,8 @@ extension PannableModalDismissAnimator: UIViewControllerAnimatedTransitioning {
         guard let to = context.viewController(forKey: .to) else { return }
         
         let view = context.containerView
-        view.insertSubview(to.view, belowSubview: from.view)
+        view.addSubview(to.view, fill: true)
+        view.sendSubview(toBack: to.view)
         
         let duration = transitionDuration(using: context)
         let animation = { from.view.frame = self.getFinalFrame() }
