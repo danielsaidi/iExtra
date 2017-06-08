@@ -126,6 +126,9 @@
 		45686A401EBC5EB000019206 /* DateSerializerFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */; };
 		45686A431EBC684C00019206 /* SystemUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45686A421EBC684C00019206 /* SystemUrl.swift */; };
 		45864A7A1EC3A274004B3831 /* HasVolume_Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45864A791EC3A274004B3831 /* HasVolume_Fade.swift */; };
+		45C3D8BA1ED8B89D0082CCA6 /* ThinSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C3D8B91ED8B89D0082CCA6 /* ThinSeparator.swift */; };
+		45F07C801EDD8E350043BEF1 /* UINavigationBar_Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F07C7F1EDD8E350043BEF1 /* UINavigationBar_Tint.swift */; };
+		45F07C841EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F07C831EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift */; };
 		4626E604A374C931458D10F7C7FDDC49 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF877D206C63111AE6D373E279AEB9E /* ExternalMapServiceBase.swift */; };
 		47FF072E4D2BDE2759931B0B846BD5D0 /* DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936D0E6360F5879FA9408D6392D73B5E /* DSL.swift */; };
 		49AB0F336CD7A544259A65DA1136C30B /* UIView_Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BDDC92F9544235EB120169394296E4E /* UIView_Shadow.swift */; };
@@ -472,6 +475,9 @@
 		45686A3F1EBC5EB000019206 /* DateSerializerFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSerializerFormat.swift; sourceTree = "<group>"; };
 		45686A421EBC684C00019206 /* SystemUrl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemUrl.swift; sourceTree = "<group>"; };
 		45864A791EC3A274004B3831 /* HasVolume_Fade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HasVolume_Fade.swift; sourceTree = "<group>"; };
+		45C3D8B91ED8B89D0082CCA6 /* ThinSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinSeparator.swift; sourceTree = "<group>"; };
+		45F07C7F1EDD8E350043BEF1 /* UINavigationBar_Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_Tint.swift; sourceTree = "<group>"; };
+		45F07C831EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBar_TitleAlpha.swift; sourceTree = "<group>"; };
 		4687C3154E9647F2C75EAC9C00B6AEB6 /* RemoteNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RemoteNotificationService.swift; sourceTree = "<group>"; };
 		46FCB309DDCD0F3151825292492F197D /* HintManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		48E09D18327AAAD8153182BF5645685D /* UIColor_Hex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor_Hex.swift; sourceTree = "<group>"; };
@@ -1045,6 +1051,8 @@
 			children = (
 				4564AE5A1EBA883F0033B46A /* UINavigationBar_BackButton.swift */,
 				4564AE5B1EBA883F0033B46A /* UINavigationBar_Transparent.swift */,
+				45F07C7F1EDD8E350043BEF1 /* UINavigationBar_Tint.swift */,
+				45F07C831EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift */,
 			);
 			path = UINavigationBar;
 			sourceTree = "<group>";
@@ -1278,6 +1286,7 @@
 				4558DBA11E8CFB2900ECC18E /* Labels */,
 				454C6F841EC57902003DC726 /* Pannable */,
 				26FEF6102C6314F2066FF96538B09092 /* Stretchable */,
+				45C3D8B91ED8B89D0082CCA6 /* ThinSeparator.swift */,
 				4564AE611EBAF64F0033B46A /* Toolbars */,
 			);
 			path = Views;
@@ -1818,6 +1827,7 @@
 			files = (
 				45575CD11EC2E32700DA62BF /* String_Base64.swift in Sources */,
 				454C6F681EC4FE41003DC726 /* UIImage_Crop.swift in Sources */,
+				45C3D8BA1ED8B89D0082CCA6 /* ThinSeparator.swift in Sources */,
 				4558DBA21E8CFB2900ECC18E /* RoundButton.swift in Sources */,
 				102ADF622BC949BD2BF788417CCDC303 /* ActionSheet.swift in Sources */,
 				45529B741EA6260400D4DFE8 /* InteractiveModalTransition.swift in Sources */,
@@ -1829,6 +1839,7 @@
 				768986A7247FDE1D5E944CB3798A24F3 /* ActionSheetEnableItem.swift in Sources */,
 				F324829593DAF44588ECB27E6180A555 /* ActionSheetItem.swift in Sources */,
 				45575CD41EC2E32700DA62BF /* String_UrlEncode.swift in Sources */,
+				45F07C801EDD8E350043BEF1 /* UINavigationBar_Tint.swift in Sources */,
 				71A5054ED523D3C841DE1306A2553DEF /* ActionSheetItemSection.swift in Sources */,
 				01B21783A542D8FA94C9CF87BD693994 /* ActionSheetLinkItem.swift in Sources */,
 				EAEFC748B07B43C4928FF54976DE68E2 /* ActionSheetOkItem.swift in Sources */,
@@ -1852,6 +1863,7 @@
 				DBE7A2B181908A02C964AB62549881C0 /* BiometricsAuthorizationService.swift in Sources */,
 				455C23351EB1C66B0005D48F /* UIImageView_FadeInImage.swift in Sources */,
 				45575CD31EC2E32700DA62BF /* String_Replace.swift in Sources */,
+				45F07C841EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift in Sources */,
 				686DE6C1F8572B202C5B54D8AE5D6834 /* BlurredNavigationSearchController.swift in Sources */,
 				452540821E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift in Sources */,
 				454C6F7A1EC50381003DC726 /* UIView_ScaleIn.swift in Sources */,

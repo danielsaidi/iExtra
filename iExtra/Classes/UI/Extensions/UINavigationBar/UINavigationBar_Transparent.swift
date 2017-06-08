@@ -10,19 +10,15 @@ import UIKit
 
 public extension UINavigationBar {
     
-    public var isTransparent: Bool {
-        get { return shadowImage != nil }
+    public func makeNonTransparent(withBarShadow shadow: Bool) {
+        isTranslucent = false
+        setBackgroundImage(shadow ? nil : UIImage(), for: .default)
+        shadowImage = shadow ? nil : UIImage()
     }
     
     public func makeTransparent() {
-        guard !isTransparent else { return }
+        isTranslucent = true
         setBackgroundImage(UIImage(), for: .default)
         shadowImage = UIImage()
-    }
-    
-    public func makeNonTransparent() {
-        guard isTransparent else { return }
-        setBackgroundImage(nil, for: .default)
-        shadowImage = nil
     }
 }
