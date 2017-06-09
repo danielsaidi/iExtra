@@ -18,7 +18,7 @@ public extension UIViewController {
     }
     
     public var navigationBarBackground: UIView? {
-        let tag = navBarBackgroundTag
+        let tag = navigationBarBackgroundTag
         return getNavBarBackground(tag) ?? createNavBarBackground(tag)
     }
 }
@@ -29,7 +29,7 @@ public extension UIViewController {
 
 fileprivate extension UIViewController {
     
-    var navBarBackgroundTag: Int { return 324523 }
+    var navigationBarBackgroundTag: Int { return 324523 }
     
     func adjusted(_ bgView: UIView?) -> UIView? {
         guard let bar = navigationBar else { return nil }
