@@ -29,7 +29,7 @@ class UINavigationBar_TransparentTests: QuickSpec {
             }
             
             it("can be made opaque") {
-                bar.makeNonTransparent()
+                bar.makeNonTransparent(withBarShadow: true)
                 self.assertNonTransparent(bar)
             }
         }
