@@ -12,6 +12,7 @@ public protocol SystemNotificationService: class {
 
     func post(_ notification: String)
     func post(_ notification: String, object: [AnyHashable: Any])
-    func subscribe(_ subscriber: Any, to notification: String, withSelector selector: Selector)
+    func subscribe(_ subscriber: Any, to notification: String, with selector: Selector)
+    func unsubscribe(_ subscriber: Any)
     func unsubscribe(_ subscriber: Any, from notification: String)
 }

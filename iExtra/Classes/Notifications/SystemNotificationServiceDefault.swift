@@ -30,9 +30,13 @@ open class SystemNotificationServiceDefault: NSObject, SystemNotificationService
         center.post(name: name, object: nil, userInfo: object)
     }
     
-    open func subscribe(_ subscriber: Any, to notification: String, withSelector selector: Selector) {
+    open func subscribe(_ subscriber: Any, to notification: String, with selector: Selector) {
         let name = Notification.Name(notification)
         center.addObserver(subscriber, selector: selector, name: name, object: nil)
+    }
+    
+    public func unsubscribe(_ subscriber: Any) {
+        center.removeObserver(subscriber)
     }
     
     open func unsubscribe(_ subscriber: Any, from notification: String) {
