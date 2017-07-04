@@ -17,6 +17,13 @@ public extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func alert(title: Localized, message: Localized, buttonText: Localized) {
+        let title = title.localizedString
+        let message = message.localizedString
+        let buttonText = buttonText.localizedString
+        alert(title: title, message: message, buttonText: buttonText)
+    }
+    
     func alert(title: String, message: String, cancelText: String? = nil, actionText: String, action: (() -> ())?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -29,5 +36,13 @@ public extension UIViewController {
         alert.addAction(actionButton)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    func alert(title: Localized, message: Localized, cancelText: Localized? = nil, actionText: Localized, action: (() -> ())?) {
+        let title = title.localizedString
+        let message = message.localizedString
+        let cancelText = cancelText?.localizedString
+        let actionText = actionText.localizedString
+        alert(title: title, message: message, cancelText: cancelText, actionText: actionText, action: action)
     }
 }

@@ -62,6 +62,7 @@
 		40C2EED662637B206CF2A1E77E0529FE /* MKAnnotationGeocoderDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154CE3DF0E2C5BC1186B9A738DE6FE29 /* MKAnnotationGeocoderDefault.swift */; };
 		4196BF5F9322583C1AF79A2387FF66F5 /* MainBundleFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FB7671B131B1C6A3B693438BD3089F /* MainBundleFileFinder.swift */; };
 		437530B8EC3C1A7EB9ED7A4EA50EAB3D /* FloatingMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078FA24BE80F1306229035228D7CCF92 /* FloatingMenu.swift */; };
+		451C94B41F0BECE100AC7C2B /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451C94B31F0BECE100AC7C2B /* Localized.swift */; };
 		452540821E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540801E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift */; };
 		452540831E8E7E5F004E75A2 /* UIButton_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540811E8E7E5F004E75A2 /* UIButton_Init.swift */; };
 		452540871E8E7EE6004E75A2 /* UIView_DripPulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */; };
@@ -411,6 +412,7 @@
 		41E69B8A93FF8FF4F27B01D2146E962E /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		4243B67F5188640971BFDAE6D279DE57 /* KeychainWriter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainWriter.swift; sourceTree = "<group>"; };
 		43C3308E23EBE37880C2A8EB76456B20 /* UIViewController_NavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController_NavigationBar.swift; sourceTree = "<group>"; };
+		451C94B31F0BECE100AC7C2B /* Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		452540801E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_BackgroundColor.swift; sourceTree = "<group>"; };
 		452540811E8E7E5F004E75A2 /* UIButton_Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_Init.swift; sourceTree = "<group>"; };
 		452540861E8E7EE6004E75A2 /* UIView_DripPulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView_DripPulse.swift; sourceTree = "<group>"; };
@@ -951,10 +953,11 @@
 		454C6F4A1EC42C2B003DC726 /* i18n */ = {
 			isa = PBXGroup;
 			children = (
-				454C6F4B1EC42C45003DC726 /* Translator.swift */,
 				454C6F4D1EC42C8E003DC726 /* i18nNotifications.swift */,
-				454C6F4F1EC42CD3003DC726 /* LanguageService.swift */,
 				454C6F511EC42D00003DC726 /* InstantLanguageService.swift */,
+				454C6F4F1EC42CD3003DC726 /* LanguageService.swift */,
+				451C94B31F0BECE100AC7C2B /* Localized.swift */,
+				454C6F4B1EC42C45003DC726 /* Translator.swift */,
 			);
 			path = i18n;
 			sourceTree = "<group>";
@@ -1865,6 +1868,7 @@
 				45575CD31EC2E32700DA62BF /* String_Replace.swift in Sources */,
 				45F07C841EDD8F480043BEF1 /* UINavigationBar_TitleAlpha.swift in Sources */,
 				686DE6C1F8572B202C5B54D8AE5D6834 /* BlurredNavigationSearchController.swift in Sources */,
+				451C94B41F0BECE100AC7C2B /* Localized.swift in Sources */,
 				452540821E8E7E5F004E75A2 /* UIButton_BackgroundColor.swift in Sources */,
 				454C6F7A1EC50381003DC726 /* UIView_ScaleIn.swift in Sources */,
 				854CAFEF11E3711DBBCA025A40492E65 /* BorderLineView.swift in Sources */,
