@@ -15,31 +15,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let a = PannableView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        a.backgroundColor = .red
-        view.addSubview(a)
-        
-        urls = [
-            UIApplicationOpenSettingsURLString
-        ]
+        let view = PannableView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        view.backgroundColor = .red
+        view.addSubview(view)
     }
-    
-    var urls: [String]!
-    var index = 0
-    
-
-    @IBAction func fadeOut(_ sender: Any) {
-        let urlObj = URL(string:UIApplicationOpenSettingsURLString)!
-        if #available(iOS 10.0, *) {
-            UIApplication.shared.open(urlObj)
-        } else {
-            
-        }
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
 }
 
