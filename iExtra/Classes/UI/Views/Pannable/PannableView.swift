@@ -15,17 +15,17 @@ open class PannableView: UIView, Pannable {
     
     public init() {
         super.init(frame: CGRect.zero)
-        setupPannable(with: #selector(handlePan(_:)))
+        setupPannable(with: #selector(triggerPan(_:)))
     }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        setupPannable(with: #selector(handlePan(_:)))
+        setupPannable(with: #selector(triggerPan(_:)))
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupPannable(with: #selector(handlePan(_:)))
+        setupPannable(with: #selector(triggerPan(_:)))
     }
     
     
@@ -38,10 +38,19 @@ open class PannableView: UIView, Pannable {
     public var panStartCenter = CGPoint.zero
     
     
-    
     // MARK: - Public Functions
     
     open func handlePan(_ pan: UIPanGestureRecognizer) {
         handlePanBase(pan)
+    }
+}
+
+
+// MARK: - Selectors
+
+@objc public extension PannableView {
+    
+    public func triggerPan(_ pan: UIPanGestureRecognizer) {
+        handlePan(pan)
     }
 }

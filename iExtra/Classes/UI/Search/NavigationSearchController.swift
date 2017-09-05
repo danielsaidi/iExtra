@@ -107,7 +107,8 @@ fileprivate extension NavigationSearchController {
     }
     
     func createCancelButton() -> UIBarButtonItem {
-        return NavigationSearchControllerBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelButtonTapped))
+        let action = #selector(cancelBarButtonTapped)
+        return NavigationSearchControllerBarButtonItem(title: "Cancel", style: .plain, target: self, action: action)
     }
     
     func setup() {
@@ -117,6 +118,17 @@ fileprivate extension NavigationSearchController {
         searchBar.showsCancelButton = false
         dimsBackgroundDuringPresentation = true
         hidesNavigationBarDuringPresentation = false
+    }
+}
+
+
+
+// MARK: - Selectors
+
+@objc extension NavigationSearchController {
+    
+    func cancelBarButtonTapped() {
+        cancelButtonTapped()
     }
 }
 

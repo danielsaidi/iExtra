@@ -11,10 +11,10 @@ import UIKit
 public extension UINavigationBar {
     
     public func setTitleAlpha(_ alpha: CGFloat) {
-        var attributes = titleTextAttributes ?? [String : Any]()
-        var color: UIColor = attributes[NSForegroundColorAttributeName] as? UIColor ?? .black
+        var attributes = titleTextAttributes ?? [NSAttributedStringKey : Any]()
+        var color: UIColor = attributes[.foregroundColor] as? UIColor ?? .black
         color = color.withAlphaComponent(alpha)
-        attributes[NSForegroundColorAttributeName] = color
+        attributes[.foregroundColor] = color
         titleTextAttributes = attributes
     }
 }

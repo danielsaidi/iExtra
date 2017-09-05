@@ -22,8 +22,9 @@ open class FloatingMenu: UIView {
     private func setup(primaryButton button: UIButton) {
         addSubview(button)
         let size = button.frame.size
+        let action = #selector(primaryButtonTapped)
         button.frame = CGRect(origin: CGPoint.zero, size: size)
-        button.addTarget(self, action:#selector(toggle), for:.touchDown)
+        button.addTarget(self, action: action, for: .touchDown)
         primaryButton = button
         setupShadow(for: button)
     }
@@ -34,8 +35,9 @@ open class FloatingMenu: UIView {
         for submenu in submenus {
             for button in submenu.buttons {
                 insertSubview(button, belowSubview:lastView!)
+                let action = #selector(submenuButtonTapped)
                 button.center = primaryButton.center
-                button.addTarget(self, action:#selector(close), for:.touchUpInside)
+                button.addTarget(self, action: action, for: .touchUpInside)
                 lastView = button
                 setupShadow(for: button)
             }
@@ -131,12 +133,29 @@ open class FloatingMenu: UIView {
     open func toggle() {
         isOpen ? close() : open()
     }
+}
+
+
+//MARK: - Selectors
+
+@objc extension FloatingMenu {
     
+    func primaryButtonTapped() {
+        toggle()
+    }
     
+    func submenuButtonTapped() {
+        close()
+    }
+}
+
+
+
+//MARK: - Private methods
+
+fileprivate extension FloatingMenu {
     
-    //MARK: - Private methods
-    
-    private func removeAllSubviews() {
+    func removeAllSubviews() {
         for view in subviews {
             view.removeFromSuperview()
         }

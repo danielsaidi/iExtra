@@ -44,9 +44,9 @@ open class MapBadgeView: UIView {
     
     // MARK: - Appearance Properties
     
-    public dynamic var borderColor: UIColor = UIColor.lightGray
-    public dynamic var borderWidth: CGFloat = 1
-    public dynamic var mapPadding: CGFloat = 2
+    @objc public dynamic var borderColor: UIColor = UIColor.lightGray
+    @objc public dynamic var borderWidth: CGFloat = 1
+    @objc public dynamic var mapPadding: CGFloat = 2
     
     
     

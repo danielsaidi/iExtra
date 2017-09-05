@@ -15,12 +15,12 @@ open class PannableImageView: UIImageView, Pannable {
     
     public override init(image: UIImage?) {
         super.init(image: image)
-        setupPannable(with: #selector(handlePan(_:)))
+        setupPannable(with: #selector(triggerPan(_:)))
     }
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupPannable(with: #selector(handlePan(_:)))
+        setupPannable(with: #selector(triggerPan(_:)))
     }
     
     
@@ -41,3 +41,14 @@ open class PannableImageView: UIImageView, Pannable {
         handlePanBase(pan)
     }
 }
+
+
+// MARK: - Selectors
+
+@objc public extension PannableImageView {
+    
+    public func triggerPan(_ pan: UIPanGestureRecognizer) {
+        handlePan(pan)
+    }
+}
+

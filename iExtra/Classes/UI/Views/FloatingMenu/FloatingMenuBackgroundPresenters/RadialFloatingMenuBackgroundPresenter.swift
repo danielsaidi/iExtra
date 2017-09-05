@@ -43,7 +43,7 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
         )
     }
     
-    open func presentBackground(for menu:FloatingMenu) {
+    open func presentBackground(for menu: FloatingMenu) {
         createBackground(for: menu)
         guard let backgroundView = backgroundView else { return }
 
@@ -58,13 +58,15 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
             }
         )
     }
+}
+
+
+// MARK: - Private methods
+
+fileprivate extension RadialFloatingMenuBackgroundPresenter {
     
-    
-    
-    // MARK: - Private methods
-    
-    private func createBackground(for menu:FloatingMenu) {
-        if (backgroundView != nil) {
+    func createBackground(for menu: FloatingMenu) {
+        if backgroundView != nil {
             backgroundView!.removeFromSuperview()
         }
         
@@ -73,9 +75,9 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
         bg.frame = (btn?.frame)!
         bg.layer.cornerRadius = (btn?.layer.cornerRadius)!
         bg.backgroundColor = backgroundColor
-        bg.addTarget(menu, action: #selector(FloatingMenu.close), for: .touchDown)
+        bg.addTarget(menu, action: #selector(menu.primaryButtonTapped), for: .touchDown)
         backgroundView = bg
-
+        
         menu.insertSubview(bg, at: 0)
     }
 }

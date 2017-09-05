@@ -77,24 +77,42 @@ fileprivate extension InputStepperToolbar {
 }
 
 
+// MARK: - Selectors
+
+@objc extension InputStepperToolbar {
+    
+    func doneButtonTapped() {
+        resignKeyboard()
+    }
+    
+    func nextButtonTapped() {
+        stepNext()
+    }
+    
+    func previousButtonTapped() {
+        stepPrevious()
+    }
+}
+
+
 // MARK: - Private Functions
 
 fileprivate extension InputStepperToolbar {
     
     func createDoneButton() -> UIBarButtonItem {
-        let action = #selector(resignKeyboard)
+        let action = #selector(doneButtonTapped)
         return UIBarButtonItem(barButtonSystemItem: .done, target: self, action: action)
     }
     
     func createNextButton() -> UIBarButtonItem {
-        let action = #selector(stepNext)
+        let action = #selector(nextButtonTapped)
         return nextImage != nil
             ? UIBarButtonItem(image: nextImage, style: .plain, target: self, action: action)
             : UIBarButtonItem(title: nextTitle, style: .plain, target: self, action: action)
     }
     
     func createPreviousButton() -> UIBarButtonItem {
-        let action = #selector(stepPrevious)
+        let action = #selector(previousButtonTapped)
         return previousImage != nil
             ? UIBarButtonItem(image: previousImage, style: .plain, target: self, action: action)
             : UIBarButtonItem(title: previousTitle, style: .plain, target: self, action: action)

@@ -51,9 +51,9 @@ public class AnimatedLabel: UILabel {
 }
 
 
-// MARK: - Internal Functions
+// MARK: - Selectors
 
-extension AnimatedLabel {
+@objc extension AnimatedLabel {
     
     func timerTick() {
         let text = texts?.first ?? ""

@@ -35,11 +35,10 @@ public class HintManagerBase: NSObject, HintManager {
     
     public func enable() {
         disable()
-        if inactivitySecondsTrigger > 0 {
-            let interval = TimeInterval(inactivitySecondsTrigger)
-            let action = #selector(triggerInactivityHint)
-            timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: action, userInfo: nil, repeats: true)
-        }
+        guard inactivitySecondsTrigger > 0 else { return }
+        let interval = TimeInterval(inactivitySecondsTrigger)
+        let action = #selector(triggerInactivityHint)
+        timer = Timer.scheduledTimer(timeInterval: interval, target: self, selector: action, userInfo: nil, repeats: true)
     }
     
     public func showBehaviorHint() {
@@ -70,6 +69,12 @@ public class HintManagerBase: NSObject, HintManager {
         showBehaviorHint()
         delegate?.hintManagerDidTriggerBehaviorHint(self)
     }
+}
+
+
+// MARK: - Selectors
+
+@objc public extension HintManagerBase {
     
     public func triggerInactivityHint() {
         showInactivityHint()

@@ -90,9 +90,9 @@ extension PannableModalPresenter {
 
 
 
-// MARK: - Actions
+// MARK: - Selectors
 
-extension PannableModalPresenter {
+@objc extension PannableModalPresenter {
     
     func handlePanGesture(pan: UIPanGestureRecognizer) {
         guard let view = pan.view else { return }
