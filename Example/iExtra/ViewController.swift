@@ -11,13 +11,4 @@ import AVFoundation
 import iExtra
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let view = PannableView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        view.backgroundColor = .red
-        view.addSubview(view)
-    }
 }
-

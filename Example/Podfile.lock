@@ -1,22 +1,36 @@
 PODS:
-  - iExtra (0.1.0)
-  - Nimble (5.0.0)
-  - Quick (0.10.0)
+  - iExtra (0.8.1)
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
 
 DEPENDENCIES:
   - iExtra (from `../`)
-  - Nimble (~> 5.0.0)
-  - Quick (~> 0.10.0)
+  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `master`)
+  - Quick (from `https://github.com/Quick/Quick.git`, branch `master`)
 
 EXTERNAL SOURCES:
   iExtra:
     :path: "../"
+  Nimble:
+    :branch: master
+    :git: https://github.com/Quick/Nimble.git
+  Quick:
+    :branch: master
+    :git: https://github.com/Quick/Quick.git
+
+CHECKOUT OPTIONS:
+  Nimble:
+    :commit: a63252b16eba6cdebec4e4936388c90552165a68
+    :git: https://github.com/Quick/Nimble.git
+  Quick:
+    :commit: 3665ae9570b682a562df847cccbb46811864676a
+    :git: https://github.com/Quick/Quick.git
 
 SPEC CHECKSUMS:
-  iExtra: 00540caf4af43dfaddf21802ecdb66001c4fd70e
-  Nimble: 56fc9f5020effa2206de22c3dd910f4fb011b92f
-  Quick: 5d290df1c69d5ee2f0729956dcf0fd9a30447eaa
+  iExtra: 67e7ad6dd1f0f12f3f5e5442a08ed72a1f0aa1e4
+  Nimble: 1b6670c36e5750169b9e4cc2e9cfa82a7603c69e
+  Quick: 4700beb8056662b579facd79eaca7f04fb3d48e6
 
-PODFILE CHECKSUM: c1c369c1c4f8bada81a4839f1723f00fbc59ca6c
+PODFILE CHECKSUM: 81537d05791fea2c959490be2775f5a8d9897059
 
 COCOAPODS: 1.2.0
