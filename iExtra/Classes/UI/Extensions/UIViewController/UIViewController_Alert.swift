@@ -29,36 +29,20 @@ public extension UIViewController {
     }
     
     func alert(title: String, message: String, buttonText: String) {
-        alert(title: title, message: message, cancelText: nil, actionText: buttonText, action: nil)
+        alert(title: title, message: message, buttonText: buttonText) {}
     }
     
-    func alert(title: Localized, message: Localized, buttonText: Localized) {
-        alert(title: title, message: message, cancelText: nil, actionText: buttonText, action: nil)
+    func alert(title: String, message: String, buttonText: String, completion: @escaping AlertAction) {
+        alert(title: title, message: message, actionText: buttonText, cancelText: nil) {}
     }
     
-    func alert(title: String, message: String, buttonText: String, action: AlertAction?) {
-        alert(title: title, message: message, cancelText: nil, actionText: buttonText, action: action)
-    }
-    
-    func alert(title: Localized, message: Localized, buttonText: Localized, action: AlertAction?) {
-        alert(title: title, message: message, cancelText: nil, actionText: buttonText, action: action)
-    }
-    
-    func alert(title: String, message: String, cancelText: String?, actionText: String, action: AlertAction?) {
+    func alert(title: String, message: String, actionText: String, cancelText: String?, action: @escaping AlertAction) {
         guard canAlert else { return }
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         setupCancelAction(in: alert, with: cancelText)
-        let actionButton = UIAlertAction(title: actionText, style: .default, handler: { (_) in action?() })
+        let actionButton = UIAlertAction(title: actionText, style: .default, handler: { (_) in action() })
         alert.addAction(actionButton)
         present(alert, animated: true, completion: nil)
-    }
-    
-    func alert(title: Localized, message: Localized, cancelText: Localized?, actionText: Localized, action: AlertAction?) {
-        let title = title.localizedString
-        let message = message.localizedString
-        let cancelText = cancelText?.localizedString
-        let actionText = actionText.localizedString
-        alert(title: title, message: message, cancelText: cancelText, actionText: actionText, action: action)
     }
 }
 
