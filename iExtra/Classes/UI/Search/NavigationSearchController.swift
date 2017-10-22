@@ -27,11 +27,6 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     
     // MARK: - Initialization
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
     public override init(searchResultsController: UIViewController?) {
         super.init(searchResultsController: searchResultsController)
         setup()
@@ -42,6 +37,10 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
         setup()
     }
     
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
     
     
     // MARK: - Properties
@@ -58,7 +57,6 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     fileprivate weak var vcRightButton: UIBarButtonItem?
     
     
-    
     // MARK: - Public functions
     
     open override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
@@ -73,7 +71,6 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     }
     
     
-    
     // MARK: - UISearchBarDelegate
     
     open func cancelButtonTapped() {
@@ -85,7 +82,6 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     }
     
     
-    
     // MARK: - UISearchResultsUpdating
     
     open func updateSearchResults(for searchController: UISearchController) {
@@ -94,7 +90,6 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
         }
     }
 }
-
 
 
 // MARK: - Private Functions
@@ -122,7 +117,6 @@ fileprivate extension NavigationSearchController {
 }
 
 
-
 // MARK: - Selectors
 
 @objc extension NavigationSearchController {
@@ -133,7 +127,6 @@ fileprivate extension NavigationSearchController {
 }
 
 
-
 // MARK: - UISearchControllerDelegate
 
 extension NavigationSearchController: UISearchControllerDelegate {
@@ -141,7 +134,7 @@ extension NavigationSearchController: UISearchControllerDelegate {
     public func willDismissSearchController(_ searchController: UISearchController) {
         vc?.navigationItem.titleView = nil
         vc?.navigationItem.rightBarButtonItem = vcRightButton
-        
+        vc?.viewWillAppear(true)
         let fadeOut = { searchController.view.alpha = 0 }
         UIView.animate(withDuration: 0.5, animations: fadeOut) {
             finished in searchController.view.alpha = 1
