@@ -96,6 +96,7 @@
 		453B0F9E32B48DE9B518660AFAB755F9 /* Numeric_Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A786E7DDB6A5C914A9476DF12D6B5D5 /* Numeric_Random.swift */; };
 		454EF39BA176F962A895AA7A9C482CAE /* BiometricsAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6CDE82E99DFFCD0B570E98325FC1A9 /* BiometricsAuthorizationService.swift */; };
 		4578CDFC1FA915BA0002385D /* IntrinsicTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CDFB1FA915BA0002385D /* IntrinsicTableView.swift */; };
+		4578CE061FA91C280002385D /* UITextView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4578CE051FA91C280002385D /* UITextView+Placeholder.swift */; };
 		45F183320C688F9978649F30ABE21D09 /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C307734CC6DDA96E75DB8F886E6E029 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		48042C24F31091AEB3C7FC24143C3CB8 /* NSObject_ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6456ECC02097AF5AE96F014322DAF956 /* NSObject_ClassName.swift */; };
 		4ADC8F1BB71E12C2331BE7E4538BDAAB /* QuickSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = EA8315675F3D2B2385E834043F85C676 /* QuickSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -442,6 +443,7 @@
 		42DD07575CFDE63DE6412F425FDBED71 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		452940981F8A924000F2CD5A /* UIView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gestures.swift"; sourceTree = "<group>"; };
 		4578CDFB1FA915BA0002385D /* IntrinsicTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntrinsicTableView.swift; sourceTree = "<group>"; };
+		4578CE051FA91C280002385D /* UITextView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Placeholder.swift"; sourceTree = "<group>"; };
 		467F00CAF06ADEF612F697F068843FB2 /* World+DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "World+DSL.h"; path = "Sources/QuickObjectiveC/DSL/World+DSL.h"; sourceTree = "<group>"; };
 		46F8511B08505FC55B5329E6464AFDFA /* Contain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Contain.swift; path = Sources/Nimble/Matchers/Contain.swift; sourceTree = "<group>"; };
 		4812F8A830ADB1A822F206FA690C7780 /* ActionSheetLinkItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ActionSheetLinkItem.swift; sourceTree = "<group>"; };
@@ -897,6 +899,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4578CE041FA91C130002385D /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				78BBBADDED96007F6622EB50D98EC67D /* UITextView_Padding.swift */,
+				4578CE051FA91C280002385D /* UITextView+Placeholder.swift */,
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
 		464A9E211336E01000A2059714BFB80C /* Date */ = {
 			isa = PBXGroup;
 			children = (
@@ -958,20 +969,20 @@
 		4D478D27FF7422A724C5C0B8441A0745 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D6B299E301040037235F5A249C5F37C4 /* UIEdgeInsets_Init.swift */,
-				5D394506ADB7682F0DD4BD84B4C7919A /* UIScrollView_Scroll.swift */,
-				5657D146E60156FB1439FAA38C34AAE2 /* UISearchBar_Style.swift */,
-				78BBBADDED96007F6622EB50D98EC67D /* UITextView_Padding.swift */,
 				DBDC046C0BD55211685FE92A28CB63D1 /* UIAlertController */,
 				72F16ADD3D68684D9FA8F7F685B242F7 /* UIApplication */,
 				115278E17BE09151919070E132BF9F32 /* UIButton */,
 				FAA029ADD084E2E5E0DC311359F2271F /* UICollectionView */,
 				C3FFDB6A83723A7F31905800E6C42D92 /* UIColor */,
+				D6B299E301040037235F5A249C5F37C4 /* UIEdgeInsets_Init.swift */,
 				D2DAC6106A495F012B1CF7065966C0B9 /* UIImage */,
 				7DA026135C08DC7D7AB5536AD94B29EF /* UIImageView */,
 				F5CDCACB808791C2F082B067588771D9 /* UINavigationBar */,
+				5D394506ADB7682F0DD4BD84B4C7919A /* UIScrollView_Scroll.swift */,
+				5657D146E60156FB1439FAA38C34AAE2 /* UISearchBar_Style.swift */,
 				5636A96F92751906815A5C4AAA258561 /* UISlider */,
 				A16154D21B98A4A52334A2C8234AEE29 /* UITableView */,
+				4578CE041FA91C130002385D /* UITextView */,
 				EB524889FE4B96A2D03EF7D728795420 /* UIView */,
 				BBB727A63EF117737F048670BF8A947B /* UIViewController */,
 			);
@@ -1975,6 +1986,7 @@
 				B80B87BFEDB9B048A86BB5ADCDC59BB1 /* ActionSheetRadioButtonItem.swift in Sources */,
 				3E9B11192199B2867445B3D8607CCA14 /* ActionSheetSelectItem.swift in Sources */,
 				BA4649B2F03663013EE42A3370F4B4C2 /* AdaptiveFileSizePresenter.swift in Sources */,
+				4578CE061FA91C280002385D /* UITextView+Placeholder.swift in Sources */,
 				BA5B1139AAA0A60A6A01D78EF55EE3FF /* AnimatedLabel.swift in Sources */,
 				5E3FF61C7A7EE141F444738805305038 /* AppFileManager.swift in Sources */,
 				97F3A31C5A57A152D87FDFDFF6A751C4 /* AppFileManagerDefault.swift in Sources */,

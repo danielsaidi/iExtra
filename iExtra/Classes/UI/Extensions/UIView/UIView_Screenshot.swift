@@ -11,11 +11,12 @@ import UIKit
 public extension UIView {
     
     public func takeScreenshot() {
-        UIGraphicsBeginImageContext(frame.size)
+        let scale = UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
         guard let context = UIGraphicsGetCurrentContext() else { return }
         layer.render(in: context)
-        let image = UIGraphicsGetImageFromCurrentImageContext()
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
         UIGraphicsEndImageContext()
-        UIImageWriteToSavedPhotosAlbum(image!, nil, nil, nil)
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
 }
