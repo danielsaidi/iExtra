@@ -309,7 +309,7 @@
 		F9649DD59BAEE88C6864EEFE73ECA88C /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E088B77C89183030BDE7BF0FD5A6E61 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F9837F71D69C226C5D832F9EE9E51152 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259139D7CC4A29F50752899310A4252 /* AuthorizationService.swift */; };
 		FB433A84B0A557CD5E5948A8B6705024 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B97EFAAC8E5F1ABA276BDBBCA8A7E8B /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FE7A67168D634A05DBEB28929F6B3EF5 /* SKProduct_PriceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct_PriceDescription.swift */; };
+		FE7A67168D634A05DBEB28929F6B3EF5 /* SKProduct+PriceDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct+PriceDescription.swift */; };
 		FEEB6F061137033602C8EC526233406C /* PannableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7FA6E8425B29FEFA577C7C89FEC72A /* PannableView.swift */; };
 		FF5B0C291E73D6F11219EDFCBB8640F0 /* IoC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5A4E8536EA5F5430ACF3F2EEC4F8A7 /* IoC.swift */; };
 		FF6BF6FA36DB1D5055A16FA4C92A5D8E /* UIView_FadePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7589DE867F0B0E7C8C0B6BA2CCE303 /* UIView_FadePulse.swift */; };
@@ -390,7 +390,7 @@
 		27C898F6F9339E00EDE98A2DE11E70A4 /* SystemNotificationServiceDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemNotificationServiceDefault.swift; sourceTree = "<group>"; };
 		2B97EFAAC8E5F1ABA276BDBBCA8A7E8B /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		2C12FE311471678F66F177EFA1D02222 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
-		2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct_PriceDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SKProduct_PriceDescription.swift; sourceTree = "<group>"; };
+		2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct+PriceDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKProduct+PriceDescription.swift"; sourceTree = "<group>"; };
 		2CAAD2FC49BA724FCBB614579D447313 /* KeychainService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
 		2DF2F289770F6E714DF7A6EB93E5B73C /* iExtra-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iExtra-dummy.m"; sourceTree = "<group>"; };
 		2E8E430D83F3CC7F72E348A0B222C46F /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
@@ -906,7 +906,7 @@
 			children = (
 				EC81A2BC4D7A95FC97ED1B5E42B35CC2 /* IapManager.swift */,
 				DBB69B1DB4150EDAC25DAFFD02756091 /* IapManagerDefault.swift */,
-				2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct_PriceDescription.swift */,
+				2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct+PriceDescription.swift */,
 			);
 			path = Iap;
 			sourceTree = "<group>";
@@ -2007,7 +2007,7 @@
 				EAF3731C06BF56C4119B5A4AD910758B /* Sequence+Batch.swift in Sources */,
 				A8E18CE0D597C9AA9308803168682335 /* SequenceAssetFinder.swift in Sources */,
 				0A59EB5D431E1B74795E5B653E81806F /* Set+Group.swift in Sources */,
-				FE7A67168D634A05DBEB28929F6B3EF5 /* SKProduct_PriceDescription.swift in Sources */,
+				FE7A67168D634A05DBEB28929F6B3EF5 /* SKProduct+PriceDescription.swift in Sources */,
 				C221DE8BF8C25BBD147ABA9DE88AA752 /* SlidingViewControllerTransition.swift in Sources */,
 				7E4E39250284C83368DBCD2A9E64F547 /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
 				058CAB46DAD19A8C81081467B5BC331A /* StretchableScrollViewHeader.swift in Sources */,

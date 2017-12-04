@@ -24,7 +24,6 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
     }
     
     
-    
     // MARK: - Properties
     
     open weak var delegate: IapManagerDelegate?
@@ -36,7 +35,6 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
     private var paymentQueue: SKPaymentQueue {
         return SKPaymentQueue.default()
     }
-    
     
     
     // MARK: - Public functions
@@ -61,7 +59,6 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
     }
 
     
-    
     // MARK: - SKPaymentTransactionObserver
     
     open func paymentQueue(_ queue: SKPaymentQueue, restoreCompletedTransactionsFailedWithError error: Error) {
@@ -75,7 +72,6 @@ open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver
     open func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         delegate?.iapManager(self, didUpdateTransactions: transactions)
     }
-
     
     
     // MARK: - SKProductsRequestDelegate

@@ -29,7 +29,6 @@ public protocol IapManager: class {
     var canMakePayments: Bool { get }
 
     
-    
     // MARK: - Functions
     
     func complete(transaction: SKPaymentTransaction)

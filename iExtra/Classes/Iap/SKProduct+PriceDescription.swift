@@ -1,9 +1,9 @@
 //
-//  SKProductPriceDescription.swift
+//  SKProduct+PriceDescription.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-03.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import StoreKit
