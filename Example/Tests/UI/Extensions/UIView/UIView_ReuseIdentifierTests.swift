@@ -1,5 +1,5 @@
 //
-//  UIView_ReuseIdentifierTests.swift
+//  UIView+ReuseIdentifierTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-21.

@@ -1,5 +1,5 @@
 //
-//  UIView_EmptyTests.swift
+//  UIView+EmptyTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.

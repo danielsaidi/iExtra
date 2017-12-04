@@ -1,5 +1,5 @@
 //
-//  UIView_VisibilityTests.swift
+//  UIView+VisibilityTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.
