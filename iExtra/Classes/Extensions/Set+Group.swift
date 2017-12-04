@@ -1,5 +1,5 @@
 //
-//  Set_Group.swift
+//  Set+Group.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-05.

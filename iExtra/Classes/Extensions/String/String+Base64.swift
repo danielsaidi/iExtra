@@ -1,5 +1,5 @@
 //
-//  String_Base64.swift
+//  String+Base64.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.

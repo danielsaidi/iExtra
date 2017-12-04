@@ -1,5 +1,5 @@
 //
-//  String_Replace.swift
+//  String+Replace.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-08.

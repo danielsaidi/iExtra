@@ -1,5 +1,5 @@
 //
-//  NSObject_ClassName.swift
+//  NSObject+ClassName.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-21.

@@ -1,5 +1,5 @@
 //
-//  Numeric_Random.swift
+//  Numeric+Random.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-08.
@@ -16,6 +16,7 @@ public extension Int {
     }
 }
 
+
 public extension Float {
     
     public static func random(in range: ClosedRange<Double>) -> Float {
@@ -23,12 +24,14 @@ public extension Float {
     }
 }
 
+
 public extension Double {
     
     public static func random(in range: ClosedRange<Double>) -> Double {
         return Double(arc4random()) / Double(UINT32_MAX) * Swift.abs(range.upperBound - range.lowerBound) + min(range.lowerBound, range.upperBound)
     }
 }
+
 
 public extension CGFloat {
     

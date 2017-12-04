@@ -1,6 +1,6 @@
 //
-//  Sequence_Batch.swift
-//  BBCore
+//  Sequence+Batch.swift
+//  iExtra
 //
 //  Created by Daniel Saidi on 2017-05-10.
 //  Copyright © 2017 Daniel Saidi. All rights reserved.

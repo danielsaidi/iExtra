@@ -1,5 +1,5 @@
 //
-//  Numeric_Format.swift
+//  Numeric+Format.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-11-15.
@@ -16,6 +16,7 @@ public extension CGFloat {
     }
 }
 
+
 public extension Double {
     
     public func format(withDecimals decimals: Int) -> String {
@@ -23,6 +24,7 @@ public extension Double {
         return String(format: "%\(format)f", self)
     }
 }
+
 
 public extension Float {
     

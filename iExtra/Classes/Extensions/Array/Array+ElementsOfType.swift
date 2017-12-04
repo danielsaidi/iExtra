@@ -1,5 +1,5 @@
 //
-//  Array_ElementsOfType.swift
+//  Array+ElementsOfType.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-09.
@@ -11,6 +11,6 @@ import Foundation
 public extension Array {
     
     public func elements<T>(ofType: T.Type) -> [T] {
-        return filter({ $0 is T }).map({ $0 as! T })
+        return flatMap{ $0 as? T }
     }
 }

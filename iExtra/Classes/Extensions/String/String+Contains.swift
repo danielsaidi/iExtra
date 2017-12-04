@@ -1,9 +1,9 @@
 //
-//  String_Contains.swift
+//  String+Contains.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-17.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import Foundation

@@ -1,5 +1,5 @@
 //
-//  MutableCollection_Shuffle.swift
+//  Collection+Shuffle.swift
 //  Created by Nate Cook on 2016-12-13.
 //  Copyright © 2016 Nate Cook. All rights reserved.
 //

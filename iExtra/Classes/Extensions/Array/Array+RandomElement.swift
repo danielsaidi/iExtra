@@ -1,5 +1,5 @@
 //
-//  Array_RandomElement.swift
+//  Array+RandomElement.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-09.

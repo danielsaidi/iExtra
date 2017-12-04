@@ -1,5 +1,5 @@
 //
-//  CGRect_Center.swift
+//  CGRect+Center.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-13.

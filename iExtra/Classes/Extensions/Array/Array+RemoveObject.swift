@@ -1,5 +1,5 @@
 //
-//  Array_RemoveObject.swift
+//  Array+RemoveObject.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-09.

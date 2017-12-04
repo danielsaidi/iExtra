@@ -24,7 +24,6 @@ public extension URL {
     }
     
     
-    
     // MARK: - Public Functions
     
     public func getQueryParameter(named name: String) -> URLQueryItem? {
@@ -49,8 +48,6 @@ public extension URL {
         return result
     }
 }
-
-
 
 
 // MARK: - Internal Helper Extensions
