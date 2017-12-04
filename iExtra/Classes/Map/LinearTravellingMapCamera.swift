@@ -19,7 +19,6 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     }
     
     
-    
     // MARK: Properties
     
     public var direction = CGPoint(x: 0.00001, y: 0.00001)
@@ -28,7 +27,6 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     weak private var mapView: MKMapView?
     
     public private(set) var isTravelling = false
-    
     
     
     // MARK: Public functions
@@ -43,7 +41,6 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     public func stopTravelling() {
         isTravelling = false
     }
-    
     
     
     // MARK: Private functions

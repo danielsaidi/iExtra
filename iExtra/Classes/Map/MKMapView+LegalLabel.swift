@@ -1,5 +1,5 @@
 //
-//  MKMapView_LegalLabel.swift
+//  MKMapView+LegalLabel.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-10-12.

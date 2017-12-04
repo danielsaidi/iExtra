@@ -1,5 +1,5 @@
 //
-//  MKMapView_StatusBarStyle.swift
+//  MKMapView+StatusBarStyle.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-10-05.

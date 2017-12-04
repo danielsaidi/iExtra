@@ -1,5 +1,5 @@
 //
-//  MKMapView_Annotations.swift
+//  MKMapView+Annotations.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-09-17.
@@ -11,7 +11,7 @@ import MapKit
 public extension MKMapView {
     
     public func getAnnotations<T>(ofType type: T.Type) -> [T] {
-        return annotations.filter({ $0 is T }).map({ $0 as! T })
+        return annotations.flatMap { $0 as? T }
     }
     
     public func removeAllAnnotations() {

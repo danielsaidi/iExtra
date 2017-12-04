@@ -41,13 +41,11 @@ open class MapBadgeView: UIView {
     }
     
     
-    
     // MARK: - Appearance Properties
     
     @objc public dynamic var borderColor: UIColor = UIColor.lightGray
     @objc public dynamic var borderWidth: CGFloat = 1
     @objc public dynamic var mapPadding: CGFloat = 2
-    
     
     
     // MARK: - Properties
@@ -70,7 +68,6 @@ open class MapBadgeView: UIView {
 }
 
 
-
 // MARK: - Public Functions
 
 public extension MapBadgeView {
@@ -79,7 +76,6 @@ public extension MapBadgeView {
         vc.edgesForExtendedLayout = .top
     }
 }
-
 
 
 // MARK: - Private functions
@@ -100,4 +96,3 @@ fileprivate extension MapBadgeView {
         applyBorderStyle(to: mapView)
     }
 }
-

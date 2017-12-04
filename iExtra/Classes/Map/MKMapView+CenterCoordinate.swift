@@ -1,5 +1,5 @@
 //
-//  MKMapView_Center.swift
+//  MKMapView+CenterCoordinate.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-09-18.

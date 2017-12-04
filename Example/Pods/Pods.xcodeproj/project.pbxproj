@@ -39,7 +39,7 @@
 		1E1CE28FFCCD7499620B47C910E9B9E9 /* BeLogical.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C9C2C08177BF35A3FD0A747DADCDF9 /* BeLogical.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		1EBFB5B14AABF5696ECA442D9066844B /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D48A33A49B17952C7ABB6214240CB9 /* URL+FileName.swift */; };
 		1F38ABFDECA4740B3DF637DA2C5F95E8 /* BorderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112604A3AC1711D0DD06ECC1812CC2AA /* BorderLineView.swift */; };
-		20387DC93FD2B4F4D5AB44151F183580 /* MKMapView_StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView_StatusBarStyle.swift */; };
+		20387DC93FD2B4F4D5AB44151F183580 /* MKMapView+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView+StatusBarStyle.swift */; };
 		214D13A400DFAC35A9BEEA906D906D86 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C0B244A8C17953AEAC11CFCCA47E7 /* Date+Compare.swift */; };
 		2168D3D4E428284988F1B4117BABB13D /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E585A4F6C1434FD922B8371E432B5051 /* QuickSpecBase.m */; };
 		226F34A993E2D877B47C038566D4E90B /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481F4BA27F26E7420F33F94CDA83C18 /* PannableModalDismissAnimator.swift */; };
@@ -112,7 +112,7 @@
 		529ABDC3221073C3A044E8534BA985A7 /* Pods-iExtra_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA85C39216080EFAA8A5A9AD3D20BB6 /* Pods-iExtra_Example-dummy.m */; };
 		531C54B1C10BA0F17A2B7D81D02BD390 /* CwlCatchException.h in Headers */ = {isa = PBXBuildFile; fileRef = 912DC6AF27F5A0EB0D0E4D6E237216F4 /* CwlCatchException.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54CC2049C937561A469575AF9E6A6FE9 /* NimbleEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2104EEA5E8F1528DDF41A689B5A01FF /* NimbleEnvironment.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		56A1B2C29ED7B5F3726513BFD4CB8116 /* MKMapView_LegalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView_LegalLabel.swift */; };
+		56A1B2C29ED7B5F3726513BFD4CB8116 /* MKMapView+LegalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView+LegalLabel.swift */; };
 		5731C7174EAD2E06F328074C4443488A /* UIView_Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFCCF1CB641C1E430D285259CF992C0 /* UIView_Shadow.swift */; };
 		57FF0DC249B0BD14A2721F9C97A47CB7 /* String+Replace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52D516734E170B56728AA4026D28CEB /* String+Replace.swift */; };
 		584A23DEEA5AF1E2BAD0F2196B51FB85 /* MainBundleFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5E5DAB50F4E734EC4E84AA7A96D3DF /* MainBundleFileFinder.swift */; };
@@ -205,7 +205,7 @@
 		97F3A31C5A57A152D87FDFDFF6A751C4 /* AppFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366BBEAB60AEABF9B5209124E399E6F1 /* AppFileManagerDefault.swift */; };
 		9864FD951B96D6C1187C8420E7331107 /* UIImageView_FadeInImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF40F85DF3B32D4969C41CB184475725 /* UIImageView_FadeInImage.swift */; };
 		988EED125395950177DC14AF9BC87D8D /* HaveCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FE3EC8226C0B8E6FC7B845B39DEDC /* HaveCount.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		98A421BD5C39BD6FFE1D79B44EC1C5F5 /* MKMapView_Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView_Annotations.swift */; };
+		98A421BD5C39BD6FFE1D79B44EC1C5F5 /* MKMapView+Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView+Annotations.swift */; };
 		9AD18843EC6176BF899CDF01B5ECA981 /* LinearFloatingSubmenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF8CC3EB9BD39D5189980B0E1922362 /* LinearFloatingSubmenuPresenter.swift */; };
 		9CB254B39E1EF4096AD6FAE6FAA9B03B /* UIView_Rotate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C785E4DF3104E2A976F082A37E9F9B2E /* UIView_Rotate.swift */; };
 		9CF2D70135EC68A09ECCD8E5AA7E47E5 /* UIAlertController_SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A22B74ED691FDB05D4BAB610C933BA8 /* UIAlertController_SourceView.swift */; };
@@ -250,7 +250,7 @@
 		C037630767F8FBFF400D77140D50AD9F /* UIApplication_Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7D40BFD4736F018260D22DB9D7F248B /* UIApplication_Review.swift */; };
 		C06FA100C1BBEE34B863BCB8A65359C1 /* MatcherFunc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0419679307D183B699A139C94F152FAD /* MatcherFunc.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C1A63A510E6F5470389EDE20727C65A5 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C214B6D00980969EBF656B72D3C27236 /* FileFinder.swift */; };
-		C1B950AF2B8A6DD4575CA049736A919E /* MKMapView_CenterCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814531EA4C1CCC768F325129E2E6C852 /* MKMapView_CenterCoordinate.swift */; };
+		C1B950AF2B8A6DD4575CA049736A919E /* MKMapView+CenterCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814531EA4C1CCC768F325129E2E6C852 /* MKMapView+CenterCoordinate.swift */; };
 		C1D862177DC2999FAC710AC25F253BD0 /* BeAnInstanceOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95614EC69755CACD43F81B3D967B88A9 /* BeAnInstanceOf.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C221DE8BF8C25BBD147ABA9DE88AA752 /* SlidingViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AACD323F011024B9C63078068F2FB8F /* SlidingViewControllerTransition.swift */; };
 		C3B1A7E0024A06554CBE973A69DFEDA2 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = F4F188E8BF10EA41AA12912175B25178 /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -304,7 +304,6 @@
 		F3BAA36614ABDBC0538B0DEA99CF80A0 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBC678177B9AD2C7DE8B1059F8BAC3 /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F4BD249C60F21F5E0F7C1FAC8A5BC2AF /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B921F09A6958C37B8A1A5E64C4264 /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F6FE875E5F86AF5E26E4393277AA11C2 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1176544528E27CA9A9DD049AA1A60A6B /* PannableModalPresenter.swift */; };
-		F89D44B2916749ED6C94D2ACF032A492 /* MKMapType_Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C156725B0266756DB77BA0343E1312 /* MKMapType_Int.swift */; };
 		F93C6F892848AD4E9637353CBAE1609B /* UIEdgeInsets_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B299E301040037235F5A249C5F37C4 /* UIEdgeInsets_Init.swift */; };
 		F9649DD59BAEE88C6864EEFE73ECA88C /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E088B77C89183030BDE7BF0FD5A6E61 /* AdapterProtocols.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F9837F71D69C226C5D832F9EE9E51152 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9259139D7CC4A29F50752899310A4252 /* AuthorizationService.swift */; };
@@ -398,7 +397,7 @@
 		2FF69EB8C1C9234284BFB37FCE9D23D4 /* Nimble-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nimble-dummy.m"; sourceTree = "<group>"; };
 		301223B3EB74E21CDB1303C459B57231 /* ExampleHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleHooks.swift; path = Sources/Quick/Hooks/ExampleHooks.swift; sourceTree = "<group>"; };
 		303FB8E2463E0E7D4CD11D388421E8B5 /* UIButton_BackgroundColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIButton_BackgroundColor.swift; sourceTree = "<group>"; };
-		3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView_LegalLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapView_LegalLabel.swift; sourceTree = "<group>"; };
+		3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView+LegalLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MKMapView+LegalLabel.swift"; sourceTree = "<group>"; };
 		32514E373FB9C68A085A904C2C776F34 /* UIApplication_Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication_Version.swift; sourceTree = "<group>"; };
 		3276DE715636F61DFFDE3B068F88418A /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -495,7 +494,7 @@
 		7EA41E9032322244B21228438B6D326A /* UIView_Move.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Move.swift; sourceTree = "<group>"; };
 		7FA3B0D7D5D9D8EDF2641BCE7E45A71B /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
 		7FD3397B19826069AC8639975EA9B888 /* NoCancellingSearchBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NoCancellingSearchBar.swift; sourceTree = "<group>"; };
-		814531EA4C1CCC768F325129E2E6C852 /* MKMapView_CenterCoordinate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapView_CenterCoordinate.swift; sourceTree = "<group>"; };
+		814531EA4C1CCC768F325129E2E6C852 /* MKMapView+CenterCoordinate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MKMapView+CenterCoordinate.swift"; sourceTree = "<group>"; };
 		8152C3AB4ECF2BA42CA9EAD577F6F404 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		829CA47FBDF0A83BF67F7102D4CD40E6 /* ExampleGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExampleGroup.swift; path = Sources/Quick/ExampleGroup.swift; sourceTree = "<group>"; };
 		82D8D964B7A4375507FF5BD5A89B26C5 /* UINavigationBar_BackButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UINavigationBar_BackButton.swift; sourceTree = "<group>"; };
@@ -520,7 +519,7 @@
 		8EB68B5C40B76775D99CBC756F792473 /* DirectoryFileManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectoryFileManager.swift; sourceTree = "<group>"; };
 		8EF0EA564D82AB46B710DC6096C1EA6B /* QuickConfiguration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickConfiguration.m; path = Sources/QuickObjectiveC/Configuration/QuickConfiguration.m; sourceTree = "<group>"; };
 		9026010213E8E5CA4DF783093779DA67 /* UIView_Distance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Distance.swift; sourceTree = "<group>"; };
-		90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView_Annotations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapView_Annotations.swift; sourceTree = "<group>"; };
+		90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView+Annotations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MKMapView+Annotations.swift"; sourceTree = "<group>"; };
 		91032E4C9DD5AE486EC735ACFB4493F4 /* Collection+Shuffle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Collection+Shuffle.swift"; sourceTree = "<group>"; };
 		912DC6AF27F5A0EB0D0E4D6E237216F4 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Sources/Lib/CwlPreconditionTesting/CwlCatchExceptionSupport/include/CwlCatchException.h; sourceTree = "<group>"; };
 		9245B48A46AAC45502A6B8A2AB745038 /* HooksPhase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HooksPhase.swift; path = Sources/Quick/Hooks/HooksPhase.swift; sourceTree = "<group>"; };
@@ -550,7 +549,6 @@
 		9F70D04165DF6499BF59DAA33D3480C5 /* UIImageView_Async.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImageView_Async.swift; sourceTree = "<group>"; };
 		9F832F30C09012CD1BCEC54181B7A278 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
 		9FFCCF1CB641C1E430D285259CF992C0 /* UIView_Shadow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Shadow.swift; sourceTree = "<group>"; };
-		A1C156725B0266756DB77BA0343E1312 /* MKMapType_Int.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapType_Int.swift; sourceTree = "<group>"; };
 		A2104EEA5E8F1528DDF41A689B5A01FF /* NimbleEnvironment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NimbleEnvironment.swift; path = Sources/Nimble/Adapters/NimbleEnvironment.swift; sourceTree = "<group>"; };
 		A23944C78C457BBBFD87A0CA7E62A738 /* ExternalMapServiceBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExternalMapServiceBase.swift; sourceTree = "<group>"; };
 		A271F0BB61B5E4A69A22F05AE8C0E6FB /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
@@ -595,7 +593,7 @@
 		C350C6AAC670F592404D0850017A74B3 /* FileSizeBytesPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileSizeBytesPresenter.swift; sourceTree = "<group>"; };
 		C3BEB253C84247B7263C82397CB95C0F /* IoCContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IoCContainer.swift; sourceTree = "<group>"; };
 		C3FE50EC469768C3CD434A2E18D7E9B4 /* mach_excServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mach_excServer.h; path = Sources/Lib/CwlPreconditionTesting/CwlMachBadInstructionHandler/mach_excServer.h; sourceTree = "<group>"; };
-		C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView_StatusBarStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MKMapView_StatusBarStyle.swift; sourceTree = "<group>"; };
+		C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView+StatusBarStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "MKMapView+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		C52519A46F6F651F2FA780F49735C212 /* UIColor_Random.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIColor_Random.swift; sourceTree = "<group>"; };
 		C54AE4E99A3E5E63A66AF3BABE32D376 /* Pods-iExtra_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iExtra_Example-umbrella.h"; sourceTree = "<group>"; };
 		C785E4DF3104E2A976F082A37E9F9B2E /* UIView_Rotate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Rotate.swift; sourceTree = "<group>"; };
@@ -1388,7 +1386,7 @@
 				4A5182E030655B51C4000BDE65E3C4B8 /* Iap */,
 				C81930724A007F5683EE0FECEA84B10E /* IoC */,
 				83D3F6432BEB115CA469A147E99DA663 /* Keychain */,
-				F03970D28BF3BC3BF318302BDF33F7A2 /* Maps */,
+				F03970D28BF3BC3BF318302BDF33F7A2 /* Map */,
 				2F04CB1B6B54314B9C0AF6CF98C1BE01 /* Navigation */,
 				2D5D6DBE3F9A3CD45D97234A024F6903 /* Notifications */,
 				C41AC7A48EEAECB2AC822F184DB464D6 /* Onboarding */,
@@ -1562,7 +1560,7 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
-		F03970D28BF3BC3BF318302BDF33F7A2 /* Maps */ = {
+		F03970D28BF3BC3BF318302BDF33F7A2 /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				EAFA54674EB0EA0852912A216DFA9F61 /* LinearTravellingMapCamera.swift */,
@@ -1570,14 +1568,13 @@
 				FEB4FD23256ED4E7839F240AAB4CA677 /* MapBadgeView.swift */,
 				0F424E0C997E11CCCBEEF14DA400B54E /* MKAnnotationGeocoder.swift */,
 				71A71F6E1CD3BFD932178062BE10F0AE /* MKAnnotationGeocoderDefault.swift */,
-				A1C156725B0266756DB77BA0343E1312 /* MKMapType_Int.swift */,
-				90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView_Annotations.swift */,
-				814531EA4C1CCC768F325129E2E6C852 /* MKMapView_CenterCoordinate.swift */,
-				3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView_LegalLabel.swift */,
-				C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView_StatusBarStyle.swift */,
+				90369C3B75F2C7A06497A33C14E0AC4A /* MKMapView+Annotations.swift */,
+				814531EA4C1CCC768F325129E2E6C852 /* MKMapView+CenterCoordinate.swift */,
+				3050AF6E73BAC94074EB7FBE2C9773BA /* MKMapView+LegalLabel.swift */,
+				C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView+StatusBarStyle.swift */,
 				BE0A3D0C99B773490F7774B08C31BABD /* TravellingMapCamera.swift */,
 			);
-			path = Maps;
+			path = Map;
 			sourceTree = "<group>";
 		};
 		F5CDCACB808791C2F082B067588771D9 /* UINavigationBar */ = {
@@ -1980,11 +1977,10 @@
 				16F3841F3EB3021BCFF6C5BBA88F307E /* MapBadgeView.swift in Sources */,
 				AEA13BCB4C4C7B8A9DB032EE446C4D21 /* MKAnnotationGeocoder.swift in Sources */,
 				761891249B09A0093919E3EDA8012B0E /* MKAnnotationGeocoderDefault.swift in Sources */,
-				F89D44B2916749ED6C94D2ACF032A492 /* MKMapType_Int.swift in Sources */,
-				98A421BD5C39BD6FFE1D79B44EC1C5F5 /* MKMapView_Annotations.swift in Sources */,
-				C1B950AF2B8A6DD4575CA049736A919E /* MKMapView_CenterCoordinate.swift in Sources */,
-				56A1B2C29ED7B5F3726513BFD4CB8116 /* MKMapView_LegalLabel.swift in Sources */,
-				20387DC93FD2B4F4D5AB44151F183580 /* MKMapView_StatusBarStyle.swift in Sources */,
+				98A421BD5C39BD6FFE1D79B44EC1C5F5 /* MKMapView+Annotations.swift in Sources */,
+				C1B950AF2B8A6DD4575CA049736A919E /* MKMapView+CenterCoordinate.swift in Sources */,
+				56A1B2C29ED7B5F3726513BFD4CB8116 /* MKMapView+LegalLabel.swift in Sources */,
+				20387DC93FD2B4F4D5AB44151F183580 /* MKMapView+StatusBarStyle.swift in Sources */,
 				40AB0DE87D833AE568D787A6FAF56EB6 /* NavigationSearchController.swift in Sources */,
 				7C649E088B648EC8BDC5E7DB3E720EAD /* NavigationServiceActionSheet.swift in Sources */,
 				6AC76CDFE4E58E18882E219A518946DC /* NoCancellingSearchBar.swift in Sources */,
