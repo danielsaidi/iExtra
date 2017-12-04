@@ -29,7 +29,6 @@ open class InstantLanguageService: NSObject, LanguageService {
     }
     
     
-    
     // MARK: Properties
     
     open weak var delegate: LanguageServiceDelegate?
@@ -37,7 +36,6 @@ open class InstantLanguageService: NSObject, LanguageService {
     open var currentLocale: String {
         return translate(localeTranslationKey)
     }
-    
     
     fileprivate var bundle: Bundle?
     
@@ -50,7 +48,6 @@ open class InstantLanguageService: NSObject, LanguageService {
     fileprivate var settings: UserDefaults {
         return UserDefaults.standard
     }
-    
     
     
     // MARK: - Translator
@@ -66,7 +63,6 @@ open class InstantLanguageService: NSObject, LanguageService {
     }
     
     
-    
     // MARK: LanguageService
     
     open func setLocale(_ locale: String) {
@@ -79,7 +75,6 @@ open class InstantLanguageService: NSObject, LanguageService {
         notificationCenter.post(name: notificationName, object: nil)
     }
 }
-
 
 
 // MARK: - Private Functions

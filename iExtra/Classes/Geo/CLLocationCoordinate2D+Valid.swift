@@ -1,5 +1,5 @@
 //
-//  CLLocationCoordinate2D_Valid.swift
+//  CLLocationCoordinate2D+Valid.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-09-18.

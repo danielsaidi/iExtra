@@ -1,9 +1,9 @@
 //
-//  CLPlacemark_AddressDescription.swift
+//  CLPlacemark+AddressDescription.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-22.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import CoreLocation

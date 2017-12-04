@@ -1,5 +1,5 @@
 //
-//  Coordinates.swift
+//  WorldCoordinate.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-10-04.
@@ -8,7 +8,7 @@
 
 import CoreLocation
 
-public enum Coordinate { case
+public enum WorldCoordinate { case
     
     manhattan,
     newYork,

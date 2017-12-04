@@ -1,9 +1,9 @@
 //
 //  LanguageService.swift
-//  Appamini
+//  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-06.
-//  Copyright © 2016 Appamini. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
