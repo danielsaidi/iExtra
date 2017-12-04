@@ -23,21 +23,14 @@ public final class PannableModalPresenter: NSObject {
     }
     
     
-    
     // MARK: - Properties
     
     fileprivate static var cache = [PannableModalPresenter]()
-    
     fileprivate var fromStatusBarStyle: UIStatusBarStyle?
-    
     fileprivate var panGesture: UIPanGestureRecognizer?
-    
     fileprivate var toStatusBarStyle: UIStatusBarStyle?
-    
     fileprivate let transition = InteractiveModalTransition()
-    
     fileprivate weak var viewController: UIViewController?
-    
     
     
     // MARK: - Public Functions
@@ -69,7 +62,6 @@ public final class PannableModalPresenter: NSObject {
 }
 
 
-
 // MARK: - Deallocation
 
 extension PannableModalPresenter {
@@ -87,7 +79,6 @@ extension PannableModalPresenter {
         panGesture = nil
     }
 }
-
 
 
 // MARK: - Selectors
@@ -128,7 +119,6 @@ extension PannableModalPresenter {
 }
 
 
-
 // MARK: - Private Functions
 
 fileprivate extension PannableModalPresenter {
@@ -159,7 +149,6 @@ fileprivate extension PannableModalPresenter {
 }
 
 
-
 // MARK: - PannableModalDismissAnimatorDelegate
 
 extension PannableModalPresenter: PannableModalDismissAnimatorDelegate {
@@ -169,7 +158,6 @@ extension PannableModalPresenter: PannableModalDismissAnimatorDelegate {
         PannableModalPresenter.destroy(presenter: self)
     }
 }
-
 
 
 // MARK: - UIViewControllerTransitioningDelegate

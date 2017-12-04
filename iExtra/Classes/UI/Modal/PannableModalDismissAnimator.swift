@@ -17,14 +17,12 @@ protocol PannableModalDismissAnimatorDelegate: class {
 }
 
 
-
 // MARK: - PannableModalDismissAnimator
 
 class PannableModalDismissAnimator: NSObject {
     
     weak var delegate: PannableModalDismissAnimatorDelegate?
 }
-
 
 
 // MARK: - Private Functions
@@ -37,7 +35,6 @@ fileprivate extension PannableModalDismissAnimator {
         return CGRect(origin: bottomLeft, size: bounds.size)
     }
 }
-
 
 
 // MARK: - UIViewControllerAnimatedTransitioning
