@@ -19,11 +19,9 @@ open class FadingViewControllerTransition: NSObject, UIViewControllerAnimatedTra
     }
     
     
-    
     // MARK: - Properties
     
     var duration: Double
-    
     
     
     // MARK: - Public functions

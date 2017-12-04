@@ -21,13 +21,11 @@ open class SlidingViewControllerTransition: NSObject, UIViewControllerAnimatedTr
     }
     
     
-    
     // MARK: - Properties
     
     var duration: Double
     var isForward: Bool
     var vector: CGPoint
-    
     
     
     // MARK: - Public functions
@@ -37,7 +35,6 @@ open class SlidingViewControllerTransition: NSObject, UIViewControllerAnimatedTr
     }
     
     open func animateTransition(using context: UIViewControllerContextTransitioning) {
-        
         let from = context.viewController(forKey: .from)
         let to = context.viewController(forKey: .to)
         guard let fromView = from?.view, let toView = to?.view else { return }

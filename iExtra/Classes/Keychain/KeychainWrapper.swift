@@ -3,7 +3,7 @@
 //  KeychainWrapper
 //
 //  Created by Jason Rendel on 9/23/14.
-//  Copyright (c) 2014 Jason Rendel. All rights reserved.
+//  Copyright © 2014 Jason Rendel. All rights reserved.
 //
 //    The MIT License (MIT)
 //
