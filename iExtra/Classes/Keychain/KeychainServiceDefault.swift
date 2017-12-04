@@ -8,11 +8,13 @@
 
 /*
  
- ServiceName is used for the kSecAttrService property, to uniquely identify keychain
- accessor. If no name is specified, it defaults to the bundleIdentifier.
+ `serviceName` is used for `kSecAttrService`, which uniquely
+ identifies keychain accessors. If no name is specified, the
+ value defaults to the current bundle identifier.
  
- AccessGroup is used for the kSecAttrAccessGroup property to identify which Keychain
- access group this entry belongs to. This allows you to use the KeychainWrapper with
+ `accessGroup` is used for `kSecAttrAccessGroup`. This value
+ is used to identify which keychain access group an entry is
+ belonging to. This allows you to use `KeychainWrapper` with
  shared keychain access between different applications.
  
  */
@@ -36,15 +38,16 @@ public class KeychainServiceDefault: NSObject {
     }
 
     
-    
     // MARK: - Properties
     
-    private (set) public var serviceName: String
+    public let serviceName: String
     
-    private (set) public var accessGroup: String?
+    public let accessGroup: String?
     
     private static let defaultServiceName: String = {
-        return Bundle.main.bundleIdentifier ?? "com.danielsaidi.KeychainServiceDefault"
+        let defaultId = Bundle.main.bundleIdentifier
+        let iExtraId = "com.danielsaidi.iExtra.KeychainServiceDefault"
+        return defaultId ?? iExtraId
     }()
 }
 
@@ -94,7 +97,6 @@ extension KeychainServiceDefault: KeychainReader {
         return KeychainWrapper.standard.string(forKey: key, withAccessibility: accessibility)
     }
 }
-
 
 
 // MARK: - KeychainWriter
