@@ -14,6 +14,6 @@ public protocol AuthorizationService: class {
     
     func authorize(action: String, reason: String, completion: @escaping AuthorizationResult)
     func canAuthorize(action: String) -> Bool
-    func isAuthorized(forAction action: String) -> Bool
-    func resetAuthorization(forAction action: String)
+    func isAuthorized(for action: String) -> Bool
+    func resetAuthorization(for action: String)
 }

@@ -278,7 +278,7 @@
 		D86115AA60240EDF166D4A4FC4D53309 /* UITableView_DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9E6BA69BC39960E6F055376AF5856 /* UITableView_DefaultNib.swift */; };
 		DAA78A981DCBC21D079F33F51310FFC4 /* UIView_Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A44D6BD0BE3DB7554DF066E4CB8B98F /* UIView_Shake.swift */; };
 		DBA6F32FB189B722020C889200F1D05A /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23944C78C457BBBFD87A0CA7E62A738 /* ExternalMapServiceBase.swift */; };
-		DBAD363E419555B305359FDD3907A834 /* HasVolume_Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume_Fade.swift */; };
+		DBAD363E419555B305359FDD3907A834 /* HasVolume+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume+Fade.swift */; };
 		DF026F6F406A4FB6CEA63B0A4B9E27DD /* AllPass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E780E005CD78D86050E2F1C9B86227 /* AllPass.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		DF8BED5CB1BD69B4444A32D048E5BA84 /* UIImage_Padded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639506844279D0AEAC6613679F0F2676 /* UIImage_Padded.swift */; };
 		DFDF22177A41163E22D48FF72333FA80 /* Behavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C1D1A0D20C667FAF4F01C3BA4AC451 /* Behavior.swift */; };
@@ -567,7 +567,7 @@
 		ADADB4F5880E022F8C855796A48BB370 /* Array_Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Array_Group.swift; sourceTree = "<group>"; };
 		AE81B79A8CD03840E8A5EEEE5860BA15 /* SatisfyAnyOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SatisfyAnyOf.swift; path = Sources/Nimble/Matchers/SatisfyAnyOf.swift; sourceTree = "<group>"; };
 		AECEA2EDA41473899EE391CA038EDC38 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume_Fade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HasVolume_Fade.swift; sourceTree = "<group>"; };
+		AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume+Fade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "HasVolume+Fade.swift"; sourceTree = "<group>"; };
 		AF7ABBF6927C7B2C7D925298945049F9 /* UIView_Subviews.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_Subviews.swift; sourceTree = "<group>"; };
 		B13E21745DCBE8216FE6DBF422BD6D7B /* UIView_ReuseIdentifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIView_ReuseIdentifier.swift; sourceTree = "<group>"; };
 		B26328CD457D3018FA95F55AA9A9AE01 /* UIViewController_Root.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIViewController_Root.swift; sourceTree = "<group>"; };
@@ -1295,7 +1295,7 @@
 		C08E6C2F29B9B46B602A836BF6D762F9 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume_Fade.swift */,
+				AF126EB3D2C4D829C6C711EFE9888C99 /* HasVolume+Fade.swift */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -1954,7 +1954,7 @@
 				12C8CA01F68DB6BF23B7FF332D6BB13C /* FloatingSubmenu.swift in Sources */,
 				6BFB15013BC1A08A282802412F3C864F /* FloatingSubmenuPresenter.swift in Sources */,
 				816BB232C4A87B58BF25B1E2B91BF68C /* GoogleMapsService.swift in Sources */,
-				DBAD363E419555B305359FDD3907A834 /* HasVolume_Fade.swift in Sources */,
+				DBAD363E419555B305359FDD3907A834 /* HasVolume+Fade.swift in Sources */,
 				D41DEF1F6B94C937CC216238504C46EA /* HintManager.swift in Sources */,
 				948EEF17C9F4B60F07B8B06E549A0175 /* HintManagerBase.swift in Sources */,
 				36CD9FCEAB1181E1F99000453216E940 /* i18nNotifications.swift in Sources */,

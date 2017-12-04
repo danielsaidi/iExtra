@@ -1,5 +1,5 @@
 //
-//  AVAudioPlayer_Fade.swift
+//  HasVolume+Fade.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-07.

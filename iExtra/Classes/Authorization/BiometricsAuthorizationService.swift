@@ -23,7 +23,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     
     public func authorize(action: String, reason: String, completion: @escaping AuthorizationResult) {
         guard canAuthorize(action: action) else { return completion(false) }
-        guard !isAuthorized(forAction: action) else { return completion(true) }
+        guard !isAuthorized(for: action) else { return completion(true) }
         
         LAContext().evaluatePolicy(policy, localizedReason: reason, reply: { (success, error) in
             self.setIsAuthorized(success, forAction: action)
@@ -36,12 +36,12 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
         return (LAContext().canEvaluatePolicy(policy, error: &error))
     }
     
-    public func isAuthorized(forAction action: String) -> Bool {
+    public func isAuthorized(for action: String) -> Bool {
         let key = authKey(forAction: action)
         return BiometricsAuthorizationService.cache[key] ?? false
     }
     
-    public func resetAuthorization(forAction action: String) {
+    public func resetAuthorization(for action: String) {
         setIsAuthorized(false, forAction: action)
     }
 }
@@ -52,7 +52,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
 fileprivate extension BiometricsAuthorizationService {
     
     func authKey(forAction action: String) -> String {
-        return "authorization_action_\(action)"
+        return "com.danielsaidi.iExtra.\(action)"
     }
     
     func setIsAuthorized(_ authorized: Bool, forAction action: String) {
