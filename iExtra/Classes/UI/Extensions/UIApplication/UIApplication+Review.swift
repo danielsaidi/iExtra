@@ -1,5 +1,5 @@
 //
-//  UIApplication_Review.swift
+//  UIApplication+Review.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-08.

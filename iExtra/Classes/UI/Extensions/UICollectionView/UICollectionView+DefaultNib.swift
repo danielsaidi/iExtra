@@ -1,5 +1,5 @@
 //
-//  UICollectionView_DefaultNib.swift
+//  UICollectionView+DefaultNib.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-21.

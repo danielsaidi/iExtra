@@ -1,5 +1,5 @@
 //
-//  UIButton_Target.swift
+//  UIButton+Target.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-03-17.

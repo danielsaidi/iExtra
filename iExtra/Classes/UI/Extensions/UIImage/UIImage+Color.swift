@@ -1,5 +1,5 @@
 //
-//  UIImage_Color.swift
+//  UIImage+Color.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-01-05.

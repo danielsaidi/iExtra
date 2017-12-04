@@ -1,5 +1,5 @@
 //
-//  UIButton_BackgroundColor.swift
+//  UIButton+BackgroundColor.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-02-20.

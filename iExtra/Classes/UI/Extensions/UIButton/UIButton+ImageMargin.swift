@@ -1,5 +1,5 @@
 //
-//  UIButton_ImageMargin.swift
+//  UIButton+ImageMargin.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-03-21.

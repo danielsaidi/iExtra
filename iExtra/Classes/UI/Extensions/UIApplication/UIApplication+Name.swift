@@ -1,5 +1,5 @@
 //
-//  UIApplication_Name.swift
+//  UIApplication+Name.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-09.

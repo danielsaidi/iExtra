@@ -1,5 +1,5 @@
 //
-//  UIAlertController_SourceView.swift
+//  UIAlertController+SourceView.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-10-17.

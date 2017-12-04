@@ -1,9 +1,9 @@
 //
-//  UIColor_Hex.swift
+//  UIColor+Hex.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-22.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -102,7 +102,7 @@ fileprivate extension UIColor {
     
     func removeHash(in string: String) -> String {
         guard string.hasPrefix("#") else { return string }
-        let index = string.characters.index(string.startIndex, offsetBy: 1)
-        return string.substring(from: index)
+        let index = string.index(string.startIndex, offsetBy: 1)
+        return String(string.suffix(from: index))
     }
 }

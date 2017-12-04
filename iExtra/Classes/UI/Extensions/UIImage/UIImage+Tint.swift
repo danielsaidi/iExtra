@@ -1,5 +1,5 @@
 //
-//  UIImage_Tint.swift
+//  UIImage+Tint.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-09.

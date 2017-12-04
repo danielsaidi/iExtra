@@ -1,5 +1,5 @@
 //
-//  UIApplication_Version.swift
+//  UIApplication+Version.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-08.

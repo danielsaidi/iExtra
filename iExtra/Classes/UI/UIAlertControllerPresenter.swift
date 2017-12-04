@@ -18,11 +18,12 @@ public class UIAlertControllerPresenter {
     }
     
     public static func show(_ alert: UIAlertController, animated: Bool) {
+        let vc = UIViewController()
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIViewController()
+        window.rootViewController = vc
         window.windowLevel = UIWindowLevelAlert + 1
         window.makeKeyAndVisible()
-        window.rootViewController!.present(alert, animated:animated) {}
+        vc.present(alert, animated:animated) {}
         alertWindow = window
     }
 }

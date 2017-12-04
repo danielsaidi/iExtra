@@ -1,5 +1,5 @@
 //
-//  UIImage_Crop.swift
+//  UIImage+Crop.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-20.

@@ -1,5 +1,5 @@
 //
-//  UIImage_Async.swift
+//  UIImage+Async.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-27.
@@ -23,7 +23,6 @@ public extension UIImage {
     
     static func async(from url: String, completion: @escaping AsyncImageResult) {
         guard let url = URL(string: url) else { return completion(nil, nil) }
-        
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             DispatchQueue.main.async(execute: {
                 if let error = error { return completion(nil, error ) }

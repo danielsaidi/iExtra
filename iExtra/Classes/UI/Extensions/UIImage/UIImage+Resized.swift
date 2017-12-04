@@ -1,5 +1,5 @@
 //
-//  UIImage_Resized.swift
+//  UIImage+Resized.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-21.

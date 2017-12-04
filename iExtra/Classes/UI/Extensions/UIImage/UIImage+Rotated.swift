@@ -1,5 +1,5 @@
 //
-//  UIImage_Rotated.swift
+//  UIImage+Rotated.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-12.

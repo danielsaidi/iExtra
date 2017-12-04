@@ -1,5 +1,5 @@
 //
-//  UIButton_Init.swift
+//  UIButton+Init.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.

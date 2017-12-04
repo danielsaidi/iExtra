@@ -8,10 +8,12 @@
 
 /*
  
- This is an easy way to load images asynchronously.
- However, production apps should probably use more
- sophisticated ways to do this, with cached images
- etc. Have a look at Kingfisher or any similar lib.
+ This is a super-simple way to load async images. However, a
+ production app should probably use a more sophisticated way
+ to do this, with cached images, cache flush etc.
+ 
+ Have a look at Alamofire or similar libraries for much more
+ sophisticated async functionality.
  
  */
 
@@ -29,8 +31,11 @@ public extension UIImageView {
     }
 }
 
+
+// MARK: - Private Functions
+
 fileprivate extension UIImageView {
-    
+
     func setupAsyncTag() -> Int {
         tag = Int.random(in: 1...10000)
         return tag

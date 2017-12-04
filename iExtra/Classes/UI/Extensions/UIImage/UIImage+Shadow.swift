@@ -1,5 +1,5 @@
 //
-//  UIImage_Shadow.swift
+//  UIImage+Shadow.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-15.
@@ -7,12 +7,14 @@
 //
 
 /*
- The UIView addDropShadow extension is slow if used on
- several views. This one is much faster, since it will
- create a copy of the image, with a shadow added to it.
+ The UIView version of `addDropShadow` is slow if it is used
+ on several views.
  
- Note that you cannot rotate such an image much, since
- the shadow will be fixed. Use it for performance only.
+ This one is much faster, since it will create a copy of the
+ image with a shadow added to it. However, note that you can
+ not rotate such images much, since the shadow will be fixed.
+ Use it for performance only.
+ 
  */
 
 import UIKit

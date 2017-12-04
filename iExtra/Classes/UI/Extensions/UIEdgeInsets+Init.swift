@@ -1,5 +1,5 @@
 //
-//  UIEdgeInset_Init.swift
+//  UIEdgeInset+Init.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-09.
