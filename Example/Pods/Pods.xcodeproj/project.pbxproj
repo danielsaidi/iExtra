@@ -40,7 +40,7 @@
 		1EBFB5B14AABF5696ECA442D9066844B /* URL+FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6D48A33A49B17952C7ABB6214240CB9 /* URL+FileName.swift */; };
 		1F38ABFDECA4740B3DF637DA2C5F95E8 /* BorderLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112604A3AC1711D0DD06ECC1812CC2AA /* BorderLineView.swift */; };
 		20387DC93FD2B4F4D5AB44151F183580 /* MKMapView_StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D816F68D1D81F6C6F781C35743F0C0 /* MKMapView_StatusBarStyle.swift */; };
-		214D13A400DFAC35A9BEEA906D906D86 /* Date_Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C0B244A8C17953AEAC11CFCCA47E7 /* Date_Compare.swift */; };
+		214D13A400DFAC35A9BEEA906D906D86 /* Date+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67C0B244A8C17953AEAC11CFCCA47E7 /* Date+Compare.swift */; };
 		2168D3D4E428284988F1B4117BABB13D /* QuickSpecBase.m in Sources */ = {isa = PBXBuildFile; fileRef = E585A4F6C1434FD922B8371E432B5051 /* QuickSpecBase.m */; };
 		226F34A993E2D877B47C038566D4E90B /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7481F4BA27F26E7420F33F94CDA83C18 /* PannableModalDismissAnimator.swift */; };
 		2271A2E8BFE75AE0E36C2DA1D5E4A251 /* FadingViewControllerTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59065CEC3E69BFB0773899B84657A532 /* FadingViewControllerTransition.swift */; };
@@ -301,7 +301,7 @@
 		F2500BC98F2796DCFC3A7FE27650C946 /* QuickTestSuite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8E430D83F3CC7F72E348A0B222C46F /* QuickTestSuite.swift */; };
 		F28003B228B82B7E1497D4F41F55A31E /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6B34FE5E08BAF87E042A2629840DAD /* Match.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F285B297F09827B190085F39B408990F /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56730E11F8D88A9D097F9955181FC4F1 /* KeychainItemAccessibility.swift */; };
-		F2883D556EC4236EB33AAB284623D8E7 /* Date_Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FAB3183629C9A2B202559FDFED0ADE /* Date_Init.swift */; };
+		F2883D556EC4236EB33AAB284623D8E7 /* Date+Adding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FAB3183629C9A2B202559FDFED0ADE /* Date+Adding.swift */; };
 		F3BAA36614ABDBC0538B0DEA99CF80A0 /* SourceLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FBC678177B9AD2C7DE8B1059F8BAC3 /* SourceLocation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F4BD249C60F21F5E0F7C1FAC8A5BC2AF /* BeIdenticalTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83B921F09A6958C37B8A1A5E64C4264 /* BeIdenticalTo.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		F6FE875E5F86AF5E26E4393277AA11C2 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1176544528E27CA9A9DD049AA1A60A6B /* PannableModalPresenter.swift */; };
@@ -622,7 +622,7 @@
 		D4A392F50358C08BAA6DD0648E8F6951 /* DelayOperator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DelayOperator.swift; sourceTree = "<group>"; };
 		D5EBE08A3B758919CB15F7C75D878D1D /* Nimble.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nimble.xcconfig; sourceTree = "<group>"; };
 		D61A65644B128A845AB3BF3D8631CC4C /* Stringers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stringers.swift; path = Sources/Nimble/Utils/Stringers.swift; sourceTree = "<group>"; };
-		D67C0B244A8C17953AEAC11CFCCA47E7 /* Date_Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date_Compare.swift; sourceTree = "<group>"; };
+		D67C0B244A8C17953AEAC11CFCCA47E7 /* Date+Compare.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Compare.swift"; sourceTree = "<group>"; };
 		D685C0D509328CD8778F99DD53A49A48 /* Closures.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Closures.swift; path = Sources/Quick/Hooks/Closures.swift; sourceTree = "<group>"; };
 		D6B299E301040037235F5A249C5F37C4 /* UIEdgeInsets_Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets_Init.swift; sourceTree = "<group>"; };
 		D6C3B6DAC9EE276DD752D93EAED6E88B /* ExpectationMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpectationMessage.swift; path = Sources/Nimble/ExpectationMessage.swift; sourceTree = "<group>"; };
@@ -639,7 +639,7 @@
 		E47A53D71A47E1C1AEDCB0FF3453B670 /* i18nNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = i18nNotifications.swift; sourceTree = "<group>"; };
 		E4F0C6F477FD362646B7253A5D19CB88 /* Pods-iExtra_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iExtra_Example.release.xcconfig"; sourceTree = "<group>"; };
 		E585A4F6C1434FD922B8371E432B5051 /* QuickSpecBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpecBase.m; path = Sources/QuickSpecBase/QuickSpecBase.m; sourceTree = "<group>"; };
-		E5FAB3183629C9A2B202559FDFED0ADE /* Date_Init.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Date_Init.swift; sourceTree = "<group>"; };
+		E5FAB3183629C9A2B202559FDFED0ADE /* Date+Adding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Date+Adding.swift"; sourceTree = "<group>"; };
 		E6E780E005CD78D86050E2F1C9B86227 /* AllPass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AllPass.swift; path = Sources/Nimble/Matchers/AllPass.swift; sourceTree = "<group>"; };
 		E722DE2634B142EBADB37FCF5E25BC5A /* GoogleMapsService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GoogleMapsService.swift; sourceTree = "<group>"; };
 		E7BEA0193CE25D54B72585456A84CD32 /* UIImage_Resized.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImage_Resized.swift; sourceTree = "<group>"; };
@@ -874,8 +874,8 @@
 		464A9E211336E01000A2059714BFB80C /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				D67C0B244A8C17953AEAC11CFCCA47E7 /* Date_Compare.swift */,
-				E5FAB3183629C9A2B202559FDFED0ADE /* Date_Init.swift */,
+				D67C0B244A8C17953AEAC11CFCCA47E7 /* Date+Compare.swift */,
+				E5FAB3183629C9A2B202559FDFED0ADE /* Date+Adding.swift */,
 				2F4637D0352631563D23247AF970411E /* DateSerializer.swift */,
 				6C6F1CFAF5DAB6032CA1066D61249821 /* DateSerializerDefault.swift */,
 				F0D6DA4104D1B69AEEB2CD08A0214FC6 /* DateSerializerFormat.swift */,
@@ -1930,8 +1930,8 @@
 				416B5FE8180A825222FBFACBFB8B0B0C /* CLPlacemark_AddressDescription.swift in Sources */,
 				C8DF6C685BC133A088A47F9CAE812D4D /* Collection_Shuffle.swift in Sources */,
 				29E59E8D12F523A046358F5521BE4731 /* Coordinate.swift in Sources */,
-				214D13A400DFAC35A9BEEA906D906D86 /* Date_Compare.swift in Sources */,
-				F2883D556EC4236EB33AAB284623D8E7 /* Date_Init.swift in Sources */,
+				214D13A400DFAC35A9BEEA906D906D86 /* Date+Compare.swift in Sources */,
+				F2883D556EC4236EB33AAB284623D8E7 /* Date+Adding.swift in Sources */,
 				AE4F11329DB79536F3DCE1175E597E3D /* DateSerializer.swift in Sources */,
 				D20526EF95F1312A09D8E8CAFE79319F /* DateSerializerDefault.swift in Sources */,
 				CCFFF21907D9693FE3084247D9171BD3 /* DateSerializerFormat.swift in Sources */,

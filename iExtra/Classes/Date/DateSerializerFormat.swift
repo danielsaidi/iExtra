@@ -16,11 +16,3 @@ public enum DateSerializerFormat: String { case
     
     var string: String { return rawValue }
 }
-
-
-public extension DateSerializer {
-    
-    func serialize(_ date: Date, format: DateSerializerFormat) -> String {
-        return serialize(date, format: format.string)
-    }
-}

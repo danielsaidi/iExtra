@@ -3,15 +3,12 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-29.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
 
 public class DateSerializerDefault: NSObject, DateSerializer {
-    
-    
-    // MARK: Public methods
     
     public func deserialize(_ string: String) -> Date? {
         let formatter = DateFormatter()
@@ -27,7 +24,6 @@ public class DateSerializerDefault: NSObject, DateSerializer {
         return formatter.string(from: date)
     }
 }
-
 
 
 // MARK: Private methods
