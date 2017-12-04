@@ -8,15 +8,6 @@
 
 import UIKit
 
-
-public protocol ReusableCollectionViewCell {
-    static var defaultReuseIdentifier: String { get }
-}
-
-
-extension UICollectionViewCell: ReusableCollectionViewCell {}
-
-
 public extension UICollectionView {
     
     public func dequeueDefaultCell<T: ReusableCollectionViewCell>(at indexPath: IndexPath) -> T {
@@ -24,7 +15,7 @@ public extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: id, for: indexPath) as! T
     }
     
-    public func registerDefaultNib(for type: UICollectionViewCell.Type) {
+    public func registerDefaultCell(for type: UICollectionViewCell.Type) {
         let id = type.defaultReuseIdentifier
         register(type.defaultNib, forCellWithReuseIdentifier: id)
     }
@@ -33,3 +24,12 @@ public extension UICollectionView {
         return cellForItem(at: indexPath) as! T
     }
 }
+
+
+// MARK: - ReusableCollectionViewCell
+
+public protocol ReusableCollectionViewCell {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension UICollectionViewCell: ReusableCollectionViewCell {}

@@ -8,21 +8,6 @@
 
 import UIKit
 
-
-public protocol ReusableTableViewCell {
-    static var defaultReuseIdentifier: String { get }
-}
-
-public protocol ReusableTableViewHeaderFooterView {
-    static var defaultReuseIdentifier: String { get }
-}
-
-
-extension UITableViewCell: ReusableTableViewCell {}
-
-extension UITableViewHeaderFooterView: ReusableTableViewHeaderFooterView {}
-
-
 public extension UITableView {
     
     public func dequeueDefaultCell<T: ReusableTableViewCell>() -> T? {
@@ -50,3 +35,22 @@ public extension UITableView {
         register(type.defaultNib, forHeaderFooterViewReuseIdentifier: id)
     }
 }
+
+
+
+// MARK: - ReusableTableViewCell
+
+public protocol ReusableTableViewCell {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension UITableViewCell: ReusableTableViewCell {}
+
+
+// MARK: - ReusableTableViewHeaderFooterView
+
+public protocol ReusableTableViewHeaderFooterView {
+    static var defaultReuseIdentifier: String { get }
+}
+
+extension UITableViewHeaderFooterView: ReusableTableViewHeaderFooterView {}

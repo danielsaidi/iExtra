@@ -62,15 +62,15 @@ class UITableView_DefaultNibTests: QuickSpec {
             
             beforeEach {
                 table = RegisterTestTable()
-                table.registerCellWithDefaultNib(for: RegisterTestCell.self)
-                table.registerHeaderFooterViewWithDefaultNib(for: RegisterTestView.self)
+                table.registerDefaultCell(for: RegisterTestCell.self)
+                table.registerDefaultHeaderFooterView(for: RegisterTestView.self)
             }
             
             
             describe("registering cell with default nib") {
                 
                 it("uses default reuse identifier") {
-                    table.registerCellWithDefaultNib(for: RegisterTestCell.self)
+                    table.registerDefaultCell(for: RegisterTestCell.self)
                     let expectedId = RegisterTestCell.defaultReuseIdentifier
                     expect(table.executedWithIdentifier).to(equal(expectedId))
                 }
@@ -80,7 +80,7 @@ class UITableView_DefaultNibTests: QuickSpec {
             describe("registering header footer view with default nib") {
                 
                 it("uses default reuse identifier") {
-                    table.registerHeaderFooterViewWithDefaultNib(for: RegisterTestView.self)
+                    table.registerDefaultHeaderFooterView(for: RegisterTestView.self)
                     let expectedId = RegisterTestView.defaultReuseIdentifier
                     expect(table.executedWithIdentifier).to(equal(expectedId))
                 }
@@ -90,13 +90,13 @@ class UITableView_DefaultNibTests: QuickSpec {
             describe("dequeuing cell with default nib") {
                 
                 it("uses default reuse identifier") {
-                    let _: RegisterTestCell? = table.dequeueCellWithDefaultNib()
+                    let _: RegisterTestCell? = table.dequeueDefaultCell()
                     let expectedId = RegisterTestCell.defaultReuseIdentifier
                     expect(table.executedWithIdentifier).to(equal(expectedId))
                 }
                 
                 it("returns cell for correct type") {
-                    let cell: RegisterTestCell? = table.dequeueCellWithDefaultNib()
+                    let cell: RegisterTestCell? = table.dequeueDefaultCell()
                     expect(cell).toNot(beNil())
                 }
             }
@@ -106,7 +106,7 @@ class UITableView_DefaultNibTests: QuickSpec {
                 
                 it("uses default reuse identifier and path") {
                     let path = IndexPath(row: 1, section: 2)
-                    let _: RegisterTestCell? = table.dequeueCellWithDefaultNib(at: path)
+                    let _: RegisterTestCell? = table.dequeueDefaultCell(at: path)
                     let expectedId = RegisterTestCell.defaultReuseIdentifier
                     expect(table.executedWithIndexPath).to(equal(path))
                     expect(table.executedWithIdentifier).to(equal(expectedId))
@@ -114,7 +114,7 @@ class UITableView_DefaultNibTests: QuickSpec {
                 
                 it("returns cell for correct type") {
                     let path = IndexPath(row: 0, section: 0)
-                    let cell: RegisterTestCell? = table.dequeueCellWithDefaultNib(at: path)
+                    let cell: RegisterTestCell? = table.dequeueDefaultCell(at: path)
                     expect(cell).toNot(beNil())
                 }
             }
@@ -123,13 +123,13 @@ class UITableView_DefaultNibTests: QuickSpec {
             describe("dequeuing header footer view with default nib") {
                 
                 it("uses default reuse identifier") {
-                    let _: RegisterTestView? = table.dequeueHeaderFooterViewWithDefaultNib()
+                    let _: RegisterTestView? = table.dequeueDefaultHeaderFooterView()
                     let expectedId = RegisterTestView.defaultReuseIdentifier
                     expect(table.executedWithIdentifier).to(equal(expectedId))
                 }
                 
                 it("returns cell for correct type") {
-                    let cell: RegisterTestView? = table.dequeueHeaderFooterViewWithDefaultNib()
+                    let cell: RegisterTestView? = table.dequeueDefaultHeaderFooterView()
                     expect(cell).toNot(beNil())
                 }
             }
