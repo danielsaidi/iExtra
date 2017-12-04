@@ -29,12 +29,10 @@ open class SequenceAssetFinder: NSObject, FileFinder {
     }
     
     
-    
     // MARK: Properties
     
     fileprivate var separator: String
     fileprivate var startIndex: Int
-    
     
     
     // MARK: Public functions

@@ -13,8 +13,10 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     
     // MARK: - Initialization
     
-    public init(directory: FileManager.SearchPathDirectory, fileManager: AppFileManager) {
-        self.directory = FileManager.default.urls(for: directory, in: .userDomainMask).last!
+    public init?(directory: FileManager.SearchPathDirectory, fileManager: AppFileManager) {
+        let manager = FileManager.default
+        guard let dir = manager.urls(for: directory, in: .userDomainMask).last else { return nil }
+        self.directory = dir
         self.manager = fileManager
         super.init()
     }
@@ -26,13 +28,11 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     }
     
     
-    
     // MARK: - Properties
     
     public let directory: URL
     
     fileprivate let manager: AppFileManager
-    
     
     
     // MARK: - Public Functions

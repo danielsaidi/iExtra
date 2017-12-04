@@ -16,7 +16,6 @@ public class AdaptiveFileSizePresenter: FileSizeBytesPresenter {
     fileprivate var dimensionThreshold: Double = 1024/2
     
     
-    
     // MARK: - Public Functions
     
     public override func fileSizeDescription(for fileSize: UInt64) -> String {

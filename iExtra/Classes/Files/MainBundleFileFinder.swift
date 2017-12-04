@@ -26,7 +26,6 @@ public class MainBundleFileFinder: NSObject, FileFinder {
     }
     
     
-    
     // MARK: Private functions
     
     private func findFiles(with predicate: NSPredicate) -> [String] {

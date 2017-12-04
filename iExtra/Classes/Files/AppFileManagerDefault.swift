@@ -18,7 +18,6 @@ open class AppFileManagerDefault: NSObject, AppFileManager {
     }
     
     
-    
     // MARK: - Public Functions
     
     open func createFile(at url: URL, contents: Data?) -> Bool {
