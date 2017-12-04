@@ -1118,6 +1118,9 @@
 		9019798C88CA3E0C0D80A6BED609F450 /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
+				BF3414BD1E14EA658C6904D362E99BF5 /* InteractiveModalTransition.swift */,
+				7481F4BA27F26E7420F33F94CDA83C18 /* PannableModalDismissAnimator.swift */,
+				1176544528E27CA9A9DD049AA1A60A6B /* PannableModalPresenter.swift */,
 				59065CEC3E69BFB0773899B84657A532 /* FadingViewControllerTransition.swift */,
 				1AACD323F011024B9C63078068F2FB8F /* SlidingViewControllerTransition.swift */,
 			);
@@ -1298,7 +1301,6 @@
 			children = (
 				6C900DB658F147AA50D8E8DA0A05610D /* UIAlertControllerPresenter.swift */,
 				4D478D27FF7422A724C5C0B8441A0745 /* Extensions */,
-				DE2F228A578DCDB513448B402163AE65 /* Modal */,
 				DCE445C77B3B61B8C1B9BB1147DE5AFB /* Parallax */,
 				F900E025D3098BFB7A18434C79F5D651 /* Search */,
 				9019798C88CA3E0C0D80A6BED609F450 /* Transitions */,
@@ -1503,16 +1505,6 @@
 			);
 			name = iExtra;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		DE2F228A578DCDB513448B402163AE65 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				BF3414BD1E14EA658C6904D362E99BF5 /* InteractiveModalTransition.swift */,
-				7481F4BA27F26E7420F33F94CDA83C18 /* PannableModalDismissAnimator.swift */,
-				1176544528E27CA9A9DD049AA1A60A6B /* PannableModalPresenter.swift */,
-			);
-			path = Modal;
 			sourceTree = "<group>";
 		};
 		EB524889FE4B96A2D03EF7D728795420 /* UIView */ = {
