@@ -12,7 +12,6 @@
 		0171D12FAA26B2F29770FABD20B57CD4 /* Pannable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 067B769B631D7044635A1E3FD17E720A /* Pannable.swift */; };
 		028407CF83084CBA49D7058593F36347 /* UIView_Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C678FDB4742ECB517EF5B4426418B2 /* UIView_Bounce.swift */; };
 		03B141A295F390B9956A8604C1A109AE /* UISearchBar_Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5657D146E60156FB1439FAA38C34AAE2 /* UISearchBar_Style.swift */; };
-		0500E835CD814295DA250B24D81419B7 /* SystemNotificationServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C898F6F9339E00EDE98A2DE11E70A4 /* SystemNotificationServiceDefault.swift */; };
 		051B2AF789E6D4E648C099830025DED9 /* CwlCatchBadInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38838690C7FCB8A320C0F7580365CB8B /* CwlCatchBadInstruction.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		058CAB46DAD19A8C81081467B5BC331A /* StretchableScrollViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CBCB5E6C4E4B8D813FF272751D27ED /* StretchableScrollViewHeader.swift */; };
 		08326F0C4C72641FB69C6E10F149769D /* UIApplication_Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9761EA3564157FC681900B916C3075CC /* UIApplication_Name.swift */; };
@@ -132,7 +131,6 @@
 		632F21118766A1F16D3E409A45AC3AF3 /* DirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB68B5C40B76775D99CBC756F792473 /* DirectoryFileManager.swift */; };
 		63FB71475995EB534E2916865A345F6F /* RemoteNotificationServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BF3497B6F04196F0ABC39C414378D3 /* RemoteNotificationServiceDefault.swift */; };
 		64819C8D4EBD3386377D0F84DC909F8B /* CwlCatchException.m in Sources */ = {isa = PBXBuildFile; fileRef = 031049477EF89D8C0F6EDF4DA335F657 /* CwlCatchException.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
-		64AEB59F9B0AD9A4DFB22D9069B61385 /* SystemNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34EB4D1EA09DCAC647CCB90787F7EFB0 /* SystemNotificationService.swift */; };
 		650CE60D33D0B53A2559B22B1862E477 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BA4794DD94D5DE6BFFFEEC72B8C43E3 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		65985C142EE8A74E6E56D5E30A39C79C /* Expectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D40E21FFD40BEFA4C8C5B04B4FEE82 /* Expectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		65B3ED86640C16F4EF1DE3FE124DC359 /* UIView_FullSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D60B8354D08E275DD2905D35B03D00 /* UIView_FullSize.swift */; };
@@ -386,7 +384,6 @@
 		24FAED8BD878439BC32BE461165E4E08 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		26BFA2B925BEF9740354772FC0DDE571 /* iExtra-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iExtra-prefix.pch"; sourceTree = "<group>"; };
 		27A6E1B1438113D3D4423FB3586E904A /* Errors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Errors.swift; path = Sources/Nimble/Utils/Errors.swift; sourceTree = "<group>"; };
-		27C898F6F9339E00EDE98A2DE11E70A4 /* SystemNotificationServiceDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemNotificationServiceDefault.swift; sourceTree = "<group>"; };
 		2B97EFAAC8E5F1ABA276BDBBCA8A7E8B /* DSL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DSL.h; path = Sources/NimbleObjectiveC/DSL.h; sourceTree = "<group>"; };
 		2C12FE311471678F66F177EFA1D02222 /* RaisesException.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RaisesException.swift; path = Sources/Nimble/Matchers/RaisesException.swift; sourceTree = "<group>"; };
 		2C81A9AA5E865BA4F9A36EFFD674D591 /* SKProduct+PriceDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "SKProduct+PriceDescription.swift"; sourceTree = "<group>"; };
@@ -401,7 +398,6 @@
 		32514E373FB9C68A085A904C2C776F34 /* UIApplication_Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIApplication_Version.swift; sourceTree = "<group>"; };
 		3276DE715636F61DFFDE3B068F88418A /* PostNotification.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PostNotification.swift; path = Sources/Nimble/Matchers/PostNotification.swift; sourceTree = "<group>"; };
 		32DF21EF8268E32D359CD23F2CF3EFE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		34EB4D1EA09DCAC647CCB90787F7EFB0 /* SystemNotificationService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SystemNotificationService.swift; sourceTree = "<group>"; };
 		358C5CE9A3BF3A1365D22576DCE92C31 /* CwlDarwinDefinitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlDarwinDefinitions.swift; path = Sources/Lib/CwlPreconditionTesting/CwlPreconditionTesting/CwlDarwinDefinitions.swift; sourceTree = "<group>"; };
 		366BBEAB60AEABF9B5209124E399E6F1 /* AppFileManagerDefault.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AppFileManagerDefault.swift; sourceTree = "<group>"; };
 		3718B918BEFD94E93859B9284AA81994 /* Equal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Equal.swift; path = Sources/Nimble/Matchers/Equal.swift; sourceTree = "<group>"; };
@@ -803,8 +799,6 @@
 			children = (
 				8383B101E597276C460687E01F0BFBC8 /* RemoteNotificationService.swift */,
 				88BF3497B6F04196F0ABC39C414378D3 /* RemoteNotificationServiceDefault.swift */,
-				34EB4D1EA09DCAC647CCB90787F7EFB0 /* SystemNotificationService.swift */,
-				27C898F6F9339E00EDE98A2DE11E70A4 /* SystemNotificationServiceDefault.swift */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -2013,8 +2007,6 @@
 				8078E2DED5BA0EEFEDAA562509ECDE97 /* String+Contains.swift in Sources */,
 				57FF0DC249B0BD14A2721F9C97A47CB7 /* String+Replace.swift in Sources */,
 				853C338694E044859343DAC223F9E4C6 /* String+UrlEncode.swift in Sources */,
-				64AEB59F9B0AD9A4DFB22D9069B61385 /* SystemNotificationService.swift in Sources */,
-				0500E835CD814295DA250B24D81419B7 /* SystemNotificationServiceDefault.swift in Sources */,
 				AA04BBE42C95B4C28ED4F661A99708A5 /* SystemUrl.swift in Sources */,
 				C650EC36FAD09594BD92C9BB0FDF7F01 /* ThinSeparator.swift in Sources */,
 				6813891AF553C3AC81C31E4FC426D6D0 /* ThreadingOperator.swift in Sources */,

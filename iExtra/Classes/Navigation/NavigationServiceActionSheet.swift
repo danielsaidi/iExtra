@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-18.
-//  Copyright (c) 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -18,7 +18,6 @@ public final class ExternalMapServicePicker: NSObject {
     public static var googleButtonTitle = "Google Maps"
     public static var title = "Which app would you like to use?"
     public static var message: String? = nil
-    
     
     
     // MARK: Public functions

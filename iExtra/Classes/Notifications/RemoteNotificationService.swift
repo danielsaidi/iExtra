@@ -11,7 +11,7 @@ import Foundation
 public protocol RemoteNotificationService {
     
     func alert(notification: [AnyHashable: Any])
-    func getDeviceToken(fromData deviceToken: Data) -> String
+    func getDeviceToken(from deviceTokenData: Data) -> String
     func handle(notification: [AnyHashable: Any])
     func registerForRemoteNotifications()
 }

@@ -22,11 +22,11 @@ open class RemoteNotificationServiceDefault: NSObject, RemoteNotificationService
         }
     }
     
-    open func getDeviceToken(fromData deviceToken: Data) -> String {
-        let token = deviceToken as NSData
-        let tokenChars = token.bytes.bindMemory(to: CChar.self, capacity: deviceToken.count)
+    open func getDeviceToken(from deviceTokenData: Data) -> String {
+        let token = deviceTokenData as NSData
+        let tokenChars = token.bytes.bindMemory(to: CChar.self, capacity: deviceTokenData.count)
         var tokenString = ""
-        for i in 0..<deviceToken.count {
+        for i in 0..<deviceTokenData.count {
             tokenString += String(format: "%02.2hhx", arguments: [tokenChars[i]])
         }
         return tokenString
