@@ -1,10 +1,4 @@
-#
-# Be sure to run `pod lib lint iExtra.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
+# Run `pod lib lint iExtra.podspec' to ensure this is a valid spec.
 
 Pod::Spec.new do |s|
   s.name             = 'iExtra'
@@ -22,7 +16,7 @@ in order to make the code in my apps app-specific.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/iExtra.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/danielsaidi'
 
   s.ios.deployment_target = '8.0'
 

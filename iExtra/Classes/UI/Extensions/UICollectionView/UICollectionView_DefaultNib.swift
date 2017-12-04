@@ -19,13 +19,17 @@ extension UICollectionViewCell: ReusableCollectionViewCell {}
 
 public extension UICollectionView {
     
-    public func dequeueCellWithDefaultNib<T: ReusableCollectionViewCell>(at indexPath: IndexPath) -> T {
+    public func dequeueDefaultCell<T: ReusableCollectionViewCell>(at indexPath: IndexPath) -> T {
         let id = T.defaultReuseIdentifier
         return dequeueReusableCell(withReuseIdentifier: id, for: indexPath) as! T
     }
     
-    public func registerCellWithDefaultNib(for type: UICollectionViewCell.Type) {
+    public func registerDefaultNib(for type: UICollectionViewCell.Type) {
         let id = type.defaultReuseIdentifier
         register(type.defaultNib, forCellWithReuseIdentifier: id)
+    }
+    
+    public func typedCellForItem<T: ReusableCollectionViewCell>(at indexPath: IndexPath) -> T {
+        return cellForItem(at: indexPath) as! T
     }
 }

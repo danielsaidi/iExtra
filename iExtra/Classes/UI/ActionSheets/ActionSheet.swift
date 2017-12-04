@@ -144,7 +144,7 @@ fileprivate extension ActionSheet {
     var hasTitle: Bool {
         let title = (self.title ?? "")
         let trimmed = title.trimmingCharacters(in: .whitespaces)
-        return trimmed.characters.count > 0
+        return trimmed.count > 0
     }
     
     var itemTotalHeight: Int {
