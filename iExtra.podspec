@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'iExtra'
-  s.version          = '0.9.1'
+  s.version          = '1.0.0'
   s.summary          = 'iExtra contains a bunch of extra stuff for the iOS framework.'
 
   s.description      = <<-DESC
@@ -12,7 +12,6 @@ in order to make the code in my apps app-specific.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/iExtra'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Daniel Saidi' => 'daniel.saidi@gmail.com' }
   s.source           = { :git => 'https://github.com/danielsaidi/iExtra.git', :tag => s.version.to_s }
@@ -20,13 +19,6 @@ in order to make the code in my apps app-specific.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'iExtra/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'iExtra' => ['iExtra/Assets/*.png']
-  # }
+  s.source_files = 'iExtra/**/*.swift'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end

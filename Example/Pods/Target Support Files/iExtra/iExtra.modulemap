@@ -1,6 +1,0 @@
-framework module iExtra {
-  umbrella header "iExtra-umbrella.h"
-
-  export *
-  module * { export * }
-}

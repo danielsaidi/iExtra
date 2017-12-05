@@ -1,53 +1,66 @@
 # iExtra
 
-[![CI Status](http://img.shields.io/travis/danielsaidi/iExtra.svg?style=flat)](https://travis-ci.org/Daniel Saidi/iExtra)
-[![Version](https://img.shields.io/cocoapods/v/iExtra.svg?style=flat)](http://cocoapods.org/pods/iExtra)
-[![License](https://img.shields.io/cocoapods/l/iExtra.svg?style=flat)](http://cocoapods.org/pods/iExtra)
-[![Platform](https://img.shields.io/cocoapods/p/iExtra.svg?style=flat)](http://cocoapods.org/pods/iExtra)
-
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+[![GitHub version](https://badge.fury.io/gh/danielsaidi%2FiExtra.svg)](http://badge.fury.io/gh/danielsaidi%2FiExtra)
+[![Build Status](https://api.travis-ci.org/danielsaidi/iExtra.svg)](https://travis-ci.org/danielsaidi/iExtra)
 
 
 ## About iExtra
 
-iExtra is a Swift library that contains most of the general functionality that
-I use in my various apps. There is no real focus, just a bag of bytes.
+iExtra is a Swift library that contains most of the general functionality that I
+build in apps on my spare time. There is no real focus, just a bag of bytes.
 
 
+## Demo Application
 
-## Demo Project
-
-To run the demo project, clone the repo and run `pod install` from the Example
-directory first. You can then open the generated iExtra.xcworkspace file.
-
-For now, the demo is just the host application used to run the unit test suite.
-It has no testable stuff.
+This repository contains a demo application. Open the `iExtra` project, then run
+the `iExtraExample` target to try different types of action sheets.
 
 
+## Install
 
-## Requirements
+iExtra can be installed with `CocoaPods` and `Carthage`:
 
-iExtra requires iOS 8 or later.
+### CocoaPods
 
+To install iExtra with CocoaPods, add this line to your `Podfile`:
 
-
-## Installation
-
-iExtra is not yet available through [CocoaPods](http://cocoapods.org). Instead,
-install it by pointing the pod to this repository.
-
-
-```ruby
-pod "iExtra"
+```
+pod 'iExtra'
 ```
 
+then run `pod install`. For more info, visit the [CocoaPod website][CocoaPods].
+
+### Carthage
+
+To install iExtra with Carthage, add this line to your `Cartfile`:
+
+```
+github "danielsaidi/iExtra"
+```
+
+then run `carthage update`. For more info, visit [Carthage website][Carthage].
 
 
-## Author
+## Contact me
 
-Daniel Saidi, daniel.saidi@gmail.com
+Feel free to reach out if you have any questions or if you want to contribute to
+iExtra:
 
+* E-mail: [daniel.saidi@gmail.com](mailto:daniel.saidi@gmail.com)
+* Twitter: [@danielsaidi](http://www.twitter.com/danielsaidi)
+* Web site: [danielsaidi.com](http://www.danielsaidi.com)
 
 
 ## License
 
 iExtra is available under the MIT license. See the LICENSE file for more info.
+
+
+
+
+[header-image]: iExtraExample/Assets/Images/title-image.png "Sheeeeeeeeeit"
+[demo-gif]: Resources/device.gif "Example gif"
+
+[Carthage]: https://github.com/Carthage/Carthage
+[CocoaPods]: https://cocoapods.org/
