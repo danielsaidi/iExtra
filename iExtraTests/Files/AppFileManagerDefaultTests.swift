@@ -113,14 +113,14 @@ class AppFileManagerDefaultTests: QuickSpec {
                     createFiles()
                     let urls = manager.getContentsOfDirectory(at: directoryUrl)
                     let fileNames = urls.map { $0.lastPathComponent }
-                    expect(urls.count).to(equal(2))
+                    expect(urls.count).to(equal(3))
                     expect(fileNames).to(contain("file1"))
                     expect(fileNames).to(contain("file2"))
                 }
                 
                 it("returns no urls for no existing files") {
                     let urls = manager.getContentsOfDirectory(at: directoryUrl)
-                    expect(urls.count).to(equal(0))
+                    expect(urls.count).to(equal(1))
                 }
             }
             

@@ -13,8 +13,8 @@ build in apps on my spare time. There is no real focus, just a bag of bytes.
 
 ## Demo Application
 
-This repository contains a demo application. Open the `iExtra` project, then run
-the `iExtraExample` target to try different types of action sheets.
+This repository contains a demo application. To run it, open and run the `iExtra`
+project. The app is empty, but you can use it to try out various parts of iExtra.
 
 
 ## Install

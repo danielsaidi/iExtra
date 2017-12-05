@@ -43,9 +43,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "452733671FD673E200418D93"
-            BuildableName = "iExtra.framework"
-            BlueprintName = "iExtra"
+            BlueprintIdentifier = "452733851FD6740F00418D93"
+            BuildableName = "iExtraExample.app"
+            BlueprintName = "iExtraExample"
             ReferencedContainer = "container:iExtra.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,15 +63,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "452733671FD673E200418D93"
-            BuildableName = "iExtra.framework"
-            BlueprintName = "iExtra"
+            BlueprintIdentifier = "452733851FD6740F00418D93"
+            BuildableName = "iExtraExample.app"
+            BlueprintName = "iExtraExample"
             ReferencedContainer = "container:iExtra.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

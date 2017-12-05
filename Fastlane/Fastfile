@@ -1,63 +1,37 @@
-fastlane_version "1.32.3"
+fastlane_version "2.30.2"
 
 default_platform :ios
 
-
 platform :ios do
 
-  
 
-  # Build ======================
-
-  desc "Build the app"
-  lane :build do
-    gym(
-      clean: true,
-      scheme: "iExtra-Example",
-      workspace: "Example/iExtra.xcworkspace"
-    )
-  end
-
-
-
-  # Version =====================
+  # Version ================
 
   desc "Create a new version"
   lane :version do |options|
     ensure_git_status_clean
     ensure_git_branch(branch: 'master')
     test
-    
     version = version_bump_podspec(path: "iExtra.podspec", version_number: options[:name])
 
-    increment_build_number(build_number: version)
-
     git_commit(
-      path: [
-        "iExtra.podspec",
-        "Example/Pods/",
-        "Fastlane/"],
+      path: ["Sheeeeeeeeet.podspec"],
       message: "Bump to #{version}"
     )
 
     add_git_tag(tag: version)
     push_git_tags()
-    reset_git_repo
+    push_to_git_remote()
   end
 
   
-
   # Test =======================
 
   desc "Run unit tests"
   lane :test do
-
-    # To try this from the terminal, run:
-    # scan --workspace "Example/iExtra.xcworkspace" --scheme "iExtra-Example"
-
     scan(
-      workspace: "Example/iExtra.xcworkspace",
-      scheme: "iExtra-Example",
+      project: "iExtra.xcodeproj",
+      scheme: "iExtra",
       devices: ["iPhone 6s"]
     )    
   end

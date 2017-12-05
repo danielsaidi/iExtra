@@ -30,11 +30,6 @@ xcode-select --install
 
 # Available Actions
 ## iOS
-### ios build
-```
-fastlane ios build
-```
-Build the app
 ### ios version
 ```
 fastlane ios version

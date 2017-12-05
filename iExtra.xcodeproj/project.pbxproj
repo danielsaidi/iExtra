@@ -241,6 +241,10 @@
 		452735A31FD674F900418D93 /* UuidGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734ED1FD674F900418D93 /* UuidGenerator.swift */; };
 		452735A41FD6756700418D93 /* iExtra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452733681FD673E200418D93 /* iExtra.framework */; };
 		452735A51FD6756700418D93 /* iExtra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452733681FD673E200418D93 /* iExtra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452735AC1FD6782100418D93 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; };
+		452735AD1FD6782100418D93 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; };
+		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -270,6 +274,17 @@
 				452735A51FD6756700418D93 /* iExtra.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		452735AE1FD6782B00418D93 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */,
+				452735B01FD6783500418D93 /* Quick.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -512,6 +527,8 @@
 		452734EA1FD674F900418D93 /* WorldCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorldCoordinate.swift; sourceTree = "<group>"; };
 		452734EC1FD674F900418D93 /* IdGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdGenerator.swift; sourceTree = "<group>"; };
 		452734ED1FD674F900418D93 /* UuidGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UuidGenerator.swift; sourceTree = "<group>"; };
+		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -526,6 +543,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				452735AC1FD6782100418D93 /* Nimble.framework in Frameworks */,
+				452735AD1FD6782100418D93 /* Quick.framework in Frameworks */,
 				452733721FD673E200418D93 /* iExtra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,6 +567,7 @@
 				452733871FD6740F00418D93 /* iExtraExample */,
 				452733751FD673E200418D93 /* iExtraTests */,
 				452733691FD673E200418D93 /* Products */,
+				452735A91FD6782000418D93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1408,6 +1428,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		452735A91FD6782000418D93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				452735AA1FD6782000418D93 /* Nimble.framework */,
+				452735AB1FD6782100418D93 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1447,6 +1476,7 @@
 				4527336D1FD673E200418D93 /* Sources */,
 				4527336E1FD673E200418D93 /* Frameworks */,
 				4527336F1FD673E200418D93 /* Resources */,
+				452735AE1FD6782B00418D93 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1993,6 +2023,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMEDFW438U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iExtraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraTests;
@@ -2008,6 +2042,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PMEDFW438U;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = iExtraTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraTests;
