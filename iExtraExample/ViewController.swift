@@ -7,19 +7,39 @@
 //
 
 import UIKit
+import iExtra
 
 class ViewController: UIViewController {
 
+    var i = 0
+    
+    let feedback: [HapticFeedback] = [
+        .error,
+        .success,
+        .warning,
+        
+        .lightImpact,
+        .mediumImpact,
+        .heavyImpact,
+        
+        .selectionChanged
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let button = UIButton(type: .contactAdd)
+        button.frame = CGRect(x: 100, y: 100, width: 300, height: 100)
+        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        view.addSubview(button)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @objc func buttonTapped() {
+        if i == self.feedback.count { i = 0 }
+        let feedback = self.feedback[i]
+        print(feedback.identifier)
+        feedback.trigger()
+        i += 1
     }
-
-
 }
 

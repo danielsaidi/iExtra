@@ -20,7 +20,7 @@ class UuidGeneratorTests: QuickSpec {
                 let creator = UuidGenerator()
                 let id = creator.generateUniqueId()
                 
-                expect(id.characters.count).to(equal(36))
+                expect(id.count).to(equal(36))
             }
             
             it("creates a random password each time") {

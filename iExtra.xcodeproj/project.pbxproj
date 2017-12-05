@@ -245,6 +245,7 @@
 		452735AD1FD6782100418D93 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; };
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -529,6 +530,7 @@
 		452734ED1FD674F900418D93 /* UuidGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UuidGenerator.swift; sourceTree = "<group>"; };
 		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		452735B61FD67EE400418D93 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -962,6 +964,7 @@
 			children = (
 				4527343B1FD674F800418D93 /* ActionSheets */,
 				4527343E1FD674F800418D93 /* Extensions */,
+				452735B51FD67EC100418D93 /* Haptics */,
 				4527348E1FD674F800418D93 /* Modal */,
 				4527348F1FD674F800418D93 /* Modals */,
 				452734931FD674F800418D93 /* Models */,
@@ -1437,6 +1440,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		452735B51FD67EC100418D93 /* Haptics */ = {
+			isa = PBXGroup;
+			children = (
+				452735B61FD67EE400418D93 /* HapticFeedback.swift */,
+			);
+			path = Haptics;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1683,6 +1694,7 @@
 				4527359B1FD674F900418D93 /* KeychainService.swift in Sources */,
 				452735301FD674F900418D93 /* UIImageView+Async.swift in Sources */,
 				4527354A1FD674F900418D93 /* UIView+Rotate.swift in Sources */,
+				452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */,
 				4527358D1FD674F900418D93 /* EventTracker.swift in Sources */,
 				452735761FD674F900418D93 /* Pannable.swift in Sources */,
 				4527359A1FD674F900418D93 /* KeychainReader.swift in Sources */,
@@ -1911,7 +1923,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1965,7 +1977,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
