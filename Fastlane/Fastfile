@@ -15,7 +15,7 @@ platform :ios do
     version = version_bump_podspec(path: "iExtra.podspec", version_number: options[:name])
 
     git_commit(
-      path: ["Sheeeeeeeeet.podspec"],
+      path: ["iExtra.podspec"],
       message: "Bump to #{version}"
     )
 
