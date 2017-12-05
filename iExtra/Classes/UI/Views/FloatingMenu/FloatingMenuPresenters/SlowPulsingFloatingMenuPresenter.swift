@@ -21,7 +21,6 @@ open class SlowPulsingFloatingMenuPresenter: NSObject, FloatingMenuPresenter {
     open var presentationDuration = 0.8
     
     
-    
     // MARK: - Public functions
     
     open func present(menu: FloatingMenu, completion: @escaping (() -> ())) {
@@ -33,7 +32,6 @@ open class SlowPulsingFloatingMenuPresenter: NSObject, FloatingMenuPresenter {
         menu.layer.transform = CATransform3DIdentity
         delay(presentationDuration, { completion() })
     }
-    
     
     
     // MARK: - Private functions

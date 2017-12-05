@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-19.
-//  Copyright © 2016 Appamini. All rights reserved.
+//  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -24,7 +24,6 @@ open class PannableImageView: UIImageView, Pannable {
     }
     
     
-    
     // MARK: Properties
     
     open weak var panDelegate: PannableDelegate?
@@ -32,7 +31,6 @@ open class PannableImageView: UIImageView, Pannable {
     public var isPanEnabled = true
     public var panDirections: [PannableDirection] = [.horizontal, .vertical]
     public var panStartCenter = CGPoint.zero
-    
     
     
     // MARK: - Public Functions
@@ -51,4 +49,3 @@ open class PannableImageView: UIImageView, Pannable {
         handlePan(pan)
     }
 }
-

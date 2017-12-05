@@ -33,7 +33,6 @@ public class StretchableScrollViewHeaderTapView: UIView {
     weak var header: StretchableScrollViewHeader?
     
     
-    
     // MARK: - Functions
     
     override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
@@ -52,7 +51,6 @@ public class StretchableScrollViewHeaderTapView: UIView {
         return nil
     }
 }
-
 
 
 // MARK: - Private Functions

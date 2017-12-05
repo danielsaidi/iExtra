@@ -25,7 +25,6 @@ public class InputStepperToolbar: UIToolbar {
     }
     
     
-    
     // MARK: - Appearance properties
     
     public static var nextImage: UIImage?
@@ -47,7 +46,6 @@ public class InputStepperToolbar: UIToolbar {
     public var previousTitle: String {
         return InputStepperToolbar.previousTitle
     }
-    
     
     
     // MARK: - Properties

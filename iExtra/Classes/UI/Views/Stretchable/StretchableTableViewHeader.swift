@@ -36,7 +36,6 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
     public var shouldAutosizeToFitSubview = false
     
     
-    
     // MARK: - Functions
     
     open override func handleScroll(in scrollView: UIScrollView, usingHeightConstraint constraint: NSLayoutConstraint? = nil) {
@@ -45,7 +44,6 @@ open class StretchableTableViewHeader: StretchableScrollViewHeader {
         super.handleScroll(in: scrollView)
     }
 }
-
 
 
 // MARK: - Internal Functions

@@ -9,12 +9,16 @@
 import Foundation
 
 
+// MARK: - PannableDelegate
+
 public protocol PannableDelegate: class {
     func pannableDidBeginPan(_ pannable: Pannable)
     func pannableDidContinuePan(_ pannable: Pannable)
     func pannableDidEndPan(_ pannable: Pannable)
 }
 
+
+// MARK: - Pannable
 
 public protocol Pannable: class {
     
@@ -25,6 +29,8 @@ public protocol Pannable: class {
     var panStartCenter: CGPoint { get set }
 }
 
+
+// MARK: - Public Functions
 
 public extension Pannable {
     

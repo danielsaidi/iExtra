@@ -25,7 +25,6 @@ class BottomGradientView: UIView {
 }
 
 
-
 // MARK: - Private Properties
 
 fileprivate extension BottomGradientView {
@@ -34,7 +33,6 @@ fileprivate extension BottomGradientView {
         return (layer.sublayers?.count ?? 0) == 0
     }
 }
-
 
 
 // MARK: - Private Functions
@@ -47,7 +45,7 @@ fileprivate extension BottomGradientView {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.frame.size.width = 5000   // NOTE: For landscape...should autosize
+        gradientLayer.frame.size.width = 5000   // TODO: For iPad landscape...should autosize
         gradientLayer.colors = [fromColor.cgColor, toColor.cgColor]
         return gradientLayer
     }

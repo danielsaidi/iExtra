@@ -13,14 +13,12 @@
 
 import UIKit
 
-
 public enum LinearFloatingSubmenuPresenterDirection {
     case up
     case down
     case left
     case right
 }
-
 
 open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
     
@@ -33,7 +31,6 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
     }
     
     
-    
     // MARK: Properties
     
     open var direction: LinearFloatingSubmenuPresenterDirection
@@ -41,8 +38,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
     open var offsetMultiplier = 1.4
     
     
-    
-    // MARK: Public methods
+    // MARK: Public Functions
     
     open func dismiss(submenu: FloatingSubmenu, in menu: FloatingMenu) {
         for button in submenu.buttons {
@@ -67,11 +63,14 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
             presentButton(button, usingOffset: offset)
         }
     }
+}
+
+
+// MARK: Private Functions
+
+fileprivate extension LinearFloatingSubMenuPresenter {
     
-    
-    // MARK: Private methods
-    
-    private func applyShadow(on label: UILabel, from button: UIButton) {
+    func applyShadow(on label: UILabel, from button: UIButton) {
         label.layer.shadowOffset = button.layer.shadowOffset
         label.layer.shadowRadius = button.layer.shadowRadius
         label.layer.shadowOpacity = button.layer.shadowOpacity
@@ -79,7 +78,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         label.layer.rasterizationScale = button.layer.rasterizationScale
     }
     
-    private func presentButton(_ button: UIButton, usingOffset offset: CGFloat) {
+    func presentButton(_ button: UIButton, usingOffset offset: CGFloat) {
         let center = button.center
         let animation = CAKeyframeAnimation()
         animation.duration = presentationDuration
@@ -107,7 +106,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         }
     }
     
-    private func getDismissPoint(forButton button: UIButton, inMenu menu: FloatingMenu) -> CGPoint {
+    func getDismissPoint(forButton button: UIButton, inMenu menu: FloatingMenu) -> CGPoint {
         switch direction {
         case .up: fallthrough
         case .down:
@@ -118,7 +117,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         }
     }
     
-    private func getPresentationOffsets(forButtons buttons: [UIButton], inMenu menu: FloatingMenu) -> [CGFloat] {
+    func getPresentationOffsets(forButtons buttons: [UIButton], inMenu menu: FloatingMenu) -> [CGFloat] {
         var multiplier = CGFloat(offsetMultiplier)
         if (direction == .up || direction == .left) {
             multiplier = -multiplier
@@ -134,7 +133,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         return result
     }
     
-    private func presentLabel(forButton button: UIButton) {
+    func presentLabel(forButton button: UIButton) {
         switch direction {
         case .up: fallthrough
         case .down:
@@ -155,7 +154,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         }
     }
     
-    private func removeLabelsFromSuperview(_ subviews: [UIView]) {
+    func removeLabelsFromSuperview(_ subviews: [UIView]) {
         for view in subviews {
             if (view.isKind(of: UILabel.self)) {
                 view.removeFromSuperview()

@@ -26,7 +26,6 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
     fileprivate var scaleFactor = CGFloat(100.0)
     
     
-    
     // MARK: - Public methods
     
     open func hideBackground(for menu: FloatingMenu) {

@@ -3,6 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-10-31.
+//  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
 import UIKit

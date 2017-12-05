@@ -60,7 +60,6 @@ open class StretchableScrollViewHeader: UIView {
     public var tappableViews = [UIView?]()
     
     
-    
     // MARK: - Private Properties
     
     fileprivate weak var scrollView: UIScrollView?
@@ -68,7 +67,6 @@ open class StretchableScrollViewHeader: UIView {
     fileprivate weak var heightConstraint: NSLayoutConstraint?
     
     fileprivate var tapView: StretchableScrollViewHeaderTapView?
-    
     
     
     // MARK: - Public Functions
@@ -94,7 +92,6 @@ open class StretchableScrollViewHeader: UIView {
         print(baseHeight)
     }
 }
-
 
 
 // MARK: - Internal Functions

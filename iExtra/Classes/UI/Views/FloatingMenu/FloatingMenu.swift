@@ -15,43 +15,9 @@ open class FloatingMenu: UIView {
     
     open func setup(primaryButton: UIButton, submenus: [FloatingSubmenu]) {
         removeAllSubviews()
-        setup(primaryButton: primaryButton)
-        setup(submenus: submenus)
+        setupPrimaryButton(primaryButton)
+        setupSubmenus(submenus)
     }
-    
-    private func setup(primaryButton button: UIButton) {
-        addSubview(button)
-        let size = button.frame.size
-        let action = #selector(primaryButtonTapped)
-        button.frame = CGRect(origin: CGPoint.zero, size: size)
-        button.addTarget(self, action: action, for: .touchDown)
-        primaryButton = button
-        setupShadow(for: button)
-    }
-    
-    private func setup(submenus: [FloatingSubmenu]) {
-        self.submenus = submenus
-        var lastView = primaryButton
-        for submenu in submenus {
-            for button in submenu.buttons {
-                insertSubview(button, belowSubview:lastView!)
-                let action = #selector(submenuButtonTapped)
-                button.center = primaryButton.center
-                button.addTarget(self, action: action, for: .touchUpInside)
-                lastView = button
-                setupShadow(for: button)
-            }
-        }
-    }
-    
-    private func setupShadow(for button: UIButton) {
-        button.layer.shadowColor = shadowColor.cgColor
-        button.layer.shadowOffset = shadowOffset
-        button.layer.shadowRadius = CGFloat(shadowRadius)
-        button.layer.shadowOpacity = shadowOpacity
-        layer.rasterizationScale = UIScreen.main.scale
-    }
-    
     
     
     // MARK: - Dependencies
@@ -59,7 +25,6 @@ open class FloatingMenu: UIView {
     open var menuPresenter = SlowPulsingFloatingMenuPresenter()
     open var backgroundPresenter = RadialFloatingMenuBackgroundPresenter()
     open var buttonPresenter = LinearFloatingSubMenuPresenter(direction:.right)
-    
     
     
     // MARK: - Properties
@@ -73,7 +38,6 @@ open class FloatingMenu: UIView {
     
     public private(set) var primaryButton: UIButton!
     public private(set) var submenus = [FloatingSubmenu]()
-    
     
     
     // MARK: - Custom hit test
@@ -93,7 +57,6 @@ open class FloatingMenu: UIView {
         }
         return super.hitTest(point, with: event)
     }
-    
     
     
     // MARK: - Public methods
@@ -150,8 +113,46 @@ open class FloatingMenu: UIView {
 }
 
 
+//MARK: - Setup
 
-//MARK: - Private methods
+fileprivate extension FloatingMenu {
+    
+    func setupPrimaryButton(_ button: UIButton) {
+        addSubview(button)
+        let size = button.frame.size
+        let action = #selector(primaryButtonTapped)
+        button.frame = CGRect(origin: CGPoint.zero, size: size)
+        button.addTarget(self, action: action, for: .touchDown)
+        primaryButton = button
+        setupShadow(for: button)
+    }
+    
+    func setupSubmenus(_ submenus: [FloatingSubmenu]) {
+        self.submenus = submenus
+        var lastView = primaryButton
+        for submenu in submenus {
+            for button in submenu.buttons {
+                insertSubview(button, belowSubview:lastView!)
+                let action = #selector(submenuButtonTapped)
+                button.center = primaryButton.center
+                button.addTarget(self, action: action, for: .touchUpInside)
+                lastView = button
+                setupShadow(for: button)
+            }
+        }
+    }
+    
+    func setupShadow(for button: UIButton) {
+        button.layer.shadowColor = shadowColor.cgColor
+        button.layer.shadowOffset = shadowOffset
+        button.layer.shadowRadius = CGFloat(shadowRadius)
+        button.layer.shadowOpacity = shadowOpacity
+        layer.rasterizationScale = UIScreen.main.scale
+    }
+}
+
+
+//MARK: - Private Functions
 
 fileprivate extension FloatingMenu {
     
@@ -161,3 +162,4 @@ fileprivate extension FloatingMenu {
         }
     }
 }
+

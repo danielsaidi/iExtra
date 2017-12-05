@@ -18,16 +18,15 @@ open class FloatingSubmenu: UIView {
     
     // MARK: - Init
     
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
     public init(buttons:[UIButton], presenter: FloatingSubmenuPresenter) {
         super.init(frame:CGRect.zero)
         self.buttons = buttons
         self.presenter = presenter
     }
     
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     
     // MARK: - Properties
@@ -35,7 +34,6 @@ open class FloatingSubmenu: UIView {
     open var buttons = [UIButton]()
     open var displayMode = FloatingSubmenuDisplayMode.visibleWhenMainMenuIsOpen
     open var presenter: FloatingSubmenuPresenter?
-    
     
     
     // MARK: - Public Functions
@@ -51,9 +49,14 @@ open class FloatingSubmenu: UIView {
     open func handleMenuDidPresent(_ menu: FloatingMenu) {
         handleMenuDidChangeState(menu)
     }
+}
+
+
+// MARK: - Private Functions
+
+fileprivate extension FloatingSubmenu {
     
-    
-    private func handleMenuDidChangeState(_ menu: FloatingMenu) {
+    func handleMenuDidChangeState(_ menu: FloatingMenu) {
         guard let presenter = presenter else { return }
         
         let presentForOpen = menu.isOpen && displayMode == .visibleWhenMainMenuIsOpen
