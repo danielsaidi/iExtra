@@ -246,6 +246,8 @@
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
+		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
+		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -531,6 +533,8 @@
 		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		452735B61FD67EE400418D93 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
+		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -900,7 +904,9 @@
 			isa = PBXGroup;
 			children = (
 				452734201FD674F700418D93 /* DeviceIdentifier.swift */,
+				45A1029F1FD982C50032884A /* DeviceModelType.swift */,
 				452734211FD674F700418D93 /* KeychainBasedDeviceIdentifier.swift */,
+				45A1029D1FD9822C0032884A /* UIDevice+Model.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -962,7 +968,6 @@
 		4527343A1FD674F800418D93 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				4527343B1FD674F800418D93 /* ActionSheets */,
 				4527343E1FD674F800418D93 /* Extensions */,
 				452735B51FD67EC100418D93 /* Haptics */,
 				4527348E1FD674F800418D93 /* Modal */,
@@ -974,29 +979,6 @@
 				4527349F1FD674F800418D93 /* Views */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		4527343B1FD674F800418D93 /* ActionSheets */ = {
-			isa = PBXGroup;
-			children = (
-				4527343C1FD674F800418D93 /* ActionSheetItems */,
-				4527343D1FD674F800418D93 /* ActionSheetPresenters */,
-			);
-			path = ActionSheets;
-			sourceTree = "<group>";
-		};
-		4527343C1FD674F800418D93 /* ActionSheetItems */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ActionSheetItems;
-			sourceTree = "<group>";
-		};
-		4527343D1FD674F800418D93 /* ActionSheetPresenters */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ActionSheetPresenters;
 			sourceTree = "<group>";
 		};
 		4527343E1FD674F800418D93 /* Extensions */ = {
@@ -1601,6 +1583,7 @@
 				452735271FD674F900418D93 /* UIImage+Async.swift in Sources */,
 				452735611FD674F900418D93 /* ParallaxEffectDefault.swift in Sources */,
 				452735061FD674F900418D93 /* DeviceIdentifier.swift in Sources */,
+				45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */,
 				4527355D1FD674F900418D93 /* InteractiveModalTransition.swift in Sources */,
 				452734F31FD674F900418D93 /* SystemUrl.swift in Sources */,
 				452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */,
@@ -1611,6 +1594,7 @@
 				4527355E1FD674F900418D93 /* PannableModalDismissAnimator.swift in Sources */,
 				452735321FD674F900418D93 /* UINavigationBar+BackButton.swift in Sources */,
 				452735531FD674F900418D93 /* UIView+Subviews.swift in Sources */,
+				45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */,
 				452735521FD674F900418D93 /* UIView+SizeToFit.swift in Sources */,
 				452735591FD674F900418D93 /* UIViewController+Nib.swift in Sources */,
 				4527351A1FD674F900418D93 /* TravellingMapCamera.swift in Sources */,
