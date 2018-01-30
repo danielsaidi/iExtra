@@ -109,7 +109,6 @@
 		4527351F1FD674F900418D93 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */; };
 		452735201FD674F900418D93 /* UIButton+ImageMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734471FD674F800418D93 /* UIButton+ImageMargin.swift */; };
 		452735211FD674F900418D93 /* UIButton+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734481FD674F800418D93 /* UIButton+Init.swift */; };
-		452735221FD674F900418D93 /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734491FD674F800418D93 /* UIButton+Target.swift */; };
 		452735231FD674F900418D93 /* UICollectionView+DefaultNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527344B1FD674F800418D93 /* UICollectionView+DefaultNib.swift */; };
 		452735241FD674F900418D93 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527344D1FD674F800418D93 /* UIColor+Hex.swift */; };
 		452735251FD674F900418D93 /* UIColor+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527344E1FD674F800418D93 /* UIColor+Random.swift */; };
@@ -144,7 +143,6 @@
 		452735421FD674F900418D93 /* UIView+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734721FD674F800418D93 /* UIView+Empty.swift */; };
 		452735431FD674F900418D93 /* UIView+FadePulse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734731FD674F800418D93 /* UIView+FadePulse.swift */; };
 		452735441FD674F900418D93 /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734741FD674F800418D93 /* UIView+Frame.swift */; };
-		452735451FD674F900418D93 /* UIView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734751FD674F800418D93 /* UIView+Gestures.swift */; };
 		452735461FD674F900418D93 /* UIView+HitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734761FD674F800418D93 /* UIView+HitTest.swift */; };
 		452735471FD674F900418D93 /* UIView+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734771FD674F800418D93 /* UIView+Move.swift */; };
 		452735481FD674F900418D93 /* UIView+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734781FD674F800418D93 /* UIView+Nib.swift */; };
@@ -246,6 +244,8 @@
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
+		4535AE3120205E51006E5408 /* UIView+ActionTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3020205E51006E5408 /* UIView+ActionTapGesture.swift */; };
+		4535AE3320205E60006E5408 /* UIView+ActionLongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 /* End PBXBuildFile section */
@@ -400,7 +400,6 @@
 		452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
 		452734471FD674F800418D93 /* UIButton+ImageMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+ImageMargin.swift"; sourceTree = "<group>"; };
 		452734481FD674F800418D93 /* UIButton+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Init.swift"; sourceTree = "<group>"; };
-		452734491FD674F800418D93 /* UIButton+Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
 		4527344B1FD674F800418D93 /* UICollectionView+DefaultNib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DefaultNib.swift"; sourceTree = "<group>"; };
 		4527344D1FD674F800418D93 /* UIColor+Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		4527344E1FD674F800418D93 /* UIColor+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Random.swift"; sourceTree = "<group>"; };
@@ -435,7 +434,6 @@
 		452734721FD674F800418D93 /* UIView+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Empty.swift"; sourceTree = "<group>"; };
 		452734731FD674F800418D93 /* UIView+FadePulse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+FadePulse.swift"; sourceTree = "<group>"; };
 		452734741FD674F800418D93 /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
-		452734751FD674F800418D93 /* UIView+Gestures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Gestures.swift"; sourceTree = "<group>"; };
 		452734761FD674F800418D93 /* UIView+HitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+HitTest.swift"; sourceTree = "<group>"; };
 		452734771FD674F800418D93 /* UIView+Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Move.swift"; sourceTree = "<group>"; };
 		452734781FD674F800418D93 /* UIView+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Nib.swift"; sourceTree = "<group>"; };
@@ -533,6 +531,8 @@
 		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		452735B61FD67EE400418D93 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		4535AE3020205E51006E5408 /* UIView+ActionTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActionTapGesture.swift"; sourceTree = "<group>"; };
+		4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActionLongPressGesture.swift"; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -810,8 +810,7 @@
 		452733FE1FD674F700418D93 /* Date */ = {
 			isa = PBXGroup;
 			children = (
-				452733FF1FD674F700418D93 /* Date+Adding.swift */,
-				452734001FD674F700418D93 /* Date+Compare.swift */,
+				4535AE2D20205946006E5408 /* Extensions */,
 				452734011FD674F700418D93 /* DateSerializer.swift */,
 				452734021FD674F700418D93 /* DateSerializerDefault.swift */,
 				452734031FD674F700418D93 /* DateSerializerFormat.swift */,
@@ -832,7 +831,6 @@
 			children = (
 				452734071FD674F700418D93 /* Array */,
 				4527340C1FD674F700418D93 /* Bool */,
-				4527340D1FD674F700418D93 /* Bool+Random.swift */,
 				4527340E1FD674F700418D93 /* CGRect */,
 				452734111FD674F700418D93 /* Collection+Shuffle.swift */,
 				452734121FD674F700418D93 /* Collections */,
@@ -860,6 +858,7 @@
 		4527340C1FD674F700418D93 /* Bool */ = {
 			isa = PBXGroup;
 			children = (
+				4527340D1FD674F700418D93 /* Bool+Random.swift */,
 			);
 			path = Bool;
 			sourceTree = "<group>";
@@ -903,10 +902,10 @@
 		4527341F1FD674F700418D93 /* Device */ = {
 			isa = PBXGroup;
 			children = (
+				4535AE2E20205953006E5408 /* Extensions */,
 				452734201FD674F700418D93 /* DeviceIdentifier.swift */,
 				45A1029F1FD982C50032884A /* DeviceModelType.swift */,
 				452734211FD674F700418D93 /* KeychainBasedDeviceIdentifier.swift */,
-				45A1029D1FD9822C0032884A /* UIDevice+Model.swift */,
 			);
 			path = Device;
 			sourceTree = "<group>";
@@ -969,10 +968,9 @@
 			isa = PBXGroup;
 			children = (
 				4527343E1FD674F800418D93 /* Extensions */,
+				4535AE2F20205A28006E5408 /* Gestures */,
 				452735B51FD67EC100418D93 /* Haptics */,
-				4527348E1FD674F800418D93 /* Modal */,
 				4527348F1FD674F800418D93 /* Modals */,
-				452734931FD674F800418D93 /* Models */,
 				452734941FD674F800418D93 /* Parallax */,
 				452734971FD674F800418D93 /* Search */,
 				4527349C1FD674F800418D93 /* Transitions */,
@@ -1028,7 +1026,6 @@
 				452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */,
 				452734471FD674F800418D93 /* UIButton+ImageMargin.swift */,
 				452734481FD674F800418D93 /* UIButton+Init.swift */,
-				452734491FD674F800418D93 /* UIButton+Target.swift */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -1123,7 +1120,6 @@
 				452734721FD674F800418D93 /* UIView+Empty.swift */,
 				452734731FD674F800418D93 /* UIView+FadePulse.swift */,
 				452734741FD674F800418D93 /* UIView+Frame.swift */,
-				452734751FD674F800418D93 /* UIView+Gestures.swift */,
 				452734761FD674F800418D93 /* UIView+HitTest.swift */,
 				452734771FD674F800418D93 /* UIView+Move.swift */,
 				452734781FD674F800418D93 /* UIView+Nib.swift */,
@@ -1158,13 +1154,6 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		4527348E1FD674F800418D93 /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
 		4527348F1FD674F800418D93 /* Modals */ = {
 			isa = PBXGroup;
 			children = (
@@ -1173,13 +1162,6 @@
 				452734921FD674F800418D93 /* PannableModalPresenter.swift */,
 			);
 			path = Modals;
-			sourceTree = "<group>";
-		};
-		452734931FD674F800418D93 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		452734941FD674F800418D93 /* Parallax */ = {
@@ -1430,6 +1412,32 @@
 			path = Haptics;
 			sourceTree = "<group>";
 		};
+		4535AE2D20205946006E5408 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				452733FF1FD674F700418D93 /* Date+Adding.swift */,
+				452734001FD674F700418D93 /* Date+Compare.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4535AE2E20205953006E5408 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				45A1029D1FD9822C0032884A /* UIDevice+Model.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4535AE2F20205A28006E5408 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */,
+				4535AE3020205E51006E5408 /* UIView+ActionTapGesture.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1602,6 +1610,7 @@
 				452735441FD674F900418D93 /* UIView+Frame.swift in Sources */,
 				452735601FD674F900418D93 /* ParallaxEffect.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
+				4535AE3120205E51006E5408 /* UIView+ActionTapGesture.swift in Sources */,
 				452735171FD674F900418D93 /* MKMapView+CenterCoordinate.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735971FD674F900418D93 /* HintManager.swift in Sources */,
@@ -1686,7 +1695,6 @@
 				4527356F1FD674F900418D93 /* FloatingMenuPresenter.swift in Sources */,
 				452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */,
 				452735211FD674F900418D93 /* UIButton+Init.swift in Sources */,
-				452735451FD674F900418D93 /* UIView+Gestures.swift in Sources */,
 				452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */,
 				452735391FD674F900418D93 /* UISlider+HitTest.swift in Sources */,
 				4527359F1FD674F900418D93 /* CLLocationCoordinate2D+Valid.swift in Sources */,
@@ -1704,6 +1712,7 @@
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,
 				452735841FD674F900418D93 /* FileFinder.swift in Sources */,
+				4535AE3320205E60006E5408 /* UIView+ActionLongPressGesture.swift in Sources */,
 				452735981FD674F900418D93 /* HintManagerBase.swift in Sources */,
 				452735101FD674F900418D93 /* RemoteNotificationServiceDefault.swift in Sources */,
 				4527357A1FD674F900418D93 /* StretchableScrollViewHeader.swift in Sources */,
@@ -1744,7 +1753,6 @@
 				4527359C1FD674F900418D93 /* KeychainServiceDefault.swift in Sources */,
 				4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */,
 				452735241FD674F900418D93 /* UIColor+Hex.swift in Sources */,
-				452735221FD674F900418D93 /* UIButton+Target.swift in Sources */,
 				452735481FD674F900418D93 /* UIView+Nib.swift in Sources */,
 				452735121FD674F900418D93 /* MapAnnotation.swift in Sources */,
 				452734F21FD674F900418D93 /* DateSerializerFormat.swift in Sources */,
