@@ -6,6 +6,13 @@
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This extension divides arrays and other sequence types into
+ batches of a certain max group size.
+ 
+ */
+
 import Foundation
 
 public extension Sequence {

@@ -27,14 +27,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(UIDevice.current.modelType)
-        
-        let button = UIButton(type: .contactAdd)
-        /*button.frame = CGRect(x: 100, y: 100, width: 300, height: 100)
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)*/
-        button.addLongPressGestureRecognizer { print("Long pressed") }
-        button.addTapGestureRecognizer { print("Tapped") }
-        view.addSubview(button)
+        let image = UIImage(named: "cover")
+        let view = UIImageView(image: image)
+        view.addLongPressGestureRecognizer { print("Long pressed") }
+        view.addTapGestureRecognizer { print("Tapped") }
+        self.view.addSubview(view)
     }
 }
 

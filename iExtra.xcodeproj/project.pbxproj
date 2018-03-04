@@ -248,6 +248,12 @@
 		4535AE3320205E60006E5408 /* UIView+ActionLongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
+		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
+		45CE0717204C030600A93175 /* UIImage+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0716204C030600A93175 /* UIImage+Pasteboard.swift */; };
+		45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0718204C038500A93175 /* UIImage+Photos.swift */; };
+		45CE071C204C040500A93175 /* UIInputViewController+FullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE071B204C040500A93175 /* UIInputViewController+FullAccess.swift */; };
+		45CE071F204C043A00A93175 /* UIScrollView+PageNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE071E204C043A00A93175 /* UIScrollView+PageNumber.swift */; };
+		45CE0722204C048D00A93175 /* UIViewAutoresizing+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0721204C048D00A93175 /* UIViewAutoresizing+Extras.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -535,6 +541,12 @@
 		4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActionLongPressGesture.swift"; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
+		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
+		45CE0716204C030600A93175 /* UIImage+Pasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Pasteboard.swift"; sourceTree = "<group>"; };
+		45CE0718204C038500A93175 /* UIImage+Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Photos.swift"; sourceTree = "<group>"; };
+		45CE071B204C040500A93175 /* UIInputViewController+FullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIInputViewController+FullAccess.swift"; sourceTree = "<group>"; };
+		45CE071E204C043A00A93175 /* UIScrollView+PageNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+PageNumber.swift"; sourceTree = "<group>"; };
+		45CE0721204C048D00A93175 /* UIViewAutoresizing+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Extras.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -990,13 +1002,15 @@
 				4527344F1FD674F800418D93 /* UIEdgeInsets+Init.swift */,
 				452734501FD674F800418D93 /* UIImage */,
 				4527345A1FD674F800418D93 /* UIImageView */,
+				45CE071A204C03F800A93175 /* UIInputViewController */,
 				4527345D1FD674F800418D93 /* UINavigationBar */,
-				452734621FD674F800418D93 /* UIScrollView+Scroll.swift */,
+				45CE071D204C042600A93175 /* UIScrollView */,
 				452734631FD674F800418D93 /* UISearchBar+Style.swift */,
 				452734641FD674F800418D93 /* UISlider */,
 				452734671FD674F800418D93 /* UITableView */,
 				452734691FD674F800418D93 /* UITextView */,
 				4527346C1FD674F800418D93 /* UIView */,
+				45CE0721204C048D00A93175 /* UIViewAutoresizing+Extras.swift */,
 				452734871FD674F800418D93 /* UIViewController */,
 			);
 			path = Extensions;
@@ -1051,10 +1065,13 @@
 			isa = PBXGroup;
 			children = (
 				452734511FD674F800418D93 /* UIImage+Async.swift */,
+				45CE0714204C02D100A93175 /* UIImage+Badged.swift */,
 				452734521FD674F800418D93 /* UIImage+Color.swift */,
 				452734531FD674F800418D93 /* UIImage+Combine.swift */,
 				452734541FD674F800418D93 /* UIImage+Crop.swift */,
 				452734551FD674F800418D93 /* UIImage+Padded.swift */,
+				45CE0716204C030600A93175 /* UIImage+Pasteboard.swift */,
+				45CE0718204C038500A93175 /* UIImage+Photos.swift */,
 				452734561FD674F800418D93 /* UIImage+Resized.swift */,
 				452734571FD674F800418D93 /* UIImage+Rotated.swift */,
 				452734581FD674F800418D93 /* UIImage+Shadow.swift */,
@@ -1438,6 +1455,23 @@
 			path = Gestures;
 			sourceTree = "<group>";
 		};
+		45CE071A204C03F800A93175 /* UIInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				45CE071B204C040500A93175 /* UIInputViewController+FullAccess.swift */,
+			);
+			path = UIInputViewController;
+			sourceTree = "<group>";
+		};
+		45CE071D204C042600A93175 /* UIScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				45CE071E204C043A00A93175 /* UIScrollView+PageNumber.swift */,
+				452734621FD674F800418D93 /* UIScrollView+Scroll.swift */,
+			);
+			path = UIScrollView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1624,6 +1658,7 @@
 				452735581FD674F900418D93 /* UIViewController+NavigationBarBackground.swift in Sources */,
 				4527355A1FD674F900418D93 /* UIViewController+RequiredTextField.swift in Sources */,
 				452734F81FD674F900418D93 /* Bool+Random.swift in Sources */,
+				45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */,
 				452735091FD674F900418D93 /* IapManagerDefault.swift in Sources */,
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
 				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
@@ -1650,6 +1685,7 @@
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
 				452735291FD674F900418D93 /* UIImage+Combine.swift in Sources */,
+				45CE0717204C030600A93175 /* UIImage+Pasteboard.swift in Sources */,
 				4527353B1FD674F900418D93 /* UITextView+Padding.swift in Sources */,
 				452734FC1FD674F900418D93 /* NSObject+ClassName.swift in Sources */,
 				4527353D1FD674F900418D93 /* UIView+Bounce.swift in Sources */,
@@ -1660,6 +1696,7 @@
 				452735111FD674F900418D93 /* LinearTravellingMapCamera.swift in Sources */,
 				452735131FD674F900418D93 /* MapBadgeView.swift in Sources */,
 				4527354E1FD674F900418D93 /* UIView+ScalePulse.swift in Sources */,
+				45CE0722204C048D00A93175 /* UIViewAutoresizing+Extras.swift in Sources */,
 				452735071FD674F900418D93 /* KeychainBasedDeviceIdentifier.swift in Sources */,
 				452735251FD674F900418D93 /* UIColor+Random.swift in Sources */,
 				452735231FD674F900418D93 /* UICollectionView+DefaultNib.swift in Sources */,
@@ -1678,6 +1715,7 @@
 				4527356E1FD674F900418D93 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
 				4527354D1FD674F900418D93 /* UIView+ScaleIn.swift in Sources */,
 				452735001FD674F900418D93 /* Set+Group.swift in Sources */,
+				45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */,
 				4527350F1FD674F900418D93 /* RemoteNotificationService.swift in Sources */,
 				4527355C1FD674F900418D93 /* UIViewController+StatusBar.swift in Sources */,
 				452735811FD674F900418D93 /* AppFileManagerDefault.swift in Sources */,
@@ -1698,6 +1736,7 @@
 				452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */,
 				452735391FD674F900418D93 /* UISlider+HitTest.swift in Sources */,
 				4527359F1FD674F900418D93 /* CLLocationCoordinate2D+Valid.swift in Sources */,
+				45CE071F204C043A00A93175 /* UIScrollView+PageNumber.swift in Sources */,
 				452735831FD674F900418D93 /* DirectoryFileManagerDefault.swift in Sources */,
 				452735081FD674F900418D93 /* IapManager.swift in Sources */,
 				452735931FD674F900418D93 /* ExternalMapService.swift in Sources */,
@@ -1753,6 +1792,7 @@
 				4527359C1FD674F900418D93 /* KeychainServiceDefault.swift in Sources */,
 				4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */,
 				452735241FD674F900418D93 /* UIColor+Hex.swift in Sources */,
+				45CE071C204C040500A93175 /* UIInputViewController+FullAccess.swift in Sources */,
 				452735481FD674F900418D93 /* UIView+Nib.swift in Sources */,
 				452735121FD674F900418D93 /* MapAnnotation.swift in Sources */,
 				452734F21FD674F900418D93 /* DateSerializerFormat.swift in Sources */,

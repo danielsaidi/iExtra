@@ -6,6 +6,14 @@
 //  Copyright © 2016 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This extension can be used to resize images in various ways,
+ either to a new height or width while preserving the aspect
+ ratio or to a completely custom size.
+ 
+ */
+
 import UIKit
 
 public extension UIImage {
