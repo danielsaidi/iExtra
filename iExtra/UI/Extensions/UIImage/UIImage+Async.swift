@@ -8,10 +8,19 @@
 
 /*
  
- This is an easy way to load images asynchronously.
- However, production apps should probably use more
- sophisticated ways to do this, with cached images
- etc. Have a look at Kingfisher or any similar lib.
+ `async(from:)` is an easy way to load images asynchronously.
+ However, production apps should use more sophisticated ways
+ to do this, with cached images etc. Check out Kingfisher or
+ Alamofire...or any similar lib.
+ 
+ `async(named:)` draws images into a minimal rect and return
+ the images. This will cache the images and make them render
+ faster later on. This should only be used when you render a
+ large amount of small images at the same time. I did use it
+ in a keyboard extension with ~60 image buttons.
+ 
+ `async(named:)` uses the ~> operator, which can be found in
+ the `Threading` folder.
  
  */
 
@@ -21,7 +30,7 @@ public typealias AsyncImageResult = (_ image: UIImage?, _ error: Error?) -> ()
 
 public extension UIImage {
     
-    static func async(from url: String, completion: @escaping AsyncImageResult) {
+    public static func async(from url: String, completion: @escaping AsyncImageResult) {
         guard let url = URL(string: url) else { return completion(nil, nil) }
         URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
             DispatchQueue.main.async(execute: {
@@ -33,5 +42,26 @@ public extension UIImage {
                 completion(image, nil)
             })
         }).resume()
+    }
+    
+    public static func async(named name: String, callback: @escaping AsyncImageResult) {
+        { self.loadAsync(named: name) } ~> { callback($0, nil) }
+    }
+}
+
+
+// MARK: - Private Functions
+
+fileprivate extension UIImage {
+    
+    class func loadAsync(named name: String) -> UIImage? {
+        let image = UIImage(named: name)
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        let context = UIGraphicsGetCurrentContext()
+        guard let cgImage = image?.cgImage else { return nil }
+        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
+        context?.draw(cgImage, in: rect)
+        UIGraphicsEndImageContext()
+        return image
     }
 }
