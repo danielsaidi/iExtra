@@ -21,17 +21,4 @@ public extension UIViewController {
     fileprivate var app: UIApplication {
         return UIApplication.shared
     }
-    
-    
-    // MARK: - Functions
-    
-    public func hideStatusBar() {
-        app.setStatusBarHidden(true, with: .none)
-    }
-    
-    public func showStatusBar() {
-        app.setStatusBarHidden(false, with: .none)
-    }
 }
-
-

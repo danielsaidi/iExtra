@@ -121,7 +121,6 @@
 		4527352C1FD674F900418D93 /* UIImage+Resized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734561FD674F800418D93 /* UIImage+Resized.swift */; };
 		4527352D1FD674F900418D93 /* UIImage+Rotated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734571FD674F800418D93 /* UIImage+Rotated.swift */; };
 		4527352E1FD674F900418D93 /* UIImage+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734581FD674F800418D93 /* UIImage+Shadow.swift */; };
-		4527352F1FD674F900418D93 /* UIImage+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734591FD674F800418D93 /* UIImage+Tint.swift */; };
 		452735301FD674F900418D93 /* UIImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527345B1FD674F800418D93 /* UIImageView+Async.swift */; };
 		452735311FD674F900418D93 /* UIImageView+FadeInImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527345C1FD674F800418D93 /* UIImageView+FadeInImage.swift */; };
 		452735321FD674F900418D93 /* UINavigationBar+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527345E1FD674F800418D93 /* UINavigationBar+BackButton.swift */; };
@@ -244,6 +243,7 @@
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
+		4530CC0B2079E87300481162 /* UIImage+Tinted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530CC0A2079E87200481162 /* UIImage+Tinted.swift */; };
 		4535AE3120205E51006E5408 /* UIView+ActionTapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3020205E51006E5408 /* UIView+ActionTapGesture.swift */; };
 		4535AE3320205E60006E5408 /* UIView+ActionLongPressGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
@@ -418,7 +418,6 @@
 		452734561FD674F800418D93 /* UIImage+Resized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Resized.swift"; sourceTree = "<group>"; };
 		452734571FD674F800418D93 /* UIImage+Rotated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Rotated.swift"; sourceTree = "<group>"; };
 		452734581FD674F800418D93 /* UIImage+Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Shadow.swift"; sourceTree = "<group>"; };
-		452734591FD674F800418D93 /* UIImage+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tint.swift"; sourceTree = "<group>"; };
 		4527345B1FD674F800418D93 /* UIImageView+Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Async.swift"; sourceTree = "<group>"; };
 		4527345C1FD674F800418D93 /* UIImageView+FadeInImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+FadeInImage.swift"; sourceTree = "<group>"; };
 		4527345E1FD674F800418D93 /* UINavigationBar+BackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+BackButton.swift"; sourceTree = "<group>"; };
@@ -537,6 +536,7 @@
 		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		452735B61FD67EE400418D93 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		4530CC0A2079E87200481162 /* UIImage+Tinted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tinted.swift"; sourceTree = "<group>"; };
 		4535AE3020205E51006E5408 /* UIView+ActionTapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActionTapGesture.swift"; sourceTree = "<group>"; };
 		4535AE3220205E60006E5408 /* UIView+ActionLongPressGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActionLongPressGesture.swift"; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
@@ -1075,7 +1075,7 @@
 				452734561FD674F800418D93 /* UIImage+Resized.swift */,
 				452734571FD674F800418D93 /* UIImage+Rotated.swift */,
 				452734581FD674F800418D93 /* UIImage+Shadow.swift */,
-				452734591FD674F800418D93 /* UIImage+Tint.swift */,
+				4530CC0A2079E87200481162 /* UIImage+Tinted.swift */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -1700,6 +1700,7 @@
 				452735071FD674F900418D93 /* KeychainBasedDeviceIdentifier.swift in Sources */,
 				452735251FD674F900418D93 /* UIColor+Random.swift in Sources */,
 				452735231FD674F900418D93 /* UICollectionView+DefaultNib.swift in Sources */,
+				4530CC0B2079E87300481162 /* UIImage+Tinted.swift in Sources */,
 				452735511FD674F900418D93 /* UIView+Shake.swift in Sources */,
 				4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */,
 				452734F61FD674F900418D93 /* Array+RandomElement.swift in Sources */,
@@ -1710,7 +1711,6 @@
 				452735421FD674F900418D93 /* UIView+Empty.swift in Sources */,
 				4527350A1FD674F900418D93 /* SKProduct+PriceDescription.swift in Sources */,
 				452735891FD674F900418D93 /* MainBundleImageFileFinder.swift in Sources */,
-				4527352F1FD674F900418D93 /* UIImage+Tint.swift in Sources */,
 				4527358E1FD674F900418D93 /* i18nNotifications.swift in Sources */,
 				4527356E1FD674F900418D93 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
 				4527354D1FD674F900418D93 /* UIView+ScaleIn.swift in Sources */,
