@@ -9,8 +9,6 @@
 /*
  
  This extension will draw an image on top of a colored badge.
- It is used by KeyboardKit to ensure that emoji imagess with
- a transparent background are properly exported.
  
  */
 
