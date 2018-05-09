@@ -12,3 +12,7 @@ bumps, but not on revision bumps.
 The action block-based gesture recognizer view extensions have been renamed. The
 action block now completes with the gesture that triggered the action. This is a
 breaking change.
+
+I have begun adding theme components to the library. For now, this namespace has
+a `Theme` protocol, a themed button class and an extension to reapply the global
+appearance of an app.
