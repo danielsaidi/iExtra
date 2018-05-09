@@ -251,6 +251,7 @@
 		4567E4E620A32B23008B7FE5 /* UIApplication+RefreshApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */; };
 		4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E720A32E94008B7FE5 /* DipIoCContainer.swift */; };
 		4567E4EA20A32EB6008B7FE5 /* SwinjectIoCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */; };
+		4567E4F020A33E97008B7FE5 /* ThemedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
@@ -558,6 +559,7 @@
 		4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+RefreshApperance.swift"; sourceTree = "<group>"; };
 		4567E4E720A32E94008B7FE5 /* DipIoCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DipIoCContainer.swift; sourceTree = "<group>"; };
 		4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectIoCContainer.swift; sourceTree = "<group>"; };
+		4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedLabel.swift; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
@@ -1499,6 +1501,7 @@
 			children = (
 				4567E4D720A328FC008B7FE5 /* Theme.swift */,
 				4567E4D820A328FC008B7FE5 /* ThemedButton.swift */,
+				4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */,
 				4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */,
 			);
 			path = Themes;
@@ -1689,6 +1692,7 @@
 				45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */,
 				452735521FD674F900418D93 /* UIView+SizeToFit.swift in Sources */,
 				452735591FD674F900418D93 /* UIViewController+Nib.swift in Sources */,
+				4567E4F020A33E97008B7FE5 /* ThemedLabel.swift in Sources */,
 				4527351A1FD674F900418D93 /* TravellingMapCamera.swift in Sources */,
 				452735A01FD674F900418D93 /* CLPlacemark+AddressDescription.swift in Sources */,
 				452735441FD674F900418D93 /* UIView+Frame.swift in Sources */,

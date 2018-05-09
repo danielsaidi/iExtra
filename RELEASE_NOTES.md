@@ -7,6 +7,14 @@ Note that iExtra doesn't use semver. Breaking changes can occur on minor version
 bumps, but not on revision bumps.
 
 
+
+## 1.2.1
+
+I have added a new `ThemedLabel` class, which lets you set label appearane fonts
+more easily, instead of having to add a theme font property extension on UILabel.
+
+
+
 ## 1.2.0
 
 I have begun adding theme components to the library. For now, this namespace has
