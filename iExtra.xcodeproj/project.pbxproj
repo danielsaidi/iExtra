@@ -246,6 +246,8 @@
 		4530CC0B2079E87300481162 /* UIImage+Tinted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530CC0A2079E87200481162 /* UIImage+Tinted.swift */; };
 		4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */; };
 		4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */; };
+		4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D720A328FC008B7FE5 /* Theme.swift */; };
+		4567E4E020A328FC008B7FE5 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D820A328FC008B7FE5 /* ThemedButton.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
@@ -548,6 +550,8 @@
 		4567E4D020A32763008B7FE5 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		4567E4D120A3276F008B7FE5 /* Fastfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Fastfile; path = Fastlane/Fastfile; sourceTree = "<group>"; };
 		4567E4D320A32781008B7FE5 /* RELEASE_NOTES.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = RELEASE_NOTES.md; sourceTree = "<group>"; };
+		4567E4D720A328FC008B7FE5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4567E4D820A328FC008B7FE5 /* ThemedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedButton.swift; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
@@ -995,6 +999,7 @@
 				4527348F1FD674F800418D93 /* Modals */,
 				452734941FD674F800418D93 /* Parallax */,
 				452734971FD674F800418D93 /* Search */,
+				4567E4D420A328CC008B7FE5 /* Themes */,
 				4527349C1FD674F800418D93 /* Transitions */,
 				4527349F1FD674F800418D93 /* Views */,
 			);
@@ -1481,6 +1486,15 @@
 			name = "Library Files";
 			sourceTree = "<group>";
 		};
+		4567E4D420A328CC008B7FE5 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				4567E4D720A328FC008B7FE5 /* Theme.swift */,
+				4567E4D820A328FC008B7FE5 /* ThemedButton.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		45CE071A204C03F800A93175 /* UIInputViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1719,6 +1733,7 @@
 				452735991FD674F900418D93 /* KeychainItemAccessibility.swift in Sources */,
 				452735431FD674F900418D93 /* UIView+FadePulse.swift in Sources */,
 				4527353A1FD674F900418D93 /* UITableView+DefaultNib.swift in Sources */,
+				4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */,
 				452735111FD674F900418D93 /* LinearTravellingMapCamera.swift in Sources */,
 				452735131FD674F900418D93 /* MapBadgeView.swift in Sources */,
 				4527354E1FD674F900418D93 /* UIView+ScalePulse.swift in Sources */,
@@ -1819,6 +1834,7 @@
 				4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */,
 				452735241FD674F900418D93 /* UIColor+Hex.swift in Sources */,
 				45CE071C204C040500A93175 /* UIInputViewController+FullAccess.swift in Sources */,
+				4567E4E020A328FC008B7FE5 /* ThemedButton.swift in Sources */,
 				452735481FD674F900418D93 /* UIView+Nib.swift in Sources */,
 				452735121FD674F900418D93 /* MapAnnotation.swift in Sources */,
 				452734F21FD674F900418D93 /* DateSerializerFormat.swift in Sources */,
