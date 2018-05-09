@@ -19,7 +19,9 @@ import UIKit
 
 public extension UIView {
     
-    public func addLongPressGestureRecognizer(action: (() -> Void)?) {
+    typealias LongPressAction = ((UILongPressGestureRecognizer) -> ())
+    
+    public func addLongPressGestureRecognizer(action: LongPressAction?) {
         longPressAction = action
         isUserInteractionEnabled = true
         let selector = #selector(handleLongPress)
@@ -30,13 +32,11 @@ public extension UIView {
 
 fileprivate extension UIView {
     
-    typealias Action = (() -> Void)
-    
     struct Key { static var id = "longPressAction" }
     
-    var longPressAction: Action? {
+    var longPressAction: LongPressAction? {
         get {
-            return objc_getAssociatedObject(self, &Key.id) as? Action
+            return objc_getAssociatedObject(self, &Key.id) as? LongPressAction
         }
         set {
             guard let value = newValue else { return }
@@ -47,6 +47,6 @@ fileprivate extension UIView {
     
     @objc func handleLongPress(sender: UILongPressGestureRecognizer) {
         guard sender.state == .began else { return }
-        longPressAction?()
+        longPressAction?(sender)
     }
 }

@@ -29,9 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let image = UIImage(named: "cover")
         let view = UIImageView(image: image)
-        view.addLongPressGestureRecognizer { print("Long pressed") }
-        view.addTapGestureRecognizer { print("Tapped") }
         self.view.addSubview(view)
     }
 }
-

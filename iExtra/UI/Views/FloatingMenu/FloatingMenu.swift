@@ -6,6 +6,9 @@
 //  Copyright © 2014 Daniel Saidi. All rights reserved.
 //
 
+//  TODO: Convert into a separate project
+//  TODO: FloatingMenu should use items and have a data source for resolving views
+
 import UIKit
 
 open class FloatingMenu: UIView {
