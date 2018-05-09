@@ -24,6 +24,18 @@ class TestContainer: NSObject, IoCContainer {
     func resolve<T, A, B>(arguments arg1: A, _ arg2: B) -> T {
         return "foo" as! T
     }
+    
+    func resolve<T, A, B, C>(arguments arg1: A, _ arg2: B, _ arg3: C) -> T {
+        return "foo" as! T
+    }
+    
+    func resolve<T, A, B, C, D>(arguments arg1: A, _ arg2: B, _ arg3: C, _ arg4: D) -> T {
+        return "foo" as! T
+    }
+    
+    func resolve<T, A, B, C, D, E>(arguments arg1: A, _ arg2: B, _ arg3: C, _ arg4: D, _ arg5: E) -> T {
+        return "foo" as! T
+    }
 }
 
 

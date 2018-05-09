@@ -249,6 +249,8 @@
 		4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D720A328FC008B7FE5 /* Theme.swift */; };
 		4567E4E020A328FC008B7FE5 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D820A328FC008B7FE5 /* ThemedButton.swift */; };
 		4567E4E620A32B23008B7FE5 /* UIApplication+RefreshApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */; };
+		4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E720A32E94008B7FE5 /* DipIoCContainer.swift */; };
+		4567E4EA20A32EB6008B7FE5 /* SwinjectIoCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
@@ -554,6 +556,8 @@
 		4567E4D720A328FC008B7FE5 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4567E4D820A328FC008B7FE5 /* ThemedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemedButton.swift; sourceTree = "<group>"; };
 		4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+RefreshApperance.swift"; sourceTree = "<group>"; };
+		4567E4E720A32E94008B7FE5 /* DipIoCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DipIoCContainer.swift; sourceTree = "<group>"; };
+		4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectIoCContainer.swift; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
@@ -953,6 +957,8 @@
 			children = (
 				452734271FD674F700418D93 /* IoC.swift */,
 				452734281FD674F700418D93 /* IoCContainer.swift */,
+				4567E4E720A32E94008B7FE5 /* DipIoCContainer.swift */,
+				4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */,
 			);
 			path = IoC;
 			sourceTree = "<group>";
@@ -1719,6 +1725,7 @@
 				4527356C1FD674F900418D93 /* FloatingMenu.swift in Sources */,
 				4527350D1FD674F900418D93 /* DelayOperator.swift in Sources */,
 				452735861FD674F900418D93 /* FileSizePresenter.swift in Sources */,
+				4567E4EA20A32EB6008B7FE5 /* SwinjectIoCContainer.swift in Sources */,
 				452735181FD674F900418D93 /* MKMapView+LegalLabel.swift in Sources */,
 				452735281FD674F900418D93 /* UIImage+Color.swift in Sources */,
 				452734FD1FD674F900418D93 /* Numeric+Format.swift in Sources */,
@@ -1828,6 +1835,7 @@
 				4527354C1FD674F900418D93 /* UIView+Scale.swift in Sources */,
 				4527354B1FD674F900418D93 /* UIView+Round.swift in Sources */,
 				452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */,
+				4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */,
 				452735011FD674F900418D93 /* String+Base64.swift in Sources */,
 				452735881FD674F900418D93 /* MainBundleFileFinder.swift in Sources */,
 				4527352A1FD674F900418D93 /* UIImage+Crop.swift in Sources */,
