@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-10-24.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -12,10 +12,9 @@ open class RemoteNotificationServiceDefault: NSObject, RemoteNotificationService
     
     open func alert(notification: [AnyHashable: Any]) {
         let app = UIApplication.shared
-        let aps = notification["aps"] as! [AnyHashable: Any]
+        guard let aps = notification["aps"] as? [AnyHashable: Any] else { return }
         let text = aps["alert"] as? String
-        if (app.applicationState == .active && text != nil)
-        {
+        if app.applicationState == .active && text != nil {
             let alert: UIAlertController = UIAlertController(title: nil, message: text, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             app.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-18.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -12,10 +12,10 @@ import iExtra
 import UIKit
 
 
-fileprivate class RegisterTestCell: UICollectionViewCell { }
-fileprivate class RegisterTestCellAlternate: UICollectionViewCell { }
+private class RegisterTestCell: UICollectionViewCell { }
+private class RegisterTestCellAlternate: UICollectionViewCell { }
 
-fileprivate class RegisterTestView: UICollectionView {
+private class RegisterTestView: UICollectionView {
     
     var executedWithIdentifier: String?
     var executedWithIndexPath: IndexPath?
@@ -63,8 +63,9 @@ class UICollectionView_DefaultNibTests: QuickSpec {
                 
                 it("uses default reuse identifier and path") {
                     let path = IndexPath(row: 1, section: 2)
-                    let _: RegisterTestCell = view.dequeueDefaultCell(at: path)
+                    let result: RegisterTestCell = view.dequeueDefaultCell(at: path)
                     let expectedId = RegisterTestCell.defaultReuseIdentifier
+                    expect(result).toNot(beNil())
                     expect(view.executedWithIndexPath).to(equal(path))
                     expect(view.executedWithIdentifier).to(equal(expectedId))
                 }
@@ -78,4 +79,3 @@ class UICollectionView_DefaultNibTests: QuickSpec {
         }
     }
 }
-

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-22.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -22,7 +22,7 @@ public extension UIColor {
     
     public convenience init(hexString hex: String) {
         var hex = hex
-        if (hex.hasPrefix("#")) {
+        if hex.hasPrefix("#") {
             let index = hex.index(hex.startIndex, offsetBy: 1)
             hex = String(hex.suffix(from: index))
         }
@@ -35,7 +35,7 @@ public extension UIColor {
         let scanner = Scanner(string: hex)
         var hexValue: CUnsignedLongLong = 0
         if scanner.scanHexInt64(&hexValue) {
-            switch (hex.count) {
+            switch hex.count {
             case 3:
                 red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
                 green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0

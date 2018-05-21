@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-20.
-//  Copyright © 2016 iExtra. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
     
     public func createImageCopy() -> UIImage {
-        UIGraphicsBeginImageContext(frame.size);
+        UIGraphicsBeginImageContext(frame.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
@@ -28,7 +28,7 @@ public extension UIView {
         filter?.setValue(color0, forKey: "inputColor0")
         filter?.setValue(color1, forKey: "inputColor1")
         filter?.setValue(ciInput, forKey: kCIInputImageKey)
-        let outImage = filter?.value(forKey: kCIOutputImageKey) as! CIImage
+        let outImage = filter?.value(forKey: kCIOutputImageKey) as? CIImage ?? CIImage()
         let result = ciContext.createCGImage(outImage, from: ciInput.extent)
         return UIImage(cgImage: result!)
     }

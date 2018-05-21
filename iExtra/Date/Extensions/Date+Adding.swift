@@ -3,10 +3,10 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-05-15.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
-//  TODO: Test
+//  TODO: Write unit tests
 
 import Foundation
 

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2014-12-11.
-//  Copyright © 2014 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 //  TODO: Convert into a separate project
@@ -27,7 +27,7 @@ open class FloatingMenu: UIView {
     
     open var menuPresenter = SlowPulsingFloatingMenuPresenter()
     open var backgroundPresenter = RadialFloatingMenuBackgroundPresenter()
-    open var buttonPresenter = LinearFloatingSubMenuPresenter(direction:.right)
+    open var buttonPresenter = LinearFloatingSubMenuPresenter(direction: .right)
     
     
     // MARK: - Properties
@@ -46,7 +46,7 @@ open class FloatingMenu: UIView {
     // MARK: - Custom hit test
     
     open override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        var hitViews = Array<UIView>()
+        var hitViews = [UIView]()
         hitViews.append(primaryButton)
         for submenu in submenus {
             hitViews.append(contentsOf: submenu.buttons as [UIView])
@@ -97,12 +97,12 @@ open class FloatingMenu: UIView {
     }
     
     open func toggle() {
-        isOpen ? close() : open()
+        isOpen ? close(): open()
     }
 }
 
 
-//MARK: - Selectors
+// MARK: - Selectors
 
 @objc extension FloatingMenu {
     
@@ -116,7 +116,7 @@ open class FloatingMenu: UIView {
 }
 
 
-//MARK: - Setup
+// MARK: - Setup
 
 fileprivate extension FloatingMenu {
     
@@ -131,11 +131,12 @@ fileprivate extension FloatingMenu {
     }
     
     func setupSubmenus(_ submenus: [FloatingSubmenu]) {
+        guard let button = primaryButton else { return }
         self.submenus = submenus
-        var lastView = primaryButton
+        var lastView = button
         for submenu in submenus {
             for button in submenu.buttons {
-                insertSubview(button, belowSubview:lastView!)
+                insertSubview(button, belowSubview: lastView)
                 let action = #selector(submenuButtonTapped)
                 button.center = primaryButton.center
                 button.addTarget(self, action: action, for: .touchUpInside)
@@ -155,7 +156,7 @@ fileprivate extension FloatingMenu {
 }
 
 
-//MARK: - Private Functions
+// MARK: - Private Functions
 
 fileprivate extension FloatingMenu {
     
@@ -165,4 +166,3 @@ fileprivate extension FloatingMenu {
         }
     }
 }
-

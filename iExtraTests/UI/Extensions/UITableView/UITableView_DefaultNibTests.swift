@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-18.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -11,13 +11,13 @@ import Nimble
 import iExtra
 import UIKit
 
-fileprivate class RegisterTestCell: UITableViewCell { }
-fileprivate class RegisterTestCellAlternate: UITableViewCell { }
+private class RegisterTestCell: UITableViewCell { }
+private class RegisterTestCellAlternate: UITableViewCell { }
 
-fileprivate class RegisterTestView: UITableViewHeaderFooterView { }
-fileprivate class RegisterTestViewAlternate: UITableViewHeaderFooterView { }
+private class RegisterTestView: UITableViewHeaderFooterView { }
+private class RegisterTestViewAlternate: UITableViewHeaderFooterView { }
 
-fileprivate class RegisterTestTable: UITableView {
+private class RegisterTestTable: UITableView {
     
     var executedWithIdentifier: String?
     var executedWithIndexPath: IndexPath?
@@ -136,4 +136,3 @@ class UITableView_DefaultNibTests: QuickSpec {
         }
     }
 }
-

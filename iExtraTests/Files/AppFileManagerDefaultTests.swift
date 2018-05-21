@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -22,7 +22,7 @@ class AppFileManagerDefaultTests: QuickSpec {
             let fileNames = ["file1", "file2"]
             
             func createFiles() {
-                fileNames.forEach { let _ = manager.createFile(at: url(for: $0), contents: nil) }
+                fileNames.forEach { _ = manager.createFile(at: url(for: $0), contents: nil) }
             }
             
             func createFile(named name: String, contents: Data?) -> Bool {
@@ -34,7 +34,7 @@ class AppFileManagerDefaultTests: QuickSpec {
             }
             
             afterEach {
-                fileNames.forEach { let _ = manager.removeFile(at: url(for: $0)) }
+                fileNames.forEach { _ = manager.removeFile(at: url(for: $0)) }
             }
             
             
@@ -142,7 +142,7 @@ class AppFileManagerDefaultTests: QuickSpec {
                 
                 it("returns non-zero size if empty file exists") {
                     let content = "content".data(using: .utf8)
-                    let _ = createFile(named: "file1", contents: content)
+                    _ = createFile(named: "file1", contents: content)
                     let size = manager.getSizeOfFile(at: url(for: "file1"))
                     expect(size).to(equal(7))
                 }
@@ -165,4 +165,3 @@ class AppFileManagerDefaultTests: QuickSpec {
         }
     }
 }
-

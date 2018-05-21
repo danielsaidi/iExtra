@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -54,13 +54,13 @@ class FilteredDirectoryFileManagerTests: QuickSpec {
 
 
 
-fileprivate class TestFileManager: AppFileManager {
+private class TestFileManager: AppFileManager {
     
     var contentsOfDirectory = [URL]()
     
     func createFile(at url: URL, contents: Data?) -> Bool { return true }
     func fileExists(at url: URL) -> Bool { return false }
-    func getAttributesForFile(at url: URL) -> [FileAttributeKey : Any]? { return nil }
+    func getAttributesForFile(at url: URL) -> [FileAttributeKey: Any]? { return nil }
     
     func getContentsOfDirectory(at url: URL) -> [URL] {
         return contentsOfDirectory

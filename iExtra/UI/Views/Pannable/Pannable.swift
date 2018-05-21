@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -84,9 +84,9 @@ extension Pannable {
     }
     
     func setupPannable(with action: Selector) {
-        guard let _self = self as? UIView else { return }
-        _self.isUserInteractionEnabled = true
+        guard let view = self as? UIView else { return }
+        view.isUserInteractionEnabled = true
         let pan = UIPanGestureRecognizer(target: self, action: action)
-        _self.addGestureRecognizer(pan)
+        view.addGestureRecognizer(pan)
     }
 }

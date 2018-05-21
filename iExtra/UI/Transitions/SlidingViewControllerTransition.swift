@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-08-21.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -40,8 +40,8 @@ open class SlidingViewControllerTransition: NSObject, UIViewControllerAnimatedTr
         guard let fromView = from?.view, let toView = to?.view else { return }
         
         let container = context.containerView
-        let xoffset = CGFloat(isForward ? vector.x : -vector.x)
-        let yoffset = CGFloat(isForward ? vector.y : -vector.y)
+        let xoffset = CGFloat(isForward ? vector.x: -vector.x)
+        let yoffset = CGFloat(isForward ? vector.y: -vector.y)
         
         toView.alpha = 0.0
         toView.frame = toView.frame.offsetBy(dx: xoffset, dy: yoffset)

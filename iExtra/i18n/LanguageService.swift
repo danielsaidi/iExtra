@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-06.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -11,7 +11,7 @@ import Foundation
 
 public protocol LanguageServiceDelegate: class {
     
-    func languageService(_ service: LanguageService, didSetLocale locale:String)
+    func languageService(_ service: LanguageService, didSetLocale locale: String)
 }
 
 

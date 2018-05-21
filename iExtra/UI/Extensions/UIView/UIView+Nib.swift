@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-09.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,7 @@ import UIKit
 public extension UIView {
     
     
-    // MARK: - Static Properties
+    // MARK: - Properties
     
     public static var defaultNib: UINib {
         return UINib(nibName: defaultNibName, bundle: nil)
@@ -23,16 +23,21 @@ public extension UIView {
     }
     
     
-    // MARK: - Static Functions
+    // MARK: - Functions
     
-    public static func initWithDefaultNib(owner: Any) -> Self {
-        return initWithDefaultNibTyped(owner: owner)
+    public static func initWithDefaultNib(owner: Any?) -> Self {
+        return initWithDefaultNibTyped(owner: owner, nibName: defaultNibName)
     }
     
-    public static func initWithDefaultNibTyped<T>(owner: Any) -> T {
+    public static func initWithDefaultNib(owner: Any?, fileNameSuffix: String) -> Self {
+        let nib = "\(defaultNibName)\(fileNameSuffix)"
+        return initWithDefaultNibTyped(owner: owner, nibName: nib)
+    }
+    
+    public static func initWithDefaultNibTyped<T>(owner: Any?, nibName: String) -> T {
         let bundle = Bundle.main
-        let nib = defaultNibName
-        let nibs = bundle.loadNibNamed(nib, owner: owner, options: nil)
-        return nibs?[0] as! T
+        let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)
+        guard let nib = nibs?[0] as? T else { fatalError("initWithDefaultNibTyped: Invalid class") }
+        return nib
     }
 }

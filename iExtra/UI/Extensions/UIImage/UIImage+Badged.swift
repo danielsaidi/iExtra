@@ -36,4 +36,3 @@ public extension UIImage {
         return image
     }
 }
-

@@ -3,16 +3,14 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-10-18.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
  
- This search controller is displayed in the navigation
- bar of another vc.
- 
- When using this class in your apps, do not affect the
- default behavior. Instead, override updateSearchResults.
+ This search controller is displayed in the navigation bar.
+ When using it, don't affect the default behavior. Instead,
+ override `updateSearchResults`.
  
  */
 
@@ -136,8 +134,8 @@ extension NavigationSearchController: UISearchControllerDelegate {
         vc?.navigationItem.rightBarButtonItem = vcRightButton
         vc?.viewWillAppear(true)
         let fadeOut = { searchController.view.alpha = 0 }
-        UIView.animate(withDuration: 0.5, animations: fadeOut) {
-            finished in searchController.view.alpha = 1
+        UIView.animate(withDuration: 0.5, animations: fadeOut) { _ in
+            searchController.view.alpha = 1
         }
     }
 }

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-01.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import CoreLocation
@@ -21,7 +21,7 @@ public class MKAnnotationGeocoderDefault: NSObject, MKAnnotationGeocoder {
     }
     
     public func reverseGeocodeAddressSubtitle(for annotation: MKAnnotation) {
-        reverseGeocode(annotation) { (placemark, error) in
+        reverseGeocode(annotation) { (placemark, _) in
             guard let placemark = placemark else { return }
             if let userAnnotation = annotation as? MKUserLocation {
                 userAnnotation.willChangeValue(forKey: "subtitle")

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-18.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -17,7 +17,7 @@ public final class ExternalMapServicePicker: NSObject {
     public static var cancelButtonTitle = "Cancel"
     public static var googleButtonTitle = "Google Maps"
     public static var title = "Which app would you like to use?"
-    public static var message: String? = nil
+    public static var message: String?
     
     
     // MARK: Public functions
@@ -26,25 +26,25 @@ public final class ExternalMapServicePicker: NSObject {
         
         let title = ExternalMapServicePicker.title
         let message = ExternalMapServicePicker.message
-        let style: UIAlertControllerStyle = from == nil ? .alert : .actionSheet
+        let style: UIAlertControllerStyle = from == nil ? .alert: .actionSheet
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         alert.sourceView = from
         
         let appleTitle = ExternalMapServicePicker.appleButtonTitle
-        let appleAction = UIAlertAction(title: appleTitle, style: .default) { action in
+        let appleAction = UIAlertAction(title: appleTitle, style: .default) { _ in
             completion(AppleMapsService())
         }
         alert.addAction(appleAction)
         
         let googleTitle = ExternalMapServicePicker.googleButtonTitle
-        let googleAction = UIAlertAction(title: googleTitle, style: .default) { action in
+        let googleAction = UIAlertAction(title: googleTitle, style: .default) { _ in
             completion(GoogleMapsService())
         }
         alert.addAction(googleAction)
         
         let cancelTitle = ExternalMapServicePicker.cancelButtonTitle
-        let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel) { action in
+        let cancelAction = UIAlertAction(title: cancelTitle, style: .cancel) { _ in
             completion(nil)
         }
         alert.addAction(cancelAction)

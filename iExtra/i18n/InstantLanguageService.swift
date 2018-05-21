@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-03-06.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -41,7 +41,7 @@ open class InstantLanguageService: NSObject, LanguageService {
     
     fileprivate let localeTranslationKey: String
     
-    fileprivate var notificationCenter : NotificationCenter {
+    fileprivate var notificationCenter: NotificationCenter {
         return NotificationCenter.default
     }
     

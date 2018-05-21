@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-27.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -32,16 +32,16 @@ public extension UIImage {
     
     public static func async(from url: String, completion: @escaping AsyncImageResult) {
         guard let url = URL(string: url) else { return completion(nil, nil) }
-        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in
-            DispatchQueue.main.async(execute: {
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            DispatchQueue.main.async {
                 if let error = error { return completion(nil, error ) }
                 guard
                     let data = data,
                     let image = UIImage(data: data)
                     else { return completion(nil, nil) }
                 completion(image, nil)
-            })
-        }).resume()
+            }
+        }.resume()
     }
     
     public static func async(named name: String, callback: @escaping AsyncImageResult) {

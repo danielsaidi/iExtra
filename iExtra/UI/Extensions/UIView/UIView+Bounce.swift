@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-25.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ public extension UIView {
         
         var transforms = [NSValue]()
         for index in 1...Int(kNumFactors) {
-            let offset  = CGFloat(factors[index-1]) / CGFloat(kFactorsMaxValue) * midHeight;
+            let offset  = CGFloat(factors[index-1]) / CGFloat(kFactorsMaxValue) * midHeight
             let transform = CATransform3DMakeTranslation(0.0, -offset, 0.0)
             transforms.append(NSValue(caTransform3D: transform))
         }

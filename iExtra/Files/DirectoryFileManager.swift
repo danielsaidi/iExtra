@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 
 import Foundation
 
@@ -13,7 +13,7 @@ public protocol DirectoryFileManager: class {
     
     func createFile(named name: String, contents: Data?) -> Bool
     func fileExists(named name: String) -> Bool
-    func getAttributesForFile(named name: String) -> [FileAttributeKey : Any]?
+    func getAttributesForFile(named name: String) -> [FileAttributeKey: Any]?
     func getExistingFileNames(in collection: [String]) -> [String]
     func getFileNames() -> [String]
     func getFileNames(matching fileNamePatterns: [String]) -> [String]

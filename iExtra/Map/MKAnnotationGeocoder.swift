@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-02-01.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import CoreLocation
@@ -15,5 +15,5 @@ public protocol MKAnnotationGeocoder {
     
     func reverseGeocode(_ annotation: MKAnnotation, completion: @escaping ReverseGeocodeResult)
     
-    func reverseGeocodeAddressSubtitle(for annotation:MKAnnotation)
+    func reverseGeocodeAddressSubtitle(for annotation: MKAnnotation)
 }

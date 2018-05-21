@@ -20,8 +20,8 @@ public extension UIInputViewController {
     
     public var hasFullLegacyAccess: Bool {
         if #available(iOS 11.0, *) { return hasFullAccess }
-        if #available(iOS 10.0, *) { return hasFullAccess_iOS10 }
-        return hasFullAccess_iOS9
+        if #available(iOS 10.0, *) { return hasFullAccessiOS10 }
+        return hasFullAccessiOS9
     }
 }
 
@@ -30,13 +30,13 @@ public extension UIInputViewController {
 
 fileprivate extension UIInputViewController {
     
-    var hasFullAccess_iOS9: Bool {
+    var hasFullAccessiOS9: Bool {
         var pasteboard: UIPasteboard?
         pasteboard = UIPasteboard.general
         return pasteboard != nil
     }
     
-    var hasFullAccess_iOS10: Bool {
+    var hasFullAccessiOS10: Bool {
         if #available(iOS 10.0, *) {
             let pasteboard = UIPasteboard.general
             if pasteboard.hasURLs || pasteboard.hasColors || pasteboard.hasStrings || pasteboard.hasImages {
@@ -50,4 +50,3 @@ fileprivate extension UIInputViewController {
         return false
     }
 }
-

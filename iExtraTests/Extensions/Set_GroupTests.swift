@@ -3,14 +3,14 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-05.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
 import Nimble
 import iExtra
 
-fileprivate class TestGroupClass: NSObject {
+private class TestGroupClass: NSObject {
     
     init(name: String, age: Int) {
         self.name = name

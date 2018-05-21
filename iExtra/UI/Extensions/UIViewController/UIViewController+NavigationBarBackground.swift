@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-22.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -58,4 +58,3 @@ fileprivate extension UIViewController {
         return adjusted(view.viewWithTag(tag))
     }    
 }
-

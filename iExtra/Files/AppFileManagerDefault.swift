@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -28,7 +28,7 @@ open class AppFileManagerDefault: NSObject, AppFileManager {
         return manager.fileExists(atPath: url.path)
     }
     
-    open func getAttributesForFile(at url: URL) -> [FileAttributeKey : Any]? {
+    open func getAttributesForFile(at url: URL) -> [FileAttributeKey: Any]? {
         do {
             return try manager.attributesOfItem(atPath: url.path)
         } catch {

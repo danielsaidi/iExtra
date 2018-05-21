@@ -2,15 +2,15 @@
 //  Sequence_BatchTests.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2017-05-10.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2017-05-10.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
 import Nimble
 import iExtra
 
-fileprivate class TestSequenceItem: NSObject {
+private class TestSequenceItem: NSObject {
     
     init(_ name: String) {
         self.name = name

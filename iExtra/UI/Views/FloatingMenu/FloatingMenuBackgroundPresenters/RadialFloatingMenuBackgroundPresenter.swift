@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2014-12-11.
-//  Copyright © 2014 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -19,7 +19,7 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
     
     // MARK: - Properties
     
-    open var backgroundColor = UIColor(red:0, green:0, blue:0, alpha:0.7)
+    open var backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.7)
     open var presentationDuration = 1.0
     
     fileprivate var backgroundView: UIView?
@@ -34,11 +34,8 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
         UIView.animate(withDuration: presentationDuration / 5,
             delay: 0.0,
             options: .curveEaseOut,
-            animations: {
-                backgroundView.alpha = 0.0
-            }, completion: { finished in
-                backgroundView.removeFromSuperview()
-            }
+            animations: { backgroundView.alpha = 0.0 },
+            completion: { _ in backgroundView.removeFromSuperview() }
         )
     }
     
@@ -48,13 +45,12 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
 
         UIView.animate(withDuration: presentationDuration,
             delay: 0.0,
-            options:.curveEaseOut,
+            options: .curveEaseOut,
             animations: {
                 let factor = self.scaleFactor
                 let transform = CGAffineTransform(scaleX: factor, y: factor)
                 backgroundView.transform = transform
-            }, completion: { finished in
-            }
+            }, completion: { _ in }
         )
     }
 }

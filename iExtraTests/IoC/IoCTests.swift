@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-17.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -14,27 +14,33 @@ import iExtra
 class TestContainer: NSObject, IoCContainer {
     
     func resolve<T>() -> T {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
     
     func resolve<T, A>(arguments arg1: A) -> T  {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
     
     func resolve<T, A, B>(arguments arg1: A, _ arg2: B) -> T {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
     
     func resolve<T, A, B, C>(arguments arg1: A, _ arg2: B, _ arg3: C) -> T {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
     
     func resolve<T, A, B, C, D>(arguments arg1: A, _ arg2: B, _ arg3: C, _ arg4: D) -> T {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
     
     func resolve<T, A, B, C, D, E>(arguments arg1: A, _ arg2: B, _ arg3: C, _ arg4: D, _ arg5: E) -> T {
-        return "foo" as! T
+        guard let result = "foo" as? T else { fatalError() }
+        return result
     }
 }
 

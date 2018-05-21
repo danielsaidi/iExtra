@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-05-22.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -18,8 +18,8 @@ open class FloatingSubmenu: UIView {
     
     // MARK: - Init
     
-    public init(buttons:[UIButton], presenter: FloatingSubmenuPresenter) {
-        super.init(frame:CGRect.zero)
+    public init(buttons: [UIButton], presenter: FloatingSubmenuPresenter) {
+        super.init(frame: CGRect.zero)
         self.buttons = buttons
         self.presenter = presenter
     }
@@ -61,7 +61,7 @@ fileprivate extension FloatingSubmenu {
         
         let presentForOpen = menu.isOpen && displayMode == .visibleWhenMainMenuIsOpen
         let presentForClosed = menu.isClosed && displayMode == .visibleWhenMainMenuIsClosed
-        if (presentForOpen || presentForClosed) {
+        if presentForOpen || presentForClosed {
             presenter.present(submenu: self, in: menu)
         } else {
             presenter.dismiss(submenu: self, in: menu)

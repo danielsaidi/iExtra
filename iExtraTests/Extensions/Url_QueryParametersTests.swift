@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -152,31 +152,31 @@ class Url_QueryParametersTests: QuickSpec {
                 
                 it("adds first parameters") {
                     let url = URL(string: "http://foo.bar/home")!
-                    let result = url.setQueryParameters(["p1":"v1"])!.absoluteString
+                    let result = url.setQueryParameters(["p1": "v1"])!.absoluteString
                     expect(result).to(equal("http://foo.bar/home?p1=v1"))
                 }
                 
                 it("adds new parameters") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
-                    let result = url.setQueryParameters(["p1":"v1"])!.absoluteString
+                    let result = url.setQueryParameters(["p1": "v1"])!.absoluteString
                     expect(result).to(equal("http://foo.bar/home?p1=v1&foo=bar"))
                 }
                 
                 it("overwrites existing parameter") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
-                    let result = url.setQueryParameters(["foo":"v1"])!.absoluteString
+                    let result = url.setQueryParameters(["foo": "v1"])!.absoluteString
                     expect(result).to(equal("http://foo.bar/home?foo=v1"))
                 }
                 
                 it("overwrites existing parameters") {
                     let url = URL(string: "http://foo.bar/home?p1=v1&p2=v2")!
-                    let result = url.setQueryParameters(["p1":"v3","p2":"v4"])!.absoluteString
+                    let result = url.setQueryParameters(["p1": "v3", "p2": "v4"])!.absoluteString
                     expect(result).to(equal("http://foo.bar/home?p1=v3&p2=v4"))
                 }
                 
                 it("encodes parameter values") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
-                    let result = url.setQueryParameters(["foo":"åä& ö"])!.absoluteString
+                    let result = url.setQueryParameters(["foo": "åä& ö"])!.absoluteString
                     expect(result).to(equal("http://foo.bar/home?foo=%C3%A5%C3%A4%26%20%C3%B6"))
                 }
             }

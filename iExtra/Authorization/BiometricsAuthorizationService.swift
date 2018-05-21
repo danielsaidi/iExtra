@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-18.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
     
     fileprivate var policy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
     
-    fileprivate static var cache = [String : Bool]()
+    fileprivate static var cache = [String: Bool]()
     
     
     // MARK: Public functions
@@ -25,7 +25,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
         guard canAuthorize(action: action) else { return completion(false) }
         guard !isAuthorized(for: action) else { return completion(true) }
         
-        LAContext().evaluatePolicy(policy, localizedReason: reason, reply: { (success, error) in
+        LAContext().evaluatePolicy(policy, localizedReason: reason, reply: { (success, _) in
             self.setIsAuthorized(success, forAction: action)
             DispatchQueue.main.async(execute: { completion(success) })
         })

@@ -3,7 +3,7 @@
 //  Appamini
 //
 //  Created by Daniel Saidi on 2016-03-14.
-//  Copyright © 2016 Appamini. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,7 @@ public extension UIView {
         var closest: UIView?
         for view in views {
             let viewDistance = self.distance(to: view)
-            if (viewDistance < distance && view != self) {
+            if viewDistance < distance && view != self {
                 distance = viewDistance
                 closest = view
             }

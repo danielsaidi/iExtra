@@ -3,12 +3,13 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2014-12-11.
-//  Copyright © 2014 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
-    This floating sub menu presenter presents a sub menu
-    by expanding it in any linear direction.
+ This presenter presents submenus by expanding in any linear
+ direction.
+ 
 */
 
 import UIKit
@@ -45,11 +46,10 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
             removeLabelsFromSuperview(button.subviews)
             
             let point = getDismissPoint(forButton: button, inMenu: menu)
-            let anim = { button.center = point }
-            UIView.animate(withDuration: presentationDuration, animations: anim, completion: {
-                finished in
+            let animations = { button.center = point }
+            UIView.animate(withDuration: presentationDuration, animations: animations) { _ in
                 button.isHidden = true
-            }) 
+            }
         }
     }
     
@@ -85,19 +85,17 @@ fileprivate extension LinearFloatingSubMenuPresenter {
         animation.isRemovedOnCompletion = true
         
         switch direction {
-        case .up: fallthrough
-        case .down:
+        case .up, .down:
             let y = button.center.y
             animation.keyPath = "position.y"
             animation.values = [y, y + 1.3 * offset, y + 1.0 * offset]
-            button.center = CGPoint(x:center.x, y:center.y + offset)
+            button.center = CGPoint(x: center.x, y: center.y + offset)
             button.layer.add(animation, forKey: "position.y")
-        case .left: fallthrough
-        case .right:
+        case .left, .right:
             let x = button.center.x
             animation.keyPath = "position.x"
             animation.values = [x, x + 1.3 * offset, x + 1.0 * offset]
-            button.center = CGPoint(x:center.x + offset, y:center.y)
+            button.center = CGPoint(x: center.x + offset, y: center.y)
             button.layer.add(animation, forKey: "position.x")
         }
         
@@ -108,18 +106,14 @@ fileprivate extension LinearFloatingSubMenuPresenter {
     
     func getDismissPoint(forButton button: UIButton, inMenu menu: FloatingMenu) -> CGPoint {
         switch direction {
-        case .up: fallthrough
-        case .down:
-            return CGPoint(x:button.center.x, y:menu.primaryButton.center.y)
-        case .left: fallthrough
-        case .right:
-            return CGPoint(x:menu.primaryButton.center.x, y:button.center.y)
+        case .up, .down: return CGPoint(x: button.center.x, y: menu.primaryButton.center.y)
+        case .left, .right: return CGPoint(x: menu.primaryButton.center.x, y: button.center.y)
         }
     }
     
     func getPresentationOffsets(forButtons buttons: [UIButton], inMenu menu: FloatingMenu) -> [CGFloat] {
         var multiplier = CGFloat(offsetMultiplier)
-        if (direction == .up || direction == .left) {
+        if direction == .up || direction == .left {
             multiplier = -multiplier
         }
         
@@ -135,8 +129,7 @@ fileprivate extension LinearFloatingSubMenuPresenter {
     
     func presentLabel(forButton button: UIButton) {
         switch direction {
-        case .up: fallthrough
-        case .down:
+        case .up, .down:
             let buttonSize = button.frame.size
             let labelSize = CGSize(width: 100, height: buttonSize.height)
             let label = UILabel()
@@ -148,15 +141,13 @@ fileprivate extension LinearFloatingSubMenuPresenter {
             label.frame = CGRect(x: 1.35 * buttonSize.width, y: 0, width: labelSize.width, height: labelSize.height)
             applyShadow(on: label, from: button)
             button.addSubview(label)
-            
-        case .left: fallthrough
-        case .right: break
+        case .left, .right: break
         }
     }
     
     func removeLabelsFromSuperview(_ subviews: [UIView]) {
         for view in subviews {
-            if (view.isKind(of: UILabel.self)) {
+            if view.isKind(of: UILabel.self) {
                 view.removeFromSuperview()
             }
         }

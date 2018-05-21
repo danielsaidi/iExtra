@@ -28,17 +28,17 @@
 import Foundation
 
 
-private let SecMatchLimit: String! = kSecMatchLimit as String
-private let SecReturnData: String! = kSecReturnData as String
-private let SecReturnPersistentRef: String! = kSecReturnPersistentRef as String
-private let SecValueData: String! = kSecValueData as String
-private let SecAttrAccessible: String! = kSecAttrAccessible as String
-private let SecClass: String! = kSecClass as String
-private let SecAttrService: String! = kSecAttrService as String
-private let SecAttrGeneric: String! = kSecAttrGeneric as String
-private let SecAttrAccount: String! = kSecAttrAccount as String
-private let SecAttrAccessGroup: String! = kSecAttrAccessGroup as String
-private let SecReturnAttributes: String = kSecReturnAttributes as String
+private let paramSecMatchLimit = kSecMatchLimit as String
+private let paramSecReturnData = kSecReturnData as String
+private let paramSecReturnPersistentRef = kSecReturnPersistentRef as String
+private let paramSecValueData = kSecValueData as String
+private let paramSecAttrAccessible = kSecAttrAccessible as String
+private let paramSecClass = kSecClass as String
+private let paramSecAttrService = kSecAttrService as String
+private let paramSecAttrGeneric = kSecAttrGeneric as String
+private let paramSecAttrAccount = kSecAttrAccount as String
+private let paramSecAttrAccessGroup = kSecAttrAccessGroup as String
+private let paramSecReturnAttributes = kSecReturnAttributes as String
 
 
 /// KeychainWrapper is a class to help make Keychain access in Swift more straightforward. It is designed to make accessing the Keychain services more like using NSUserDefaults, which is much more familiar to people.
@@ -73,7 +73,7 @@ open class KeychainWrapper {
         self.accessGroup = accessGroup
     }
     
-    // MARK:- Public Methods
+    // MARK: - Public Methods
     
     /// Checks if keychain data exists for a specified key.
     ///
@@ -81,11 +81,7 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility to use when retrieving the keychain item.
     /// - returns: True if a value exists for the key. False otherwise.
     open func hasValue(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        if let _ = data(forKey: key, withAccessibility: accessibility) {
-            return true
-        } else {
-            return false
-        }
+        return data(forKey: key, withAccessibility: accessibility) != nil
     }
     
     open func accessibilityOfKey(_ key: String) -> KeychainItemAccessibility? {
@@ -93,13 +89,13 @@ open class KeychainWrapper {
         var result: AnyObject?
         
         // Remove accessibility attribute
-        keychainQueryDictionary.removeValue(forKey: SecAttrAccessible)
+        keychainQueryDictionary.removeValue(forKey: paramSecAttrAccessible)
         
         // Limit search results to one
-        keychainQueryDictionary[SecMatchLimit] = kSecMatchLimitOne
+        keychainQueryDictionary[paramSecMatchLimit] = kSecMatchLimitOne
         
         // Specify we want SecAttrAccessible returned
-        keychainQueryDictionary[SecReturnAttributes] = kCFBooleanTrue
+        keychainQueryDictionary[paramSecReturnAttributes] = kCFBooleanTrue
         
         // Search
         let status = withUnsafeMutablePointer(to: &result) {
@@ -107,8 +103,8 @@ open class KeychainWrapper {
         }
         
         if status == noErr {
-            if let resultsDictionary = result as? [String:AnyObject], let accessibilityAttrValue = resultsDictionary[SecAttrAccessible] as? String {
-                return KeychainItemAccessibility.accessibilityForAttributeValue(accessibilityAttrValue as CFString)
+            if let dict = result as? [String: AnyObject], let val = dict[paramSecAttrAccessible] as? String {
+                return KeychainItemAccessibility.accessibilityForAttributeValue(val as CFString)
             }
         }
         
@@ -118,34 +114,22 @@ open class KeychainWrapper {
     // MARK: Public Getters
     
     open func integer(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Int? {
-        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else {
-            return nil
-        }
-        
+        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else { return nil }
         return numberValue.intValue
     }
     
     open func float(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Float? {
-        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else {
-            return nil
-        }
-        
+        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else { return nil }
         return numberValue.floatValue
     }
     
     open func double(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Double? {
-        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else {
-            return nil
-        }
-        
+        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else { return nil }
         return numberValue.doubleValue
     }
     
     open func bool(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool? {
-        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else {
-            return nil
-        }
-        
+        guard let numberValue = object(forKey: key, withAccessibility: accessibility) as? NSNumber else { return nil }
         return numberValue.boolValue
     }
     
@@ -155,10 +139,7 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility to use when retrieving the keychain item.
     /// - returns: The String associated with the key if it exists. If no data exists, or the data found cannot be encoded as a string, returns nil.
     open func string(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> String? {
-        guard let keychainData = data(forKey: key, withAccessibility: accessibility) else {
-            return nil
-        }
-        
+        guard let keychainData = data(forKey: key, withAccessibility: accessibility) else { return nil }
         return String(data: keychainData, encoding: String.Encoding.utf8) as String?
     }
     
@@ -168,10 +149,7 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility to use when retrieving the keychain item.
     /// - returns: The decoded object associated with the key if it exists. If no data exists, or the data found cannot be decoded, returns nil.
     open func object(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> NSCoding? {
-        guard let keychainData = data(forKey: key, withAccessibility: accessibility) else {
-            return nil
-        }
-        
+        guard let keychainData = data(forKey: key, withAccessibility: accessibility) else { return nil }
         return NSKeyedUnarchiver.unarchiveObject(with: keychainData) as? NSCoding
     }
     
@@ -186,17 +164,17 @@ open class KeychainWrapper {
         var result: AnyObject?
         
         // Limit search results to one
-        keychainQueryDictionary[SecMatchLimit] = kSecMatchLimitOne
+        keychainQueryDictionary[paramSecMatchLimit] = kSecMatchLimitOne
         
         // Specify we want Data/CFData returned
-        keychainQueryDictionary[SecReturnData] = kCFBooleanTrue
+        keychainQueryDictionary[paramSecReturnData] = kCFBooleanTrue
         
         // Search
         let status = withUnsafeMutablePointer(to: &result) {
             SecItemCopyMatching(keychainQueryDictionary as CFDictionary, UnsafeMutablePointer($0))
         }
         
-        return status == noErr ? result as? Data : nil
+        return status == noErr ? result as? Data: nil
     }
     
     
@@ -210,17 +188,17 @@ open class KeychainWrapper {
         var result: AnyObject?
         
         // Limit search results to one
-        keychainQueryDictionary[SecMatchLimit] = kSecMatchLimitOne
+        keychainQueryDictionary[paramSecMatchLimit] = kSecMatchLimitOne
         
         // Specify we want persistent Data/CFData reference returned
-        keychainQueryDictionary[SecReturnPersistentRef] = kCFBooleanTrue
+        keychainQueryDictionary[paramSecReturnPersistentRef] = kCFBooleanTrue
         
         // Search
         let status = withUnsafeMutablePointer(to: &result) {
             SecItemCopyMatching(keychainQueryDictionary as CFDictionary, UnsafeMutablePointer($0))
         }
         
-        return status == noErr ? result as? Data : nil
+        return status == noErr ? result as? Data: nil
     }
     
     // MARK: Public Setters
@@ -248,11 +226,8 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility to use when setting the keychain item.
     /// - returns: True if the save was successful, false otherwise.
     @discardableResult open func set(_ value: String, forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        if let data = value.data(using: .utf8) {
-            return set(data, forKey: key, withAccessibility: accessibility)
-        } else {
-            return false
-        }
+        guard let data = value.data(using: .utf8) else { return false }
+        return set(data, forKey: key, withAccessibility: accessibility)
     }
     
     
@@ -265,7 +240,6 @@ open class KeychainWrapper {
     /// - returns: True if the save was successful, false otherwise.
     @discardableResult open func set(_ value: NSCoding, forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
         let data = NSKeyedArchiver.archivedData(withRootObject: value)
-        
         return set(data, forKey: key, withAccessibility: accessibility)
     }
     
@@ -276,15 +250,15 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility to use when setting the keychain item.
     /// - returns: True if the save was successful, false otherwise.
     @discardableResult open func set(_ value: Data, forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        var keychainQueryDictionary: [String:Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
+        var keychainQueryDictionary: [String: Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
         
-        keychainQueryDictionary[SecValueData] = value
+        keychainQueryDictionary[paramSecValueData] = value
         
         if let accessibility = accessibility {
-            keychainQueryDictionary[SecAttrAccessible] = accessibility.keychainAttrValue
+            keychainQueryDictionary[paramSecAttrAccessible] = accessibility.keychainAttrValue
         } else {
             // Assign default protection - Protect the keychain entry so it's only valid when the device is unlocked
-            keychainQueryDictionary[SecAttrAccessible] = KeychainItemAccessibility.whenUnlocked.keychainAttrValue
+            keychainQueryDictionary[paramSecAttrAccessible] = KeychainItemAccessibility.whenUnlocked.keychainAttrValue
         }
         
         let status: OSStatus = SecItemAdd(keychainQueryDictionary as CFDictionary, nil)
@@ -309,7 +283,7 @@ open class KeychainWrapper {
     /// - parameter withAccessibility: Optional accessibility level to use when looking up the keychain item.
     /// - returns: True if successful, false otherwise.
     @discardableResult open func removeObject(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        let keychainQueryDictionary: [String:Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
+        let keychainQueryDictionary: [String: Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
         
         // Delete
         let status: OSStatus = SecItemDelete(keychainQueryDictionary as CFDictionary)
@@ -324,14 +298,14 @@ open class KeychainWrapper {
     /// Remove all keychain data added through KeychainWrapper. This will only delete items matching the currnt ServiceName and AccessGroup if one is set.
     open func removeAllKeys() -> Bool {
         // Setup dictionary to access keychain and specify we are using a generic password (rather than a certificate, internet password, etc)
-        var keychainQueryDictionary: [String:Any] = [SecClass:kSecClassGenericPassword]
+        var keychainQueryDictionary: [String: Any] = [paramSecClass: kSecClassGenericPassword]
         
         // Uniquely identify this keychain accessor
-        keychainQueryDictionary[SecAttrService] = serviceName
+        keychainQueryDictionary[paramSecAttrService] = serviceName
         
         // Set the keychain access group if defined
         if let accessGroup = self.accessGroup {
-            keychainQueryDictionary[SecAttrAccessGroup] = accessGroup
+            keychainQueryDictionary[paramSecAttrAccessGroup] = accessGroup
         }
         
         let status: OSStatus = SecItemDelete(keychainQueryDictionary as CFDictionary)
@@ -355,13 +329,13 @@ open class KeychainWrapper {
         deleteKeychainSecClass(kSecClassIdentity) // Identity items
     }
     
-    // MARK:- Private Methods
+    // MARK: - Private Methods
     
     /// Remove all items for a given Keychain Item Class
     ///
     ///
     @discardableResult private class func deleteKeychainSecClass(_ secClass: AnyObject) -> Bool {
-        let query = [SecClass: secClass]
+        let query = [paramSecClass: secClass]
         let status: OSStatus = SecItemDelete(query as CFDictionary)
         
         if status == errSecSuccess {
@@ -373,12 +347,12 @@ open class KeychainWrapper {
     
     /// Update existing data associated with a specified key name. The existing data will be overwritten by the new data
     private func update(_ value: Data, forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        var keychainQueryDictionary: [String:Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
-        let updateDictionary = [SecValueData:value]
+        var keychainQueryDictionary: [String: Any] = setupKeychainQueryDictionary(forKey: key, withAccessibility: accessibility)
+        let updateDictionary = [paramSecValueData: value]
         
         // on update, only set accessibility if passed in
         if let accessibility = accessibility {
-            keychainQueryDictionary[SecAttrAccessible] = accessibility.keychainAttrValue
+            keychainQueryDictionary[paramSecAttrAccessible] = accessibility.keychainAttrValue
         }
         
         // Update
@@ -396,29 +370,29 @@ open class KeychainWrapper {
     /// - parameter forKey: The key this query is for
     /// - parameter withAccessibility: Optional accessibility to use when setting the keychain item. If none is provided, will default to .WhenUnlocked
     /// - returns: A dictionary with all the needed properties setup to access the keychain on iOS
-    private func setupKeychainQueryDictionary(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> [String:Any] {
+    private func setupKeychainQueryDictionary(forKey key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> [String: Any] {
         // Setup default access as generic password (rather than a certificate, internet password, etc)
-        var keychainQueryDictionary: [String:Any] = [SecClass:kSecClassGenericPassword]
+        var keychainQueryDictionary: [String: Any] = [paramSecClass: kSecClassGenericPassword]
         
         // Uniquely identify this keychain accessor
-        keychainQueryDictionary[SecAttrService] = serviceName
+        keychainQueryDictionary[paramSecAttrService] = serviceName
         
         // Only set accessibiilty if its passed in, we don't want to default it here in case the user didn't want it set
         if let accessibility = accessibility {
-            keychainQueryDictionary[SecAttrAccessible] = accessibility.keychainAttrValue
+            keychainQueryDictionary[paramSecAttrAccessible] = accessibility.keychainAttrValue
         }
         
         // Set the keychain access group if defined
         if let accessGroup = self.accessGroup {
-            keychainQueryDictionary[SecAttrAccessGroup] = accessGroup
+            keychainQueryDictionary[paramSecAttrAccessGroup] = accessGroup
         }
         
         // Uniquely identify the account who will be accessing the keychain
         let encodedIdentifier: Data? = key.data(using: String.Encoding.utf8)
         
-        keychainQueryDictionary[SecAttrGeneric] = encodedIdentifier
+        keychainQueryDictionary[paramSecAttrGeneric] = encodedIdentifier
         
-        keychainQueryDictionary[SecAttrAccount] = encodedIdentifier
+        keychainQueryDictionary[paramSecAttrAccount] = encodedIdentifier
         
         return keychainQueryDictionary
     }

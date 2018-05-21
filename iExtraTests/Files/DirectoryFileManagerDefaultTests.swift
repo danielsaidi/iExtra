@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -89,14 +89,14 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
                 
                 it("returns nil if invalid file exists") {
                     fileManager.contentsOfDirectory = [url1, url2]
-                    fileManager.attributes = [.size : 40]
+                    fileManager.attributes = [.size: 40]
                     let attributes = manager.getAttributesForFile(named: "fo.o")
                     expect(attributes).to(beNil())
                 }
                 
                 it("returns attributes if valid file exists") {
                     fileManager.contentsOfDirectory = [url1, url2]
-                    fileManager.attributes = [.size : 40]
+                    fileManager.attributes = [.size: 40]
                     let attributes = manager.getAttributesForFile(named: "ba.r")
                     expect(attributes?.count).to(equal(1))
                 }
@@ -362,7 +362,7 @@ class DirectoryFileManagerDefaultTests: QuickSpec {
 
 
 
-fileprivate func isDocumentDirectoryUrl(_ url: URL) -> Bool {
+private func isDocumentDirectoryUrl(_ url: URL) -> Bool {
     let simulatorPattern = "Library/Developer/CoreSimulator/Devices"
     let simulatorMatch = url.path.contains(simulatorPattern)
     let devicePattern = "/var/mobile/Containers"
@@ -370,15 +370,15 @@ fileprivate func isDocumentDirectoryUrl(_ url: URL) -> Bool {
     return simulatorMatch || deviceMatch
 }
 
-fileprivate func isValidTestFileUrl(_ url: URL) -> Bool {
+private func isValidTestFileUrl(_ url: URL) -> Bool {
     return !url.absoluteString.contains("fo.o")
 }
 
 
 
-fileprivate class TestFileManager: AppFileManager {
+private class TestFileManager: AppFileManager {
     
-    var attributes: [FileAttributeKey : Any]?
+    var attributes: [FileAttributeKey: Any]?
     var contentsOfDirectory = [URL]()
     var createdFileUrl: URL?
     var createdFileContent: Data?
@@ -392,12 +392,12 @@ fileprivate class TestFileManager: AppFileManager {
         return true
     }
     
-    func getAttributesForFile(at url: URL) -> [FileAttributeKey : Any]? {
-        return isValidTestFileUrl(url) ? attributes : nil
+    func getAttributesForFile(at url: URL) -> [FileAttributeKey: Any]? {
+        return isValidTestFileUrl(url) ? attributes: nil
     }
     
     func getContentsOfDirectory(at url: URL) -> [URL] {
-        return isDocumentDirectoryUrl(url) ? contentsOfDirectory : [URL]()
+        return isDocumentDirectoryUrl(url) ? contentsOfDirectory: [URL]()
     }
     
     func getSizeOfFile(at url: URL) -> UInt64? { return fileSize }

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -17,8 +17,8 @@ public extension URL {
         return NSURLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
     }
     
-    public var queryParametersDictionary: [String : String] {
-        var result = [String : String]()
+    public var queryParametersDictionary: [String: String] {
+        var result = [String: String]()
         queryParameters.forEach { result[$0.name] = $0.value ?? "" }
         return result
     }
@@ -40,7 +40,7 @@ public extension URL {
         return URL(string: "\(urlString)?\(queryString)")
     }
     
-    public func setQueryParameters(_ dict: [String : String]) -> URL? {
+    public func setQueryParameters(_ dict: [String: String]) -> URL? {
         var result = self
         dict.forEach {
             result = result.setQueryParameter(name: $0, value: $1) ?? result

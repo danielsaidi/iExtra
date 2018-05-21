@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -73,7 +73,7 @@ class Array_RandomElementTests: QuickSpec {
 }
 
 
-fileprivate class TestClass: NSObject {
+private class TestClass: NSObject {
     init(_ name: String) {
         self.name = name
     }

@@ -1,9 +1,9 @@
 //
-//  UITableView+DefaultNib.swift
+//  UITableView+DefaultCell.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-21.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -15,9 +15,11 @@ public extension UITableView {
         return dequeueReusableCell(withIdentifier: id) as? T
     }
     
-    public func dequeueDefaultCell<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T! {
+    public func dequeueDefaultCell<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T {
         let id = T.defaultReuseIdentifier
-        return dequeueReusableCell(withIdentifier: id, for: indexPath) as! T
+        let dequeued = dequeueReusableCell(withIdentifier: id, for: indexPath)
+        guard let cell = dequeued as? T else { fatalError("dequeueDefaultCell: Invalid type") }
+        return cell
     }
     
     public func dequeueDefaultHeaderFooterView<T: ReusableTableViewHeaderFooterView>() -> T? {
@@ -35,7 +37,6 @@ public extension UITableView {
         register(type.defaultNib, forHeaderFooterViewReuseIdentifier: id)
     }
 }
-
 
 
 // MARK: - ReusableTableViewCell

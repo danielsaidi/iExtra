@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-29.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -32,6 +32,6 @@ fileprivate extension DateSerializerDefault {
     
     func getDateFormat(for string: String) -> DateSerializerFormat {
         let hasFragments = string.range(of: ".") != nil
-        return hasFragments ? .dateTimeWithFragments : .dateTime
+        return hasFragments ? .dateTimeWithFragments: .dateTime
     }
 }

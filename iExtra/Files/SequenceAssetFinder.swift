@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-04-04.
-//  Copyright © 2016 Appamini. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -40,10 +40,10 @@ open class SequenceAssetFinder: NSObject, FileFinder {
     public func findFiles(withPrefix prefix: String) -> [String] {
         var result = [String]()
         var index = startIndex
-        while(true) {
+        while true {
             let name = "\(prefix)\(separator)\(index)"
             let image = UIImage(named: name)
-            if (image == nil) { return result }
+            if image == nil { return result }
             result.append(name)
             index += 1
         }

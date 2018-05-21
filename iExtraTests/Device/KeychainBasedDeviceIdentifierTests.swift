@@ -75,16 +75,9 @@ class KeychainBasedDeviceIdentifierTests: QuickSpec {
                     expect(result.hasPrefix(" ")).to(beFalse())
                     expect(result.hasSuffix("foo")).to(beTrue())
                 }
-
-                // TODO: Find out why this crashes every second time
-//                it("writes to keychain") {
-//                    let _ = identifier.getDeviceIdentifier()
-//                    expect(service.setValue!.count).to(equal(37 + deviceName.count))
-//                    expect(service.setAccessibility).to(beNil())
-//                }
                 
                 it("writes to user defaults") {
-                    let _ = identifier.getDeviceIdentifier()
+                    _ = identifier.getDeviceIdentifier()
                     let defaults = UserDefaults.standard
                     let id = defaults.string(forKey: idKey)
                     expect(id!.count).to(equal(37 + deviceName.count))

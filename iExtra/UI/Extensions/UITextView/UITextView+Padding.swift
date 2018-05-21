@@ -1,10 +1,9 @@
-
 //
 //  UITextView+Padding.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-11-07.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -12,6 +11,6 @@ import UIKit
 public extension UITextView {
     
     public func removePadding() {
-        contentInset = UIEdgeInsetsMake(0, -4, 0, 0)
+        contentInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
     }
 }

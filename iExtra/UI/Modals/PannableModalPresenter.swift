@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-18.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -110,7 +110,7 @@ extension PannableModalPresenter {
             transition.cancel()
         case .ended:
             transition.hasStarted = false
-            transition.shouldFinish ? transition.finish() : transition.cancel()
+            transition.shouldFinish ? transition.finish(): transition.cancel()
             adjustStatusBar(for: transition.shouldFinish)
         default:
             break
@@ -132,12 +132,12 @@ fileprivate extension PannableModalPresenter {
     }
     
     func adjustStatusBar(for translation: CGFloat) {
-        let style = translation > 70 ? fromStatusBarStyle : toStatusBarStyle
+        let style = translation > 70 ? fromStatusBarStyle: toStatusBarStyle
         setStatusBarStyle(style)
     }
     
     func adjustStatusBar(for isDismissing: Bool) {
-        let style = isDismissing ? fromStatusBarStyle : toStatusBarStyle
+        let style = isDismissing ? fromStatusBarStyle: toStatusBarStyle
         setStatusBarStyle(style)
     }
     
@@ -171,6 +171,6 @@ extension PannableModalPresenter: UIViewControllerTransitioningDelegate {
     }
     
     public func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return transition.hasStarted ? transition : nil
+        return transition.hasStarted ? transition: nil
     }
 }

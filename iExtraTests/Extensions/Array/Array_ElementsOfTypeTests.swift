@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Quick
@@ -60,7 +60,7 @@ class Array_ElementsOfTypeTests: QuickSpec {
 }
 
 
-fileprivate class TestBaseClass: NSObject {
+private class TestBaseClass: NSObject {
     
     override init() {
         super.init()
@@ -70,12 +70,10 @@ fileprivate class TestBaseClass: NSObject {
     var name = ""
 }
 
-fileprivate class TestSubClass: TestBaseClass {
+private class TestSubClass: TestBaseClass {
     
     override init() {
         super.init()
         name = "sub"
     }
 }
-
-

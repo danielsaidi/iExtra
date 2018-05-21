@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi Daniel on 2016-12-12.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -100,6 +100,3 @@ class UISlider_HitTestTests: QuickSpec {
         }
     }
 }
-
-
-

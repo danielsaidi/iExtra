@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-21.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 /*
@@ -26,7 +26,7 @@ public extension UIImage {
         return resized(toSize: newSize)
     }
     
-    public func resized(toSize newSize:CGSize) -> UIImage? {
+    public func resized(toSize newSize: CGSize) -> UIImage? {
         UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
         draw(in: CGRect(origin: CGPoint.zero, size: newSize))
         let result = UIGraphicsGetImageFromCurrentImageContext()

@@ -3,12 +3,12 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-10-18.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
 
-open class BlurredNavigationSearchController : NavigationSearchController {
+open class BlurredNavigationSearchController: NavigationSearchController {
     
     
     // MARK: - Initialization
@@ -49,4 +49,3 @@ fileprivate extension BlurredNavigationSearchController {
         tableView?.separatorEffect = UIVibrancyEffect(blurEffect: effect)
     }
 }
-

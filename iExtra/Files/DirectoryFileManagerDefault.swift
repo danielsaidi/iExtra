@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-19.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -46,7 +46,7 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
         return getUrlForFile(named: name) != nil
     }
     
-    open func getAttributesForFile(named name: String) -> [FileAttributeKey : Any]? {
+    open func getAttributesForFile(named name: String) -> [FileAttributeKey: Any]? {
         guard let url = getUrlForFile(named: name) else { return nil }
         return manager.getAttributesForFile(at: url)
     }

@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-19.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -13,18 +13,16 @@ public class ParallaxEffectDefault: NSObject, ParallaxEffect {
     public func addParallaxEffect(to view: UIView, maxOffset: Int) {
         removeParallaxEffect(from: view)
         
-        let verticalEffect : UIInterpolatingMotionEffect =
-            UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
-        verticalEffect.minimumRelativeValue = -maxOffset
-        verticalEffect.maximumRelativeValue = maxOffset
+        let vertical = UIInterpolatingMotionEffect(keyPath: "center.y", type: .tiltAlongVerticalAxis)
+        vertical.minimumRelativeValue = -maxOffset
+        vertical.maximumRelativeValue = maxOffset
         
-        let horizontalEffect : UIInterpolatingMotionEffect =
-            UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
-        horizontalEffect.minimumRelativeValue = -maxOffset
-        horizontalEffect.maximumRelativeValue = maxOffset
+        let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .tiltAlongHorizontalAxis)
+        horizontal.minimumRelativeValue = -maxOffset
+        horizontal.maximumRelativeValue = maxOffset
         
-        let effectGroup : UIMotionEffectGroup = UIMotionEffectGroup()
-        effectGroup.motionEffects = [horizontalEffect, verticalEffect]
+        let effectGroup: UIMotionEffectGroup = UIMotionEffectGroup()
+        effectGroup.motionEffects = [horizontal, vertical]
         
         view.addMotionEffect(effectGroup)
     }

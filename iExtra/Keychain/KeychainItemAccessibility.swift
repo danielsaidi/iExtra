@@ -94,23 +94,19 @@ public enum KeychainItemAccessibility {
     case whenUnlockedThisDeviceOnly
     
     static func accessibilityForAttributeValue(_ keychainAttrValue: CFString) -> KeychainItemAccessibility? {
-        for (key, value) in keychainItemAccessibilityLookup {
-            if value == keychainAttrValue {
-                return key
-            }
-        }
-        return nil
+        let value = keychainItemAccessibilityLookup.first { $0.value == keychainAttrValue }
+        return value?.key
     }
 }
 
 
-private let keychainItemAccessibilityLookup: [KeychainItemAccessibility : CFString] = {
-    var lookup: [KeychainItemAccessibility:CFString] = [
+private let keychainItemAccessibilityLookup: [KeychainItemAccessibility: CFString] = {
+    var lookup: [KeychainItemAccessibility: CFString] = [
         .afterFirstUnlock: kSecAttrAccessibleAfterFirstUnlock,
         .afterFirstUnlockThisDeviceOnly: kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly,
         .always: kSecAttrAccessibleAlways,
         .whenPasscodeSetThisDeviceOnly: kSecAttrAccessibleWhenPasscodeSetThisDeviceOnly,
-        .alwaysThisDeviceOnly : kSecAttrAccessibleAlwaysThisDeviceOnly,
+        .alwaysThisDeviceOnly: kSecAttrAccessibleAlwaysThisDeviceOnly,
         .whenUnlocked: kSecAttrAccessibleWhenUnlocked,
         .whenUnlockedThisDeviceOnly: kSecAttrAccessibleWhenUnlockedThisDeviceOnly
     ]
@@ -119,7 +115,7 @@ private let keychainItemAccessibilityLookup: [KeychainItemAccessibility : CFStri
 }()
 
 
-extension KeychainItemAccessibility : KeychainAttrRepresentable {
+extension KeychainItemAccessibility: KeychainAttrRepresentable {
     
     public var keychainAttrValue: CFString {
         return keychainItemAccessibilityLookup[self]!
