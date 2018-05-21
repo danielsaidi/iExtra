@@ -3,7 +3,7 @@
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-11-15.
-//  Copyright © 2015 Daniel Saidi. All rights reserved.
+//  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
 import Foundation
@@ -24,20 +24,21 @@ public class MainBundleFileFinder: NSObject, FileFinder {
         let predicate = NSPredicate(format: format, argumentArray: [suffix])
         return findFiles(with: predicate)
     }
+}
+
+
+// MARK: - Private Functions
+
+fileprivate extension MainBundleFileFinder {
     
-    
-    // MARK: Private functions
-    
-    private func findFiles(with predicate: NSPredicate) -> [String] {
-        let bundleRoot = Bundle.main.bundlePath
+    func findFiles(with predicate: NSPredicate) -> [String] {
+        let path = Bundle.main.bundlePath
         let fileManager = FileManager.default
         do {
-            let files = try fileManager.contentsOfDirectory(atPath: bundleRoot)
-            let array = files as NSArray
-            let filteredFiles = array.filtered(using: predicate)
-            return filteredFiles as! [String]
+            let files = try fileManager.contentsOfDirectory(atPath: path) as NSArray
+            return files.filtered(using: predicate).flatMap { $0 as? String }
         } catch {
-            return [String]()
+            return []
         }
     }
 }

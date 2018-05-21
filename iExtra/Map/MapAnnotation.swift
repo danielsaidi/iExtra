@@ -13,6 +13,19 @@ import UIKit
 open class MapAnnotation: NSObject, MKAnnotation {
     
     
+    // MARK: - Initialization
+    
+    public override init() {}
+    
+    public init(title: String, subtitle: String? = nil, coordinate: CLLocationCoordinate2D) {
+        super.init()
+        self.title = title
+        self.subtitle = subtitle
+        self.coordinate = coordinate
+        coordinateRegion.center = coordinate
+    }
+    
+    
     // MARK: Properties
     
     public var title: String? {

@@ -8,6 +8,15 @@ bumps, but not on revision bumps.
 
 
 
+## 1.2.2
+
+`MainBundleFileFinder` and `MainBundleImageFileFinder` have been rewritten. This
+fixes a bug in the image file finder as well.
+
+`MapAnnotation` has a new initializer that lets you create a complete instance.
+
+
+
 ## 1.2.1
 
 I have added a new `ThemedLabel` class, which lets you set label appearane fonts
