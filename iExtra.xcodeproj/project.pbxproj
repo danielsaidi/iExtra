@@ -253,6 +253,7 @@
 		4567E4EA20A32EB6008B7FE5 /* SwinjectIoCContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */; };
 		4567E4F020A33E97008B7FE5 /* ThemedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */; };
 		45883B9B20CF0A9E001C0E2F /* UIView+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */; };
+		45883B9D20CF120C001C0E2F /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
@@ -563,6 +564,7 @@
 		4567E4E920A32EB6008B7FE5 /* SwinjectIoCContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwinjectIoCContainer.swift; sourceTree = "<group>"; };
 		4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedLabel.swift; sourceTree = "<group>"; };
 		45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Fade.swift"; sourceTree = "<group>"; };
+		45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
@@ -1193,6 +1195,7 @@
 			isa = PBXGroup;
 			children = (
 				452734881FD674F800418D93 /* UIViewController+Alert.swift */,
+				45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */,
 				452734891FD674F800418D93 /* UIViewController+NavigationBarBackground.swift */,
 				4527348A1FD674F800418D93 /* UIViewController+Nib.swift */,
 				4527348B1FD674F800418D93 /* UIViewController+RequiredTextField.swift */,
@@ -1809,6 +1812,7 @@
 				4527354A1FD674F900418D93 /* UIView+Rotate.swift in Sources */,
 				452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */,
 				4527358D1FD674F900418D93 /* EventTracker.swift in Sources */,
+				45883B9D20CF120C001C0E2F /* UIViewController+BackButton.swift in Sources */,
 				452735761FD674F900418D93 /* Pannable.swift in Sources */,
 				4527359A1FD674F900418D93 /* KeychainReader.swift in Sources */,
 				452735261FD674F900418D93 /* UIEdgeInsets+Init.swift in Sources */,

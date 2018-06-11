@@ -10,8 +10,8 @@ import UIKit
 
 public extension UIView {
     
-    public func animateDefaultPress(completion: (() -> ())? = nil) {
-        let transform = CGAffineTransform(scaleX: 0.93, y: 0.93)
+    public func animateDefaultPress(factor: CGFloat = 0.8, completion: (() -> ())? = nil) {
+        let transform = CGAffineTransform(scaleX: factor, y: factor)
         animateTransform(transform, completion: completion)
     }
     

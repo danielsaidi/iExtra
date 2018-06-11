@@ -8,6 +8,22 @@ bumps, but not on revision bumps.
 
 
 
+## 1.2.4
+
+This version contains `UIView` animation extensions, e.g. tap, press and release,
+fade to alpha and rotate animations.
+
+It also contains a custom back button extension that I use until I've managed to
+find a way to adjust image insets when using the standard appearance approach.
+
+
+
+## 1.2.3
+
+This version of iExtra only contains nonfunctional Swiftlint conformance changes.
+
+
+
 ## 1.2.2
 
 `MainBundleFileFinder` and `MainBundleImageFileFinder` have been rewritten. This
