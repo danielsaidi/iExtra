@@ -10,8 +10,17 @@ import UIKit
 
 public extension UIView {
     
-    public func rotate(withRadians radians: CGFloat, duration: TimeInterval, options: UIViewAnimationOptions, completion: ((_ completed: Bool) -> ())? = nil) {
-        let anims = { self.transform = self.transform.rotated(by: radians) }
-        UIView.animate(withDuration: duration, delay: 0, options: options, animations: anims, completion: completion)
+    public func rotate(
+        withRadians radians: CGFloat,
+        duration: TimeInterval,
+        options: UIViewAnimationOptions,
+        completion: ((_ completed: Bool) -> ())? = nil) {
+        UIView.animate(
+            withDuration: duration,
+            delay: 0,
+            options: options,
+            animations: { self.transform = self.transform.rotated(by: radians) },
+            completion: completion
+        )
     }
 }
