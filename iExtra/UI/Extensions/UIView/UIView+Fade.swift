@@ -13,7 +13,7 @@ public extension UIView {
     public func fade(
         to alpha: CGFloat,
         withDuration duration: TimeInterval,
-        completion: ((_ finished: Bool) -> ())?) {
+        completion: ((_ finished: Bool) -> ())? = nil) {
         if self.alpha == alpha { return }
         if alpha == 0 { show() }
         UIView.animate(

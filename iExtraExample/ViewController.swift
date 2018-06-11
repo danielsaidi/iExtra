@@ -9,6 +9,21 @@
 import UIKit
 import iExtra
 
+class Shadow: ShadowStyle {
+ 
+    var alpha: Float { return 1 }
+    var blur: CGFloat { return 0.5 }
+    var color: UIColor { return .purple }
+    var spread: CGFloat { return 1 }
+    var x: CGFloat { return 0 }
+    var y: CGFloat { return 2 }
+}
+
+class Corner: CornerRadiusStyle {
+    
+    var radius: Int { return 20 }
+}
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
@@ -17,5 +32,6 @@ class ViewController: UIViewController {
         view.backgroundColor = .red
         self.view.addSubview(view)
         view.startRotation(withDuration: 10)
+        view.applyCornerRadius(Corner())
     }
 }

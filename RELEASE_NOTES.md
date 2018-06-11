@@ -8,6 +8,17 @@ bumps, but not on revision bumps.
 
 
 
+## 1.2.5
+
+This version contains new corner radius and shadow extensions for `UIView`. They
+are protocol-based, which means that they can be specified as e.g. enums in apps
+that use them.
+
+I have also adjusted the rotation extension and made the optional completion nil
+by default.
+
+
+
 ## 1.2.4
 
 This version contains `UIView` animation extensions, e.g. tap, press and release,

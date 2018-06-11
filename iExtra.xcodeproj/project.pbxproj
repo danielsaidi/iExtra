@@ -254,6 +254,10 @@
 		4567E4F020A33E97008B7FE5 /* ThemedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */; };
 		45883B9B20CF0A9E001C0E2F /* UIView+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */; };
 		45883B9D20CF120C001C0E2F /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */; };
+		45883BAE20CF1853001C0E2F /* UIView+CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */; };
+		45883BAF20CF1853001C0E2F /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */; };
+		45883BB020CF1853001C0E2F /* UIView+ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */; };
+		45883BB120CF1853001C0E2F /* ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAD20CF1853001C0E2F /* ShadowStyle.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
@@ -565,6 +569,10 @@
 		4567E4EF20A33E97008B7FE5 /* ThemedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemedLabel.swift; sourceTree = "<group>"; };
 		45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Fade.swift"; sourceTree = "<group>"; };
 		45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
+		45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadiusStyle.swift"; sourceTree = "<group>"; };
+		45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
+		45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ShadowStyle.swift"; sourceTree = "<group>"; };
+		45883BAD20CF1853001C0E2F /* ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
@@ -1009,12 +1017,14 @@
 		4527343A1FD674F800418D93 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				45883BA820CF1853001C0E2F /* CornerRadius */,
 				4527343E1FD674F800418D93 /* Extensions */,
 				4535AE2F20205A28006E5408 /* Gestures */,
 				452735B51FD67EC100418D93 /* Haptics */,
 				4527348F1FD674F800418D93 /* Modals */,
 				452734941FD674F800418D93 /* Parallax */,
 				452734971FD674F800418D93 /* Search */,
+				45883BAB20CF1853001C0E2F /* Shadows */,
 				4567E4D420A328CC008B7FE5 /* Themes */,
 				4527349C1FD674F800418D93 /* Transitions */,
 				4527349F1FD674F800418D93 /* Views */,
@@ -1516,6 +1526,24 @@
 			path = Themes;
 			sourceTree = "<group>";
 		};
+		45883BA820CF1853001C0E2F /* CornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */,
+				45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */,
+			);
+			path = CornerRadius;
+			sourceTree = "<group>";
+		};
+		45883BAB20CF1853001C0E2F /* Shadows */ = {
+			isa = PBXGroup;
+			children = (
+				45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */,
+				45883BAD20CF1853001C0E2F /* ShadowStyle.swift */,
+			);
+			path = Shadows;
+			sourceTree = "<group>";
+		};
 		45CE071A204C03F800A93175 /* UIInputViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1709,6 +1737,7 @@
 				4527355D1FD674F900418D93 /* InteractiveModalTransition.swift in Sources */,
 				452734F31FD674F900418D93 /* SystemUrl.swift in Sources */,
 				452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */,
+				45883BAE20CF1853001C0E2F /* UIView+CornerRadiusStyle.swift in Sources */,
 				452734F41FD674F900418D93 /* Array+ElementsOfType.swift in Sources */,
 				452735331FD674F900418D93 /* UINavigationBar+Tint.swift in Sources */,
 				452735471FD674F900418D93 /* UIView+Move.swift in Sources */,
@@ -1790,6 +1819,7 @@
 				452734F61FD674F900418D93 /* Array+RandomElement.swift in Sources */,
 				4527351F1FD674F900418D93 /* UIButton+BackgroundColor.swift in Sources */,
 				452735641FD674F900418D93 /* NoCancellingSearchBar.swift in Sources */,
+				45883BAF20CF1853001C0E2F /* CornerRadiusStyle.swift in Sources */,
 				452735491FD674F900418D93 /* UIView+ReuseIdentifier.swift in Sources */,
 				4527357F1FD674F900418D93 /* AdaptiveFileSizePresenter.swift in Sources */,
 				452735421FD674F900418D93 /* UIView+Empty.swift in Sources */,
@@ -1818,6 +1848,7 @@
 				452735261FD674F900418D93 /* UIEdgeInsets+Init.swift in Sources */,
 				4527356F1FD674F900418D93 /* FloatingMenuPresenter.swift in Sources */,
 				452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */,
+				45883BB120CF1853001C0E2F /* ShadowStyle.swift in Sources */,
 				452735211FD674F900418D93 /* UIButton+Init.swift in Sources */,
 				452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */,
 				452735391FD674F900418D93 /* UISlider+HitTest.swift in Sources */,
@@ -1863,6 +1894,7 @@
 				452734EF1FD674F900418D93 /* Date+Compare.swift in Sources */,
 				452734FF1FD674F900418D93 /* Sequence+Batch.swift in Sources */,
 				452735541FD674F900418D93 /* UIView+SubviewsOfType.swift in Sources */,
+				45883BB020CF1853001C0E2F /* UIView+ShadowStyle.swift in Sources */,
 				452735051FD674F900418D93 /* Url+QueryParameters.swift in Sources */,
 				452735571FD674F900418D93 /* UIViewController+Alert.swift in Sources */,
 				452735311FD674F900418D93 /* UIImageView+FadeInImage.swift in Sources */,

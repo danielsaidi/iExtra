@@ -44,7 +44,7 @@ private extension UIView {
     
     func rotate360Animation(withDuration duration: Double, times: Int) -> CABasicAnimation {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
-        animation.duration = duration / 2
+        animation.duration = duration
         animation.fromValue = 0
         animation.toValue = CGFloat(Double.pi)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
