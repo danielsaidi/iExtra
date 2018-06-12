@@ -1,5 +1,5 @@
 //
-//  String_UrlEncodeTests.swift
+//  String+UrlEncodeTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-12.

@@ -8,6 +8,17 @@ bumps, but not on revision bumps.
 
 
 
+## 1.2.6
+
+I have added a `capitalizedFirst` `StringProtocol` extension. It capitalizes the
+first character and leaves the rest of the string untouched, unlike `capitalized`
+which capitalizes the first character and lower-cases the rest of the string.
+
+I have also fixed a rotation bug for the `startRotation` UIView extension, which
+only rotated with PI, instead of a full revolution.
+
+
+
 ## 1.2.5
 
 This version contains new corner radius and shadow extensions for `UIView`. They

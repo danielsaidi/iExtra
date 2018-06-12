@@ -46,7 +46,7 @@ private extension UIView {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.duration = duration
         animation.fromValue = 0
-        animation.toValue = CGFloat(Double.pi)
+        animation.toValue = CGFloat(2*Double.pi)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
         animation.autoreverses = false
         animation.repeatCount = Float(times)

@@ -27,9 +27,9 @@
 		452733DD1FD674C500418D93 /* Numeric_RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A61FD674C400418D93 /* Numeric_RandomTests.swift */; };
 		452733DE1FD674C500418D93 /* Sequence_BatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A71FD674C400418D93 /* Sequence_BatchTests.swift */; };
 		452733DF1FD674C500418D93 /* Set_GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A81FD674C400418D93 /* Set_GroupTests.swift */; };
-		452733E01FD674C500418D93 /* String_Base64Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AA1FD674C400418D93 /* String_Base64Tests.swift */; };
-		452733E11FD674C500418D93 /* String_ContainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AB1FD674C400418D93 /* String_ContainsTests.swift */; };
-		452733E21FD674C500418D93 /* String_UrlEncodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AC1FD674C400418D93 /* String_UrlEncodeTests.swift */; };
+		452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AA1FD674C400418D93 /* String+Base64Tests.swift */; };
+		452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AB1FD674C400418D93 /* String+ContainsTests.swift */; };
+		452733E21FD674C500418D93 /* String+UrlEncodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AC1FD674C400418D93 /* String+UrlEncodeTests.swift */; };
 		452733E31FD674C500418D93 /* Url_QueryParametersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AD1FD674C400418D93 /* Url_QueryParametersTests.swift */; };
 		452733E41FD674C500418D93 /* UIButton_ImageMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733B11FD674C400418D93 /* UIButton_ImageMarginTests.swift */; };
 		452733E51FD674C500418D93 /* UICollectionView_DefaultNibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733B31FD674C400418D93 /* UICollectionView_DefaultNibTests.swift */; };
@@ -243,6 +243,8 @@
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
+		452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452AB7AF20CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift */; };
+		452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452AB7B120CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift */; };
 		4530CC0B2079E87300481162 /* UIImage+Tinted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530CC0A2079E87200481162 /* UIImage+Tinted.swift */; };
 		4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */; };
 		4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */; };
@@ -337,9 +339,9 @@
 		452733A61FD674C400418D93 /* Numeric_RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numeric_RandomTests.swift; sourceTree = "<group>"; };
 		452733A71FD674C400418D93 /* Sequence_BatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sequence_BatchTests.swift; sourceTree = "<group>"; };
 		452733A81FD674C400418D93 /* Set_GroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Set_GroupTests.swift; sourceTree = "<group>"; };
-		452733AA1FD674C400418D93 /* String_Base64Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_Base64Tests.swift; sourceTree = "<group>"; };
-		452733AB1FD674C400418D93 /* String_ContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_ContainsTests.swift; sourceTree = "<group>"; };
-		452733AC1FD674C400418D93 /* String_UrlEncodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String_UrlEncodeTests.swift; sourceTree = "<group>"; };
+		452733AA1FD674C400418D93 /* String+Base64Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64Tests.swift"; sourceTree = "<group>"; };
+		452733AB1FD674C400418D93 /* String+ContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ContainsTests.swift"; sourceTree = "<group>"; };
+		452733AC1FD674C400418D93 /* String+UrlEncodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UrlEncodeTests.swift"; sourceTree = "<group>"; };
 		452733AD1FD674C400418D93 /* Url_QueryParametersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Url_QueryParametersTests.swift; sourceTree = "<group>"; };
 		452733B11FD674C400418D93 /* UIButton_ImageMarginTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton_ImageMarginTests.swift; sourceTree = "<group>"; };
 		452733B31FD674C400418D93 /* UICollectionView_DefaultNibTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionView_DefaultNibTests.swift; sourceTree = "<group>"; };
@@ -549,6 +551,8 @@
 		452735AA1FD6782000418D93 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		452735AB1FD6782100418D93 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		452735B61FD67EE400418D93 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		452AB7AF20CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+CapitalizedFirst.swift"; sourceTree = "<group>"; };
+		452AB7B120CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+CapitalizedFirstTests.swift"; sourceTree = "<group>"; };
 		4530CC0A2079E87200481162 /* UIImage+Tinted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tinted.swift"; sourceTree = "<group>"; };
 		4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGestureAction.swift"; sourceTree = "<group>"; };
 		4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LongPressGestureAction.swift"; sourceTree = "<group>"; };
@@ -739,9 +743,10 @@
 		452733A91FD674C400418D93 /* String */ = {
 			isa = PBXGroup;
 			children = (
-				452733AA1FD674C400418D93 /* String_Base64Tests.swift */,
-				452733AB1FD674C400418D93 /* String_ContainsTests.swift */,
-				452733AC1FD674C400418D93 /* String_UrlEncodeTests.swift */,
+				452733AA1FD674C400418D93 /* String+Base64Tests.swift */,
+				452733AB1FD674C400418D93 /* String+ContainsTests.swift */,
+				452733AC1FD674C400418D93 /* String+UrlEncodeTests.swift */,
+				452AB7B120CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -943,6 +948,7 @@
 				4527341B1FD674F700418D93 /* String+Contains.swift */,
 				4527341C1FD674F700418D93 /* String+Replace.swift */,
 				4527341D1FD674F700418D93 /* String+UrlEncode.swift */,
+				452AB7AF20CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -1901,6 +1907,7 @@
 				4527354C1FD674F900418D93 /* UIView+Scale.swift in Sources */,
 				4527354B1FD674F900418D93 /* UIView+Round.swift in Sources */,
 				452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */,
+				452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */,
 				4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */,
 				452735011FD674F900418D93 /* String+Base64.swift in Sources */,
 				452735881FD674F900418D93 /* MainBundleFileFinder.swift in Sources */,
@@ -1936,7 +1943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452733E21FD674C500418D93 /* String_UrlEncodeTests.swift in Sources */,
+				452733E21FD674C500418D93 /* String+UrlEncodeTests.swift in Sources */,
 				452733FB1FD674C500418D93 /* KeychainServiceTestClass.swift in Sources */,
 				452733F41FD674C500418D93 /* UIView_RoundTests.swift in Sources */,
 				452733E81FD674C500418D93 /* UISlider_Extensions_ButtonPositionTests.swift in Sources */,
@@ -1946,12 +1953,13 @@
 				452733DF1FD674C500418D93 /* Set_GroupTests.swift in Sources */,
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
 				452733E91FD674C500418D93 /* UISlider_Extensions_ButtonSizeTests.swift in Sources */,
-				452733E01FD674C500418D93 /* String_Base64Tests.swift in Sources */,
+				452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */,
 				452733E51FD674C500418D93 /* UICollectionView_DefaultNibTests.swift in Sources */,
 				452733ED1FD674C500418D93 /* UISlider_HitTests.swift in Sources */,
 				452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				452733D41FD674C500418D93 /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider_Extensions_PercentageAtPointTests.swift in Sources */,
+				452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */,
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				452733F01FD674C500418D93 /* UIView_EmptyTests.swift in Sources */,
 				452733DB1FD674C500418D93 /* NSObject_ClassNameTests.swift in Sources */,
@@ -1970,7 +1978,7 @@
 				452733EE1FD674C500418D93 /* UITableView_DefaultNibTests.swift in Sources */,
 				452733E71FD674C500418D93 /* UINavigationBar_TransparentTests.swift in Sources */,
 				452733D91FD674C500418D93 /* Bool_RandomTests.swift in Sources */,
-				452733E11FD674C500418D93 /* String_ContainsTests.swift in Sources */,
+				452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */,
 				452733D51FD674C500418D93 /* Array_ElementsOfTypeTests.swift in Sources */,
 				452733D61FD674C500418D93 /* Array_GroupTests.swift in Sources */,
 				452733F11FD674C500418D93 /* UIView_HitTests.swift in Sources */,

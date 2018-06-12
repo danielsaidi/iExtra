@@ -1,5 +1,5 @@
 //
-//  String_ContainsTests.swift
+//  String+ContainsTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.
