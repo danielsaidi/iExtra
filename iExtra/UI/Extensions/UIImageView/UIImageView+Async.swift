@@ -30,14 +30,3 @@ public extension UIImageView {
         }
     }
 }
-
-
-// MARK: - Private Functions
-
-fileprivate extension UIImageView {
-
-    func setupAsyncTag() -> Int {
-        tag = Int.random(in: 1...10000)
-        return tag
-    }
-}

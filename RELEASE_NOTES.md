@@ -11,8 +11,15 @@ bumps, but not on revision bumps.
 ## 1.2.6
 
 I have added a `capitalizedFirst` `StringProtocol` extension. It capitalizes the
-first character and leaves the rest of the string untouched, unlike `capitalized`
-which capitalizes the first character and lower-cases the rest of the string.
+first character and leaves the remaining ones unchanged, unlike `capitalized`.
+
+I have added a `calculateAverageColor` `UIImage` extension, which calculates the
+average color in an image.
+
+I have made the previously private `setupAsyncTag` extension public, and changed
+it so that it extensions `UIView` instead of `UIImageView`. It's a nice tool for
+when async operations may become obsolete on their completion, e.g. when loading
+async images while scrolling through a collection of cells.
 
 I have also fixed a rotation bug for the `startRotation` UIView extension, which
 only rotated with PI, instead of a full revolution.

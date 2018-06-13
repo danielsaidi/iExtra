@@ -43,25 +43,4 @@ public extension UIImage {
             }
         }.resume()
     }
-    
-    public static func async(named name: String, callback: @escaping AsyncImageResult) {
-        { self.loadAsync(named: name) } ~> { callback($0, nil) }
-    }
-}
-
-
-// MARK: - Private Functions
-
-fileprivate extension UIImage {
-    
-    class func loadAsync(named name: String) -> UIImage? {
-        let image = UIImage(named: name)
-        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
-        let context = UIGraphicsGetCurrentContext()
-        guard let cgImage = image?.cgImage else { return nil }
-        let rect = CGRect(x: 0, y: 0, width: 1, height: 1)
-        context?.draw(cgImage, in: rect)
-        UIGraphicsEndImageContext()
-        return image
-    }
 }
