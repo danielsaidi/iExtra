@@ -1,5 +1,5 @@
 //
-//  UISlider_HitTestTests.swift
+//  UISlider+HitTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi Daniel on 2016-12-12.
@@ -7,12 +7,11 @@
 //
 
 import UIKit
-
 import Quick
 import Nimble
 import iExtra
 
-class UISlider_HitTestTests: QuickSpec {
+class UISlider_HitTests: QuickSpec {
     
     override func spec() {
         

@@ -1,5 +1,5 @@
 //
-//  UISlider_Extensions_ValueAtPointTests.swift
+//  UISlider+ValueAtPointTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi Daniel on 2016-12-12.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class UISlider_Extensions_ValueAtPointTests: QuickSpec {
+class UISlider_ValueAtPointTests: QuickSpec {
 
     override func spec() {
         

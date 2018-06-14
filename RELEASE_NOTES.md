@@ -10,18 +10,29 @@ bumps, but not on revision bumps.
 
 ## 1.2.6
 
-I have added a `capitalizedFirst` `StringProtocol` extension. It capitalizes the
-first character and leaves the remaining ones unchanged, unlike `capitalized`.
+New features:
 
-I have added a `calculateAverageColor` `UIImage` extension, which calculates the
-average color in an image.
+- I have added a `capitalizedFirst` `StringProtocol` extension, that capitalizes
+the first character and leaves the remaining characters unchanged.
 
-I have made the previously private `setupAsyncTag` extension public, and changed
-it so that it extensions `UIView` instead of `UIImageView`. It's a nice tool for
-when async operations may become obsolete on their completion, e.g. when loading
-async images while scrolling through a collection of cells.
+- I have added a new `calculateAverageColor` `UIImage` extension that calculates
+the average color of an image.
 
-I have also fixed a rotation bug for the `startRotation` UIView extension, which
+- I have made the private `setupAsyncTag` extension public and modified it so it
+extends `UIView` instead of `UIImageView`. It's a convenient tool for when async
+operations may become obsolete, e.g. when loading images while scrolling through
+a collection of cells.
+
+- I have added more color extensions to `UISearchBar+Style` like setting a color
+for the search icon, clear buttons etc.
+
+- I have added a `UITextField+Placeholder` extension that lets you set a colored
+text field placeholder text.
+
+
+Bug fixes:
+
+- I have also fixed a rotation bug for the `startRotation` UIView extension, which
 only rotated with PI, instead of a full revolution.
 
 

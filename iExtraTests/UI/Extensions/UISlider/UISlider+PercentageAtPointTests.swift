@@ -1,5 +1,5 @@
 //
-//  UISlider_Extensions_ValuePercentageTests.swift
+//  UISlider+ValuePercentageTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi Daniel on 2016-12-12.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class UISlider_Extensions_PercentageAtPointTests: QuickSpec {
+class UISlider_PercentageAtPointTests: QuickSpec {
     
     override func spec() {
         

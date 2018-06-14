@@ -1,5 +1,5 @@
 //
-//  UISlider_Extensions_ButtonPositionTests.swift
+//  UISlider+ButtonPositionTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi Daniel on 2016-12-12.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class UISlider_Extensions_ButtonPositionTests: QuickSpec {
+class UISlider_ButtonPositionTests: QuickSpec {
 
     override func spec() {
         
