@@ -8,12 +8,12 @@
 
 import UIKit
 
-public class ThinSeparator: UIView {
+open class ThinSeparator: UIView {
     
     
     // MARK: - Overridden Functions
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         super.layoutSubviews()
         setupTrailing()
         adjustHeight()
@@ -22,12 +22,12 @@ public class ThinSeparator: UIView {
         adjustY()
     }
     
-    public override func didMoveToSuperview() {
+    open override func didMoveToSuperview() {
         isTrailingSeparator = nil
         super.didMoveToSuperview()
     }
     
-    public override func removeFromSuperview() {
+    open override func removeFromSuperview() {
         isTrailingSeparator = nil
         super.removeFromSuperview()
     }
@@ -35,17 +35,17 @@ public class ThinSeparator: UIView {
     
     // MARK: - Properties
     
-    public var lineWidth: CGFloat = 0.5 {
+    open var lineWidth: CGFloat = 0.5 {
         didSet { setNeedsLayout() }
     }
     
-    public var isHeightSeparator: Bool {
+    open var isHeightSeparator: Bool {
         return frame.size.width > frame.size.height
     }
     
-    public var isTrailingSeparator: Bool?
+    open var isTrailingSeparator: Bool?
     
-    public var isWidthSeparator: Bool {
+    open var isWidthSeparator: Bool {
         return !isHeightSeparator
     }
 }
@@ -53,7 +53,7 @@ public class ThinSeparator: UIView {
 
 // MARK: - Private Functions
 
-fileprivate extension ThinSeparator {
+private extension ThinSeparator {
     
     func adjustHeight() {
         guard isHeightSeparator else { return }
