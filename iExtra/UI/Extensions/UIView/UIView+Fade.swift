@@ -15,7 +15,7 @@ public extension UIView {
         withDuration duration: TimeInterval,
         completion: ((_ finished: Bool) -> ())? = nil) {
         if self.alpha == alpha { return }
-        if alpha == 0 { show() }
+        if self.alpha == 0 { show() }
         UIView.animate(
             withDuration: duration,
             animations: { self.alpha = alpha },
