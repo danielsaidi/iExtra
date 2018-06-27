@@ -106,7 +106,6 @@
 		4527351C1FD674F900418D93 /* UIApplication+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734421FD674F800418D93 /* UIApplication+Name.swift */; };
 		4527351D1FD674F900418D93 /* UIApplication+Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734431FD674F800418D93 /* UIApplication+Review.swift */; };
 		4527351E1FD674F900418D93 /* UIApplication+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734441FD674F800418D93 /* UIApplication+Version.swift */; };
-		4527351F1FD674F900418D93 /* UIButton+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */; };
 		452735201FD674F900418D93 /* UIButton+ImageMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734471FD674F800418D93 /* UIButton+ImageMargin.swift */; };
 		452735211FD674F900418D93 /* UIButton+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734481FD674F800418D93 /* UIButton+Init.swift */; };
 		452735231FD674F900418D93 /* UICollectionView+DefaultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527344B1FD674F800418D93 /* UICollectionView+DefaultCell.swift */; };
@@ -422,7 +421,6 @@
 		452734421FD674F800418D93 /* UIApplication+Name.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Name.swift"; sourceTree = "<group>"; };
 		452734431FD674F800418D93 /* UIApplication+Review.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Review.swift"; sourceTree = "<group>"; };
 		452734441FD674F800418D93 /* UIApplication+Version.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Version.swift"; sourceTree = "<group>"; };
-		452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+BackgroundColor.swift"; sourceTree = "<group>"; };
 		452734471FD674F800418D93 /* UIButton+ImageMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+ImageMargin.swift"; sourceTree = "<group>"; };
 		452734481FD674F800418D93 /* UIButton+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Init.swift"; sourceTree = "<group>"; };
 		4527344B1FD674F800418D93 /* UICollectionView+DefaultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+DefaultCell.swift"; sourceTree = "<group>"; };
@@ -1095,7 +1093,6 @@
 		452734451FD674F800418D93 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
-				452734461FD674F800418D93 /* UIButton+BackgroundColor.swift */,
 				452734471FD674F800418D93 /* UIButton+ImageMargin.swift */,
 				452734481FD674F800418D93 /* UIButton+Init.swift */,
 			);
@@ -1869,7 +1866,6 @@
 				452735511FD674F900418D93 /* UIView+Shake.swift in Sources */,
 				4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */,
 				452734F61FD674F900418D93 /* Array+RandomElement.swift in Sources */,
-				4527351F1FD674F900418D93 /* UIButton+BackgroundColor.swift in Sources */,
 				452735641FD674F900418D93 /* NoCancellingSearchBar.swift in Sources */,
 				45883BAF20CF1853001C0E2F /* CornerRadiusStyle.swift in Sources */,
 				452735491FD674F900418D93 /* UIView+ReuseIdentifier.swift in Sources */,
