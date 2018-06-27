@@ -1,10 +1,33 @@
 # Release Notes
 
 There are no release notes before v`1.2.0`. For these versions, please check the
-git tags.
+git tags. Also please note that iExtra does not use semver. Breaking changes can
+occur on minor version bumps, but not on revision bumps.
 
-Note that iExtra doesn't use semver. Breaking changes can occur on minor version
-bumps, but not on revision bumps.
+
+
+## 1.3.0
+
+New features:
+
+- The `ThinSeparator` class is now `open` instead of `public`, so subclass it as
+much as you like.
+
+
+Bug fixes:
+
+- The `UIView+Fade` extension had a bug that messed up fading in a view that had
+been faded out previously.
+
+- The `ThemedButton` class previously didn't apply its appearance when movind to
+a window, which could cause bugs. This has been solved.
+
+
+Removed features:
+
+- I have removed the `setBackgroundColor(for state:...)` `UIButton` extension. I
+added it long ago and regret it deeply, since it's image-based and messes up any
+round corners and shadows applied to the button.
 
 
 
@@ -18,16 +41,15 @@ the first character and leaves the remaining characters unchanged.
 - I have added a new `calculateAverageColor` `UIImage` extension that calculates
 the average color of an image.
 
-- I have made the private `setupAsyncTag` extension public and modified it so it
-extends `UIView` instead of `UIImageView`. It's a convenient tool for when async
-operations may become obsolete, e.g. when loading images while scrolling through
-a collection of cells.
-
-- I have added more color extensions to `UISearchBar+Style` like setting a color
-for the search icon, clear buttons etc.
-
 - I have added a `UITextField+Placeholder` extension that lets you set a colored
 text field placeholder text.
+
+- `UISearchBar+Style` has been etended with more extensions, like setting custom
+colors for search icons, clear buttons etc.
+
+- The `setupAsyncTag` extension has been made public, and extends UIView instead
+of UIImageView. It's nice for when async operations completions may become stale,
+e.g. when loading images while scrolling through a collection of cells.
 
 
 Bug fixes:

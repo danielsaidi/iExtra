@@ -57,7 +57,7 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     
     // MARK: - Public functions
     
-    open override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+    open override func dismiss(animated flag: Bool, completion: (() -> ())? = nil) {
         isActive = false
         super.dismiss(animated: true)
     }
