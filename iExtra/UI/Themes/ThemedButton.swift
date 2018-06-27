@@ -32,6 +32,11 @@ open class ThemedButton: UIButton {
     
     open func setup() { }
     
+    open override func didMoveToWindow() {
+        super.didMoveToWindow()
+        updateAppearance()
+    }
+    
     
     // MARK: - Appearance
     
