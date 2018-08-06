@@ -30,7 +30,8 @@ public extension UIView {
     }
 }
 
-fileprivate extension UIView {
+
+private extension UIView {
     
     struct Key { static var id = "longPressAction" }
     

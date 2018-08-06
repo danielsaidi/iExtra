@@ -13,26 +13,19 @@ import UIKit
 
 public extension UIViewController {
     
-    func addCustomBackButton(withImage image: UIImage, insets: UIEdgeInsets) {
+    func addCustomBackButton(withImage image: UIImage, insets: UIEdgeInsets, accessibilityLabel: String = "Back") {
         guard let nvc = navigationController else { return }
         guard nvc.viewControllers.first != self else { return }
         let image = image.withAlignmentRectInsets(insets)
         let action = #selector(backButtonTapped)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
+        button.accessibilityTraits = UIAccessibilityTraitButton
+        button.accessibilityLabel = accessibilityLabel
         navigationItem.leftBarButtonItem = button
-        setupBackBarButtonAccessibility(for: button)
+        nvc.interactivePopGestureRecognizer?.delegate = nil
     }
     
     @objc func backButtonTapped() {
         _ = navigationController?.popViewController(animated: true)
-    }
-}
-
-
-private extension UIViewController {
-    
-    func setupBackBarButtonAccessibility(for button: UIBarButtonItem) {
-        button.accessibilityTraits = UIAccessibilityTraitButton
-        button.accessibilityLabel = ""// L10n.generalBack.string
     }
 }

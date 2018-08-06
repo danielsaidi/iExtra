@@ -92,7 +92,7 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
 
 // MARK: - Private Functions
 
-fileprivate extension NavigationSearchController {
+private extension NavigationSearchController {
     
     func addManualCancelButton() {
         guard UIDevice.current.userInterfaceIdiom == .pad else { return }

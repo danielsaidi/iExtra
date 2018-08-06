@@ -31,7 +31,7 @@ open class BlurredNavigationSearchController: NavigationSearchController {
 
 // MARK: - Private functions
 
-fileprivate extension BlurredNavigationSearchController {
+private extension BlurredNavigationSearchController {
     
     func blurEffect(withStyle style: UIBlurEffectStyle, alpha: CGFloat) -> UIBlurEffect {
         let blurEffect = UIBlurEffect(style: style)

@@ -58,7 +58,7 @@ open class RadialFloatingMenuBackgroundPresenter: NSObject, FloatingMenuBackgrou
 
 // MARK: - Private methods
 
-fileprivate extension RadialFloatingMenuBackgroundPresenter {
+private extension RadialFloatingMenuBackgroundPresenter {
     
     func createBackground(for menu: FloatingMenu) {
         if backgroundView != nil {

@@ -22,7 +22,7 @@ public class BorderLineView: UIView {
 
 // MARK: - Private functions
 
-fileprivate extension BorderLineView {
+private extension BorderLineView {
     
     func adjustHeight() {
         guard frame.size.height == 1 else { return }

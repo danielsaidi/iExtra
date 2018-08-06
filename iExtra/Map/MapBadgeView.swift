@@ -80,7 +80,7 @@ public extension MapBadgeView {
 
 // MARK: - Private functions
 
-fileprivate extension MapBadgeView {
+private extension MapBadgeView {
     
     func applyBorderStyle(to view: UIView) {
         let layer = view.layer

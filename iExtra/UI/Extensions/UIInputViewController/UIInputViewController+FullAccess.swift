@@ -26,9 +26,7 @@ public extension UIInputViewController {
 }
 
 
-// MARK: - Private Properties
-
-fileprivate extension UIInputViewController {
+private extension UIInputViewController {
     
     var hasFullAccessiOS9: Bool {
         var pasteboard: UIPasteboard?

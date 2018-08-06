@@ -6,6 +6,15 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
+
+## 1.3.1
+
+New features:
+
+- I have added a bunch of new extensions to the library.
+
+
+
 ## 1.3.0
 
 New features:

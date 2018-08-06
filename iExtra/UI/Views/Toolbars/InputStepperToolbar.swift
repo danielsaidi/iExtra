@@ -60,7 +60,7 @@ public class InputStepperToolbar: UIToolbar {
 
 // MARK: - Calculated Properties
 
-fileprivate extension InputStepperToolbar {
+private extension InputStepperToolbar {
     
     var hasNext: Bool {
         guard let owner = owner else { return false }
@@ -95,7 +95,7 @@ fileprivate extension InputStepperToolbar {
 
 // MARK: - Private Functions
 
-fileprivate extension InputStepperToolbar {
+private extension InputStepperToolbar {
     
     func createDoneButton() -> UIBarButtonItem {
         let action = #selector(doneButtonTapped)

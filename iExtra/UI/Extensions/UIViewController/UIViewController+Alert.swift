@@ -36,7 +36,7 @@ public extension UIViewController {
 }
 
 
-fileprivate extension UIViewController {
+private extension UIViewController {
     
     func setupCancelAction(in alert: UIAlertController, with title: String?) {
         guard let title = title else { return }

@@ -68,7 +68,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
 
 // MARK: Private Functions
 
-fileprivate extension LinearFloatingSubMenuPresenter {
+private extension LinearFloatingSubMenuPresenter {
     
     func applyShadow(on label: UILabel, from button: UIButton) {
         label.layer.shadowOffset = button.layer.shadowOffset

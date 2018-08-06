@@ -121,7 +121,7 @@ extension PannableModalPresenter {
 
 // MARK: - Private Functions
 
-fileprivate extension PannableModalPresenter {
+private extension PannableModalPresenter {
     
     func addPanGesture(to view: UIView?) {
         guard let view = view else { return }

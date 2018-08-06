@@ -19,9 +19,6 @@ import UIKit
 
 public extension UIViewController {
     
-    
-    // MARK: - Properties
-    
     public var navigationBarBackground: UIView? {
         let tag = navBarBackgroundTag
         return getNavBarBackground(tag) ?? createNavBarBackground(tag)
@@ -29,10 +26,7 @@ public extension UIViewController {
 }
 
 
-
-// MARK: - Private Functions
-
-fileprivate extension UIViewController {
+private extension UIViewController {
     
     var navBarBackgroundTag: Int { return 324523 }
     

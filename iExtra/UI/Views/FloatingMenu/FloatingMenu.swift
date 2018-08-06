@@ -118,7 +118,7 @@ open class FloatingMenu: UIView {
 
 // MARK: - Setup
 
-fileprivate extension FloatingMenu {
+private extension FloatingMenu {
     
     func setupPrimaryButton(_ button: UIButton) {
         addSubview(button)
@@ -158,7 +158,7 @@ fileprivate extension FloatingMenu {
 
 // MARK: - Private Functions
 
-fileprivate extension FloatingMenu {
+private extension FloatingMenu {
     
     func removeAllSubviews() {
         for view in subviews {

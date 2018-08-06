@@ -26,9 +26,7 @@ public class DateSerializerDefault: NSObject, DateSerializer {
 }
 
 
-// MARK: Private methods
-
-fileprivate extension DateSerializerDefault {
+private extension DateSerializerDefault {
     
     func getDateFormat(for string: String) -> DateSerializerFormat {
         let hasFragments = string.range(of: ".") != nil

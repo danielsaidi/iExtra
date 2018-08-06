@@ -27,7 +27,7 @@ class BottomGradientView: UIView {
 
 // MARK: - Private Properties
 
-fileprivate extension BottomGradientView {
+private extension BottomGradientView {
     
     var shouldSetupGradientLayer: Bool {
         return (layer.sublayers?.count ?? 0) == 0
@@ -37,7 +37,7 @@ fileprivate extension BottomGradientView {
 
 // MARK: - Private Functions
 
-fileprivate extension BottomGradientView {
+private extension BottomGradientView {
     
     func createGradientLayer(for superview: UIView) -> CAGradientLayer {
         let fromColor = superview.backgroundColor?.withAlphaComponent(0) ?? UIColor.clear

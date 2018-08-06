@@ -63,13 +63,11 @@ public extension UIColor {
     }
     
     
-    
     // MARK: - Public Properties
     
     public var hexString: String {
         return hexString(withAlpha: false)
     }
-    
     
     
     // MARK: - Public Functions
@@ -98,7 +96,7 @@ public extension UIColor {
 
 // MARK: - Private Functions
 
-fileprivate extension UIColor {
+private extension UIColor {
     
     func removeHash(in string: String) -> String {
         guard string.hasPrefix("#") else { return string }

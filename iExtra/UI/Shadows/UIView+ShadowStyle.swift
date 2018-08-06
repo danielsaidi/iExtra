@@ -21,7 +21,7 @@ public extension UIView {
     }
 }
 
-fileprivate extension CALayer {
+private extension CALayer {
     
     func applyShadow(
         color: UIColor = .black,

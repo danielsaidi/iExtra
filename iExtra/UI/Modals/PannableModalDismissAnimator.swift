@@ -27,7 +27,7 @@ class PannableModalDismissAnimator: NSObject {
 
 // MARK: - Private Functions
 
-fileprivate extension PannableModalDismissAnimator {
+private extension PannableModalDismissAnimator {
     
     func getFinalFrame() -> CGRect {
         let bounds = UIScreen.main.bounds

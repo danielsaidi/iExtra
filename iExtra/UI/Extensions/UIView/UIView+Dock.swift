@@ -36,27 +36,27 @@ public extension UIView {
 
 // MARK: - Private Functions
 
-fileprivate extension UIView {
+private extension UIView {
     
-    fileprivate func dockToBottomRight(with padding: CGFloat) {
+    func dockToBottomRight(with padding: CGFloat) {
         let x = superview!.frame.size.width - frame.size.width - padding
         let y = superview!.frame.size.height - frame.size.height - padding
         frame.origin = CGPoint(x: x, y: y)
     }
     
-    fileprivate func dockToBottomLeft(with padding: CGFloat) {
+    func dockToBottomLeft(with padding: CGFloat) {
         let x = padding
         let y = superview!.frame.size.height - frame.size.height - padding
         frame.origin = CGPoint(x: x, y: y)
     }
     
-    fileprivate func dockToTopLeft(with padding: CGFloat) {
+    func dockToTopLeft(with padding: CGFloat) {
         let x = padding
         let y = padding
         frame.origin = CGPoint(x: x, y: y)
     }
     
-    fileprivate func dockToTopRight(with padding: CGFloat) {
+    func dockToTopRight(with padding: CGFloat) {
         let x = superview!.frame.size.width - frame.size.width - padding
         let y = padding
         frame.origin = CGPoint(x: x, y: y)

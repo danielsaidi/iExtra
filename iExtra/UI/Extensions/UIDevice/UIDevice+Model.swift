@@ -27,9 +27,9 @@ public extension UIDevice {
 }
 
 
-// MARK: - Private DeviceModelType Extension
+// MARK: - DeviceModelType Extension
 
-fileprivate extension DeviceModelType {
+private extension DeviceModelType {
     
     static func from(modelName: String) -> DeviceModelType {
         switch modelName {

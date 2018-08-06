@@ -17,9 +17,6 @@ import Foundation
 
 public class MainBundleImageFileFinder: MainBundleFileFinder {
     
-    
-    // MARK: Public methods
-    
     public override func findFiles(withPrefix prefix: String) -> [String] {
         let rawResult = super.findFiles(withPrefix: prefix)
         let result = filter(rawResult)
@@ -34,9 +31,7 @@ public class MainBundleImageFileFinder: MainBundleFileFinder {
 }
 
 
-// MARK: - Private Functions
-
-fileprivate extension MainBundleImageFileFinder {
+private extension MainBundleImageFileFinder {
     
     func filter(_ rawResult: [String]) -> [String] {
         return rawResult.flatMap { getBaseImageName($0) }

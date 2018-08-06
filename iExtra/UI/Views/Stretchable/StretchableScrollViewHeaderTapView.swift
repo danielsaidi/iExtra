@@ -55,7 +55,7 @@ public class StretchableScrollViewHeaderTapView: UIView {
 
 // MARK: - Private Functions
 
-fileprivate extension StretchableScrollViewHeaderTapView {
+private extension StretchableScrollViewHeaderTapView {
     
     func getAllSubviews(in view: UIView) -> [UIView] {
         var result = [UIView]()

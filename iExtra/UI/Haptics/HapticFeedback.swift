@@ -52,7 +52,7 @@ public extension HapticFeedback {
 
 // MARK: - Private Functions
 
-fileprivate extension HapticFeedback {
+private extension HapticFeedback {
     
     func trigger(feedbackType: UINotificationFeedbackType) {
         if #available(iOS 10.0, *) {

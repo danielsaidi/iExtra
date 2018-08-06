@@ -54,7 +54,7 @@ open class FloatingSubmenu: UIView {
 
 // MARK: - Private Functions
 
-fileprivate extension FloatingSubmenu {
+private extension FloatingSubmenu {
     
     func handleMenuDidChangeState(_ menu: FloatingMenu) {
         guard let presenter = presenter else { return }

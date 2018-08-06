@@ -10,9 +10,6 @@ import Foundation
 
 public class MainBundleFileFinder: NSObject, FileFinder {
     
-    
-    // MARK: Public functions
-    
     public func findFiles(withPrefix prefix: String) -> [String] {
         let format = "self BEGINSWITH %@"
         let predicate = NSPredicate(format: format, argumentArray: [prefix])
@@ -27,9 +24,7 @@ public class MainBundleFileFinder: NSObject, FileFinder {
 }
 
 
-// MARK: - Private Functions
-
-fileprivate extension MainBundleFileFinder {
+private extension MainBundleFileFinder {
     
     func findFiles(with predicate: NSPredicate) -> [String] {
         let path = Bundle.main.bundlePath

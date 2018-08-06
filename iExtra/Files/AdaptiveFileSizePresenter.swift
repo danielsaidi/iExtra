@@ -40,9 +40,7 @@ public class AdaptiveFileSizePresenter: FileSizeBytesPresenter {
 }
 
 
-// MARK: - Private Functions
-
-fileprivate extension AdaptiveFileSizePresenter {
+private extension AdaptiveFileSizePresenter {
     
     func getNextDimensionSize(for size: Double) -> Double {
         return size / 1024.0

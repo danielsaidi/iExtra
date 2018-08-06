@@ -1,5 +1,5 @@
 //
-//  UIView+AnimatedTap.swift
+//  UIView+TapAnimations.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-25.
@@ -26,7 +26,7 @@ public extension UIView {
     }
 }
 
-fileprivate extension UIView {
+private extension UIView {
     
     func animateTransform(_ transform: CGAffineTransform, completion: (() -> ())? = nil) {
         UIView.animate(

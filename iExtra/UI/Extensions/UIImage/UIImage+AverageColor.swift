@@ -30,7 +30,7 @@ public extension UIImage {
 }
 
 
-fileprivate extension UIImage {
+private extension UIImage {
     
     var colorSpace: CGColorSpace {
         return CGColorSpaceCreateDeviceRGB()

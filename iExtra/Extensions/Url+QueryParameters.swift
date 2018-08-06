@@ -50,9 +50,9 @@ public extension URL {
 }
 
 
-// MARK: - Internal Helper Extensions
+// MARK: - Dictionary Extensions
 
-fileprivate extension Dictionary {
+private extension Dictionary {
     
     func urlEncoded() -> String {
         let parameterArray = map { (key, value) -> String in
@@ -63,7 +63,10 @@ fileprivate extension Dictionary {
     }
 }
 
-fileprivate extension URLQueryItem {
+
+// MARK: - URLQueryItem Extensions
+
+private extension URLQueryItem {
     
     func isNamed(_ name: String) -> Bool {
         return self.name.lowercased() == name.lowercased()

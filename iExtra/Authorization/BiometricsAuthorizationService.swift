@@ -47,9 +47,7 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
 }
 
 
-// MARK: Private functions
-
-fileprivate extension BiometricsAuthorizationService {
+private extension BiometricsAuthorizationService {
     
     func authKey(forAction action: String) -> String {
         return "com.danielsaidi.iExtra.\(action)"

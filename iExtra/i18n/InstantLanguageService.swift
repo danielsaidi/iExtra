@@ -79,7 +79,7 @@ open class InstantLanguageService: NSObject, LanguageService {
 
 // MARK: - Private Functions
 
-fileprivate extension InstantLanguageService {
+private extension InstantLanguageService {
     
     fileprivate func loadBundle(for locale: String) -> Bool {
         if let path = Bundle.main.path(forResource: locale, ofType: "lproj") {
