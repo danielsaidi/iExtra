@@ -11,7 +11,8 @@ occur on minor version bumps, but not on revision bumps.
 
 New features:
 
-- I have added a bunch of new extensions to the library.
+- I have added a bunch of new extensions to the library. Instead of lsiting them
+here, just have a look at the commits for this version.
 
 
 
