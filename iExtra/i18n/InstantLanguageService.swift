@@ -81,11 +81,9 @@ open class InstantLanguageService: NSObject, LanguageService {
 
 private extension InstantLanguageService {
     
-    fileprivate func loadBundle(for locale: String) -> Bool {
-        if let path = Bundle.main.path(forResource: locale, ofType: "lproj") {
-            bundle = Bundle(path: path)
-            return true
-        }
-        return false
+    func loadBundle(for locale: String) -> Bool {
+        guard let path = Bundle.main.path(forResource: locale, ofType: "lproj") else { return false }
+        bundle = Bundle(path: path)
+        return true
     }
 }
