@@ -274,12 +274,14 @@
 		459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E62C8210F25AE006253F0 /* UITabBarController+StatusBar.swift */; };
 		45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029D1FD9822C0032884A /* UIDevice+Model.swift */; };
 		45A102A01FD982C50032884A /* DeviceModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1029F1FD982C50032884A /* DeviceModelType.swift */; };
+		45BE4FE1211AD144007B8D31 /* NavigationBarTriggerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BE4FE0211AD144007B8D31 /* NavigationBarTriggerViewController.swift */; };
 		45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0714204C02D100A93175 /* UIImage+Badged.swift */; };
 		45CE0717204C030600A93175 /* UIImage+Pasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0716204C030600A93175 /* UIImage+Pasteboard.swift */; };
 		45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0718204C038500A93175 /* UIImage+Photos.swift */; };
 		45CE071C204C040500A93175 /* UIInputViewController+FullAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE071B204C040500A93175 /* UIInputViewController+FullAccess.swift */; };
 		45CE071F204C043A00A93175 /* UIScrollView+PageNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE071E204C043A00A93175 /* UIScrollView+PageNumber.swift */; };
 		45CE0722204C048D00A93175 /* UIViewAutoresizing+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CE0721204C048D00A93175 /* UIViewAutoresizing+Extras.swift */; };
+		45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D17F2421188CF900A02318 /* Url+LocalFile.swift */; };
 		45E04C2320C3D4A300A4FB2B /* UIView+TapAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E04C2220C3D4A300A4FB2B /* UIView+TapAnimations.swift */; };
 		45E517AF20D1485B005A8029 /* UIImage+AverageColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517AE20D1485B005A8029 /* UIImage+AverageColor.swift */; };
 		45E517B120D14901005A8029 /* UIView+AsyncTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517B020D14901005A8029 /* UIView+AsyncTag.swift */; };
@@ -607,12 +609,14 @@
 		459E62C8210F25AE006253F0 /* UITabBarController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+StatusBar.swift"; sourceTree = "<group>"; };
 		45A1029D1FD9822C0032884A /* UIDevice+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Model.swift"; sourceTree = "<group>"; };
 		45A1029F1FD982C50032884A /* DeviceModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceModelType.swift; sourceTree = "<group>"; };
+		45BE4FE0211AD144007B8D31 /* NavigationBarTriggerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarTriggerViewController.swift; sourceTree = "<group>"; };
 		45CE0714204C02D100A93175 /* UIImage+Badged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Badged.swift"; sourceTree = "<group>"; };
 		45CE0716204C030600A93175 /* UIImage+Pasteboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Pasteboard.swift"; sourceTree = "<group>"; };
 		45CE0718204C038500A93175 /* UIImage+Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Photos.swift"; sourceTree = "<group>"; };
 		45CE071B204C040500A93175 /* UIInputViewController+FullAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIInputViewController+FullAccess.swift"; sourceTree = "<group>"; };
 		45CE071E204C043A00A93175 /* UIScrollView+PageNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+PageNumber.swift"; sourceTree = "<group>"; };
 		45CE0721204C048D00A93175 /* UIViewAutoresizing+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewAutoresizing+Extras.swift"; sourceTree = "<group>"; };
+		45D17F2421188CF900A02318 /* Url+LocalFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Url+LocalFile.swift"; sourceTree = "<group>"; };
 		45E04C2220C3D4A300A4FB2B /* UIView+TapAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapAnimations.swift"; sourceTree = "<group>"; };
 		45E517AE20D1485B005A8029 /* UIImage+AverageColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+AverageColor.swift"; sourceTree = "<group>"; };
 		45E517B020D14901005A8029 /* UIView+AsyncTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AsyncTag.swift"; sourceTree = "<group>"; };
@@ -757,7 +761,7 @@
 				452733A71FD674C400418D93 /* Sequence_BatchTests.swift */,
 				452733A81FD674C400418D93 /* Set_GroupTests.swift */,
 				452733A91FD674C400418D93 /* String */,
-				452733AD1FD674C400418D93 /* Url_QueryParametersTests.swift */,
+				45D17F2321188CCF00A02318 /* Url */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -926,7 +930,7 @@
 				452734171FD674F700418D93 /* Sequence+Batch.swift */,
 				452734181FD674F700418D93 /* Set+Group.swift */,
 				452734191FD674F700418D93 /* String */,
-				4527341E1FD674F700418D93 /* Url+QueryParameters.swift */,
+				45D17F2221188CB700A02318 /* Url */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1066,6 +1070,7 @@
 				45883BAB20CF1853001C0E2F /* Shadows */,
 				4567E4D420A328CC008B7FE5 /* Themes */,
 				4527349C1FD674F800418D93 /* Transitions */,
+				45BE4FDF211AD132007B8D31 /* ViewControllers */,
 				4527349F1FD674F800418D93 /* Views */,
 			);
 			path = UI;
@@ -1632,6 +1637,14 @@
 			path = UITabBarController;
 			sourceTree = "<group>";
 		};
+		45BE4FDF211AD132007B8D31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				45BE4FE0211AD144007B8D31 /* NavigationBarTriggerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		45CE071A204C03F800A93175 /* UIInputViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1647,6 +1660,23 @@
 				452734621FD674F800418D93 /* UIScrollView+Scroll.swift */,
 			);
 			path = UIScrollView;
+			sourceTree = "<group>";
+		};
+		45D17F2221188CB700A02318 /* Url */ = {
+			isa = PBXGroup;
+			children = (
+				45D17F2421188CF900A02318 /* Url+LocalFile.swift */,
+				4527341E1FD674F700418D93 /* Url+QueryParameters.swift */,
+			);
+			path = Url;
+			sourceTree = "<group>";
+		};
+		45D17F2321188CCF00A02318 /* Url */ = {
+			isa = PBXGroup;
+			children = (
+				452733AD1FD674C400418D93 /* Url_QueryParametersTests.swift */,
+			);
+			path = Url;
 			sourceTree = "<group>";
 		};
 		45E517BE20D23E77005A8029 /* UIViewAutoresizing */ = {
@@ -1880,6 +1910,7 @@
 				452735441FD674F900418D93 /* UIView+Frame.swift in Sources */,
 				45E04C2320C3D4A300A4FB2B /* UIView+TapAnimations.swift in Sources */,
 				452735601FD674F900418D93 /* ParallaxEffect.swift in Sources */,
+				45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
 				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,
 				452735171FD674F900418D93 /* MKMapView+CenterCoordinate.swift in Sources */,
@@ -2027,6 +2058,7 @@
 				452735041FD674F900418D93 /* String+UrlEncode.swift in Sources */,
 				452734EF1FD674F900418D93 /* Date+Compare.swift in Sources */,
 				452734FF1FD674F900418D93 /* Sequence+Batch.swift in Sources */,
+				45BE4FE1211AD144007B8D31 /* NavigationBarTriggerViewController.swift in Sources */,
 				452735541FD674F900418D93 /* UIView+SubviewsOfType.swift in Sources */,
 				45883BB020CF1853001C0E2F /* UIView+ShadowStyle.swift in Sources */,
 				452735051FD674F900418D93 /* Url+QueryParameters.swift in Sources */,

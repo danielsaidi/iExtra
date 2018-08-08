@@ -11,8 +11,13 @@ occur on minor version bumps, but not on revision bumps.
 
 New features:
 
-- I have added a bunch of new extensions to the library. Instead of lsiting them
+- I have added a bunch of new extensions to the library. Instead of listing them
 here, just have a look at the commits for this version.
+
+- I have added a new `NavigationBarTriggerViewController` protocol that makes it
+very easy to work with navigation bars that should fade/animate in after a while,
+depending on the scrollview's offset. You can use it to setup triggers that will
+be activated under certain conditions, then style the navigation bar accordingly.
 
 
 

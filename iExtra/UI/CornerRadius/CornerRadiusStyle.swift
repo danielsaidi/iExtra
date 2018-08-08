@@ -1,6 +1,6 @@
 //
-//  BaseViewController.swift
-//  Pinny
+//  CornerRadiusStyle.swift
+//  iExtra
 //
 //  Created by Daniel Saidi on 2018-05-09.
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
