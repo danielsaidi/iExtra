@@ -6,6 +6,13 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This extension must be added to the project. It will not be
+ enabled if it only exists in the iExtra framework.
+ 
+ */
+
 import UIKit
 
 extension UITabBarController {
