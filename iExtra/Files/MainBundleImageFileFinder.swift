@@ -34,7 +34,7 @@ public class MainBundleImageFileFinder: MainBundleFileFinder {
 private extension MainBundleImageFileFinder {
     
     func filter(_ rawResult: [String]) -> [String] {
-        return rawResult.flatMap { getBaseImageName($0) }
+        return rawResult.compactMap { getBaseImageName($0) }
     }
     
     func getBaseImageName(_ fileName: String) -> String? {

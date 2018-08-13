@@ -22,7 +22,7 @@ public protocol PannableDelegate: class {
 
 public protocol Pannable: class {
     
-    weak var panDelegate: PannableDelegate? { get set }
+    var panDelegate: PannableDelegate? { get set }
     
     var isPanEnabled: Bool { get set }
     var panDirections: [PannableDirection] { get set }

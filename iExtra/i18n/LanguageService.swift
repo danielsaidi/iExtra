@@ -17,8 +17,9 @@ public protocol LanguageServiceDelegate: class {
 
 public protocol LanguageService: class, Translator {
     
+    var delegate: LanguageServiceDelegate? { get set }
+    
     var currentLocale: String { get }
-    weak var delegate: LanguageServiceDelegate? { get set }
     
     func setLocale(_ locale: String)
 }

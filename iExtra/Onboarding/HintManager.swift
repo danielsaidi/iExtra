@@ -15,7 +15,7 @@ public protocol HintManagerDelegate: class {
 
 
 public protocol HintManager {
-    weak var delegate: HintManagerDelegate? { get set }
+    var delegate: HintManagerDelegate? { get set }
     
     func disable()
     func enable()

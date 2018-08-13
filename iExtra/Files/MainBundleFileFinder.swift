@@ -31,7 +31,7 @@ private extension MainBundleFileFinder {
         let fileManager = FileManager.default
         do {
             let files = try fileManager.contentsOfDirectory(atPath: path) as NSArray
-            return files.filtered(using: predicate).flatMap { $0 as? String }
+            return files.filtered(using: predicate).compactMap { $0 as? String }
         } catch {
             return []
         }

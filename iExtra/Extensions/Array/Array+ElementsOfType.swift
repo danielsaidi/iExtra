@@ -11,6 +11,6 @@ import Foundation
 public extension Array {
     
     public func elements<T>(ofType: T.Type) -> [T] {
-        return flatMap{ $0 as? T }
+        return compactMap{ $0 as? T }
     }
 }
