@@ -131,7 +131,7 @@ private extension LinearFloatingSubMenuPresenter {
         switch direction {
         case .up, .down:
             let buttonSize = button.frame.size
-            let labelSize = CGSize(width: 100, height: buttonSize.height)
+            let labelSize = CGSize(width: 1000, height: buttonSize.height)
             let label = UILabel()
             let translationKey = button.accessibilityLabel ?? ""
             label.text = NSLocalizedString(translationKey, comment: "")
