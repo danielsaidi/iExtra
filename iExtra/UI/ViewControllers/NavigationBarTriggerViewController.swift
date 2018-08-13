@@ -87,4 +87,3 @@ private extension NavigationBarTriggerViewController {
         }
     }
 }
-

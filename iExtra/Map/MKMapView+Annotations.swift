@@ -11,7 +11,7 @@ import MapKit
 public extension MKMapView {
     
     public func getAnnotations<T>(ofType type: T.Type) -> [T] {
-        return annotations.flatMap { $0 as? T }
+        return annotations.compactMap { $0 as? T }
     }
     
     public func removeAllAnnotations() {

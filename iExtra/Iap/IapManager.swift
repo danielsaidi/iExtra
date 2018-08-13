@@ -24,7 +24,7 @@ public protocol IapManager: class {
     
     // MARK: - Properties
     
-    weak var delegate: IapManagerDelegate? { get set }
+    var delegate: IapManagerDelegate? { get set }
     
     var canMakePayments: Bool { get }
 

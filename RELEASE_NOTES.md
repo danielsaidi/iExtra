@@ -6,6 +6,23 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
+## 1.4.0
+
+This version is adjusted to conform to `Swift 4.1` and thus requires Xcode 9.4.1
+or later.
+
+New features:
+
+- I have added a `UINavigationController+Completions` extensions file, that lets
+you use push and pop with completion blocks.
+
+Breaking changes:
+
+- I have adjusted the source code to conform to `Swift 4.1`. This means that any
+`flatMap` occurences have been replaced with `compactMap` plus some other tweaks.
+
+
+
 
 ## 1.3.1
 
