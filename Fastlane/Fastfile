@@ -11,7 +11,7 @@ platform :ios do
   lane :version do |options|
     ensure_git_status_clean
     ensure_git_branch(branch: 'master')
-#test
+    test
     version = version_bump_podspec(path: "iExtra.podspec", version_number: options[:name])
 
     git_commit(
