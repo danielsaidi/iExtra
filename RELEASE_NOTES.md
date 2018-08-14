@@ -6,6 +6,13 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
+## 1.4.1 - 1.4.3
+
+These versions increase the width of the floating menu buttons and add MKMapView
+extensions that let you find the annotation that is closest to the user.
+
+
+
 ## 1.4.0
 
 This version is adjusted to conform to `Swift 4.1` and thus requires Xcode 9.4.1
@@ -20,7 +27,6 @@ Breaking changes:
 
 - I have adjusted the source code to conform to `Swift 4.1`. This means that any
 `flatMap` occurences have been replaced with `compactMap` plus some other tweaks.
-
 
 
 
