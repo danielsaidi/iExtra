@@ -1,5 +1,5 @@
 //
-//  Set_GroupTests.swift
+//  Array+GroupTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-04-05.
@@ -22,27 +22,27 @@ private class TestGroupClass: NSObject {
     var age: Int
 }
 
-class Set_GroupTests: QuickSpec {
+class Array_GroupTests: QuickSpec {
     
     override func spec() {
         
-        func getSet() -> Set<TestGroupClass> {
+        func getArray() -> [TestGroupClass] {
             let obj1 = TestGroupClass(name: "Foo", age: 10)
             let obj2 = TestGroupClass(name: "Foo", age: 20)
             let obj3 = TestGroupClass(name: "Bar", age: 20)
-            return Set([obj1, obj2, obj3])
+            return [obj1, obj2, obj3]
         }
         
-        describe("grouping set") {
+        describe("grouping array") {
             
             it("can group by string") {
-                let result = getSet().group { $0.name }
+                let result = getArray().group { $0.name }
                 expect(result["Foo"]?.count).to(equal(2))
                 expect(result["Bar"]?.count).to(equal(1))
             }
             
             it("can group by int") {
-                let result = getSet().group { $0.age }
+                let result = getArray().group { $0.age }
                 expect(result[10]?.count).to(equal(1))
                 expect(result[20]?.count).to(equal(2))
             }

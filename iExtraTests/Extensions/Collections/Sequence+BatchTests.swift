@@ -1,5 +1,5 @@
 //
-//  Sequence_BatchTests.swift
+//  Sequence+BatchTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-05-10.

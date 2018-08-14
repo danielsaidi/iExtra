@@ -1,5 +1,5 @@
 //
-//  Collection_ShuffleTests.swift
+//  Collection+ShuffleTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.

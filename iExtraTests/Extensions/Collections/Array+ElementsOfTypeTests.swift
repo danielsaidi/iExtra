@@ -1,5 +1,5 @@
 //
-//  Array_ElementsOfTypeTests.swift
+//  Array+ElementsOfTypeTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.

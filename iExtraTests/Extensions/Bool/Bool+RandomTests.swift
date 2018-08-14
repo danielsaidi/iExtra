@@ -1,8 +1,8 @@
 //
-//  Bool_RandomTests.swift
+//  Bool+RandomTests.swift
 //  iExtra
 //
-//  Created by Saidi Daniel (BookBeat) on 2017-05-10.
+//  Created by Daniel Saidi on 2017-05-10.
 //  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 

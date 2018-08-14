@@ -1,5 +1,5 @@
 //
-//  Numeric_RandomTests.swift
+//  Numeric+RandomTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-12-13.

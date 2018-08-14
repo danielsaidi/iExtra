@@ -1,5 +1,5 @@
 //
-//  Float_FormatTests.swift
+//  Numeric+FormatTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-11-15.
@@ -13,7 +13,6 @@ import iExtra
 class Float_FormatTests: QuickSpec {
     
     override func spec() {
-        
         
         describe("cgfloat formatting with decimals") {
             
@@ -34,7 +33,6 @@ class Float_FormatTests: QuickSpec {
                 expect(result).to(equal("123.46"))
             }
         }
-        
         
         describe("double formatting with decimals") {
             

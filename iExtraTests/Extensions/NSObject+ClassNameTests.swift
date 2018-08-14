@@ -1,5 +1,5 @@
 //
-//  NSObject_ClassNameTests.swift
+//  NSObject+ClassNameTests.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-11-18.
