@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'iExtra'
-  s.version          = '1.4.3'
+  s.version          = '1.4.4'
   s.summary          = 'iExtra contains a bunch of extra stuff for the iOS framework.'
 
   s.description      = <<-DESC
