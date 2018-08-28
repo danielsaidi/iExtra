@@ -306,6 +306,13 @@
 			remoteGlobalIDString = 452733671FD673E200418D93;
 			remoteInfo = iExtra;
 		};
+		84BA20D321352A6F0040A20B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4527335F1FD673E200418D93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 452733851FD6740F00418D93;
+			remoteInfo = iExtraExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -1779,6 +1786,7 @@
 			);
 			dependencies = (
 				452733741FD673E200418D93 /* PBXTargetDependency */,
+				84BA20D421352A6F0040A20B /* PBXTargetDependency */,
 			);
 			name = iExtraTests;
 			productName = iExtraTests;
@@ -1811,7 +1819,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Daniel Saidi";
 				TargetAttributes = {
 					452733671FD673E200418D93 = {
@@ -1821,6 +1829,7 @@
 					452733701FD673E200418D93 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						TestTargetID = 452733851FD6740F00418D93;
 					};
 					452733851FD6740F00418D93 = {
 						CreatedOnToolsVersion = 9.1;
@@ -2198,6 +2207,11 @@
 			target = 452733671FD673E200418D93 /* iExtra */;
 			targetProxy = 452735A61FD6756700418D93 /* PBXContainerItemProxy */;
 		};
+		84BA20D421352A6F0040A20B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 452733851FD6740F00418D93 /* iExtraExample */;
+			targetProxy = 84BA20D321352A6F0040A20B /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -2234,6 +2248,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2241,6 +2256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2294,6 +2310,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -2301,6 +2318,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -2391,6 +2409,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iExtraExample.app/iExtraExample";
 			};
 			name = Debug;
 		};
@@ -2410,6 +2429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iExtraExample.app/iExtraExample";
 			};
 			name = Release;
 		};
