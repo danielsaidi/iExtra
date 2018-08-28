@@ -9,6 +9,7 @@
 import UIKit
 
 public typealias AlertAction = (() -> ())
+public typealias AlertTextInputCompletion = ((_ textFields: [UITextField]) -> ())
 
 
 public extension UIViewController {
@@ -26,12 +27,19 @@ public extension UIViewController {
     }
     
     func alert(title: String, message: String, actionText: String, cancelText: String?, action: @escaping AlertAction) {
-        guard let alert = getAlert(withTitle: title, message: message, actionText: actionText, cancelText: cancelText, textFieldPlaceholders: [], action: action) else { return }
+        guard canAlert else { return }
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        setupCancelButton(in: alert, title: cancelText)
+        setupActionButton(in: alert, title: actionText, action: action)
         present(alert, animated: true, completion: nil)
     }
     
-    func alertTextInput(title: String, message: String, actionText: String, cancelText: String?, textFieldPlaceholders: [String], action: @escaping AlertAction) {
-        guard let alert = getAlert(withTitle: title, message: message, actionText: actionText, cancelText: cancelText, textFieldPlaceholders: textFieldPlaceholders, action: action) else { return }
+    func alertTextInput(title: String, message: String, actionText: String, cancelText: String?, textFieldPlaceholders: [String], action: @escaping AlertTextInputCompletion) {
+        guard canAlert else { return }
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        setupCancelButton(in: alert, title: cancelText)
+        setupActionButton(in: alert, title: actionText) { action(alert.textFields ?? []) }
+        setupTextFields(in: alert, placeholders: textFieldPlaceholders)
         present(alert, animated: true, completion: nil)
     }
 }
@@ -45,12 +53,11 @@ private extension UIViewController {
         setupCancelButton(in: alert, title: cancelText)
         setupActionButton(in: alert, title: actionText, action: action)
         setupTextFields(in: alert, placeholders: textFieldPlaceholders)
-        present(alert, animated: true, completion: nil)
         return alert
     }
     
     func setupActionButton(in alert: UIAlertController, title: String, action: @escaping AlertAction) {
-        let button = UIAlertAction(title: title, style: .cancel)
+        let button = UIAlertAction(title: title, style: .default) { _ in action() }
         alert.addAction(button)
     }
     
