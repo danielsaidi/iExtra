@@ -6,7 +6,7 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
-## 1.4.4
+## 1.4.4 - 1.4.5
 
 I have added a new `UIViewController` `alertTextInput` extension, which lets you
 provide a list of placeholders that are used to create text fields.
