@@ -98,7 +98,7 @@
 		452735141FD674F900418D93 /* MKAnnotationGeocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734331FD674F800418D93 /* MKAnnotationGeocoder.swift */; };
 		452735151FD674F900418D93 /* MKAnnotationGeocoderDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734341FD674F800418D93 /* MKAnnotationGeocoderDefault.swift */; };
 		452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734351FD674F800418D93 /* MKMapView+Annotations.swift */; };
-		452735171FD674F900418D93 /* MKMapView+CenterCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734361FD674F800418D93 /* MKMapView+CenterCoordinate.swift */; };
+		452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734361FD674F800418D93 /* MKMapView+Center.swift */; };
 		452735181FD674F900418D93 /* MKMapView+LegalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734371FD674F800418D93 /* MKMapView+LegalLabel.swift */; };
 		452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734381FD674F800418D93 /* MKMapView+StatusBarStyle.swift */; };
 		4527351A1FD674F900418D93 /* TravellingMapCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734391FD674F800418D93 /* TravellingMapCamera.swift */; };
@@ -289,6 +289,8 @@
 		45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */; };
 		840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
+		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
+		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -437,7 +439,7 @@
 		452734331FD674F800418D93 /* MKAnnotationGeocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKAnnotationGeocoder.swift; sourceTree = "<group>"; };
 		452734341FD674F800418D93 /* MKAnnotationGeocoderDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MKAnnotationGeocoderDefault.swift; sourceTree = "<group>"; };
 		452734351FD674F800418D93 /* MKMapView+Annotations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Annotations.swift"; sourceTree = "<group>"; };
-		452734361FD674F800418D93 /* MKMapView+CenterCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+CenterCoordinate.swift"; sourceTree = "<group>"; };
+		452734361FD674F800418D93 /* MKMapView+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+Center.swift"; sourceTree = "<group>"; };
 		452734371FD674F800418D93 /* MKMapView+LegalLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+LegalLabel.swift"; sourceTree = "<group>"; };
 		452734381FD674F800418D93 /* MKMapView+StatusBarStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+StatusBarStyle.swift"; sourceTree = "<group>"; };
 		452734391FD674F800418D93 /* TravellingMapCamera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TravellingMapCamera.swift; sourceTree = "<group>"; };
@@ -634,6 +636,8 @@
 		45E517C420D24201005A8029 /* iExtra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = iExtra.podspec; sourceTree = "<group>"; };
 		840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClosestAnnotation.swift"; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
+		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
+		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -718,6 +722,7 @@
 		452733751FD673E200418D93 /* iExtraTests */ = {
 			isa = PBXGroup;
 			children = (
+				84BA20F12135677F0040A20B /* Map */,
 				452733981FD674C400418D93 /* Authorization */,
 				452733D11FD674C500418D93 /* Data */,
 				4527339A1FD674C400418D93 /* Device */,
@@ -1731,11 +1736,28 @@
 		840176E02122AFAA00FE86B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */,
 				452734351FD674F800418D93 /* MKMapView+Annotations.swift */,
-				452734361FD674F800418D93 /* MKMapView+CenterCoordinate.swift */,
+				452734361FD674F800418D93 /* MKMapView+Center.swift */,
 				840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */,
 				452734371FD674F800418D93 /* MKMapView+LegalLabel.swift */,
 				452734381FD674F800418D93 /* MKMapView+StatusBarStyle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		84BA20F12135677F0040A20B /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				84BA20F2213567870040A20B /* Extensions */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		84BA20F2213567870040A20B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1929,6 +1951,7 @@
 				452735411FD674F900418D93 /* UIView+DripPulse.swift in Sources */,
 				458EEDD221187A3700774A79 /* UICollectionViewCell+BackgroundColor.swift in Sources */,
 				4527355E1FD674F900418D93 /* PannableModalDismissAnimator.swift in Sources */,
+				84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */,
 				452735321FD674F900418D93 /* UINavigationBar+BackButton.swift in Sources */,
 				452735531FD674F900418D93 /* UIView+Subviews.swift in Sources */,
 				45A1029E1FD9822C0032884A /* UIDevice+Model.swift in Sources */,
@@ -1944,7 +1967,7 @@
 				45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
 				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,
-				452735171FD674F900418D93 /* MKMapView+CenterCoordinate.swift in Sources */,
+				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735971FD674F900418D93 /* HintManager.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
@@ -2178,6 +2201,7 @@
 				452733D61FD674C500418D93 /* Array+GroupTests.swift in Sources */,
 				452733F11FD674C500418D93 /* UIView+HitTests.swift in Sources */,
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
+				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,
 				452733DC1FD674C500418D93 /* Numeric+FormatTests.swift in Sources */,

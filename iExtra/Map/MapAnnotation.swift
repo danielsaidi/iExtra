@@ -46,7 +46,6 @@ open class MapAnnotation: NSObject, MKAnnotation {
     public var coordinateRegion = MKCoordinateRegion()
     
     
-    
     // MARK: Functions
     
     open func view(for mapView: MKMapView) -> MKAnnotationView? {

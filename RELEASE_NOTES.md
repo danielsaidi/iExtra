@@ -6,6 +6,20 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
+## 1.5.0
+
+New features:
+
+- The new `MKAnnotation+DefaultView` contains an new extension that provides the
+default view for an annotation given a certain map view instance.
+
+Breaking changes:
+
+- `MKMapView+CenterCoordinate` has been renamed and its syntax refactored to use
+modern Swift naming conventions.
+
+
+
 ## 1.4.4 - 1.4.6
 
 I have added a new `UIViewController` `alertTextInput` extension, which lets you
