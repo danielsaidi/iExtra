@@ -45,7 +45,7 @@ private extension BottomGradientView {
         
         let gradientLayer = CAGradientLayer()
         gradientLayer.frame = bounds
-        gradientLayer.frame.size.width = 5000   // TODO: For iPad landscape...should autosize
+        gradientLayer.frame.size.width = 5000   // TODO: Should use constraints instead
         gradientLayer.colors = [fromColor.cgColor, toColor.cgColor]
         return gradientLayer
     }

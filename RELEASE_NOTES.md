@@ -6,6 +6,13 @@ occur on minor version bumps, but not on revision bumps.
 
 
 
+## 1.4.4
+
+I have added a new `UIViewController` `alertTextInput` extension, which lets you
+provide a list of placeholders that are used to create text fields.
+
+
+
 ## 1.4.1 - 1.4.3
 
 These versions increase the width of the floating menu buttons and add MKMapView
