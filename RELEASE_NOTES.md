@@ -13,6 +13,9 @@ New features:
 - The new `MKAnnotation+DefaultView` contains an new extension that provides the
 default view for an annotation given a certain map view instance.
 
+- For `Codable` there is now a new `customISO8601` `JsonDecoder` that uses a new
+date decoding strategy that uses new date formatters to handle dates. Enjoy!
+
 Breaking changes:
 
 - `MKMapView+CenterCoordinate` has been renamed and its syntax refactored to use

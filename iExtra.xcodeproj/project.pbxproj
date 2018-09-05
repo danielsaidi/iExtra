@@ -288,6 +288,12 @@
 		45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517B220D1493B005A8029 /* UIView+AsyncTagTests.swift */; };
 		45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */; };
 		840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */; };
+		8488054D214083EA00C18688 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054C214083EA00C18688 /* DateFormatters.swift */; };
+		84880550214084D000C18688 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054F214084CF00C18688 /* DateFormattersTests.swift */; };
+		84880552214085B000C18688 /* DateDecoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84880551214085B000C18688 /* DateDecoders.swift */; };
+		848805542140863600C18688 /* DateDecodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848805532140863600C18688 /* DateDecodersTests.swift */; };
+		848805562140888100C18688 /* DateEncoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848805552140888100C18688 /* DateEncoders.swift */; };
+		84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84880557214089AA00C18688 /* DateEncodersTests.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -635,6 +641,12 @@
 		45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
 		45E517C420D24201005A8029 /* iExtra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = iExtra.podspec; sourceTree = "<group>"; };
 		840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClosestAnnotation.swift"; sourceTree = "<group>"; };
+		8488054C214083EA00C18688 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		8488054F214084CF00C18688 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
+		84880551214085B000C18688 /* DateDecoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoders.swift; sourceTree = "<group>"; };
+		848805532140863600C18688 /* DateDecodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodersTests.swift; sourceTree = "<group>"; };
+		848805552140888100C18688 /* DateEncoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEncoders.swift; sourceTree = "<group>"; };
+		84880557214089AA00C18688 /* DateEncodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEncodersTests.swift; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -722,16 +734,17 @@
 		452733751FD673E200418D93 /* iExtraTests */ = {
 			isa = PBXGroup;
 			children = (
-				84BA20F12135677F0040A20B /* Map */,
 				452733981FD674C400418D93 /* Authorization */,
 				452733D11FD674C500418D93 /* Data */,
+				8488054E214084B600C18688 /* Date */,
 				4527339A1FD674C400418D93 /* Device */,
 				4527339C1FD674C400418D93 /* Extensions */,
 				452733C71FD674C500418D93 /* Files */,
+				452733781FD673E200418D93 /* Info.plist */,
 				452733CF1FD674C500418D93 /* IoC */,
 				452733CD1FD674C500418D93 /* Keychain */,
+				84BA20F12135677F0040A20B /* Map */,
 				452733AE1FD674C400418D93 /* UI */,
-				452733781FD673E200418D93 /* Info.plist */,
 			);
 			path = iExtraTests;
 			sourceTree = "<group>";
@@ -906,6 +919,9 @@
 				452734011FD674F700418D93 /* DateSerializer.swift */,
 				452734021FD674F700418D93 /* DateSerializerDefault.swift */,
 				452734031FD674F700418D93 /* DateSerializerFormat.swift */,
+				8488054C214083EA00C18688 /* DateFormatters.swift */,
+				84880551214085B000C18688 /* DateDecoders.swift */,
+				848805552140888100C18688 /* DateEncoders.swift */,
 			);
 			path = Date;
 			sourceTree = "<group>";
@@ -1746,6 +1762,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		8488054E214084B600C18688 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				8488054F214084CF00C18688 /* DateFormattersTests.swift */,
+				848805532140863600C18688 /* DateDecodersTests.swift */,
+				84880557214089AA00C18688 /* DateEncodersTests.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		84BA20F12135677F0040A20B /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -2000,6 +2026,7 @@
 				4527356C1FD674F900418D93 /* FloatingMenu.swift in Sources */,
 				4527350D1FD674F900418D93 /* DelayOperator.swift in Sources */,
 				452735861FD674F900418D93 /* FileSizePresenter.swift in Sources */,
+				84880552214085B000C18688 /* DateDecoders.swift in Sources */,
 				4567E4EA20A32EB6008B7FE5 /* SwinjectIoCContainer.swift in Sources */,
 				452735181FD674F900418D93 /* MKMapView+LegalLabel.swift in Sources */,
 				452735281FD674F900418D93 /* UIImage+Color.swift in Sources */,
@@ -2053,6 +2080,7 @@
 				452735021FD674F900418D93 /* String+Contains.swift in Sources */,
 				4527356B1FD674F900418D93 /* RoundButton.swift in Sources */,
 				4527359B1FD674F900418D93 /* KeychainService.swift in Sources */,
+				848805562140888100C18688 /* DateEncoders.swift in Sources */,
 				452735301FD674F900418D93 /* UIImageView+Async.swift in Sources */,
 				4527354A1FD674F900418D93 /* UIView+Rotate.swift in Sources */,
 				452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */,
@@ -2108,6 +2136,7 @@
 				840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */,
 				452735361FD674F900418D93 /* UIScrollView+Scroll.swift in Sources */,
 				4527352D1FD674F900418D93 /* UIImage+Rotated.swift in Sources */,
+				8488054D214083EA00C18688 /* DateFormatters.swift in Sources */,
 				458EEC13210F354600774A79 /* UIDevice+Properties.swift in Sources */,
 				452734F01FD674F900418D93 /* DateSerializer.swift in Sources */,
 				452734F71FD674F900418D93 /* Array+RemoveObject.swift in Sources */,
@@ -2183,6 +2212,7 @@
 				45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */,
 				452733D31FD674C500418D93 /* BiometricsAuthorizationServiceTests.swift in Sources */,
 				452733E41FD674C500418D93 /* UIButton_ImageMarginTests.swift in Sources */,
+				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
@@ -2203,6 +2233,8 @@
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
+				84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */,
+				848805542140863600C18688 /* DateDecodersTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,
 				452733DC1FD674C500418D93 /* Numeric+FormatTests.swift in Sources */,
 				452733D71FD674C500418D93 /* Array+RandomElementTests.swift in Sources */,
