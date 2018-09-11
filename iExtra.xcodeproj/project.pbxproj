@@ -297,6 +297,10 @@
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
+		84F22D50214791A2005DEC41 /* StringEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D4E214791A2005DEC41 /* StringEncoder.swift */; };
+		84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */; };
+		84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */; };
+		84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5521479347005DEC41 /* StringDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -650,6 +654,10 @@
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
+		84F22D4E214791A2005DEC41 /* StringEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEncoder.swift; sourceTree = "<group>"; };
+		84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringCoder.swift; sourceTree = "<group>"; };
+		84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderTests.swift; sourceTree = "<group>"; };
+		84F22D5521479347005DEC41 /* StringDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -710,6 +718,7 @@
 				452734EB1FD674F900418D93 /* Data */,
 				452733FE1FD674F700418D93 /* Date */,
 				4527341F1FD674F700418D93 /* Device */,
+				84F22D4D214791A2005DEC41 /* Encoding */,
 				452734D01FD674F800418D93 /* EventTracking */,
 				452734061FD674F700418D93 /* Extensions */,
 				452734C01FD674F800418D93 /* Files */,
@@ -734,6 +743,7 @@
 		452733751FD673E200418D93 /* iExtraTests */ = {
 			isa = PBXGroup;
 			children = (
+				84F22D52214791F3005DEC41 /* Encoding */,
 				452733981FD674C400418D93 /* Authorization */,
 				452733D11FD674C500418D93 /* Data */,
 				8488054E214084B600C18688 /* Date */,
@@ -1788,6 +1798,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		84F22D4D214791A2005DEC41 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */,
+				84F22D5521479347005DEC41 /* StringDecoder.swift */,
+				84F22D4E214791A2005DEC41 /* StringEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		84F22D52214791F3005DEC41 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2034,6 +2062,7 @@
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
 				452734FE1FD674F900418D93 /* Numeric+Random.swift in Sources */,
+				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
@@ -2042,6 +2071,7 @@
 				4527353B1FD674F900418D93 /* UITextView+Padding.swift in Sources */,
 				452734FC1FD674F900418D93 /* NSObject+ClassName.swift in Sources */,
 				458EEDDC21187C6900774A79 /* UILabel+Size.swift in Sources */,
+				84F22D50214791A2005DEC41 /* StringEncoder.swift in Sources */,
 				4527353D1FD674F900418D93 /* UIView+Bounce.swift in Sources */,
 				4527351E1FD674F900418D93 /* UIApplication+Version.swift in Sources */,
 				452735991FD674F900418D93 /* KeychainItemAccessibility.swift in Sources */,
@@ -2101,6 +2131,7 @@
 				452735081FD674F900418D93 /* IapManager.swift in Sources */,
 				452735931FD674F900418D93 /* ExternalMapService.swift in Sources */,
 				452735341FD674F900418D93 /* UINavigationBar+TitleAlpha.swift in Sources */,
+				84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */,
 				452735731FD674F900418D93 /* LinearFloatingSubmenuPresenter.swift in Sources */,
 				4527357C1FD674F900418D93 /* StretchableTableViewHeader.swift in Sources */,
 				452735A11FD674F900418D93 /* WorldCoordinate.swift in Sources */,
@@ -2233,6 +2264,7 @@
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
+				84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */,
 				84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */,
 				848805542140863600C18688 /* DateDecodersTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,

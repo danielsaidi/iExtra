@@ -14,7 +14,10 @@ New features:
 default view for an annotation given a certain map view instance.
 
 - For `Codable` there is now a new `customISO8601` `JsonDecoder` that uses a new
-date decoding strategy that uses new date formatters to handle dates. Enjoy!
+date decoding strategy that uses new date formatters to handle dates.
+
+- I have added two `StringEncoder` and `StringDecoder` protocols together with a
+`Base64StringCoder` implementation.
 
 Breaking changes:
 
