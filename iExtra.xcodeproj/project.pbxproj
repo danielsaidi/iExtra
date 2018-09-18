@@ -20,8 +20,6 @@
 		452733D61FD674C500418D93 /* Array+GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527339F1FD674C400418D93 /* Array+GroupTests.swift */; };
 		452733D71FD674C500418D93 /* Array+RandomElementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A01FD674C400418D93 /* Array+RandomElementTests.swift */; };
 		452733D81FD674C500418D93 /* Array+RemoveObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A11FD674C400418D93 /* Array+RemoveObjectTests.swift */; };
-		452733D91FD674C500418D93 /* Bool+RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A21FD674C400418D93 /* Bool+RandomTests.swift */; };
-		452733DA1FD674C500418D93 /* Collection+ShuffleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A31FD674C400418D93 /* Collection+ShuffleTests.swift */; };
 		452733DB1FD674C500418D93 /* NSObject+ClassNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */; };
 		452733DC1FD674C500418D93 /* Numeric+FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A51FD674C400418D93 /* Numeric+FormatTests.swift */; };
 		452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A61FD674C400418D93 /* Numeric+RandomTests.swift */; };
@@ -67,10 +65,8 @@
 		452734F51FD674F900418D93 /* Array+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734091FD674F700418D93 /* Array+Group.swift */; };
 		452734F61FD674F900418D93 /* Array+RandomElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527340A1FD674F700418D93 /* Array+RandomElement.swift */; };
 		452734F71FD674F900418D93 /* Array+RemoveObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527340B1FD674F700418D93 /* Array+RemoveObject.swift */; };
-		452734F81FD674F900418D93 /* Bool+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527340D1FD674F700418D93 /* Bool+Random.swift */; };
 		452734F91FD674F900418D93 /* CGRect+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527340F1FD674F700418D93 /* CGRect+Center.swift */; };
 		452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734101FD674F700418D93 /* CGRect+Rects.swift */; };
-		452734FB1FD674F900418D93 /* Collection+Shuffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734111FD674F700418D93 /* Collection+Shuffle.swift */; };
 		452734FC1FD674F900418D93 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734131FD674F700418D93 /* NSObject+ClassName.swift */; };
 		452734FD1FD674F900418D93 /* Numeric+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734151FD674F700418D93 /* Numeric+Format.swift */; };
 		452734FE1FD674F900418D93 /* Numeric+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734161FD674F700418D93 /* Numeric+Random.swift */; };
@@ -368,8 +364,6 @@
 		4527339F1FD674C400418D93 /* Array+GroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+GroupTests.swift"; sourceTree = "<group>"; };
 		452733A01FD674C400418D93 /* Array+RandomElementTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RandomElementTests.swift"; sourceTree = "<group>"; };
 		452733A11FD674C400418D93 /* Array+RemoveObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObjectTests.swift"; sourceTree = "<group>"; };
-		452733A21FD674C400418D93 /* Bool+RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+RandomTests.swift"; sourceTree = "<group>"; };
-		452733A31FD674C400418D93 /* Collection+ShuffleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+ShuffleTests.swift"; sourceTree = "<group>"; };
 		452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassNameTests.swift"; sourceTree = "<group>"; };
 		452733A51FD674C400418D93 /* Numeric+FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+FormatTests.swift"; sourceTree = "<group>"; };
 		452733A61FD674C400418D93 /* Numeric+RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+RandomTests.swift"; sourceTree = "<group>"; };
@@ -415,10 +409,8 @@
 		452734091FD674F700418D93 /* Array+Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Group.swift"; sourceTree = "<group>"; };
 		4527340A1FD674F700418D93 /* Array+RandomElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RandomElement.swift"; sourceTree = "<group>"; };
 		4527340B1FD674F700418D93 /* Array+RemoveObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObject.swift"; sourceTree = "<group>"; };
-		4527340D1FD674F700418D93 /* Bool+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+Random.swift"; sourceTree = "<group>"; };
 		4527340F1FD674F700418D93 /* CGRect+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Center.swift"; sourceTree = "<group>"; };
 		452734101FD674F700418D93 /* CGRect+Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Rects.swift"; sourceTree = "<group>"; };
-		452734111FD674F700418D93 /* Collection+Shuffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+Shuffle.swift"; sourceTree = "<group>"; };
 		452734131FD674F700418D93 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		452734151FD674F700418D93 /* Numeric+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+Format.swift"; sourceTree = "<group>"; };
 		452734161FD674F700418D93 /* Numeric+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+Random.swift"; sourceTree = "<group>"; };
@@ -785,7 +777,6 @@
 		4527339C1FD674C400418D93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				840176DE2122AEC500FE86B7 /* Bool */,
 				840176DD2122AEA800FE86B7 /* Collections */,
 				452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */,
 				840176DF2122AEE300FE86B7 /* Numerics */,
@@ -942,7 +933,6 @@
 			isa = PBXGroup;
 			children = (
 				840176DC2122AE8500FE86B7 /* Collections */,
-				4527340C1FD674F700418D93 /* Bool */,
 				4527340E1FD674F700418D93 /* CGRect */,
 				452734131FD674F700418D93 /* NSObject+ClassName.swift */,
 				452734141FD674F700418D93 /* Numerics */,
@@ -950,14 +940,6 @@
 				45D17F2221188CB700A02318 /* Url */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		4527340C1FD674F700418D93 /* Bool */ = {
-			isa = PBXGroup;
-			children = (
-				4527340D1FD674F700418D93 /* Bool+Random.swift */,
-			);
-			path = Bool;
 			sourceTree = "<group>";
 		};
 		4527340E1FD674F700418D93 /* CGRect */ = {
@@ -1714,7 +1696,6 @@
 				452734091FD674F700418D93 /* Array+Group.swift */,
 				4527340A1FD674F700418D93 /* Array+RandomElement.swift */,
 				4527340B1FD674F700418D93 /* Array+RemoveObject.swift */,
-				452734111FD674F700418D93 /* Collection+Shuffle.swift */,
 				452734171FD674F700418D93 /* Sequence+Batch.swift */,
 				452734181FD674F700418D93 /* Set+Group.swift */,
 			);
@@ -1728,19 +1709,10 @@
 				4527339F1FD674C400418D93 /* Array+GroupTests.swift */,
 				452733A01FD674C400418D93 /* Array+RandomElementTests.swift */,
 				452733A11FD674C400418D93 /* Array+RemoveObjectTests.swift */,
-				452733A31FD674C400418D93 /* Collection+ShuffleTests.swift */,
 				452733A71FD674C400418D93 /* Sequence+BatchTests.swift */,
 				452733A81FD674C400418D93 /* Set+GroupTests.swift */,
 			);
 			path = Collections;
-			sourceTree = "<group>";
-		};
-		840176DE2122AEC500FE86B7 /* Bool */ = {
-			isa = PBXGroup;
-			children = (
-				452733A21FD674C400418D93 /* Bool+RandomTests.swift */,
-			);
-			path = Bool;
 			sourceTree = "<group>";
 		};
 		840176DF2122AEE300FE86B7 /* Numerics */ = {
@@ -2027,7 +1999,6 @@
 				458EEDE321187EE300774A79 /* UIStackView+Subviews.swift in Sources */,
 				452735581FD674F900418D93 /* UIViewController+NavigationBarBackground.swift in Sources */,
 				4527355A1FD674F900418D93 /* UIViewController+RequiredTextField.swift in Sources */,
-				452734F81FD674F900418D93 /* Bool+Random.swift in Sources */,
 				45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */,
 				452735091FD674F900418D93 /* IapManagerDefault.swift in Sources */,
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
@@ -2036,7 +2007,6 @@
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
-				452734FB1FD674F900418D93 /* Collection+Shuffle.swift in Sources */,
 				452735801FD674F900418D93 /* AppFileManager.swift in Sources */,
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
@@ -2239,7 +2209,6 @@
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
-				452733DA1FD674C500418D93 /* Collection+ShuffleTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,
 				452733EF1FD674C500418D93 /* UITableView_Reload.swift in Sources */,
@@ -2248,7 +2217,6 @@
 				452733FC1FD674C500418D93 /* IoCTests.swift in Sources */,
 				452733EE1FD674C500418D93 /* UITableView_DefaultNibTests.swift in Sources */,
 				452733E71FD674C500418D93 /* UINavigationBar+TransparentTests.swift in Sources */,
-				452733D91FD674C500418D93 /* Bool+RandomTests.swift in Sources */,
 				452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */,
 				452733D51FD674C500418D93 /* Array+ElementsOfTypeTests.swift in Sources */,
 				452733D61FD674C500418D93 /* Array+GroupTests.swift in Sources */,

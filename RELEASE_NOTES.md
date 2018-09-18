@@ -5,6 +5,13 @@ git tags. Also please note that iExtra does not use semver. Breaking changes can
 occur on minor version bumps, but not on revision bumps.
 
 
+## 1.6.0
+
+This version upgrades iExtra to `Swift 4.2` and removes functionality that Swift
+now has built-in (array `shuffled()`). I have also removed old deprecated status
+bar extensions.
+
+
 
 ## 1.5.0
 
