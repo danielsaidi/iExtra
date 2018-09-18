@@ -52,7 +52,6 @@ public final class PannableModalPresenter: NSObject {
         vc.transitioningDelegate = presenter
         from.present(vc, animated: true) {
             presenter.addPanGesture(to: vc.view)
-            presenter.setStatusBarStyle(presenter.toStatusBarStyle)
         }
     }
     
@@ -96,8 +95,6 @@ extension PannableModalPresenter {
         let downwardMovementPercent = fminf(downwardMovement, 1.0)
         let progress = CGFloat(downwardMovementPercent)
         
-        adjustStatusBar(for: translation.y)
-        
         switch pan.state {
         case .began:
             transition.hasStarted = true
@@ -111,7 +108,6 @@ extension PannableModalPresenter {
         case .ended:
             transition.hasStarted = false
             transition.shouldFinish ? transition.finish(): transition.cancel()
-            adjustStatusBar(for: transition.shouldFinish)
         default:
             break
         }
@@ -130,22 +126,6 @@ private extension PannableModalPresenter {
         view.addGestureRecognizer(pan)
         panGesture = pan
     }
-    
-    func adjustStatusBar(for translation: CGFloat) {
-        let style = translation > 70 ? fromStatusBarStyle: toStatusBarStyle
-        setStatusBarStyle(style)
-    }
-    
-    func adjustStatusBar(for isDismissing: Bool) {
-        let style = isDismissing ? fromStatusBarStyle: toStatusBarStyle
-        setStatusBarStyle(style)
-    }
-    
-    func setStatusBarStyle(_ style: UIStatusBarStyle?) {
-        guard let style = style else { return }
-        guard fromStatusBarStyle != toStatusBarStyle else { return }
-        UIApplication.shared.statusBarStyle = style
-    }
 }
 
 
@@ -154,7 +134,6 @@ private extension PannableModalPresenter {
 extension PannableModalPresenter: PannableModalDismissAnimatorDelegate {
     
     func dismissAnimatorDidDismiss(_ animator: PannableModalDismissAnimator) {
-        setStatusBarStyle(fromStatusBarStyle)
         PannableModalPresenter.destroy(presenter: self)
     }
 }

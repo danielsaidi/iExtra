@@ -163,7 +163,6 @@
 		452735591FD674F900418D93 /* UIViewController+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527348A1FD674F800418D93 /* UIViewController+Nib.swift */; };
 		4527355A1FD674F900418D93 /* UIViewController+RequiredTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527348B1FD674F800418D93 /* UIViewController+RequiredTextField.swift */; };
 		4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527348C1FD674F800418D93 /* UIViewController+Root.swift */; };
-		4527355C1FD674F900418D93 /* UIViewController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527348D1FD674F800418D93 /* UIViewController+StatusBar.swift */; };
 		4527355D1FD674F900418D93 /* InteractiveModalTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734901FD674F800418D93 /* InteractiveModalTransition.swift */; };
 		4527355E1FD674F900418D93 /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734911FD674F800418D93 /* PannableModalDismissAnimator.swift */; };
 		4527355F1FD674F900418D93 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734921FD674F800418D93 /* PannableModalPresenter.swift */; };
@@ -237,8 +236,6 @@
 		452735A31FD674F900418D93 /* UuidGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734ED1FD674F900418D93 /* UuidGenerator.swift */; };
 		452735A41FD6756700418D93 /* iExtra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452733681FD673E200418D93 /* iExtra.framework */; };
 		452735A51FD6756700418D93 /* iExtra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 452733681FD673E200418D93 /* iExtra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		452735AC1FD6782100418D93 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; };
-		452735AD1FD6782100418D93 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; };
 		452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AA1FD6782000418D93 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B01FD6783500418D93 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 452735AB1FD6782100418D93 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452735B61FD67EE400418D93 /* HapticFeedback.swift */; };
@@ -514,7 +511,6 @@
 		4527348A1FD674F800418D93 /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
 		4527348B1FD674F800418D93 /* UIViewController+RequiredTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RequiredTextField.swift"; sourceTree = "<group>"; };
 		4527348C1FD674F800418D93 /* UIViewController+Root.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Root.swift"; sourceTree = "<group>"; };
-		4527348D1FD674F800418D93 /* UIViewController+StatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StatusBar.swift"; sourceTree = "<group>"; };
 		452734901FD674F800418D93 /* InteractiveModalTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractiveModalTransition.swift; sourceTree = "<group>"; };
 		452734911FD674F800418D93 /* PannableModalDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalDismissAnimator.swift; sourceTree = "<group>"; };
 		452734921FD674F800418D93 /* PannableModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalPresenter.swift; sourceTree = "<group>"; };
@@ -672,8 +668,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				452735AC1FD6782100418D93 /* Nimble.framework in Frameworks */,
-				452735AD1FD6782100418D93 /* Quick.framework in Frameworks */,
 				452733721FD673E200418D93 /* iExtra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1267,7 +1261,6 @@
 				4527348A1FD674F800418D93 /* UIViewController+Nib.swift */,
 				4527348B1FD674F800418D93 /* UIViewController+RequiredTextField.swift */,
 				4527348C1FD674F800418D93 /* UIViewController+Root.swift */,
-				4527348D1FD674F800418D93 /* UIViewController+StatusBar.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -2102,7 +2095,6 @@
 				452735001FD674F900418D93 /* Set+Group.swift in Sources */,
 				45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */,
 				4527350F1FD674F900418D93 /* RemoteNotificationService.swift in Sources */,
-				4527355C1FD674F900418D93 /* UIViewController+StatusBar.swift in Sources */,
 				45883B9B20CF0A9E001C0E2F /* UIView+Fade.swift in Sources */,
 				452735811FD674F900418D93 /* AppFileManagerDefault.swift in Sources */,
 				45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */,
