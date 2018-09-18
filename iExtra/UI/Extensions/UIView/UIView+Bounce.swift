@@ -28,7 +28,7 @@ public extension UIView {
         let animation = CAKeyframeAnimation(keyPath: "transform")
         animation.repeatCount = 1
         animation.duration = CFTimeInterval(kNumFactors * CGFloat(1.0) / kFactorsPerSec)
-        animation.fillMode = kCAFillModeForwards
+        animation.fillMode = CAMediaTimingFillMode.forwards
         animation.values = transforms
         animation.isRemovedOnCompletion = true
         animation.autoreverses = false

@@ -18,6 +18,6 @@ public class IntrinsicTableView: UITableView {
     
     public override var intrinsicContentSize: CGSize {
         self.layoutIfNeeded()
-        return CGSize(width: UIViewNoIntrinsicMetric, height: contentSize.height)
+        return CGSize(width: UIView.noIntrinsicMetric, height: contentSize.height)
     }
 }

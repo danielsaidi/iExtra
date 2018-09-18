@@ -6,7 +6,7 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
-import UIKit
+import UserNotifications
 
 open class RemoteNotificationServiceDefault: NSObject, RemoteNotificationService {
     
@@ -36,12 +36,6 @@ open class RemoteNotificationServiceDefault: NSObject, RemoteNotificationService
     }
     
     open func registerForRemoteNotifications() {
-        let application = UIApplication.shared
-        let selector = #selector(UIApplication.registerUserNotificationSettings(_:))
-        if application.responds(to: selector) {
-            let settings = UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
-            application.registerUserNotificationSettings(settings)
-            application.registerForRemoteNotifications()
-        }
+        // Implement in app
     }
 }

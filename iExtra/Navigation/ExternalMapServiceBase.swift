@@ -26,11 +26,11 @@ open class ExternalMapServiceBase: NSObject, ExternalMapService {
     
     open func navigate(from: CLLocationCoordinate2D, to: CLLocationCoordinate2D) {
         guard let url = getUrl(from: from, to: to) else { return }
-        UIApplication.shared.openURL(url)
+        UIApplication.shared.open(url, completionHandler: nil)
     }
     
     open func show(coordinate: CLLocationCoordinate2D) {
         guard let url = getUrl(for: coordinate) else { return }
-        UIApplication.shared.openURL(url)
+        UIApplication.shared.open(url, completionHandler: nil)
     }
 }

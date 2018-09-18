@@ -14,7 +14,7 @@ extension UILabel {
         guard let text = text else { return 0 }
         let size = CGSize(width: 10000, height: 0)
         let options = NSStringDrawingOptions.usesLineFragmentOrigin
-        let rect = text.boundingRect(with: size, options: options, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let rect = text.boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font: font], context: nil)
         return rect.width + 10
     }
 }

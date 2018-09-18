@@ -78,7 +78,7 @@ open class ThemedButton: UIButton {
         didSet { updateAppearance() }
     }
     
-    fileprivate var allStates: [UIControlState] {
+    fileprivate var allStates: [UIControl.State] {
         return [.normal, .highlighted, .disabled]
     }
     

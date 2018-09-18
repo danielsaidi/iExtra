@@ -11,7 +11,7 @@ import UIKit
 public extension UINavigationBar {
     
     public func setContentTintColor(_ color: UIColor?) {
-        var attributes = titleTextAttributes ?? [NSAttributedStringKey: Any]()
+        var attributes = titleTextAttributes ?? [NSAttributedString.Key: Any]()
         attributes[.foregroundColor] = color
         titleTextAttributes = attributes
         tintColor = color

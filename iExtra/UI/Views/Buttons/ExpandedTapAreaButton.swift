@@ -15,7 +15,7 @@ open class ExpandedTapAreaButton: UIButton {
     open override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
         let inset = -tapPadding
         let insets = UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset)
-        let tapBounds = UIEdgeInsetsInsetRect(bounds, insets)
+        let tapBounds = bounds.inset(by: insets)
         return tapBounds.contains(point)
     }
 }

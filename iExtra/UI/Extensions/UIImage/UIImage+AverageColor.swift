@@ -18,13 +18,13 @@ public extension UIImage {
         let inputExtent = CIVector(x: extent.origin.x, y: extent.origin.y, z: extent.size.width, w: extent.size.height)
         let params = [kCIInputImageKey: inputImage, kCIInputExtentKey: inputExtent]
         guard
-            let filter = CIFilter(name: "CIAreaAverage", withInputParameters: params),
+            let filter = CIFilter(name: "CIAreaAverage", parameters: params),
             let outputImage = filter.outputImage
             else { return fallback }
         let outputExtent = outputImage.extent
         assert(outputExtent.size.width == 1 && outputExtent.size.height == 1)
         let bounds = CGRect(x: 0, y: 0, width: 1, height: 1)
-        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: bounds, format: kCIFormatRGBA8, colorSpace: colorSpace)
+        context.render(outputImage, toBitmap: &bitmap, rowBytes: 4, bounds: bounds, format: CIFormat.RGBA8, colorSpace: colorSpace)
         return color(from: bitmap)
     }
 }

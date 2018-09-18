@@ -18,7 +18,7 @@ open class BlurredNavigationSearchController: NavigationSearchController {
         setup(withBlurEffect: blurEffect(withStyle: .dark, alpha: 1.0))
     }
     
-    public init(searchResultsController: UIViewController?, blurStyle: UIBlurEffectStyle, blurAlpha: CGFloat) {
+    public init(searchResultsController: UIViewController?, blurStyle: UIBlurEffect.Style, blurAlpha: CGFloat) {
         super.init(searchResultsController: searchResultsController)
         setup(withBlurEffect: blurEffect(withStyle: blurStyle, alpha: blurAlpha))
     }
@@ -33,7 +33,7 @@ open class BlurredNavigationSearchController: NavigationSearchController {
 
 private extension BlurredNavigationSearchController {
     
-    func blurEffect(withStyle style: UIBlurEffectStyle, alpha: CGFloat) -> UIBlurEffect {
+    func blurEffect(withStyle style: UIBlurEffect.Style, alpha: CGFloat) -> UIBlurEffect {
         let blurEffect = UIBlurEffect(style: style)
         let blurView = UIVisualEffectView(effect: blurEffect)
         blurView.frame = view.frame

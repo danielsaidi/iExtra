@@ -26,7 +26,7 @@ public final class ExternalMapServicePicker: NSObject {
         
         let title = ExternalMapServicePicker.title
         let message = ExternalMapServicePicker.message
-        let style: UIAlertControllerStyle = from == nil ? .alert: .actionSheet
+        let style: UIAlertController.Style = from == nil ? .alert: .actionSheet
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         alert.sourceView = from

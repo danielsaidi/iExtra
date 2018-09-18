@@ -15,7 +15,7 @@ public extension UIView {
     public func rotate(
         withRadians radians: CGFloat,
         duration: TimeInterval,
-        options: UIViewAnimationOptions,
+        options: UIView.AnimationOptions,
         completion: ((_ completed: Bool) -> ())? = nil) {
         UIView.animate(
             withDuration: duration,
@@ -47,7 +47,7 @@ private extension UIView {
         animation.duration = duration
         animation.fromValue = 0
         animation.toValue = CGFloat(2*Double.pi)
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear)
         animation.autoreverses = false
         animation.repeatCount = Float(times)
         return animation

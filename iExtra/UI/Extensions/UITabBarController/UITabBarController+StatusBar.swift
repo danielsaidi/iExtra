@@ -17,7 +17,7 @@ import UIKit
 
 extension UITabBarController {
     
-    open override var childViewControllerForStatusBarStyle: UIViewController? {
+    open override var childForStatusBarStyle: UIViewController? {
         return selectedViewController
     }
 }

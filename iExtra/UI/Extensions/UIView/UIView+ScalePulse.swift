@@ -22,7 +22,7 @@ public extension UIView {
         pulse.duration = duration / 2
         pulse.fromValue = fromScale
         pulse.toValue = toScale
-        pulse.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulse.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
         pulse.autoreverses = true
         pulse.repeatCount = Float(times)
         return pulse

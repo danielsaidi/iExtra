@@ -24,7 +24,7 @@ public enum SystemUrl { case
         switch self {
             
         case .applicationSettings:
-            return UIApplicationOpenSettingsURLString
+            return UIApplication.openSettingsURLString
             
         case .appStoreApp(let appId, let appName):
             return "https://itunes.apple.com/app/\(appName)/id\(appId)"

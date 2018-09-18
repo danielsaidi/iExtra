@@ -54,14 +54,14 @@ public extension HapticFeedback {
 
 private extension HapticFeedback {
     
-    func trigger(feedbackType: UINotificationFeedbackType) {
+    func trigger(feedbackType: UINotificationFeedbackGenerator.FeedbackType) {
         if #available(iOS 10.0, *) {
             let generator = UINotificationFeedbackGenerator()
             generator.notificationOccurred(feedbackType)
         }
     }
     
-    func trigger(impactStyle: UIImpactFeedbackStyle) {
+    func trigger(impactStyle: UIImpactFeedbackGenerator.FeedbackStyle) {
         if #available(iOS 10.0, *) {
             let generator = UIImpactFeedbackGenerator(style: impactStyle)
             generator.impactOccurred()

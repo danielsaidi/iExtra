@@ -12,8 +12,7 @@ public extension UIApplication {
     
     public static func leaveReview(for appId: String) {
         let urlString = "itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id=\(appId)&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software"
-        if let url = URL(string: urlString) {
-            shared.openURL(url)
-        }
+        guard let url = URL(string: urlString) else { return }
+        shared.open(url, completionHandler: nil)
     }
 }

@@ -28,10 +28,10 @@ public extension MKMapView {
     
     public func center(on coordinates: [CLLocationCoordinate2D], padding: CGFloat, animated: Bool) {
         guard coordinates.count > 0 else { return }
-        var rect = MKMapRectNull
-        let points = coordinates.map { MKMapPointForCoordinate($0) }
-        let rects = points.map { MKMapRectMake($0.x, $0.y, 0.1, 0.1) }
-        rects.forEach { rect = MKMapRectUnion(rect, $0) }
+        var rect = MKMapRect.null
+        let points = coordinates.map { MKMapPoint.init($0) }
+        let rects = points.map { MKMapRect.init(x: $0.x, y: $0.y, width: 0.1, height: 0.1) }
+        rects.forEach { rect = rect.union($0) }
         let insets = UIEdgeInsets(top: padding, left: padding, bottom: padding, right: padding)
         setVisibleMapRect(rect, edgePadding: insets, animated: animated)
     }

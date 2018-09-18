@@ -14,7 +14,7 @@ public extension UIView {
         scaleFrame(withFactor: CGFloat(factor), seconds: 0, options: .curveLinear, completion: nil)
     }
     
-    public func scaleFrame(withFactor factor: CGFloat, seconds: TimeInterval, options: UIViewAnimationOptions, completion: ((_ finished: Bool) -> ())?) {
+    public func scaleFrame(withFactor factor: CGFloat, seconds: TimeInterval, options: UIView.AnimationOptions, completion: ((_ finished: Bool) -> ())?) {
         let size = frame.size
         let newCenter = center
         let newWidth = size.width * factor

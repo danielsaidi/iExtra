@@ -11,7 +11,7 @@ import UIKit
 public extension UINavigationBar {
     
     public func setTitleAlpha(_ alpha: CGFloat) {
-        var attributes = titleTextAttributes ?? [NSAttributedStringKey: Any]()
+        var attributes = titleTextAttributes ?? [NSAttributedString.Key: Any]()
         var color: UIColor = attributes[.foregroundColor] as? UIColor ?? .black
         color = color.withAlphaComponent(alpha)
         attributes[.foregroundColor] = color

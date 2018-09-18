@@ -19,7 +19,7 @@ public extension UIViewController {
         let image = image.withAlignmentRectInsets(insets)
         let action = #selector(backButtonTapped)
         let button = UIBarButtonItem(image: image, style: .plain, target: self, action: action)
-        button.accessibilityTraits = UIAccessibilityTraitButton
+        button.accessibilityTraits = UIAccessibilityTraits.button
         button.accessibilityLabel = accessibilityLabel
         navigationItem.leftBarButtonItem = button
         nvc.interactivePopGestureRecognizer?.delegate = nil
