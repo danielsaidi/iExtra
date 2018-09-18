@@ -124,7 +124,7 @@ class Url_QueryParametersTests: QuickSpec {
                 it("adds new parameter") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
                     let result = url.setQueryParameter(name: "baz", value: "123")!.absoluteString
-                    expect(result).to(equal("http://foo.bar/home?baz=123&foo=bar"))
+                    expect(result).to(contain("http://foo.bar/home?", "foo=bar", "baz=123"))
                 }
                 
                 it("overwrites existing parameter") {
@@ -142,7 +142,7 @@ class Url_QueryParametersTests: QuickSpec {
                 it("encodes parameter value") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
                     let result = url.setQueryParameter(name: "p1", value: "me & you")!.absoluteString
-                    expect(result).to(equal("http://foo.bar/home?p1=me%20%26%20you&foo=bar"))
+                    expect(result).to(contain("http://foo.bar/home?", "foo=bar", "p1=me%20%26%20you"))
                 }
             }
             
@@ -159,7 +159,7 @@ class Url_QueryParametersTests: QuickSpec {
                 it("adds new parameters") {
                     let url = URL(string: "http://foo.bar/home?foo=bar")!
                     let result = url.setQueryParameters(["p1": "v1"])!.absoluteString
-                    expect(result).to(equal("http://foo.bar/home?p1=v1&foo=bar"))
+                    expect(result).to(contain("http://foo.bar/home?", "foo=bar", "p1=v1"))
                 }
                 
                 it("overwrites existing parameter") {
@@ -171,7 +171,7 @@ class Url_QueryParametersTests: QuickSpec {
                 it("overwrites existing parameters") {
                     let url = URL(string: "http://foo.bar/home?p1=v1&p2=v2")!
                     let result = url.setQueryParameters(["p1": "v3", "p2": "v4"])!.absoluteString
-                    expect(result).to(equal("http://foo.bar/home?p1=v3&p2=v4"))
+                    expect(result).to(contain("http://foo.bar/home?", "p1=v3", "p2=v4"))
                 }
                 
                 it("encodes parameter values") {
