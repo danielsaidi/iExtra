@@ -17,7 +17,7 @@ in order to make the code in my apps app-specific.
   s.source           = { :git => 'https://github.com/danielsaidi/iExtra.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/danielsaidi'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'iExtra/**/*.swift'
 
