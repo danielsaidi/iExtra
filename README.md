@@ -1,8 +1,23 @@
 # iExtra
 
-[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
-[![GitHub version](https://badge.fury.io/gh/danielsaidi%2FiExtra.svg)](http://badge.fury.io/gh/danielsaidi%2FiExtra)
-[![Build Status](https://api.travis-ci.org/danielsaidi/iExtra.svg)](https://travis-ci.org/danielsaidi/iExtra)
+<p>
+    <a href="https://github.com/danielsaidi/iExtra">
+        <img src="https://badge.fury.io/gh/danielsaidi%2FiExtra.svg?style=flat" alt="Version" />
+    </a>
+    <img src="https://api.travis-ci.org/danielsaidi/iExtra.svg" alt="Build Status" />
+    <a href="https://cocoapods.org/pods/iExtra">
+        <img src="https://img.shields.io/cocoapods/v/iExtra.svg?style=flat" alt="CocoaPods" />
+    </a>
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/carthage-supported-green.svg?style=flat" alt="Carthage" />
+    </a>
+    <img src="https://img.shields.io/cocoapods/p/iExtra.svg?style=flat" alt="Platform" />
+    <img src="https://img.shields.io/badge/Swift-4.2-orange.svg" alt="Swift 4.2" />
+    <img src="https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102" alt="License" />
+    <a href="https://twitter.com/danielsaidi">
+        <img src="https://img.shields.io/badge/contact-@danielsaidi-blue.svg?style=flat" alt="Twitter: @danielsaidi" />
+    </a>
+</p>
 
 
 ## About iExtra
