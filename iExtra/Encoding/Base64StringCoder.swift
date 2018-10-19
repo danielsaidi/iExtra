@@ -20,7 +20,7 @@ public class Base64StringCoder: StringEncoder, StringDecoder {
     public func encode(string: String) -> String? {
         let data = string.data(using: .utf8)
         let encoded = data?.base64EncodedData(options: .endLineWithLineFeed)
-        guard encoded != nil else { return nil }
-        return String(data: encoded!, encoding: .utf8)
+        guard let encodedData = encoded else { return nil }
+        return String(data: encodedData, encoding: .utf8)
     }
 }

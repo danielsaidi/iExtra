@@ -22,8 +22,8 @@ public class KeychainBasedDeviceIdentifier: NSObject {
     
     // MARK: - Properties
     
-    fileprivate let deviceName: String
-    fileprivate let keychainService: KeychainService
+    private let deviceName: String
+    private let keychainService: KeychainService
 }
 
 
@@ -34,15 +34,10 @@ extension KeychainBasedDeviceIdentifier: DeviceIdentifier {
     
     public func getDeviceIdentifier() -> String {
         let key = "device-uuid"
-        
-        if let keychainId = keychainService.string(for: key, with: nil) {
-            return keychainId
-        }
+        if let id = keychainService.string(for: key, with: nil) { return id }
         
         let settings = UserDefaults.standard
-        if let defaultsId = settings.string(forKey: key) {
-            return defaultsId
-        }
+        if let id = settings.string(forKey: key) { return id }
         
         let id = "\(UUID().uuidString) \(deviceName)"
         keychainService.set(id, for: key, with: nil)

@@ -14,6 +14,9 @@ Breaking Changes:
 - `DeviceModelType` and all `UIDevice+Model` extensions have been removed. These
 features are better covered in `https://github.com/dennisweissmann/DeviceKit`.
 
+- `Array+ElementsOfType` has been removed, since it's just a useless `compactMap`
+wrapper. Use `compactMap` directly.
+
 
 
 ## 1.6.0
