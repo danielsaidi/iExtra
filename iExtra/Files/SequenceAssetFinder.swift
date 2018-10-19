@@ -7,12 +7,12 @@
 //
 
 /*
- This class can only be used with asset images that
- has a numeric suffix that increments by one. It is
- setup with a start index (default 1) then tries to
- load an image per new, incremented index. Whenever
- an image can not be found for the current index, a
- list with all found images is returned.
+ 
+ This class can be used with image assets that have a suffix
+ that increments by one. It is setup with a start index then
+ tries to load an image per new, incremented index. Whenever
+ an image can not be found, all found images are returned.
+ 
  */
 
 import UIKit
@@ -31,8 +31,8 @@ open class SequenceAssetFinder: NSObject, FileFinder {
     
     // MARK: Properties
     
-    fileprivate var separator: String
-    fileprivate var startIndex: Int
+    private var separator: String
+    private var startIndex: Int
     
     
     // MARK: Public functions

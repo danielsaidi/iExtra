@@ -32,7 +32,7 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
     
     public let directory: URL
     
-    fileprivate let manager: AppFileManager
+    private let manager: AppFileManager
     
     
     // MARK: - Public Functions
