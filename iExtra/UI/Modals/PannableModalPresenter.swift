@@ -25,12 +25,12 @@ public final class PannableModalPresenter: NSObject {
     
     // MARK: - Properties
     
-    fileprivate static var cache = [PannableModalPresenter]()
-    fileprivate var fromStatusBarStyle: UIStatusBarStyle?
-    fileprivate var panGesture: UIPanGestureRecognizer?
-    fileprivate var toStatusBarStyle: UIStatusBarStyle?
-    fileprivate let transition = InteractiveModalTransition()
-    fileprivate weak var viewController: UIViewController?
+    private static var cache = [PannableModalPresenter]()
+    private var fromStatusBarStyle: UIStatusBarStyle?
+    private var panGesture: UIPanGestureRecognizer?
+    private var toStatusBarStyle: UIStatusBarStyle?
+    private let transition = InteractiveModalTransition()
+    private weak var viewController: UIViewController?
     
     
     // MARK: - Public Functions
@@ -63,7 +63,7 @@ public final class PannableModalPresenter: NSObject {
 
 // MARK: - Deallocation
 
-extension PannableModalPresenter {
+private extension PannableModalPresenter {
     
     static func destroy(presenter: PannableModalPresenter?) {
         guard let presenter = presenter else { return }
@@ -72,7 +72,7 @@ extension PannableModalPresenter {
         cache.remove(at: index)
     }
     
-    fileprivate func destroyPanGesture() {
+    func destroyPanGesture() {
         guard let pan = panGesture else { return }
         viewController?.view.removeGestureRecognizer(pan)
         panGesture = nil
@@ -133,7 +133,7 @@ private extension PannableModalPresenter {
 
 extension PannableModalPresenter: PannableModalDismissAnimatorDelegate {
     
-    func dismissAnimatorDidDismiss(_ animator: PannableModalDismissAnimator) {
+    public func dismissAnimatorDidDismiss(_ animator: PannableModalDismissAnimator) {
         PannableModalPresenter.destroy(presenter: self)
     }
 }

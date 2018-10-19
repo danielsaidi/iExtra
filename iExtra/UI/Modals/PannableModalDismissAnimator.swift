@@ -11,7 +11,7 @@ import UIKit
 
 // MARK: - PannableModalDismissAnimatorDelegate
 
-protocol PannableModalDismissAnimatorDelegate: class {
+public protocol PannableModalDismissAnimatorDelegate: AnyObject {
     
     func dismissAnimatorDidDismiss(_ animator: PannableModalDismissAnimator)
 }
@@ -19,7 +19,7 @@ protocol PannableModalDismissAnimatorDelegate: class {
 
 // MARK: - PannableModalDismissAnimator
 
-class PannableModalDismissAnimator: NSObject {
+public class PannableModalDismissAnimator: NSObject {
     
     weak var delegate: PannableModalDismissAnimatorDelegate?
 }
@@ -41,11 +41,11 @@ private extension PannableModalDismissAnimator {
 
 extension PannableModalDismissAnimator: UIViewControllerAnimatedTransitioning {
     
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0.3
     }
     
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let context = transitionContext
         guard let from = context.viewController(forKey: .from) else { return }
         guard let to = context.viewController(forKey: .to) else { return }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InteractiveModalTransition: UIPercentDrivenInteractiveTransition {
+public class InteractiveModalTransition: UIPercentDrivenInteractiveTransition {
  
     var hasStarted = false
     var shouldFinish = false
