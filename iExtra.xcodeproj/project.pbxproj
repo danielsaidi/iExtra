@@ -282,6 +282,7 @@
 		84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84880557214089AA00C18688 /* DateEncodersTests.swift */; };
 		848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */; };
 		848DB3DE217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */; };
+		848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -629,6 +630,7 @@
 		84880557214089AA00C18688 /* DateEncodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEncodersTests.swift; sourceTree = "<group>"; };
 		848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewController.swift"; sourceTree = "<group>"; };
 		848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewControllerTests.swift"; sourceTree = "<group>"; };
+		848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateTests.swift; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -719,6 +721,7 @@
 		452733751FD673E200418D93 /* iExtraTests */ = {
 			isa = PBXGroup;
 			children = (
+				848DB3DF217A2CB100CAFAB9 /* Geo */,
 				84F22D52214791F3005DEC41 /* Encoding */,
 				452733981FD674C400418D93 /* Authorization */,
 				452733D11FD674C500418D93 /* Data */,
@@ -1740,6 +1743,14 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
+		848DB3DF217A2CB100CAFAB9 /* Geo */ = {
+			isa = PBXGroup;
+			children = (
+				848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */,
+			);
+			path = Geo;
+			sourceTree = "<group>";
+		};
 		84BA20F12135677F0040A20B /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -2182,6 +2193,7 @@
 				452733E31FD674C500418D93 /* Url_QueryParametersTests.swift in Sources */,
 				452733DE1FD674C500418D93 /* Sequence+BatchTests.swift in Sources */,
 				452733DF1FD674C500418D93 /* Set+GroupTests.swift in Sources */,
+				848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */,
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
 				452733E91FD674C500418D93 /* UISlider+ButtonSizeTests.swift in Sources */,
 				452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */,

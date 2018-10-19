@@ -13,7 +13,7 @@ public extension CLLocationCoordinate2D {
     
     // MARK: - Properties
     
-    public var isValid: Bool {
+    var isValid: Bool {
         return isValidDegrees(latitude) && isValidDegrees(longitude)
     }
     

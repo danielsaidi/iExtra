@@ -10,7 +10,7 @@ import CoreLocation
 
 public extension CLPlacemark {
     
-    public var addressDescription: String {
+    var addressDescription: String {
         guard let dictionary = addressDictionary else { return "" }
         guard let lines = dictionary["FormattedAddressLines"] else { return "" }
         guard let list = lines as? [String] else { return "" }

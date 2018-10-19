@@ -8,19 +8,15 @@
 
 import CoreLocation
 
-public enum WorldCoordinate { case
+public struct WorldCoordinate {
     
-    manhattan,
-    newYork,
-    sanFransisco,
-    tokyo
+    public let coordinate: CLLocationCoordinate2D
+}
+
+public extension WorldCoordinate {
     
-    public var coordinate: CLLocationCoordinate2D {
-        switch self {
-        case .manhattan: return CLLocationCoordinate2D(latitude: 40.7590615, longitude: -73.969231)
-        case .newYork: return CLLocationCoordinate2D(latitude: 40.7033127, longitude: -73.979681)
-        case .sanFransisco: return CLLocationCoordinate2D(latitude: 37.7796828, longitude: -122.4000062)
-        case .tokyo: return CLLocationCoordinate2D(latitude: 35.673, longitude: 139.710)
-        }
-    }
+    static var manhattan: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 40.7590615, longitude: -73.969231)) }
+    static var newYork: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 40.7033127, longitude: -73.979681)) }
+    static var sanFransisco: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 37.7796828, longitude: -122.4000062)) }
+    static var tokyo: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 35.673, longitude: 139.710)) }
 }
