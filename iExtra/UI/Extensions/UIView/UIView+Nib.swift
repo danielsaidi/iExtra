@@ -15,7 +15,7 @@ public extension UIView {
     // MARK: - Properties
     
     public static var defaultNib: UINib {
-        return UINib(nibName: defaultNibName, bundle: nil)
+        return defaultNib(in: Bundle(for: self))
     }
     
     public static var defaultNibName: String {
@@ -24,6 +24,10 @@ public extension UIView {
     
     
     // MARK: - Functions
+    
+    public static func defaultNib(in bundle: Bundle?) -> UINib {
+        return UINib(nibName: defaultNibName, bundle: bundle)
+    }
     
     public static func initWithDefaultNib(owner: Any?) -> Self {
         return initWithDefaultNibTyped(owner: owner, nibName: defaultNibName)
