@@ -8,8 +8,16 @@
 
 import Foundation
 
-public class UuidGenerator: NSObject, IdGenerator {
+public class UuidGenerator: IdGenerator {
 
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    
+    // MARK: - Publix Functions
+    
     public func generateUniqueId() -> String {
         return NSUUID().uuidString
     }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
+open class DirectoryFileManagerDefault: DirectoryFileManager {
     
     
     // MARK: - Initialization
@@ -18,13 +18,11 @@ open class DirectoryFileManagerDefault: NSObject, DirectoryFileManager {
         guard let dir = manager.urls(for: directory, in: .userDomainMask).last else { return nil }
         self.directory = dir
         self.manager = fileManager
-        super.init()
     }
     
     public init(directoryUrl: URL, fileManager: AppFileManager) {
         self.directory = directoryUrl
         self.manager = fileManager
-        super.init()
     }
     
     

@@ -9,14 +9,19 @@
 import UIKit
 import LocalAuthentication
 
-public class BiometricsAuthorizationService: NSObject, AuthorizationService {
+public class BiometricsAuthorizationService: AuthorizationService {
+    
+    
+    // MARK: - Initialization
+    
+    public init() {}
     
     
     // MARK: Properties
     
-    fileprivate var policy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
+    private var policy = LAPolicy.deviceOwnerAuthenticationWithBiometrics
     
-    fileprivate static var cache = [String: Bool]()
+    private static var cache = [String: Bool]()
     
     
     // MARK: Public functions

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class KeychainBasedDeviceIdentifier: NSObject {
+public class KeychainBasedDeviceIdentifier {
 
     
     // MARK: - Initialization
@@ -16,7 +16,6 @@ public class KeychainBasedDeviceIdentifier: NSObject {
     public init(keychainService: KeychainService, deviceName: String) {
         self.keychainService = keychainService
         self.deviceName = deviceName
-        super.init()
     }
     
     

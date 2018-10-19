@@ -17,7 +17,7 @@
 
 import UIKit
 
-open class SequenceAssetFinder: NSObject, FileFinder {
+open class SequenceAssetFinder: FileFinder {
     
     
     // MARK: Initialization
@@ -25,7 +25,6 @@ open class SequenceAssetFinder: NSObject, FileFinder {
     public init(startIndex: Int = 1, separator: String = "-") {
         self.startIndex = startIndex
         self.separator = separator
-        super.init()
     }
     
     

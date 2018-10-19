@@ -8,7 +8,15 @@
 
 import Foundation
 
-public class DateSerializerDefault: NSObject, DateSerializer {
+public class DateSerializerDefault: DateSerializer {
+    
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    
+    // MARK: - Public Functions
     
     public func deserialize(_ string: String) -> Date? {
         let formatter = DateFormatter()

@@ -10,7 +10,7 @@ import Foundation
 import StoreKit
 
 
-public protocol IapManagerDelegate: class {
+public protocol IapManagerDelegate: AnyObject {
     
     func iapManager(_ manager: IapManager, didReceiveProductsResponse info: SKProductsResponse)
     func iapManager(_ manager: IapManager, didUpdateTransactions transactions: [SKPaymentTransaction])
@@ -19,7 +19,7 @@ public protocol IapManagerDelegate: class {
 }
 
 
-public protocol IapManager: class {
+public protocol IapManager {
     
     
     // MARK: - Properties

@@ -8,7 +8,15 @@
 
 import Foundation
 
-public class MainBundleFileFinder: NSObject, FileFinder {
+public class MainBundleFileFinder: FileFinder {
+    
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    
+    // MARK: - Public Functions
     
     public func findFiles(withPrefix prefix: String) -> [String] {
         let format = "self BEGINSWITH %@"

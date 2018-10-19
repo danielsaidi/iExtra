@@ -8,7 +8,15 @@
 
 import UIKit
 
-public class FileSizeBytesPresenter: NSObject, FileSizePresenter {
+public class FileSizeBytesPresenter: FileSizePresenter {
+    
+    
+    // MARK: - Initialization
+    
+    public init() {}
+    
+    
+    // MARK: - Public Functions
     
     public func fileSizeDescription(for fileSize: UInt64) -> String {
         guard fileSize != 1 else { return "1 byte" }

@@ -6,7 +6,6 @@
 //  Copyright © 2015 Daniel Saidi. All rights reserved.
 //
 
-import Foundation
 import StoreKit
 
 open class IapManagerDefault: NSObject, IapManager, SKPaymentTransactionObserver, SKProductsRequestDelegate {

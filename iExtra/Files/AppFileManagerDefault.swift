@@ -8,7 +8,12 @@
 
 import UIKit
 
-open class AppFileManagerDefault: NSObject, AppFileManager {
+open class AppFileManagerDefault: AppFileManager {
+    
+    
+    // MARK: - Initialization
+    
+    public init() {}
     
     
     // MARK: - Properties
