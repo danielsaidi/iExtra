@@ -9,7 +9,6 @@
 import MapKit
 import UIKit
 
-
 open class MapBadgeView: UIView {
     
     

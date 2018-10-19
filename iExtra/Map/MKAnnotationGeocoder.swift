@@ -14,6 +14,5 @@ public typealias ReverseGeocodeResult = (_ placemark: CLPlacemark?, _ error: Err
 public protocol MKAnnotationGeocoder {
     
     func reverseGeocode(_ annotation: MKAnnotation, completion: @escaping ReverseGeocodeResult)
-    
     func reverseGeocodeAddressSubtitle(for annotation: MKAnnotation)
 }

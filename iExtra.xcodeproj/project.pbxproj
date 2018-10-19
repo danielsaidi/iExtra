@@ -284,6 +284,7 @@
 		848DB3DE217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */; };
 		848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */; };
 		848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */; };
+		848DB3E5217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E4217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -633,6 +634,7 @@
 		848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewControllerTests.swift"; sourceTree = "<group>"; };
 		848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateTests.swift; sourceTree = "<group>"; };
 		848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+ValidTests.swift"; sourceTree = "<group>"; };
+		848DB3E4217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+NavigationBarStyle.swift"; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -1722,6 +1724,7 @@
 				452734361FD674F800418D93 /* MKMapView+Center.swift */,
 				840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */,
 				452734371FD674F800418D93 /* MKMapView+LegalLabel.swift */,
+				848DB3E4217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift */,
 				452734381FD674F800418D93 /* MKMapView+StatusBarStyle.swift */,
 			);
 			path = Extensions;
@@ -2019,6 +2022,7 @@
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
 				452735621FD674F900418D93 /* BlurredNavigationSearchController.swift in Sources */,
+				848DB3E5217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift in Sources */,
 				452735821FD674F900418D93 /* DirectoryFileManager.swift in Sources */,
 				452735461FD674F900418D93 /* UIView+HitTest.swift in Sources */,
 				452734EE1FD674F900418D93 /* Date+Adding.swift in Sources */,

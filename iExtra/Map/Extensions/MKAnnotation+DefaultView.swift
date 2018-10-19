@@ -10,10 +10,8 @@ import MapKit
 
 public extension MKAnnotation {
     
-    public func defaultView(in mapView: MKMapView) -> MKAnnotationView? {
-        if let annotation = self as? MapAnnotation {
-            return annotation.view(for: mapView)
-        }
-        return mapView.view(for: self)
+    func defaultView(in mapView: MKMapView) -> MKAnnotationView? {
+        guard let annotation = self as? MapAnnotation else { return mapView.view(for: self) }
+        return annotation.view(for: mapView)
     }
 }

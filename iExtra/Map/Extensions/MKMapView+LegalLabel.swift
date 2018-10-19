@@ -10,7 +10,7 @@ import MapKit
 
 public extension MKMapView {
 
-    public func hideLegalLabel() {
+    func hideLegalLabel() {
         subviews[1].isHidden = true
     }
 }

@@ -41,11 +41,14 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     public func stopTravelling() {
         isTravelling = false
     }
+}
+
+
+// MARK: - Private Functions
+
+private extension LinearTravellingMapCamera {
     
-    
-    // MARK: Private functions
-    
-    private func travel(inDirection vector: CGPoint) {
+    func travel(inDirection vector: CGPoint) {
         guard let mapView = mapView else { return }
         guard !isTravelling else { return }
         

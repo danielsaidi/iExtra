@@ -11,7 +11,7 @@ import CoreLocation
 
 public extension MKMapView {
     
-    public var closestAnnotation: MKAnnotation? {
+    var closestAnnotation: MKAnnotation? {
         guard let userLoc = userLocation.location else { return nil }
         let initial: (distance: CLLocationDistance, annotation: MKAnnotation?) = (CLLocationDistanceMax, nil)
         return annotations.reduce(initial) { (closest, annotation) in
@@ -20,6 +20,6 @@ public extension MKMapView {
             let annotationLoc = CLLocation(latitude: coord.latitude, longitude: coord.longitude)
             let distance = userLoc.distance(from: annotationLoc)
             return distance < closest.distance ? (distance, annotation) : closest
-            }.annotation
+        }.annotation
     }
 }

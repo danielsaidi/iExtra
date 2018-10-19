@@ -1,8 +1,8 @@
 //
-//  MKMapView+StatusBarStyle.swift
+//  MKMapView+NavigationBarStyle.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2016-10-05.
+//  Created by Daniel Saidi on 2018-10-19.
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
@@ -11,10 +11,10 @@ import MapKit
 
 public extension MKMapView {
     
-    var statusBarStyle: UIStatusBarStyle {
+    var navigationBarStyle: UIBarStyle {
         switch mapType {
         case .standard: return .default
-        default: return .lightContent
+        default: return .blackTranslucent
         }
     }
 }

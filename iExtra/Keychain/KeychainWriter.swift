@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol KeychainWriter: class {
+public protocol KeychainWriter: AnyObject {
 
     @discardableResult
     func removeObject(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool
