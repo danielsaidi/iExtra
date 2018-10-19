@@ -19,16 +19,12 @@ class Shadow: ShadowStyle {
     var y: CGFloat { return 2 }
 }
 
-class Corner: CornerRadiusStyle {
-    
-    var radius: Int { return 20 }
-}
-
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let view = PannableView(frame: CGRect.init(x: 100, y: 100, width: 100, height: 100))
+        view.applyCornerRadius(CornerRadius(radius: 20))
         view.backgroundColor = .red
         self.view.addSubview(view)
     }

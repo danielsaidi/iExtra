@@ -8,7 +8,11 @@
 
 import Foundation
 
-public protocol CornerRadiusStyle {
+public struct CornerRadius {
     
-    var radius: Int { get }
+    public init(radius: Int) {
+        self.radius = radius
+    }
+    
+    public let radius: Int
 }

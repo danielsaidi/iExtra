@@ -241,7 +241,7 @@
 		45883B9B20CF0A9E001C0E2F /* UIView+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */; };
 		45883B9D20CF120C001C0E2F /* UIViewController+BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */; };
 		45883BAE20CF1853001C0E2F /* UIView+CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */; };
-		45883BAF20CF1853001C0E2F /* CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */; };
+		45883BAF20CF1853001C0E2F /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAA20CF1853001C0E2F /* CornerRadius.swift */; };
 		45883BB020CF1853001C0E2F /* UIView+ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */; };
 		45883BB120CF1853001C0E2F /* ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAD20CF1853001C0E2F /* ShadowStyle.swift */; };
 		458EEC13210F354600774A79 /* UIDevice+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEC10210F354600774A79 /* UIDevice+Properties.swift */; };
@@ -587,7 +587,7 @@
 		45883B9A20CF0A9E001C0E2F /* UIView+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Fade.swift"; sourceTree = "<group>"; };
 		45883B9C20CF120C001C0E2F /* UIViewController+BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+BackButton.swift"; sourceTree = "<group>"; };
 		45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadiusStyle.swift"; sourceTree = "<group>"; };
-		45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadiusStyle.swift; sourceTree = "<group>"; };
+		45883BAA20CF1853001C0E2F /* CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ShadowStyle.swift"; sourceTree = "<group>"; };
 		45883BAD20CF1853001C0E2F /* ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
 		458EEC10210F354600774A79 /* UIDevice+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Properties.swift"; sourceTree = "<group>"; };
@@ -1534,7 +1534,7 @@
 		45883BA820CF1853001C0E2F /* CornerRadius */ = {
 			isa = PBXGroup;
 			children = (
-				45883BAA20CF1853001C0E2F /* CornerRadiusStyle.swift */,
+				45883BAA20CF1853001C0E2F /* CornerRadius.swift */,
 				45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */,
 			);
 			path = CornerRadius;
@@ -2045,7 +2045,7 @@
 				452735511FD674F900418D93 /* UIView+Shake.swift in Sources */,
 				4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */,
 				452735641FD674F900418D93 /* NoCancellingSearchBar.swift in Sources */,
-				45883BAF20CF1853001C0E2F /* CornerRadiusStyle.swift in Sources */,
+				45883BAF20CF1853001C0E2F /* CornerRadius.swift in Sources */,
 				452735491FD674F900418D93 /* UIView+ReuseIdentifier.swift in Sources */,
 				4527357F1FD674F900418D93 /* AdaptiveFileSizePresenter.swift in Sources */,
 				452735421FD674F900418D93 /* UIView+Empty.swift in Sources */,

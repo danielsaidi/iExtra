@@ -24,6 +24,9 @@ wrapper. Use `compactMap` directly.
 - The entire `Onboarding` namespace has been removed; use `Tutti` instead.
 - `DelayOperator` has new delay functions with more time units. As a result, the
 original delay function is removed.
+- `CornerRadiusStyle` has been converted from a protocol to a struct. It is also
+renamed to `CornerRadius`.
+- `UIView+CornerRadiusStyle` has been slightly refactored with signature changes.
 
 
 

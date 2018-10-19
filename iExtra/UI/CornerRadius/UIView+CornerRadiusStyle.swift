@@ -10,12 +10,12 @@ import UIKit
 
 public extension UIView {
     
-    public func applyCornerRadius(_ style: CornerRadiusStyle, clipsToBounds: Bool = true) {
+    func applyCornerRadius(_ radius: CornerRadius, clipsToBounds: Bool = true) {
         self.clipsToBounds = clipsToBounds
-        layer.cornerRadius = CGFloat(style.radius)
+        layer.cornerRadius = CGFloat(radius.radius)
     }
     
-    public func applyCornerRadius(_ radius: CornerRadiusStyle, toCorners corners: UIRectCorner, fillColor: UIColor? = nil) {
+    func applyCornerRadius(_ radius: CornerRadius, to corners: UIRectCorner, fillColor: UIColor? = nil) {
         if #available(iOS 11.0, *) {
             layer.maskedCorners = rectCornersToMaskedCorners(corners)
             applyCornerRadius(radius)
