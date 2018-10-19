@@ -9,22 +9,15 @@
 import UIKit
 import iExtra
 
-class Shadow: ShadowStyle {
- 
-    var alpha: Float { return 1 }
-    var blur: CGFloat { return 0.5 }
-    var color: UIColor { return .purple }
-    var spread: CGFloat { return 1 }
-    var x: CGFloat { return 0 }
-    var y: CGFloat { return 2 }
-}
-
 class ViewController: UIViewController {
+    
+    let a = Shadow(alpha: 1, blur: 0.5, color: .purple, spread: 1, x: 0, y: 2)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let view = PannableView(frame: CGRect.init(x: 100, y: 100, width: 100, height: 100))
-        view.applyCornerRadius(CornerRadius(radius: 20))
+        view.applyShadow(a)
+        //view.applyCornerRadius(CornerRadius(radius: 20))
         view.backgroundColor = .red
         self.view.addSubview(view)
     }

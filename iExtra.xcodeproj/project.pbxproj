@@ -242,7 +242,7 @@
 		45883BAE20CF1853001C0E2F /* UIView+CornerRadiusStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */; };
 		45883BAF20CF1853001C0E2F /* CornerRadius.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAA20CF1853001C0E2F /* CornerRadius.swift */; };
 		45883BB020CF1853001C0E2F /* UIView+ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */; };
-		45883BB120CF1853001C0E2F /* ShadowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAD20CF1853001C0E2F /* ShadowStyle.swift */; };
+		45883BB120CF1853001C0E2F /* Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45883BAD20CF1853001C0E2F /* Shadow.swift */; };
 		458EEC13210F354600774A79 /* UIDevice+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEC10210F354600774A79 /* UIDevice+Properties.swift */; };
 		458EEC14210F354600774A79 /* UIDevice+UniqueId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEC11210F354600774A79 /* UIDevice+UniqueId.swift */; };
 		458EEC15210F354600774A79 /* UIDevice+SystemVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEC12210F354600774A79 /* UIDevice+SystemVersion.swift */; };
@@ -588,7 +588,7 @@
 		45883BA920CF1853001C0E2F /* UIView+CornerRadiusStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+CornerRadiusStyle.swift"; sourceTree = "<group>"; };
 		45883BAA20CF1853001C0E2F /* CornerRadius.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CornerRadius.swift; sourceTree = "<group>"; };
 		45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ShadowStyle.swift"; sourceTree = "<group>"; };
-		45883BAD20CF1853001C0E2F /* ShadowStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShadowStyle.swift; sourceTree = "<group>"; };
+		45883BAD20CF1853001C0E2F /* Shadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shadow.swift; sourceTree = "<group>"; };
 		458EEC10210F354600774A79 /* UIDevice+Properties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Properties.swift"; sourceTree = "<group>"; };
 		458EEC11210F354600774A79 /* UIDevice+UniqueId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+UniqueId.swift"; sourceTree = "<group>"; };
 		458EEC12210F354600774A79 /* UIDevice+SystemVersion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+SystemVersion.swift"; sourceTree = "<group>"; };
@@ -1543,8 +1543,8 @@
 		45883BAB20CF1853001C0E2F /* Shadows */ = {
 			isa = PBXGroup;
 			children = (
+				45883BAD20CF1853001C0E2F /* Shadow.swift */,
 				45883BAC20CF1853001C0E2F /* UIView+ShadowStyle.swift */,
-				45883BAD20CF1853001C0E2F /* ShadowStyle.swift */,
 			);
 			path = Shadows;
 			sourceTree = "<group>";
@@ -2074,7 +2074,7 @@
 				452735261FD674F900418D93 /* UIEdgeInsets+Init.swift in Sources */,
 				4527356F1FD674F900418D93 /* FloatingMenuPresenter.swift in Sources */,
 				452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */,
-				45883BB120CF1853001C0E2F /* ShadowStyle.swift in Sources */,
+				45883BB120CF1853001C0E2F /* Shadow.swift in Sources */,
 				452735211FD674F900418D93 /* UIButton+Init.swift in Sources */,
 				452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */,
 				452735391FD674F900418D93 /* UISlider+HitTest.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  BaseViewController.swift
+//  UIView+ShadowStyle.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2018-05-09.
@@ -9,15 +9,15 @@ import UIKit
 
 public extension UIView {
     
-    public func applyShadow(_ style: ShadowStyle) {
+    public func applyShadow(_ shadow: Shadow) {
         clipsToBounds = false
         layer.applyShadow(
-            color: style.color,
-            alpha: style.alpha,
-            x: style.x,
-            y: style.y,
-            blur: style.blur,
-            spread: style.spread)
+            color: shadow.color,
+            alpha: shadow.alpha,
+            x: shadow.x,
+            y: shadow.y,
+            blur: shadow.blur,
+            spread: shadow.spread)
     }
 }
 
