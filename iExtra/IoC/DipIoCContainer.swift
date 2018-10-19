@@ -11,8 +11,8 @@
 import Dip
 import iExtra
 
-class DipContainer: NSObject, IoCContainer {
-    
+class DipContainer: IoCContainer {
+ 
     init(container: DependencyContainer) {
         self.container = container
     }

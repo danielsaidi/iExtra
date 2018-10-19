@@ -11,11 +11,10 @@
 import Swinject
 import iExtra
 
-class SwinjectIoCContainer: NSObject, IoCContainer {
+class SwinjectIoCContainer: IoCContainer {
     
     init(container: Container) {
         self.container = container
-        super.init()
     }
     
     
