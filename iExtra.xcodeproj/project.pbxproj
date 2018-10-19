@@ -211,7 +211,6 @@
 		452735931FD674F900418D93 /* ExternalMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D91FD674F800418D93 /* ExternalMapService.swift */; };
 		452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */; };
 		452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DB1FD674F800418D93 /* GoogleMapsService.swift */; };
-		452735961FD674F900418D93 /* NavigationServiceActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DC1FD674F800418D93 /* NavigationServiceActionSheet.swift */; };
 		452735971FD674F900418D93 /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DE1FD674F800418D93 /* HintManager.swift */; };
 		452735981FD674F900418D93 /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DF1FD674F800418D93 /* HintManagerBase.swift */; };
 		452735991FD674F900418D93 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734E11FD674F800418D93 /* KeychainItemAccessibility.swift */; };
@@ -553,7 +552,6 @@
 		452734D91FD674F800418D93 /* ExternalMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapService.swift; sourceTree = "<group>"; };
 		452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapServiceBase.swift; sourceTree = "<group>"; };
 		452734DB1FD674F800418D93 /* GoogleMapsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsService.swift; sourceTree = "<group>"; };
-		452734DC1FD674F800418D93 /* NavigationServiceActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationServiceActionSheet.swift; sourceTree = "<group>"; };
 		452734DE1FD674F800418D93 /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
 		452734DF1FD674F800418D93 /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
 		452734E11FD674F800418D93 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
@@ -1439,7 +1437,6 @@
 				452734D91FD674F800418D93 /* ExternalMapService.swift */,
 				452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */,
 				452734DB1FD674F800418D93 /* GoogleMapsService.swift */,
-				452734DC1FD674F800418D93 /* NavigationServiceActionSheet.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -2110,7 +2107,6 @@
 				452735751FD674F900418D93 /* AnimatedLabel.swift in Sources */,
 				458EEDCA2118741600774A79 /* UICollectionView+TableViewLayout.swift in Sources */,
 				452735701FD674F900418D93 /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
-				452735961FD674F900418D93 /* NavigationServiceActionSheet.swift in Sources */,
 				452735791FD674F900418D93 /* PannableView.swift in Sources */,
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,

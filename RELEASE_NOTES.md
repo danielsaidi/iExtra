@@ -20,6 +20,7 @@ wrapper. Use `compactMap` directly.
 - `String+Contains` case parameter has been inverted to avoid double negations.
 - `String+Replace` case parameter has been inverted to avoid double negations.
 - `InstantLanguageService` is restructured, with many properties being renamed.
+- `NavigationServiceActionSheet` has been removed; use `Sheeeeeeeeet` instead.
 
 
 
