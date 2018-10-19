@@ -27,6 +27,7 @@ original delay function is removed.
 - `CornerRadiusStyle` has been converted from a protocol to a struct. It is also
 renamed to `CornerRadius`.
 - `UIView+CornerRadiusStyle` has been slightly refactored with signature changes.
+- `ParallaxEffectDefault` has been renamed to `StandardParallaxEffect`.
 
 
 

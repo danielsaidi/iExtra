@@ -1,5 +1,5 @@
 //
-//  ParallaxEffectDefault.swift
+//  StandardParallaxEffect.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2015-01-19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public class ParallaxEffectDefault: NSObject, ParallaxEffect {
+public class StandardParallaxEffect: NSObject, ParallaxEffect {
     
     public func addParallaxEffect(to view: UIView, maxOffset: Int) {
         removeParallaxEffect(from: view)
@@ -28,13 +28,13 @@ public class ParallaxEffectDefault: NSObject, ParallaxEffect {
     }
     
     public func removeParallaxEffect(from view: UIView) {
-        for effect in view.motionEffects {
-            view.removeMotionEffect(effect)
+        view.motionEffects.forEach {
+            view.removeMotionEffect($0)
         }
         
-        guard let groups = view.motionEffects as? [UIMotionEffectGroup] else { return }
-        for effect in groups {
-            view.removeMotionEffect(effect)
+        let groups = view.motionEffects as? [UIMotionEffectGroup]
+        groups?.forEach {
+            view.removeMotionEffect($0)
         }
     }
 }

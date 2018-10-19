@@ -158,7 +158,6 @@
 		4527355E1FD674F900418D93 /* PannableModalDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734911FD674F800418D93 /* PannableModalDismissAnimator.swift */; };
 		4527355F1FD674F900418D93 /* PannableModalPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734921FD674F800418D93 /* PannableModalPresenter.swift */; };
 		452735601FD674F900418D93 /* ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734951FD674F800418D93 /* ParallaxEffect.swift */; };
-		452735611FD674F900418D93 /* ParallaxEffectDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734961FD674F800418D93 /* ParallaxEffectDefault.swift */; };
 		452735621FD674F900418D93 /* BlurredNavigationSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734981FD674F800418D93 /* BlurredNavigationSearchController.swift */; };
 		452735631FD674F900418D93 /* NavigationSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734991FD674F800418D93 /* NavigationSearchController.swift */; };
 		452735641FD674F900418D93 /* NoCancellingSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527349A1FD674F800418D93 /* NoCancellingSearchBar.swift */; };
@@ -282,6 +281,7 @@
 		848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */; };
 		848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */; };
 		848DB3E5217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E4217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift */; };
+		848DB3E7217A865000CAFAB9 /* StandardParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E6217A865000CAFAB9 /* StandardParallaxEffect.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -497,7 +497,6 @@
 		452734911FD674F800418D93 /* PannableModalDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalDismissAnimator.swift; sourceTree = "<group>"; };
 		452734921FD674F800418D93 /* PannableModalPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableModalPresenter.swift; sourceTree = "<group>"; };
 		452734951FD674F800418D93 /* ParallaxEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxEffect.swift; sourceTree = "<group>"; };
-		452734961FD674F800418D93 /* ParallaxEffectDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxEffectDefault.swift; sourceTree = "<group>"; };
 		452734981FD674F800418D93 /* BlurredNavigationSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlurredNavigationSearchController.swift; sourceTree = "<group>"; };
 		452734991FD674F800418D93 /* NavigationSearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationSearchController.swift; sourceTree = "<group>"; };
 		4527349A1FD674F800418D93 /* NoCancellingSearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCancellingSearchBar.swift; sourceTree = "<group>"; };
@@ -629,6 +628,7 @@
 		848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateTests.swift; sourceTree = "<group>"; };
 		848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+ValidTests.swift"; sourceTree = "<group>"; };
 		848DB3E4217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+NavigationBarStyle.swift"; sourceTree = "<group>"; };
+		848DB3E6217A865000CAFAB9 /* StandardParallaxEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardParallaxEffect.swift; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -1251,7 +1251,7 @@
 			isa = PBXGroup;
 			children = (
 				452734951FD674F800418D93 /* ParallaxEffect.swift */,
-				452734961FD674F800418D93 /* ParallaxEffectDefault.swift */,
+				848DB3E6217A865000CAFAB9 /* StandardParallaxEffect.swift */,
 			);
 			path = Parallax;
 			sourceTree = "<group>";
@@ -1951,7 +1951,6 @@
 				4567E4E620A32B23008B7FE5 /* UIApplication+RefreshApperance.swift in Sources */,
 				452735A21FD674F900418D93 /* IdGenerator.swift in Sources */,
 				452735271FD674F900418D93 /* UIImage+Async.swift in Sources */,
-				452735611FD674F900418D93 /* ParallaxEffectDefault.swift in Sources */,
 				459E62C6210F258E006253F0 /* UINavigationController+StatusBar.swift in Sources */,
 				452735061FD674F900418D93 /* DeviceIdentifier.swift in Sources */,
 				458EEDDB21187C6900774A79 /* UILabel+NumberOfLines.swift in Sources */,
@@ -2137,6 +2136,7 @@
 				452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */,
 				452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */,
 				4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */,
+				848DB3E7217A865000CAFAB9 /* StandardParallaxEffect.swift in Sources */,
 				452735011FD674F900418D93 /* String+Base64.swift in Sources */,
 				452735881FD674F900418D93 /* MainBundleFileFinder.swift in Sources */,
 				4527352A1FD674F900418D93 /* UIImage+Crop.swift in Sources */,
