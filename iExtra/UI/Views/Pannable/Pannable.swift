@@ -51,16 +51,9 @@ extension Pannable {
     func getNewCenter(for pan: UIPanGestureRecognizer, in view: UIView) -> CGPoint {
         let center = view.center
         let translation = pan.translation(in: view.superview)
-        
         var point = CGPoint(x: center.x, y: center.y)
-        if canPanHorizontally {
-            point.x += translation.x
-        }
-        
-        if canPanVertically {
-            point.y += translation.y
-        }
-        
+        if canPanHorizontally { point.x += translation.x }
+        if canPanVertically { point.y += translation.y }
         pan.setTranslation(CGPoint.zero, in: view.superview)
         return point
     }
@@ -68,11 +61,7 @@ extension Pannable {
     func handlePanBase(_ pan: UIPanGestureRecognizer) {
         guard isPanEnabled else { return }
         guard let view = pan.view else { return }
-        
-        if pan.state == .began {
-            panStartCenter = view.center
-        }
-        
+        if pan.state == .began { panStartCenter = view.center }
         view.center = getNewCenter(for: pan, in: view)
         
         switch pan.state {

@@ -1,5 +1,5 @@
 //
-//  BorderLineView.swift
+//  ThinBorderLineView.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2017-02-08.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class BorderLineView: UIView {
+public class ThinBorderLineView: UIView {
     
     
     // MARK: - Functions
@@ -22,21 +22,19 @@ public class BorderLineView: UIView {
 
 // MARK: - Private functions
 
-private extension BorderLineView {
+private extension ThinBorderLineView {
     
     func adjustHeight() {
         guard frame.size.height == 1 else { return }
         frame.size.height = 0.5
-        if frame.origin.y > 0 {
-            frame.origin.y += 0.5
-        }
+        guard frame.origin.y > 0 else { return }
+        frame.origin.y += 0.5
     }
     
     func adjustWidth() {
         guard frame.size.width == 1 else { return }
         frame.size.width = 0.5
-        if frame.origin.x > 0 {
-            frame.origin.x += 0.5
-        }
+        guard frame.origin.x > 0 else { return }
+        frame.origin.x += 0.5
     }
 }

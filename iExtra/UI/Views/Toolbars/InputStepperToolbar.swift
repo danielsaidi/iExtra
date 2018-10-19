@@ -25,24 +25,28 @@ public class InputStepperToolbar: UIToolbar {
     }
     
     
-    // MARK: - Appearance properties
+    // MARK: - Static Appearance Properties
     
     public static var nextImage: UIImage?
+    public static var nextTitle = "Next"
+    public static var previousImage: UIImage?
+    public static var previousTitle = "Previous"
+    
+    
+    // MARK: - Instance Appearance Properties
+    
     public var nextImage: UIImage? {
         return InputStepperToolbar.nextImage
     }
     
-    public static var nextTitle = "Next"
     public var nextTitle: String {
         return InputStepperToolbar.nextTitle
     }
     
-    public static var previousImage: UIImage?
     public var previousImage: UIImage? {
         return InputStepperToolbar.previousImage
     }
     
-    public static var previousTitle = "Previous"
     public var previousTitle: String {
         return InputStepperToolbar.previousTitle
     }
@@ -50,11 +54,9 @@ public class InputStepperToolbar: UIToolbar {
     
     // MARK: - Properties
     
-    fileprivate weak var owner: UIView?
-    
-    fileprivate var nextButton: UIBarButtonItem!
-    
-    fileprivate var previousButton: UIBarButtonItem!
+    private weak var owner: UIView?
+    private var nextButton: UIBarButtonItem!
+    private var previousButton: UIBarButtonItem!
 }
 
 

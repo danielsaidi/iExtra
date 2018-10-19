@@ -20,9 +20,9 @@ public class AnimatedLabel: UILabel {
     
     // MARK: - Properties
     
-    fileprivate var texts: [String]?
+    private var texts: [String]?
     
-    fileprivate var timer: Timer?
+    private var timer: Timer?
     
     
     // MARK: - Functions

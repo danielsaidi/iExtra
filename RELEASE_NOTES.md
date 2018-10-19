@@ -28,6 +28,10 @@ original delay function is removed.
 - `UIView+CornerRadiusStyle` has been slightly refactored with signature changes.
 - `ParallaxEffectDefault` has been renamed to `StandardParallaxEffect`.
 - `ShadowStyle` has been renamed to `Shadow` and changed to a struct.
+- `BorderLineView` has been renamed to `ThinBorderLineView`.
+- The entire `Stretchable` namespace has been removed. You should not solve this
+problem this way. Instead, add a header below the table/scroll/stack view and an
+additional space topmost, using either content insets or spacer views.
 
 
 
