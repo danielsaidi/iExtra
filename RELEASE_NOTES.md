@@ -17,6 +17,8 @@ features are better covered in `https://github.com/dennisweissmann/DeviceKit`.
 - `Array+ElementsOfType` has been removed, since it's just a useless `compactMap`
 wrapper. Use `compactMap` directly.
 
+- `Array+RandomElement` has been removed. This is now a native feature in Swift.
+
 
 
 ## 1.6.0

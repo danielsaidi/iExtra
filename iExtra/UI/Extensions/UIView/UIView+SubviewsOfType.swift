@@ -11,7 +11,7 @@ import UIKit
 public extension UIView {
     
     public func subviews<T>(ofType type: T.Type, recursive: Bool = false) -> [T] {
-        var views = subviews.elements(ofType: T.self)
+        var views = subviews.compactMap { $0 as? T }
         guard recursive else { return views }
         for view in subviews {
             views += view.subviews(ofType: type, recursive: true)
