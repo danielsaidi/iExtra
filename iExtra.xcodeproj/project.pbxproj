@@ -203,7 +203,7 @@
 		4527358B1FD674F900418D93 /* AuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734CE1FD674F800418D93 /* AuthorizationService.swift */; };
 		4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734CF1FD674F800418D93 /* BiometricsAuthorizationService.swift */; };
 		4527358D1FD674F900418D93 /* EventTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D11FD674F800418D93 /* EventTracker.swift */; };
-		4527358E1FD674F900418D93 /* i18nNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D31FD674F800418D93 /* i18nNotifications.swift */; };
+		4527358E1FD674F900418D93 /* LanguageNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D31FD674F800418D93 /* LanguageNotifications.swift */; };
 		4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D41FD674F800418D93 /* InstantLanguageService.swift */; };
 		452735901FD674F900418D93 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D51FD674F800418D93 /* LanguageService.swift */; };
 		452735911FD674F900418D93 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D61FD674F800418D93 /* Translator.swift */; };
@@ -544,7 +544,7 @@
 		452734CE1FD674F800418D93 /* AuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationService.swift; sourceTree = "<group>"; };
 		452734CF1FD674F800418D93 /* BiometricsAuthorizationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiometricsAuthorizationService.swift; sourceTree = "<group>"; };
 		452734D11FD674F800418D93 /* EventTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTracker.swift; sourceTree = "<group>"; };
-		452734D31FD674F800418D93 /* i18nNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = i18nNotifications.swift; sourceTree = "<group>"; };
+		452734D31FD674F800418D93 /* LanguageNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageNotifications.swift; sourceTree = "<group>"; };
 		452734D41FD674F800418D93 /* InstantLanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantLanguageService.swift; sourceTree = "<group>"; };
 		452734D51FD674F800418D93 /* LanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
 		452734D61FD674F800418D93 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
@@ -1422,7 +1422,7 @@
 		452734D21FD674F800418D93 /* i18n */ = {
 			isa = PBXGroup;
 			children = (
-				452734D31FD674F800418D93 /* i18nNotifications.swift */,
+				452734D31FD674F800418D93 /* LanguageNotifications.swift */,
 				452734D41FD674F800418D93 /* InstantLanguageService.swift */,
 				452734D51FD674F800418D93 /* LanguageService.swift */,
 				452734D61FD674F800418D93 /* Translator.swift */,
@@ -2065,7 +2065,7 @@
 				452735421FD674F900418D93 /* UIView+Empty.swift in Sources */,
 				4527350A1FD674F900418D93 /* SKProduct+PriceDescription.swift in Sources */,
 				452735891FD674F900418D93 /* MainBundleImageFileFinder.swift in Sources */,
-				4527358E1FD674F900418D93 /* i18nNotifications.swift in Sources */,
+				4527358E1FD674F900418D93 /* LanguageNotifications.swift in Sources */,
 				4527356E1FD674F900418D93 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
 				4527354D1FD674F900418D93 /* UIView+ScaleIn.swift in Sources */,
 				452735001FD674F900418D93 /* Set+Group.swift in Sources */,

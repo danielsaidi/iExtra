@@ -9,17 +9,18 @@
 import Foundation
 
 
-public protocol LanguageServiceDelegate: class {
+public protocol LanguageServiceDelegate: AnyObject {
     
     func languageService(_ service: LanguageService, didSetLocale locale: String)
 }
 
 
-public protocol LanguageService: class, Translator {
+public protocol LanguageService: Translator {
     
     var delegate: LanguageServiceDelegate? { get set }
     
     var currentLocale: String { get }
     
+    func setLocale(_ locale: Locale)
     func setLocale(_ locale: String)
 }

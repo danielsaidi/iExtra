@@ -8,46 +8,43 @@
 
 /*
  
- For this to work, your supported Localizable.strings
- must have a key with the locale's name as translated
- value. This will hopefully not be required later on.
- Specify this key's name when creating an instance of
- this class.
+ This service lets you switch languages immediately, without
+ having to restart your app. For this to work, your language
+ files must have a translation with the same key name as the
+ `localeTranslationKey` property, and the locale name as the
+ translated value, e.g. `"locale" = "en";`
+ 
+ When you want to set a locale, either with a string or with
+ a locale instance, the locale string or locale's instance's
+ language code must match the name of the language's folder.
+ When you then call `currentLocale`, it will translate it to
+ the translation in the language file.
  
  */
 
 import Foundation
 
-open class InstantLanguageService: NSObject, LanguageService {
+open class InstantLanguageService: LanguageService {
     
     
     // MARK: Initialization
     
     public init(localeTranslationKey: String) {
         self.localeTranslationKey = localeTranslationKey
-        super.init()
     }
     
     
     // MARK: Properties
     
-    open weak var delegate: LanguageServiceDelegate?
+    public weak var delegate: LanguageServiceDelegate?
     
     open var currentLocale: String {
         return translate(localeTranslationKey)
     }
     
-    fileprivate var bundle: Bundle?
+    private var bundle: Bundle?
     
-    fileprivate let localeTranslationKey: String
-    
-    fileprivate var notificationCenter: NotificationCenter {
-        return NotificationCenter.default
-    }
-    
-    fileprivate var settings: UserDefaults {
-        return UserDefaults.standard
-    }
+    private let localeTranslationKey: String
     
     
     // MARK: - Translator
@@ -66,13 +63,16 @@ open class InstantLanguageService: NSObject, LanguageService {
     // MARK: LanguageService
     
     open func setLocale(_ locale: String) {
+        let defaults = UserDefaults.standard
         guard loadBundle(for: locale) else { return }
-        settings.set([locale], forKey: "AppleLanguages")
-        settings.synchronize()
-        delegate?.languageService(self, didSetLocale: locale)
-        let notification = LanguageNotifications.languageChanged
-        let notificationName = Notification.Name(rawValue: notification)
-        notificationCenter.post(name: notificationName, object: nil)
+        defaults.set([locale], forKey: "AppleLanguages")
+        defaults.synchronize()
+        NotificationCenter.default.post(name: .languageChanged, object: nil)
+    }
+    
+    open func setLocale(_ locale: Locale) {
+        guard let code = locale.languageCode else { return }
+        setLocale(code)
     }
 }
 
