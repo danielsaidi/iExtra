@@ -43,7 +43,7 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     
     // MARK: - Properties
     
-    fileprivate weak var vc: UIViewController? {
+    private weak var vc: UIViewController? {
         didSet {
             vc?.definesPresentationContext = true
             vc?.navigationItem.titleView = searchBar
@@ -52,7 +52,7 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
         }
     }
     
-    fileprivate weak var vcRightButton: UIBarButtonItem?
+    private weak var vcRightButton: UIBarButtonItem?
     
     
     // MARK: - Public functions

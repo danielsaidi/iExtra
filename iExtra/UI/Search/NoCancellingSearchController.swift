@@ -10,7 +10,7 @@ import UIKit
 
 class NoCancellingSearchController: UISearchController {
     
-    fileprivate var _searchBar = NoCancellingSearchBar()
+    private var _searchBar = NoCancellingSearchBar()
     
     override var searchBar: UISearchBar {
         return _searchBar
