@@ -14,7 +14,7 @@ public extension URL {
     // MARK: - Public Properties
     
     public var queryParameters: [URLQueryItem] {
-        return NSURLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
+        return URLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
     }
     
     public var queryParametersDictionary: [String: String] {

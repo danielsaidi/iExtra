@@ -17,7 +17,13 @@ features are better covered in `https://github.com/dennisweissmann/DeviceKit`.
 - `Array+ElementsOfType` has been removed, since it's just a useless `compactMap`
 wrapper. Use `compactMap` directly.
 
-- `Array+RandomElement` has been removed. This is now a native feature in Swift.
+- `Array+RandomElement` has been removed. This is now a built-in parts of Swift.
+
+- `Numeric+Random` has been removed. These are now build-in parts of Swift.
+
+- `String+Contains` case parameter has been inverted to avoid double negations.
+
+- `String+Replace` case parameter has been inverted to avoid double negations.
 
 
 

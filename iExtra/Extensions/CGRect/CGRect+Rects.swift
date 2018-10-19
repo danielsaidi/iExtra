@@ -44,7 +44,7 @@ public extension CGRect {
     }
     
     
-    fileprivate var screenSize: CGSize {
+    private var screenSize: CGSize {
         return UIScreen.main.bounds.size
     }
 }

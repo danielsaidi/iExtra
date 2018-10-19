@@ -11,12 +11,12 @@ import Foundation
 public extension String {
     
     public func replacing(_ string: String, with: String) -> String {
-        return self.replacingOccurrences(of: string, with: with)
+        return replacingOccurrences(of: string, with: with)
     }
     
-    public func replacing(_ string: String, with: String, caseInsensitive: Bool) -> String {
-        return caseInsensitive
-            ? self.replacingOccurrences(of: string, with: with, options: .caseInsensitive, range: nil)
-            : self.replacing(string, with: with)
+    public func replacing(_ string: String, with: String, caseSensitive: Bool) -> String {
+        return caseSensitive
+            ? replacing(string, with: with)
+            : replacingOccurrences(of: string, with: with, options: .caseInsensitive, range: nil)
     }
 }

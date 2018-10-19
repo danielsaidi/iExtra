@@ -65,7 +65,6 @@
 		452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734101FD674F700418D93 /* CGRect+Rects.swift */; };
 		452734FC1FD674F900418D93 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734131FD674F700418D93 /* NSObject+ClassName.swift */; };
 		452734FD1FD674F900418D93 /* Numeric+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734151FD674F700418D93 /* Numeric+Format.swift */; };
-		452734FE1FD674F900418D93 /* Numeric+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734161FD674F700418D93 /* Numeric+Random.swift */; };
 		452734FF1FD674F900418D93 /* Sequence+Batch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734171FD674F700418D93 /* Sequence+Batch.swift */; };
 		452735001FD674F900418D93 /* Set+Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734181FD674F700418D93 /* Set+Group.swift */; };
 		452735011FD674F900418D93 /* String+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527341A1FD674F700418D93 /* String+Base64.swift */; };
@@ -405,7 +404,6 @@
 		452734101FD674F700418D93 /* CGRect+Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Rects.swift"; sourceTree = "<group>"; };
 		452734131FD674F700418D93 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		452734151FD674F700418D93 /* Numeric+Format.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+Format.swift"; sourceTree = "<group>"; };
-		452734161FD674F700418D93 /* Numeric+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+Random.swift"; sourceTree = "<group>"; };
 		452734171FD674F700418D93 /* Sequence+Batch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+Batch.swift"; sourceTree = "<group>"; };
 		452734181FD674F700418D93 /* Set+Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+Group.swift"; sourceTree = "<group>"; };
 		4527341A1FD674F700418D93 /* String+Base64.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64.swift"; sourceTree = "<group>"; };
@@ -948,7 +946,6 @@
 			isa = PBXGroup;
 			children = (
 				452734151FD674F700418D93 /* Numeric+Format.swift */,
-				452734161FD674F700418D93 /* Numeric+Random.swift */,
 			);
 			path = Numerics;
 			sourceTree = "<group>";
@@ -2021,7 +2018,6 @@
 				452734FD1FD674F900418D93 /* Numeric+Format.swift in Sources */,
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
-				452734FE1FD674F900418D93 /* Numeric+Random.swift in Sources */,
 				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
