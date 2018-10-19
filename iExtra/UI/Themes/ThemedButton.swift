@@ -9,6 +9,7 @@
 /*
  
  This class can be used to easily apply custom button themes.
+ Instead of overriding its initializers, just override setup.
  
  */
 

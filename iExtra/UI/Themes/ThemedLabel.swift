@@ -6,6 +6,13 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
+/*
+ 
+ This class can be used to apply custom label fonts with the
+ `appearance()` proxy.
+ 
+ */
+
 import UIKit
 
 open class ThemedLabel: UILabel {
