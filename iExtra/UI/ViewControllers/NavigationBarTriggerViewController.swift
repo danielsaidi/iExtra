@@ -52,7 +52,7 @@ public protocol NavigationBarTriggerViewController: class {
 
 public extension NavigationBarTriggerViewController {
     
-    public func updateNavigationBarTrigger(with scrollView: UIScrollView, fadeDuration: TimeInterval = 0.3) {
+    func updateNavigationBarTrigger(with scrollView: UIScrollView, fadeDuration: TimeInterval = 0.3) {
         let isActive = checkIfTriggerIsActive()
         if isNavigationBarTriggerActive == isActive { return }
         isNavigationBarTriggerActive = isActive
