@@ -287,6 +287,8 @@
 		848805542140863600C18688 /* DateDecodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848805532140863600C18688 /* DateDecodersTests.swift */; };
 		848805562140888100C18688 /* DateEncoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848805552140888100C18688 /* DateEncoders.swift */; };
 		84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84880557214089AA00C18688 /* DateEncodersTests.swift */; };
+		848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */; };
+		848DB3DE217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -639,6 +641,8 @@
 		848805532140863600C18688 /* DateDecodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecodersTests.swift; sourceTree = "<group>"; };
 		848805552140888100C18688 /* DateEncoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEncoders.swift; sourceTree = "<group>"; };
 		84880557214089AA00C18688 /* DateEncodersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateEncodersTests.swift; sourceTree = "<group>"; };
+		848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewController.swift"; sourceTree = "<group>"; };
+		848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewControllerTests.swift"; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -815,6 +819,7 @@
 				452733B61FD674C400418D93 /* UISlider */,
 				452733BD1FD674C400418D93 /* UITableView */,
 				452733C01FD674C400418D93 /* UIView */,
+				848DB3DC217A206800CAFAB9 /* UIViewController */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1243,6 +1248,7 @@
 				4527348A1FD674F800418D93 /* UIViewController+Nib.swift */,
 				4527348B1FD674F800418D93 /* UIViewController+RequiredTextField.swift */,
 				4527348C1FD674F800418D93 /* UIViewController+Root.swift */,
+				848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */,
 			);
 			path = UIViewController;
 			sourceTree = "<group>";
@@ -1747,6 +1753,14 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		848DB3DC217A206800CAFAB9 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
 		84BA20F12135677F0040A20B /* Map */ = {
 			isa = PBXGroup;
 			children = (
@@ -2007,6 +2021,7 @@
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
 				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
 				4527350C1FD674F900418D93 /* IoCContainer.swift in Sources */,
+				848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */,
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
@@ -2223,6 +2238,7 @@
 				452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */,
 				452733D51FD674C500418D93 /* Array+ElementsOfTypeTests.swift in Sources */,
 				452733D61FD674C500418D93 /* Array+GroupTests.swift in Sources */,
+				848DB3DE217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift in Sources */,
 				452733F11FD674C500418D93 /* UIView+HitTests.swift in Sources */,
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
