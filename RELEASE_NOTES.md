@@ -5,6 +5,17 @@ git tags. Also please note that iExtra does not use semver. Breaking changes can
 occur on minor version bumps, but not on revision bumps.
 
 
+## 1.7.0
+
+This is a small update, with new extensions, code cleanups and minor adjustments.
+
+Breaking Changes:
+
+- `DeviceModelType` and all `UIDevice+Model` extensions have been removed. These
+features are better covered in `https://github.com/dennisweissmann/DeviceKit`.
+
+
+
 ## 1.6.0
 
 This version upgrades iExtra to `Swift 4.2` and removes functionality that Swift

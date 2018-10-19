@@ -25,10 +25,10 @@ public class BiometricsAuthorizationService: NSObject, AuthorizationService {
         guard canAuthorize(action: action) else { return completion(false) }
         guard !isAuthorized(for: action) else { return completion(true) }
         
-        LAContext().evaluatePolicy(policy, localizedReason: reason, reply: { (success, _) in
+        LAContext().evaluatePolicy(policy, localizedReason: reason) { (success, _) in
             self.setIsAuthorized(success, forAction: action)
             DispatchQueue.main.async(execute: { completion(success) })
-        })
+        }
     }
     
     public func canAuthorize(action: String) -> Bool {
