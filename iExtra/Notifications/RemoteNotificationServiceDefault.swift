@@ -36,6 +36,6 @@ open class RemoteNotificationServiceDefault: NSObject, RemoteNotificationService
     }
     
     open func registerForRemoteNotifications() {
-        // Implement in app
+        fatalError("registerForRemoteNotifications must be implemented in your app")
     }
 }
