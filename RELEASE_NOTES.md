@@ -21,6 +21,9 @@ wrapper. Use `compactMap` directly.
 - `String+Replace` case parameter has been inverted to avoid double negations.
 - `InstantLanguageService` is restructured, with many properties being renamed.
 - `NavigationServiceActionSheet` has been removed; use `Sheeeeeeeeet` instead.
+- The entire `Onboarding` namespace has been removed; use `Tutti` instead.
+- `DelayOperator` has new delay functions with more time units. As a result, the
+original delay function is removed.
 
 
 

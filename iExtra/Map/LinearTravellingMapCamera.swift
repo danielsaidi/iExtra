@@ -22,7 +22,6 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
     // MARK: Properties
     
     public var direction = CGPoint(x: 0.00001, y: 0.00001)
-    public var updateInterval = 0.1
     
     weak private var mapView: MKMapView?
     
@@ -58,7 +57,7 @@ private extension LinearTravellingMapCamera {
         centerCoordinate = CLLocationCoordinate2D(latitude: x, longitude: y)
         mapView.setCamera(self, animated: true)
         
-        delay(updateInterval) {
+        delay(seconds: 0.1) {
             self.travel(inDirection: vector)
         }
     }

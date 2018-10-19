@@ -7,25 +7,27 @@
 //
 
 /*
-    The ~> operator makes it easy to run a block on
-    a background thread and run a callback block on
-    the main thread as soon as the background block
-    finishes.
+ 
+ The ~> operator makes it easy to run blocks on a background
+ thread then run a callback block on the main thread as soon
+ as the background block completes.
+ 
+ You can either call blocks with no return values which then
+ trigger a parameterless callback block, or call blocks with
+ a return value which then triggers the callback block using
+ the return value as an input parameter, as such:
 
-    You can either run a block with no return value,
-    then run a parameterless callbacl block, or run
-    a block with a return value and pass the return
-    value to the callback block, as such:
+ ```swift
+{ println("hello,") } ~> { println(" world") }
+{ "hello," } ~> { println("\($0) world") }
+ ```
 
-    { println("hello,") } ~> { println(" world") }
-    { "hello," } ~> { println("\($0) world") }
+ Read more here:
+ http://ijoshsmith.com/2014/07/05/custom-threading-operator-in-swift/
 
-    Read more here:
-    http://ijoshsmith.com/2014/07/05/custom-threading-operator-in-swift/
-
-    Note that the line before a {} ~> {} as well as
-    the {} ~> {} line itself must use SEMICOLONS to
-    prevent compile errors in XCode 6.
+ Note that the line before a {} ~> {} as well a the {} ~> {}
+ line itself must use SEMICOLONS to prevent compile errors.
+ 
 */
 
 import Foundation
@@ -39,10 +41,10 @@ upon completion, the righthand closure on the main thread.
 */
 
 public func ~> (block: @escaping () -> (), callback: @escaping () -> ()) {
-    queue.async(execute: {
+    queue.async {
         block()
-        DispatchQueue.main.async(execute: callback)
-    })
+        DispatchQueue.main.async { callback() }
+    }
 }
 
 
@@ -53,10 +55,10 @@ Passes the background closure's output to the main closure.
 */
 
 public func ~> <T> (block: @escaping () -> T, callback: @escaping (_ result: T) -> ()) {
-    queue.async(execute: {
+    queue.async {
         let result = block()
-        DispatchQueue.main.async(execute: { callback(result) })
-    })
+        DispatchQueue.main.async { callback(result) }
+    }
 }
 
 

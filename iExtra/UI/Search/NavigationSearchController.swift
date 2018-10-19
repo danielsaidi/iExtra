@@ -64,8 +64,8 @@ open class NavigationSearchController: UISearchController, UISearchBarDelegate, 
     
     open func present(in vc: UIViewController, makeFirstResponder: Bool = false) {
         self.vc = vc
-        delay(0.5) { self.isActive = true }
-        delay(1.0) { self.searchBar.becomeFirstResponder() }
+        delay(seconds: 0.5) { self.isActive = true }
+        delay(seconds: 1) { self.searchBar.becomeFirstResponder() }
     }
     
     

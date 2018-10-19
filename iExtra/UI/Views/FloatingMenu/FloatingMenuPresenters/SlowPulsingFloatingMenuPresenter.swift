@@ -30,7 +30,7 @@ open class SlowPulsingFloatingMenuPresenter: NSObject, FloatingMenuPresenter {
         menu.layer.transform = transform
         menu.layer.add(getAnimation(withScale: scale), forKey: "scaleIn")
         menu.layer.transform = CATransform3DIdentity
-        delay(presentationDuration, { completion() })
+        delay(seconds: presentationDuration) { completion() }
     }
     
     

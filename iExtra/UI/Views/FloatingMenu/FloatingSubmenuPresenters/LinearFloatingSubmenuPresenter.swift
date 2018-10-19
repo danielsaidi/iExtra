@@ -99,7 +99,7 @@ private extension LinearFloatingSubMenuPresenter {
             button.layer.add(animation, forKey: "position.x")
         }
         
-        delay(3 * presentationDuration) {
+        delay(seconds: 3 * presentationDuration) {
             self.presentLabel(forButton: button)
         }
     }

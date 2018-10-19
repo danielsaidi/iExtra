@@ -211,8 +211,6 @@
 		452735931FD674F900418D93 /* ExternalMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D91FD674F800418D93 /* ExternalMapService.swift */; };
 		452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */; };
 		452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DB1FD674F800418D93 /* GoogleMapsService.swift */; };
-		452735971FD674F900418D93 /* HintManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DE1FD674F800418D93 /* HintManager.swift */; };
-		452735981FD674F900418D93 /* HintManagerBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DF1FD674F800418D93 /* HintManagerBase.swift */; };
 		452735991FD674F900418D93 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734E11FD674F800418D93 /* KeychainItemAccessibility.swift */; };
 		4527359A1FD674F900418D93 /* KeychainReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734E21FD674F800418D93 /* KeychainReader.swift */; };
 		4527359B1FD674F900418D93 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734E31FD674F800418D93 /* KeychainService.swift */; };
@@ -552,8 +550,6 @@
 		452734D91FD674F800418D93 /* ExternalMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapService.swift; sourceTree = "<group>"; };
 		452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapServiceBase.swift; sourceTree = "<group>"; };
 		452734DB1FD674F800418D93 /* GoogleMapsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleMapsService.swift; sourceTree = "<group>"; };
-		452734DE1FD674F800418D93 /* HintManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManager.swift; sourceTree = "<group>"; };
-		452734DF1FD674F800418D93 /* HintManagerBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintManagerBase.swift; sourceTree = "<group>"; };
 		452734E11FD674F800418D93 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		452734E21FD674F800418D93 /* KeychainReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainReader.swift; sourceTree = "<group>"; };
 		452734E31FD674F800418D93 /* KeychainService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
@@ -710,7 +706,6 @@
 				4527342F1FD674F800418D93 /* Map */,
 				452734D71FD674F800418D93 /* Navigation */,
 				4527342C1FD674F800418D93 /* Notifications */,
-				452734DD1FD674F800418D93 /* Onboarding */,
 				452734041FD674F700418D93 /* System */,
 				452734291FD674F700418D93 /* Threading */,
 				4527343A1FD674F800418D93 /* UI */,
@@ -1441,15 +1436,6 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		452734DD1FD674F800418D93 /* Onboarding */ = {
-			isa = PBXGroup;
-			children = (
-				452734DE1FD674F800418D93 /* HintManager.swift */,
-				452734DF1FD674F800418D93 /* HintManagerBase.swift */,
-			);
-			path = Onboarding;
-			sourceTree = "<group>";
-		};
 		452734E01FD674F800418D93 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -1995,7 +1981,6 @@
 				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,
 				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
-				452735971FD674F900418D93 /* HintManager.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
 				452735551FD674F900418D93 /* UIView+Visibility.swift in Sources */,
 				452735771FD674F900418D93 /* PannableDirection.swift in Sources */,
@@ -2112,7 +2097,6 @@
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,
 				452735841FD674F900418D93 /* FileFinder.swift in Sources */,
 				4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */,
-				452735981FD674F900418D93 /* HintManagerBase.swift in Sources */,
 				452735101FD674F900418D93 /* RemoteNotificationServiceDefault.swift in Sources */,
 				4527357A1FD674F900418D93 /* StretchableScrollViewHeader.swift in Sources */,
 				452735371FD674F900418D93 /* UISearchBar+Style.swift in Sources */,
