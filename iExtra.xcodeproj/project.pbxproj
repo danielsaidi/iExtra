@@ -283,6 +283,7 @@
 		848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */; };
 		848DB3DE217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */; };
 		848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */; };
+		848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */; };
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
@@ -631,6 +632,7 @@
 		848DB3DA217A204700CAFAB9 /* UIViewController+RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewController.swift"; sourceTree = "<group>"; };
 		848DB3DD217A207400CAFAB9 /* UIViewController+RootViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+RootViewControllerTests.swift"; sourceTree = "<group>"; };
 		848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCoordinateTests.swift; sourceTree = "<group>"; };
+		848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+ValidTests.swift"; sourceTree = "<group>"; };
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
@@ -721,14 +723,14 @@
 		452733751FD673E200418D93 /* iExtraTests */ = {
 			isa = PBXGroup;
 			children = (
-				848DB3DF217A2CB100CAFAB9 /* Geo */,
-				84F22D52214791F3005DEC41 /* Encoding */,
 				452733981FD674C400418D93 /* Authorization */,
 				452733D11FD674C500418D93 /* Data */,
 				8488054E214084B600C18688 /* Date */,
 				4527339A1FD674C400418D93 /* Device */,
+				84F22D52214791F3005DEC41 /* Encoding */,
 				4527339C1FD674C400418D93 /* Extensions */,
 				452733C71FD674C500418D93 /* Files */,
+				848DB3DF217A2CB100CAFAB9 /* Geo */,
 				452733781FD673E200418D93 /* Info.plist */,
 				452733CF1FD674C500418D93 /* IoC */,
 				452733CD1FD674C500418D93 /* Keychain */,
@@ -1747,6 +1749,7 @@
 			isa = PBXGroup;
 			children = (
 				848DB3E0217A2CBE00CAFAB9 /* WorldCoordinateTests.swift */,
+				848DB3E2217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift */,
 			);
 			path = Geo;
 			sourceTree = "<group>";
@@ -2203,6 +2206,7 @@
 				452733D41FD674C500418D93 /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
 				452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */,
+				848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */,
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				452733F01FD674C500418D93 /* UIView+EmptyTests.swift in Sources */,
 				452733DB1FD674C500418D93 /* NSObject+ClassNameTests.swift in Sources */,

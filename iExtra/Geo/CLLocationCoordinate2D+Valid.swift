@@ -14,13 +14,13 @@ public extension CLLocationCoordinate2D {
     // MARK: - Properties
     
     var isValid: Bool {
-        return isValidDegrees(latitude) && isValidDegrees(longitude)
+        return isValid(latitude) && isValid(longitude)
     }
     
     
     // MARK: - Private functions
     
-    private func isValidDegrees(_ degrees: CLLocationDegrees) -> Bool {
+    private func isValid(_ degrees: CLLocationDegrees) -> Bool {
         return degrees != 0 && degrees != 180 && degrees != -180
     }
 }
