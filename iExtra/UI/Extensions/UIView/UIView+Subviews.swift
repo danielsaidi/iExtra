@@ -12,9 +12,11 @@ public extension UIView {
     
     public func addSubview(_ subview: UIView, fill: Bool) {
         guard fill else { return addSubview(subview) }
-        subview.frame = bounds
-        subview.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(subview)
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        subview.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        subview.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        subview.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        subview.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
     public func addSubviewBottommost(_ view: UIView) {
