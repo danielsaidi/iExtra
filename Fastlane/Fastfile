@@ -13,9 +13,16 @@ platform :ios do
     ensure_git_branch(branch: 'master')
     test
     version = version_bump_podspec(path: "iExtra.podspec", version_number: options[:name])
+    increment_version_number(version_number: version)
+    increment_build_number(build_number: version)
+
 
     git_commit(
-      path: ["iExtra.podspec"],
+      path: [
+        "iExtra.podspec",
+        "*/Info.plist",
+        "*/*.pbxproj",
+        "Fastlane/"],
       message: "Bump to #{version}"
     )
 
@@ -32,9 +39,7 @@ platform :ios do
   lane :test do
     scan(
       project: "iExtra.xcodeproj",
-      scheme: "iExtra",
-      devices: ["iPhone 6s"]
+      scheme: "iExtra"
     )    
   end
-  
 end

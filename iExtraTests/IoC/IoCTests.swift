@@ -18,7 +18,7 @@ class TestContainer: NSObject, IoCContainer {
         return result
     }
     
-    func resolve<T, A>(arguments arg1: A) -> T  {
+    func resolve<T, A>(arguments arg1: A) -> T {
         guard let result = "foo" as? T else { fatalError() }
         return result
     }

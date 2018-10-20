@@ -19,28 +19,28 @@ class UIView_RoundTests: QuickSpec {
             it("is rounded with small height value") {
                 let frame = CGRect(x: 0, y: 0, width: 10, height: 100)
                 let view = UIView(frame: frame)
-                view.roundByHeight()
+                view.makeRoundWithHeightRadius()
                 expect(view.layer.cornerRadius).to(equal(50))
             }
             
             it("is rounded with small width value") {
                 let frame = CGRect(x: 0, y: 0, width: 100, height: 10)
                 let view = UIView(frame: frame)
-                view.roundByWidth()
+                view.makeRoundWithWidthRadius()
                 expect(view.layer.cornerRadius).to(equal(50))
             }
             
             it("is rounded with large height value") {
                 let frame = CGRect(x: 0, y: 0, width: 10, height: 10000)
                 let view = UIView(frame: frame)
-                view.roundByHeight()
+                view.makeRoundWithHeightRadius()
                 expect(view.layer.cornerRadius).to(equal(5000))
             }
             
             it("is rounded with large width value") {
                 let frame = CGRect(x: 0, y: 0, width: 10000, height: 10)
                 let view = UIView(frame: frame)
-                view.roundByWidth()
+                view.makeRoundWithWidthRadius()
                 expect(view.layer.cornerRadius).to(equal(5000))
             }
         }

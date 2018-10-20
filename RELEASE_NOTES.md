@@ -5,9 +5,10 @@ git tags. Also please note that iExtra does not use semver. Breaking changes can
 occur on minor version bumps, but not on revision bumps.
 
 
-## 1.7.0
+## 2.0.0
 
-This is a small update, with new extensions, code cleanups and minor adjustments.
+This is a big polishing update, where I refactor a lot of code and remove pieces
+of code that have made their way into the Swift framework.
 
 Breaking Changes:
 

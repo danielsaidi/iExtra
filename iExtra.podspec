@@ -2,13 +2,13 @@
 
 Pod::Spec.new do |s|
   s.name             = 'iExtra'
-  s.version          = '1.6.0'
+  s.version          = '1.9.9'
   s.summary          = 'iExtra contains a bunch of extra stuff for the iOS framework.'
 
   s.description      = <<-DESC
 iExtra is a Swift library that contains a bunch of extra stuff for the iOS framework.
-There is no main focus; all general features I build for my various apps end up here
-in order to make the code in my apps app-specific.
+There is no main focus; all general features I build for my various apps end up here,
+until they become specific enough to deserve a library of their own.
                        DESC
 
   s.homepage         = 'https://github.com/danielsaidi/iExtra'

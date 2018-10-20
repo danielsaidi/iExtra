@@ -39,7 +39,7 @@ class UIView_HitTestTests: QuickSpec {
                     points.append(CGPoint(x: 21, y: 0))
                     
                     points.forEach {
-                        let result = view.point(inside: $0, withPadding: padding, andEvent: nil)
+                        let result = view.point(inside: $0, withPadding: padding)
                         expect(result).to(be(true))
                     }
                 }
@@ -52,7 +52,7 @@ class UIView_HitTestTests: QuickSpec {
                     points.append(CGPoint(x: 22, y: 0))
                     
                     points.forEach {
-                        let result = view.point(inside: $0, withPadding: padding, andEvent: nil)
+                        let result = view.point(inside: $0, withPadding: padding)
                         expect(result).to(be(false))
                     }
                 }
@@ -73,7 +73,7 @@ class UIView_HitTestTests: QuickSpec {
                     points.append(CGPoint(x: 7, y: 0))
                     
                     points.forEach {
-                        let result = view.point(inside: $0, withPadding: padding, andEvent: nil)
+                        let result = view.point(inside: $0, withPadding: padding)
                         expect(result).to(be(true))
                     }
                 }
@@ -86,7 +86,7 @@ class UIView_HitTestTests: QuickSpec {
                     points.append(CGPoint(x: 8, y: 0))
                     
                     points.forEach {
-                        let result = view.point(inside: $0, withPadding: padding, andEvent: nil)
+                        let result = view.point(inside: $0, withPadding: padding)
                         expect(result).to(be(false))
                     }
                 }
