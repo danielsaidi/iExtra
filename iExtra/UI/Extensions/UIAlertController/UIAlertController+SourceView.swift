@@ -10,13 +10,11 @@ import UIKit
 
 public extension UIAlertController {
 
-    public var sourceView: UIView? {
-        get {
-            return popoverPresentationController?.sourceView
-        }
+    var sourceView: UIView? {
+        get { return popoverPresentationController?.sourceView }
         set {
             popoverPresentationController?.sourceView = newValue
-            popoverPresentationController?.sourceRect = newValue?.bounds ?? CGRect.zero
+            popoverPresentationController?.sourceRect = newValue?.bounds ?? .zero
         }
     }
 }

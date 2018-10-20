@@ -12,12 +12,12 @@ public typealias MoveCompletion = (Bool) -> ()
 
 public extension UIView {
     
-    public func move(toCenter center: CGPoint, withDuration duration: Double, options: UIView.AnimationOptions, completion: MoveCompletion?) {
+    func move(toCenter center: CGPoint, withDuration duration: Double, options: UIView.AnimationOptions, completion: MoveCompletion?) {
         let anim = { self.center = center }
         UIView.animate(withDuration: duration, delay: 0, options: options, animations: anim, completion: completion)
     }
     
-    public func move(toFrame frame: CGRect, withDuration duration: Double, options: UIView.AnimationOptions, completion: MoveCompletion?) {
+    func move(toFrame frame: CGRect, withDuration duration: Double, options: UIView.AnimationOptions, completion: MoveCompletion?) {
         let anim = { self.frame = frame }
         UIView.animate(withDuration: duration, delay: 0, options: options, animations: anim, completion: completion)
     }

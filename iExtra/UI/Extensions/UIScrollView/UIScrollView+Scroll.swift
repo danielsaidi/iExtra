@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIScrollView {
     
-    public func scrollToBottom(_ animated: Bool) {
+    func scrollToBottom(_ animated: Bool) {
         let y = contentSize.height - bounds.size.height
         if y > 0 {
             let bottom = CGPoint(x: 0, y: y)

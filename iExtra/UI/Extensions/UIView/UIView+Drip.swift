@@ -8,9 +8,13 @@
 
 import UIKit
 
-public extension UIView {
+public protocol Drippable: Fadeable, Scaleable {}
+
+public extension Drippable where Self: UIView {
     
-    public func startDripPulse(fromScale: Double, toScale: Double, withDuration duration: Double, delay: Double, times: Int) {
+    private var key: String { return "rippleEffect" }
+    
+    func startDripPulse(fromScale: Double, toScale: Double, withDuration duration: Double, delay: Double, times: Int) {
         let fadePulse = fadePulseAnimation(fromAlpha: 1, toAlpha: 0, withDuration: duration, times: 1)
         let scalePulse = scalePulseAnimation(fromScale: fromScale, toScale: toScale, withDuration: duration, times: 1)
         
@@ -39,8 +43,6 @@ public extension UIView {
 
 private extension UIView {
 
-    var key: String { return "rippleEffect" }
-    
     func adjustReversingAnimation(_ anim: CABasicAnimation) -> CABasicAnimation {
         anim.autoreverses = false
         anim.duration *= 2

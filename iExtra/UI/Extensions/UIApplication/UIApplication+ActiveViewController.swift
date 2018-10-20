@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIApplication {
+public extension UIApplication {
     
     var activeViewController: UIViewController? {
         return keyWindow?.rootViewController?.activeViewController

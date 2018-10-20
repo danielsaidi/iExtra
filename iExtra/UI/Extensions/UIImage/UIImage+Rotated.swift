@@ -12,12 +12,11 @@ import UIKit
 
 public extension UIImage {
     
-    public func rotated(byDegrees degrees: CGFloat) -> UIImage? {
+    func rotated(byDegrees degrees: CGFloat) -> UIImage? {
         return rotated(byDegrees: degrees, flipped: false)
     }
     
-    public func rotated(byDegrees degrees: CGFloat, flipped flip: Bool) -> UIImage? {
-        
+    func rotated(byDegrees degrees: CGFloat, flipped flip: Bool) -> UIImage? {
         let degreesToRadians: (CGFloat) -> CGFloat = {
             return $0 / 180.0 * CGFloat(Double.pi)
         }

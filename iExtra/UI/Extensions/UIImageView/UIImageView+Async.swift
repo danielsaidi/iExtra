@@ -21,7 +21,7 @@ import UIKit
 
 public extension UIImageView {
     
-    public func loadImageAsync(from url: String, completion: @escaping AsyncImageResult) {
+    func loadImageAsync(from url: String, completion: @escaping AsyncImageResult) {
         let tag = setupAsyncTag()
         UIImage.async(from: url) { (image, error) in
             guard self.tag == tag else { return }

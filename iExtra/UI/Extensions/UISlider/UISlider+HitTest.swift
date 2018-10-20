@@ -8,13 +8,12 @@
 
 import UIKit
 
-extension UISlider {
+public extension UISlider {
     
-    public func point(insideButton point: CGPoint, withPadding padding: CGSize, andEvent event: UIEvent?) -> Bool {
+    func point(insideButton point: CGPoint, withPadding padding: CGSize, andEvent event: UIEvent?) -> Bool {
         let position = buttonPosition.rounded()
         let padding = padding.width.rounded()
         let pointX = point.x.rounded()
-        let buttonSize = self.buttonSize
         let minX = position - padding - buttonSize / 2
         let maxX = position + padding + buttonSize / 2
         return pointX >= minX && pointX <= maxX

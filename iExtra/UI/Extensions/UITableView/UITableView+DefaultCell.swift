@@ -10,29 +10,29 @@ import UIKit
 
 public extension UITableView {
     
-    public func dequeueDefaultCell<T: ReusableTableViewCell>() -> T? {
+    func dequeueDefaultCell<T: ReusableTableViewCell>() -> T? {
         let id = T.defaultReuseIdentifier
         return dequeueReusableCell(withIdentifier: id) as? T
     }
     
-    public func dequeueDefaultCell<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T {
+    func dequeueDefaultCell<T: ReusableTableViewCell>(at indexPath: IndexPath) -> T {
         let id = T.defaultReuseIdentifier
         let dequeued = dequeueReusableCell(withIdentifier: id, for: indexPath)
         guard let cell = dequeued as? T else { fatalError("dequeueDefaultCell: Invalid type") }
         return cell
     }
     
-    public func dequeueDefaultHeaderFooterView<T: ReusableTableViewHeaderFooterView>() -> T? {
+    func dequeueDefaultHeaderFooterView<T: ReusableTableViewHeaderFooterView>() -> T? {
         let id = T.defaultReuseIdentifier
         return dequeueReusableHeaderFooterView(withIdentifier: id) as? T
     }
     
-    public func registerDefaultCell(for type: UITableViewCell.Type) {
+    func registerDefaultCell(for type: UITableViewCell.Type) {
         let id = type.defaultReuseIdentifier
         register(type.defaultNib, forCellReuseIdentifier: id)
     }
     
-    public func registerDefaultHeaderFooterView(for type: UITableViewHeaderFooterView.Type) {
+    func registerDefaultHeaderFooterView(for type: UITableViewHeaderFooterView.Type) {
         let id = type.defaultNibName
         register(type.defaultNib, forHeaderFooterViewReuseIdentifier: id)
     }

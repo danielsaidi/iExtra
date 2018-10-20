@@ -13,14 +13,14 @@ public extension UIColor {
     
     // MARK: - Initialization
     
-    public convenience init(hex: Int, alpha: CGFloat = 1.0) {
+    convenience init(hex: Int, alpha: CGFloat = 1.0) {
         let red = CGFloat((hex >> 16) & 0xff) / 255
         let green = CGFloat((hex >> 08) & 0xff) / 255
         let blue = CGFloat((hex >> 00) & 0xff) / 255
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    public convenience init(hexString hex: String) {
+    convenience init(hexString hex: String) {
         var hex = hex
         if hex.hasPrefix("#") {
             let index = hex.index(hex.startIndex, offsetBy: 1)
@@ -65,14 +65,14 @@ public extension UIColor {
     
     // MARK: - Public Properties
     
-    public var hexString: String {
+    var hexString: String {
         return hexString(withAlpha: false)
     }
     
     
     // MARK: - Public Functions
     
-    public func hexString(withAlpha: Bool) -> String {
+    func hexString(withAlpha: Bool) -> String {
         var r: CGFloat = 0
         var g: CGFloat = 0
         var b: CGFloat = 0

@@ -8,11 +8,13 @@
 
 import UIKit
 
-public extension UIView {
+public protocol Rotatable {}
+
+public extension Rotatable where Self: UIView {
     
     private var key: String { return "rotation" }
     
-    public func rotate(
+    func rotate(
         withRadians radians: CGFloat,
         duration: TimeInterval,
         options: UIView.AnimationOptions,
@@ -26,16 +28,16 @@ public extension UIView {
         )
     }
     
-    public func rotate360(withDuration duration: Double, times: Int) {
+    func rotate360(withDuration duration: Double, times: Int) {
         let animation = rotate360Animation(withDuration: duration, times: times)
         layer.add(animation, forKey: key)
     }
     
-    public func startRotation(withDuration duration: Double) {
+    func startRotation(withDuration duration: Double) {
         rotate360(withDuration: duration, times: Int.max)
     }
     
-    public func stopRotation() {
+    func stopRotation() {
         layer.removeAnimation(forKey: key)
     }
 }

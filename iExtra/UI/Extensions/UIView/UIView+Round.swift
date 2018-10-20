@@ -10,20 +10,20 @@ import UIKit
 
 public extension UIView {
     
-    public func round(bySize size: Int) {
+    func makeRound(withRadius radius: CGFloat) {
         let oldCenter = center
-        let size = CGFloat(size)
-        frame.size.height = size
-        frame.size.width = size
-        layer.cornerRadius = size / 2.0
+        frame.size.height = radius
+        frame.size.width = radius
+        layer.cornerRadius = radius / 2.0
         center = oldCenter
     }
     
-    public func roundByHeight() {
-        round(bySize: Int(frame.size.height))
+    
+    func makeRoundWithHeightRadius() {
+        makeRound(withRadius: frame.size.height)
     }
     
-    public func roundByWidth() {
-        round(bySize: Int(frame.size.width))
+    func makeRoundWithWidthRadius() {
+        makeRound(withRadius: frame.size.width)
     }
 }

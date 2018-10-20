@@ -11,14 +11,16 @@ import UIKit
 public extension UISearchBar {
     
     
-    // MARK: - Public Properties
+    // MARK: - Properties
     
     var textField: UITextField? {
         return getViewElement(type: UITextField.self)
     }
     
     
-    func setTextFieldColor(color: UIColor) {
+    // MARK: - Functions
+    
+    func setTextFieldColor(_ color: UIColor) {
         guard let textField = self.textField else { return }
         switch searchBarStyle {
         case .minimal:
@@ -29,7 +31,7 @@ public extension UISearchBar {
         }
     }
     
-    func setTextFieldClearButtonColor(color: UIColor) {
+    func setTextFieldClearButtonColor(_ color: UIColor) {
         guard
             let textField = self.textField,
             let button = textField.value(forKey: "clearButton") as? UIButton,

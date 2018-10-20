@@ -1,6 +1,6 @@
 //
 //  UIScrollView+PageNumber.swift
-//  KeyboardKit
+//  iExtra
 //
 //  Created by Daniel Saidi on 2018-02-01.
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
@@ -17,7 +17,7 @@ import UIKit
 
 public extension UIScrollView {
     
-    public var pageNumber: Int {
+    var pageNumber: Int {
         get { return Int(contentOffset.x / frame.size.width) }
         set { contentOffset.x = frame.size.width * CGFloat(newValue) }
     }

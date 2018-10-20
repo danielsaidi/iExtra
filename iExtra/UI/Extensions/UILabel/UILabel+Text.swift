@@ -15,7 +15,6 @@ public extension UILabel {
     }
     
     public var hasTrimmedText: Bool {
-        let text = self.text?.trimmingCharacters(in: .whitespaces)
-        return text?.count ?? 0 > 0
+        return text?.trimmingCharacters(in: .whitespaces).count ?? 0 > 0
     }
 }

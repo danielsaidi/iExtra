@@ -15,7 +15,7 @@ Breaking Changes:
 features are better covered in `https://github.com/dennisweissmann/DeviceKit`.
 - `Array+ElementsOfType` has been removed, since it's just a useless `compactMap`
 wrapper. Use `compactMap` directly.
-- `Array+RandomElement` has been removed. This is now a built-in parts of Swift.
+- `Array+RandomElement` has been removed. This is now a built-in part of Swift.
 - `Numeric+Random` has been removed. These are now build-in parts of Swift.
 - `String+Contains` case parameter has been inverted to avoid double negations.
 - `String+Replace` case parameter has been inverted to avoid double negations.
@@ -32,6 +32,21 @@ original delay function is removed.
 - The entire `Stretchable` namespace has been removed. You should not solve this
 problem this way. Instead, add a header below the table/scroll/stack view and an
 additional space topmost, using either content insets or spacer views.
+- `UIDevice().isIphone4` has been remove. Use DeviceKit instead if you need this.
+- `UIInputViewController+FullAccess` has been removed. It is now part of the api.
+- `UISearchBar+Style` extensions have been made to be more fluent.
+- `UITextField+Placeholder` has been refactored to match the style of UITextView.
+- `UIView+Bounce` now requires that views implement `Bouncable` to use it.
+- `UIView+Drip` now requires that views implement `Drippable` to use it.
+- `UIView+Fade` now requires that views implement `Fadeable` to use it.
+- `UIView+Dock` has been removed. Use constraints instead.
+- `UIView+HitTest` no longer has an `event` parameter. 
+- `UIView+Rotate` now requires that views implement `Rotatable` to use it.
+- `UIView+Scale` now requires that views implement `Scaleable` to use it.
+- `UIView+Scale` `scaleFrame` has been renamed to just `scale`.
+- `UI/Extensions/UIView+Shadow` has been removed. Use `UI/Shadows` instead.
+- `UIView+Shake` now requires that views implement `Shakeable` to use it.
+- Add more extensions to `UIViewController+Nib`.
 
 
 

@@ -6,8 +6,7 @@
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
 //
 
-//  TODO: Remove once I achieve better image alignment using
-//  the standard appearance approach.
+//  TODO: Remove if I find better a image alignment approach.
 
 import UIKit
 

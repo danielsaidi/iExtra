@@ -10,11 +10,9 @@ import UIKit
 
 public extension UIImage {
 
-    public func padded(toSize size: CGSize) -> UIImage {
+    func padded(toSize size: CGSize) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
-        
         let bottomRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        
         let topSize = self.size
         let topSizeHeightDiff = size.height - topSize.height
         let topSizeWidthDiff = size.width - topSize.width

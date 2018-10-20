@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIButton {
     
-    public func setImageMargin(_ margin: CGFloat, withEdgePadding padding: CGFloat) {
+    func setImageMargin(_ margin: CGFloat, withEdgePadding padding: CGFloat) {
         let inset = margin / 2
         imageEdgeInsets.left = -inset
         imageEdgeInsets.right = inset

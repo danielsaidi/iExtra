@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public static var defaultReuseIdentifier: String {
+    static var defaultReuseIdentifier: String {
         return className
     }
 }

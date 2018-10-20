@@ -8,7 +8,7 @@
 
 public extension UIImageView {
     
-    public func fadeInImage(_ image: UIImage?, withDuration duration: Double) {
+    func fadeInImage(_ image: UIImage?, withDuration duration: Double) {
         self.image = image
         let transition = CATransition()
         transition.duration = 1.0

@@ -10,7 +10,7 @@ import UIKit
 
 public extension UITextField {
     
-    func setPlaceholder(_ text: String, withColor color: UIColor) {
+    func setupPlaceholder(text: String, color: UIColor) {
         attributedPlaceholder = NSAttributedString(string: text, attributes: [.foregroundColor: color])
     }
 }

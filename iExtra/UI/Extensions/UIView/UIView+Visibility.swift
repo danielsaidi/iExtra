@@ -10,11 +10,11 @@ import UIKit
 
 public extension UIView {
 
-    public var isVisible: Bool {
+    var isVisible: Bool {
         get { return !isHidden }
         set { isHidden = !newValue }
     }
     
-    public func hide() { isHidden = true }
-    public func show() { isHidden = false }
+    func hide() { isHidden = true }
+    func show() { isVisible = true }
 }

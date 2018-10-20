@@ -30,7 +30,7 @@ public typealias AsyncImageResult = (_ image: UIImage?, _ error: Error?) -> ()
 
 public extension UIImage {
     
-    public static func async(from url: String, completion: @escaping AsyncImageResult) {
+    static func async(from url: String, completion: @escaping AsyncImageResult) {
         guard let url = URL(string: url) else { return completion(nil, nil) }
         URLSession.shared.dataTask(with: url) { (data, _, error) in
             DispatchQueue.main.async {

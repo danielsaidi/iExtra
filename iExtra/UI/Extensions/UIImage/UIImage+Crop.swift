@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIImage {
     
-    public func crop(to rect: CGRect) -> UIImage? {
+    func crop(to rect: CGRect) -> UIImage? {
         guard let img = cgImage?.cropping(to: rect)! else { return nil }
         return UIImage(cgImage: img, scale: scale, orientation: imageOrientation)
     }

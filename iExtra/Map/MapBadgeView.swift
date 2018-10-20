@@ -88,9 +88,9 @@ private extension MapBadgeView {
     }
     
     func refresh() {
-        roundByWidth()
+        makeRoundWithWidthRadius()
         mapView.frame = self.bounds.insetBy(dx: mapPadding, dy: mapPadding)
-        mapView.roundByWidth()
+        mapView.makeRoundWithWidthRadius()
         applyBorderStyle(to: self)
         applyBorderStyle(to: mapView)
     }

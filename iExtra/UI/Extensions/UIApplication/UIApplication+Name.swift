@@ -10,9 +10,8 @@ import Foundation
 
 public extension UIApplication {
     
-    public var name: String {
-        let key = "CFBundleName"
-        let value = Bundle.main.infoDictionary?[key]
+    var name: String {
+        let value = Bundle.main.infoDictionary?["CFBundleName"]
         return value as? String ?? ""
     }
 }

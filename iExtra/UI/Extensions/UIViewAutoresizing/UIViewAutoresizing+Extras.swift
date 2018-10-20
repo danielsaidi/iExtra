@@ -1,6 +1,6 @@
 //
-//  UIViewAutoresizing_Extras.swift
-//  KeyboardKit
+//  UIViewAutoresizing+Extras.swift
+//  iExtra
 //
 //  Created by Daniel Saidi on 2018-02-01.
 //  Copyright © 2018 Daniel Saidi. All rights reserved.
@@ -13,7 +13,7 @@
  
  */
 
-extension UIView.AutoresizingMask {
+public extension UIView.AutoresizingMask {
     
     static var centerInParent: UIView.AutoresizingMask {
         return [

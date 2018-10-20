@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public func createImageCopy() -> UIImage {
+    func createImageCopy() -> UIImage {
         UIGraphicsBeginImageContext(frame.size)
         layer.render(in: UIGraphicsGetCurrentContext()!)
         let image = UIGraphicsGetImageFromCurrentImageContext()
@@ -18,7 +18,7 @@ public extension UIView {
         return image!
     }
     
-    public func createImageSilhouetteCopy() -> UIImage {
+    func createImageSilhouetteCopy() -> UIImage {
         let image = createImageCopy()
         let ciContext = CIContext(options: nil)
         let ciInput = CIImage(cgImage: image.cgImage!)

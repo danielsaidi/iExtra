@@ -21,7 +21,7 @@ import UIKit
 
 public extension UIImage {
     
-    public func addDropShadow(withSize shadowSize: CGFloat, opacity: Float) -> UIImage? {
+    func addDropShadow(withSize shadowSize: CGFloat, opacity: Float) -> UIImage? {
         let width = size.width + 2 * shadowSize
         let height = size.height + 2 * shadowSize
         let newSize = CGSize(width: width, height: height)

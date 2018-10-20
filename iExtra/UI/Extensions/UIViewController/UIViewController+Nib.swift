@@ -10,7 +10,21 @@ import UIKit
 
 public extension UIViewController {
     
-    public static var defaultNib: UINib {
-        return UINib(nibName: className, bundle: nil)
+    
+    // MARK: - Properties
+    
+    static var defaultNib: UINib {
+        return defaultNib(in: Bundle(for: self))
+    }
+    
+    static var defaultNibName: String {
+        return className
+    }
+    
+    
+    // MARK: - Functions
+    
+    static func defaultNib(in bundle: Bundle?) -> UINib {
+        return UINib(nibName: defaultNibName, bundle: bundle)
     }
 }

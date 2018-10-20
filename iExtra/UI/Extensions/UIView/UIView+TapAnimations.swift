@@ -10,16 +10,16 @@ import UIKit
 
 public extension UIView {
     
-    public func animateDefaultPress(factor: CGFloat = 0.8, completion: (() -> ())? = nil) {
+    func animateDefaultPress(factor: CGFloat = 0.8, completion: (() -> ())? = nil) {
         let transform = CGAffineTransform(scaleX: factor, y: factor)
         animateTransform(transform, completion: completion)
     }
     
-    public func animateDefaultRelease(completion: (() -> ())? = nil) {
+    func animateDefaultRelease(completion: (() -> ())? = nil) {
         animateTransform(.identity, completion: completion)
     }
     
-    public func animateDefaultTap(completion: (() -> ())? = nil) {
+    func animateDefaultTap(completion: (() -> ())? = nil) {
         animateDefaultPress { [weak self] in
             self?.animateDefaultRelease(completion: completion)
         }

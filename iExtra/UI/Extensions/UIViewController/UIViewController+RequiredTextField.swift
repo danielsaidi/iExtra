@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
 
-    public func assert(requiredTextField textField: UITextField?) -> Bool {
+    func assertRequiredContent(in textField: UITextField?) -> Bool {
         guard let textField = textField else { return false }
         guard let text = textField.text else { return false }
         let trimmed = text.trimmingCharacters(in: .whitespaces)
@@ -21,12 +21,7 @@ public extension UIViewController {
         return hasValue
     }
     
-    public func assert(requiredTextFields textFields: [UITextField?]) -> Bool {
-        for field in textFields {
-            if !assert(requiredTextField: field) {
-                return false
-            }
-        }
-        return true
+    func assertRequiredContent(in textFields: [UITextField?]) -> Bool {
+        return textFields.first { !assertRequiredContent(in: $0) } == nil
     }
 }

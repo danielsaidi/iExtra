@@ -10,20 +10,13 @@ import UIKit
 
 public extension UIView {
     
-    public var frameAbove: CGRect { return frame.rectAbove }
+    var frameAbove: CGRect { return frame.rectAbove }
+    var frameBelow: CGRect { return frame.rectBelow }
+    var frameLeft: CGRect { return frame.rectLeft }
+    var frameRight: CGRect { return frame.rectRight }
     
-    public var frameBelow: CGRect { return frame.rectBelow }
-    
-    public var frameLeft: CGRect { return frame.rectLeft }
-    
-    public var frameRight: CGRect { return frame.rectRight }
-    
-    
-    public var screenFrameAbove: CGRect { return frame.screenFrameAbove }
-    
-    public var screenFrameBelow: CGRect { return frame.screenFrameBelow }
-    
-    public var screenFrameLeft: CGRect { return frame.screenFrameLeft }
-    
-    public var screenFrameRight: CGRect { return frame.screenFrameRight }
+    var screenFrameAbove: CGRect { return frame.screenFrameAbove }
+    var screenFrameBelow: CGRect { return frame.screenFrameBelow }
+    var screenFrameLeft: CGRect { return frame.screenFrameLeft }
+    var screenFrameRight: CGRect { return frame.screenFrameRight }
 }

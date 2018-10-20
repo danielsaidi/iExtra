@@ -8,19 +8,21 @@
 
 import UIKit
 
-public extension UIView {
+public protocol Wobbly {}
+
+public extension Wobbly where Self: UIView {
     
     private var key: String { return "wobble" }
     
-    public func startWobble() {
+    func startWobble() {
         wobble(Int.max)
     }
     
-    public func stopWobble() {
+    func stopWobble() {
         layer.removeAnimation(forKey: key)
     }
     
-    public func wobble(_ numberOfTimes: Int) {
+    func wobble(_ numberOfTimes: Int) {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.toValue = -Double.pi/128
         animation.fromValue = Double.pi/128

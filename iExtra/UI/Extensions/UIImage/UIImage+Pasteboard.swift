@@ -16,7 +16,7 @@ import UIKit
 
 public extension UIImage {
     
-    public func copyToPasteboard() -> Bool {
+    func copyToPasteboard() -> Bool {
         guard
             let image = badged(withBackgroundColor: .white),
             let data = image.pngData()

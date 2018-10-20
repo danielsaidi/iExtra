@@ -10,18 +10,17 @@ import UIKit
 
 public extension UIView {
     
-    public func sizeToFitSubviews() {
-        let subviewsRect = subviews.reduce(CGRect.zero) {
+    func sizeToFitSubviews() {
+        let rectUnion = subviews.reduce(CGRect.zero) {
             $0.union($1.frame)
         }
         
-        let fix = subviewsRect.origin
+        let origin = rectUnion.origin
         subviews.forEach {
-            $0.frame.offsetBy(dx: -fix.x, dy: -fix.y)
+            $0.frame.offsetBy(dx: -origin.x, dy: -origin.y)
         }
         
-        frame.offsetBy(dx: fix.x, dy: fix.y)
-        frame.size = subviewsRect.size
+        frame.offsetBy(dx: origin.x, dy: origin.y)
+        frame.size = rectUnion.size
     }
-    
 }

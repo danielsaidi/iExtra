@@ -10,23 +10,19 @@ import UIKit
 
 public extension UIDevice {
     
-    public var isCarPlay: Bool {
+    var isCarPlay: Bool {
         return userInterfaceIdiom == .carPlay
     }
     
-    public var isIpad: Bool {
+    var isIpad: Bool {
         return userInterfaceIdiom == .pad
     }
     
-    public var isIphone: Bool {
+    var isIphone: Bool {
         return userInterfaceIdiom == .phone
     }
     
-    public var isIphone4: Bool {
-        return isIphone && UIScreen.main.bounds.size.height < 500
-    }
-    
-    public var isTV: Bool {
+    var isTV: Bool {
         return userInterfaceIdiom == .tv
     }
 }

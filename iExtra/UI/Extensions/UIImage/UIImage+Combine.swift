@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIImage {
     
-    public func combined(with image: UIImage) -> UIImage {
+    func combined(with image: UIImage) -> UIImage {
         UIGraphicsBeginImageContextWithOptions(size, false, scale)
         
         let bottomRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)

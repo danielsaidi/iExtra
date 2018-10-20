@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIDevice {
     
-    public var uniqueId: String {
+    var uniqueId: String {
         let name = UIDevice.current.name
         let encoded = name.base64Encoded() ?? ""
         let trimmed = encoded.trimmingCharacters(in: .whitespacesAndNewlines)

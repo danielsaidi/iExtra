@@ -15,7 +15,7 @@ public extension UIDevice {
     }
     
     
-    public func normalizeSystemVersion(_ version: String) -> String {
+    func normalizeSystemVersion(_ version: String) -> String {
         let components = version.components(separatedBy: ".")
         let dotCount = components.count - 1
         switch dotCount {
@@ -25,13 +25,13 @@ public extension UIDevice {
         }
     }
     
-    public func systemVersion(isAtLeast version: String) -> Bool {
+    func systemVersion(isAtLeast version: String) -> Bool {
         let systemVersion = normalizedSystemVersion
         let compare = systemVersion.compare(version, options: .numeric)
         return compare != .orderedAscending
     }
     
-    public func systemVersion(isLessThan version: String) -> Bool {
+    func systemVersion(isLessThan version: String) -> Bool {
         return !systemVersion(isAtLeast: version)
     }
 }

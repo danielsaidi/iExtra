@@ -2,15 +2,17 @@
 //  UIView+Bounce.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2016-01-25.
-//  Copyright © 2018 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2014-01-25.
+//  Copyright © 2014 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
 
-public extension UIView {
+public protocol Bouncable {}
 
-    public func bounce(withFactor factor: CGFloat) {
+public extension Bouncable where Self: UIView {
+
+    func bounce(withFactor factor: CGFloat) {
         
         let midHeight = frame.size.height * factor
         let kNumFactors = CGFloat(22.0)

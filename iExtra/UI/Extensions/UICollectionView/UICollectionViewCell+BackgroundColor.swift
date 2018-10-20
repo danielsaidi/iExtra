@@ -10,7 +10,7 @@ import UIKit
 
 public extension UICollectionViewCell {
     
-    public func setBackgroundColor(at indexPath: IndexPath, oddColor: UIColor?, evenColor: UIColor?) {
+    func setBackgroundColor(at indexPath: IndexPath, oddColor: UIColor?, evenColor: UIColor?) {
         let isOdd = indexPath.row % 2 == 1
         backgroundColor = (isOdd ? oddColor : evenColor) ?? .clear
     }

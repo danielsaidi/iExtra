@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public func point(inside point: CGPoint, withPadding padding: CGSize, andEvent event: UIEvent?) -> Bool {
+    func point(inside point: CGPoint, withPadding padding: CGSize) -> Bool {
         let dx = padding.width
         let dy = padding.height
         let bounds = self.bounds.insetBy(dx: -dx, dy: -dy)

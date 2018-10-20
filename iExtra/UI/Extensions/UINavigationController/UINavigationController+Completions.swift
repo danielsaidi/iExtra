@@ -10,17 +10,17 @@ import UIKit
 
 public extension UINavigationController {
     
-    public func pushViewController(_ vc: UIViewController, animated: Bool, completion: @escaping () -> ()) {
+    func pushViewController(_ vc: UIViewController, animated: Bool, completion: @escaping () -> ()) {
         pushViewController(vc, animated: animated)
         doAfterAnimatingTransition(animated: animated, completion: completion)
     }
     
-    public func popViewController(animated: Bool, completion: @escaping () -> ()) {
+    func popViewController(animated: Bool, completion: @escaping () -> ()) {
         popViewController(animated: animated)
         doAfterAnimatingTransition(animated: animated, completion: completion)
     }
     
-    public func popToRootViewController(animated: Bool, completion: @escaping () -> ()) {
+    func popToRootViewController(animated: Bool, completion: @escaping () -> ()) {
         popToRootViewController(animated: animated)
         doAfterAnimatingTransition(animated: animated, completion: completion)
     }

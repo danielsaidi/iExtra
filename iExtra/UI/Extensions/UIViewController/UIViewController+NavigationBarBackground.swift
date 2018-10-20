@@ -21,7 +21,7 @@ public extension UIViewController {
     
     public var navigationBarBackground: UIView? {
         let tag = navBarBackgroundTag
-        return getNavBarBackground(tag) ?? createNavBarBackground(tag)
+        return getBackground(tag) ?? createBackground(tag)
     }
 }
 
@@ -38,7 +38,7 @@ private extension UIViewController {
         return bgView
     }
     
-    func createNavBarBackground(_ tag: Int) -> UIView? {
+    func createBackground(_ tag: Int) -> UIView? {
         guard let bar = navigationController?.navigationBar else { return nil }
         let bgView = UIView()
         bgView.tag = tag
@@ -48,7 +48,7 @@ private extension UIViewController {
         return adjusted(view.viewWithTag(tag))
     }
     
-    func getNavBarBackground(_ tag: Int) -> UIView? {
+    func getBackground(_ tag: Int) -> UIView? {
         return adjusted(view.viewWithTag(tag))
     }    
 }

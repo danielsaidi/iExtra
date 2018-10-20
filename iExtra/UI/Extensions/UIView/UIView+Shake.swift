@@ -8,19 +8,21 @@
 
 import UIKit
 
-public extension UIView {
+public protocol Shakeable {}
+
+public extension Shakeable where Self: UIView {
     
     private var key: String { return "shake" }
     
-    public func shake() {
+    func shake() {
         shake(numberOfTimes: 1)
     }
     
-    public func shake(numberOfTimes times: Int) {
+    func shake(numberOfTimes times: Int) {
         shake(withRadians: Double.pi/256.0, duration: 0.1, times: times)
     }
     
-    public func shake(withRadians radians: Double, duration: TimeInterval, times: Int) {
+    func shake(withRadians radians: Double, duration: TimeInterval, times: Int) {
         let animation = CABasicAnimation(keyPath: "transform.rotation")
         animation.toValue = -radians
         animation.fromValue = radians
@@ -30,15 +32,15 @@ public extension UIView {
         layer.add(animation, forKey: key)
     }
     
-    public func startShake() {
+    func startShake() {
         shake(numberOfTimes: Int.max)
     }
     
-    public func startShake(withRadians radians: Double, duration: TimeInterval) {
+    func startShake(withRadians radians: Double, duration: TimeInterval) {
         shake(withRadians: radians, duration: duration, times: Int.max)
     }
     
-    public func stopShake() {
+    func stopShake() {
         layer.removeAnimation(forKey: key)
     }
 }

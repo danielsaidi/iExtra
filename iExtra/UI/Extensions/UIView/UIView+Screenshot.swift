@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public func takeScreenshot() {
+    func takeScreenshot() {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
         guard let context = UIGraphicsGetCurrentContext() else { return }

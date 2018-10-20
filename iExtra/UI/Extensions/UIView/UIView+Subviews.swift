@@ -10,7 +10,11 @@ import UIKit
 
 public extension UIView {
     
-    public func addSubview(_ subview: UIView, fill: Bool) {
+    var hasSubviews: Bool {
+        return subviews.count > 0
+    }
+    
+    func addSubview(_ subview: UIView, fill: Bool) {
         guard fill else { return addSubview(subview) }
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -19,23 +23,17 @@ public extension UIView {
         subview.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    public func addSubviewBottommost(_ view: UIView) {
-        if subviews.count == 0 {
-            addSubview(view)
-        } else {
-            insertSubview(view, belowSubview: subviews.first!)
-        }
+    func addSubviewBottommost(_ view: UIView) {
+        guard let first = subviews.first else { return addSubview(view) }
+        insertSubview(view, belowSubview: first)
     }
     
-    public func addSubviewTopmost(_ view: UIView) {
-        if subviews.count == 0 {
-            addSubview(view)
-        } else {
-            insertSubview(view, aboveSubview: subviews.last!)
-        }
+    func addSubviewTopmost(_ view: UIView) {
+        guard let last = subviews.last else { return addSubview(view) }
+        insertSubview(view, aboveSubview: last)
     }
     
-    public func removeSubviews(_ views: [UIView]) {
-        views.forEach { $0.removeFromSuperview() }
+    func removeSubviews(_ subviews: [UIView]) {
+        subviews.forEach { $0.removeFromSuperview() }
     }
 }

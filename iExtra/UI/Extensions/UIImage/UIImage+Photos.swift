@@ -16,7 +16,7 @@
 
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     func saveToPhotos(completionTarget: AnyObject?, completionSelector: Selector) {
         UIImageWriteToSavedPhotosAlbum(self, completionTarget, completionSelector, nil)
