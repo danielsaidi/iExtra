@@ -5,6 +5,11 @@ git tags. Also please note that iExtra does not use semver. Breaking changes can
 occur on minor version bumps, but not on revision bumps.
 
 
+## 2.0.1
+
+This version adds a `Parsing` namespace to iExtra, with a very simple CSV parser.
+
+
 ## 2.0.0
 
 This is a big polishing update, where I refactor a lot of code and remove pieces

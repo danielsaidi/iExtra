@@ -15,8 +15,8 @@ public struct WorldCoordinate {
 
 public extension WorldCoordinate {
     
-    static var manhattan: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 40.7590615, longitude: -73.969231)) }
-    static var newYork: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 40.7033127, longitude: -73.979681)) }
-    static var sanFransisco: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 37.7796828, longitude: -122.4000062)) }
-    static var tokyo: WorldCoordinate { return WorldCoordinate(coordinate: CLLocationCoordinate2D(latitude: 35.673, longitude: 139.710)) }
+    static var manhattan: WorldCoordinate { return .init(coordinate: CLLocationCoordinate2D(latitude: 40.7590615, longitude: -73.969231)) }
+    static var newYork: WorldCoordinate { return .init(coordinate: CLLocationCoordinate2D(latitude: 40.7033127, longitude: -73.979681)) }
+    static var sanFransisco: WorldCoordinate { return .init(coordinate: CLLocationCoordinate2D(latitude: 37.7796828, longitude: -122.4000062)) }
+    static var tokyo: WorldCoordinate { return .init(coordinate: CLLocationCoordinate2D(latitude: 35.673, longitude: 139.710)) }
 }
