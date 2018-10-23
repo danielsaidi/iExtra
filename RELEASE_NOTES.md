@@ -1,8 +1,13 @@
 # Release Notes
 
-There are no release notes before v`1.2.0`. For these versions, please check the
-git tags. Also please note that iExtra does not use semver. Breaking changes can
-occur on minor version bumps, but not on revision bumps.
+Please note that iExtra does not use semver. Breaking changes can occur on minor
+version bumps, but not on revision bumps.
+
+
+## 2.1.0
+
+This version adjusts the `UIView+Nib` extension, but leaves most of the external
+apis unaltered.
 
 
 ## 2.0.1
