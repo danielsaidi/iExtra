@@ -6,8 +6,8 @@ version bumps, but not on revision bumps.
 
 ## 2.2.0
 
-This version adds a new `UIView+Screenshot` extension. Now `takeScreenshot` will
-return the image and `saveScreenshotToPhotoAlbum` save it to the photo album.
+This version adds a new `UIView+Snapshot` extension. Now, `takeSnapshot` returns
+the image and `saveSnapshotToPhotoAlbum` saves it to the photo album.
 
 
 ## 2.1.0

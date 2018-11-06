@@ -1,5 +1,5 @@
 //
-//  UIView+Screenshot.swift
+//  UIView+Snapshot.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2016-01-20.
@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    func takeScreenshot() -> UIImage? {
+    func takeSnapshot() -> UIImage? {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
@@ -20,8 +20,8 @@ public extension UIView {
         return image
     }
     
-    func saveScreenshotToPhotoAlbum() {
-        guard let image = takeScreenshot() else { return }
+    func saveSnapshotToPhotoAlbum() {
+        guard let image = takeSnapshot() else { return }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
 }
