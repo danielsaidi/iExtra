@@ -10,13 +10,18 @@ import UIKit
 
 public extension UIView {
     
-    func takeScreenshot() {
+    func takeScreenshot() -> UIImage? {
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
-        guard let context = UIGraphicsGetCurrentContext() else { return }
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
         layer.render(in: context)
-        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return }
+        guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
         UIGraphicsEndImageContext()
+        return image
+    }
+    
+    func saveScreenshotToPhotoAlbum() {
+        guard let image = takeScreenshot() else { return }
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
     }
 }

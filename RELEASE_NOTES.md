@@ -4,6 +4,18 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.2.0
+
+This version adds a new `UIView+Screenshot` extension. Now `takeScreenshot` will
+return the image and `saveScreenshotToPhotoAlbum` save it to the photo album.
+
+
+## 2.1.0
+
+This version adjusts the `UIView+Nib` extension, but leaves most of the external
+apis unaltered.
+
+
 ## 2.1.0
 
 This version adjusts the `UIView+Nib` extension, but leaves most of the external
