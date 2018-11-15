@@ -4,6 +4,12 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.3.0
+
+This version changes the structure of the `Parallax` protocol and extensions. It
+is no longer a protocol, but a struct and a lot easier to extend and apply views.
+
+
 ## 2.2.0
 
 This version adds a new `UIView+Snapshot` extension. Now, `takeSnapshot` returns

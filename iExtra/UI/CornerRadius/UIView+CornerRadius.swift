@@ -1,5 +1,5 @@
 //
-//  UIView+CornerRadiusStyle.swift
+//  UIView+CornerRadius.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2018-05-09.
@@ -30,7 +30,6 @@ public extension UIView {
         }
     }
 }
-
 
 private extension UIView {
     

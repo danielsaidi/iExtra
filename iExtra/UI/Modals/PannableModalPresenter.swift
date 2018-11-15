@@ -1,11 +1,3 @@
-//
-//  DismissContext.swift
-//  iExtra
-//
-//  Created by Daniel Saidi on 2017-04-18.
-//  Copyright © 2018 Daniel Saidi. All rights reserved.
-//
-
 import UIKit
 
 public final class PannableModalPresenter: NSObject {
@@ -26,9 +18,7 @@ public final class PannableModalPresenter: NSObject {
     // MARK: - Properties
     
     private static var cache = [PannableModalPresenter]()
-    private var fromStatusBarStyle: UIStatusBarStyle?
     private var panGesture: UIPanGestureRecognizer?
-    private var toStatusBarStyle: UIStatusBarStyle?
     private let transition = InteractiveModalTransition()
     private weak var viewController: UIViewController?
     
@@ -43,12 +33,9 @@ public final class PannableModalPresenter: NSObject {
         presenter(for: vc)?.panGesture?.isEnabled = true
     }
     
-    public static func present(vc: UIViewController, from: UIViewController, statusBarStyle: UIStatusBarStyle? = nil) {
+    public static func present(vc: UIViewController, from: UIViewController) {
         let presenter = PannableModalPresenter()
         presenter.viewController = vc
-        presenter.fromStatusBarStyle = UIApplication.shared.statusBarStyle
-        presenter.toStatusBarStyle = statusBarStyle ?? presenter.fromStatusBarStyle
-        
         vc.transitioningDelegate = presenter
         from.present(vc, animated: true) {
             presenter.addPanGesture(to: vc.view)
