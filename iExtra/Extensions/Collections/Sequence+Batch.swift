@@ -17,12 +17,12 @@ import Foundation
 
 public extension Sequence {
     
-    public func batch(size: Int) -> [[Iterator.Element]] {
+    public func batched(withBatchSize size: Int) -> [[Iterator.Element]] {
         var result: [[Iterator.Element]] = []
         var batch: [Iterator.Element] = []
         
-        for element in self {
-            batch.append(element)
+        forEach {
+            batch.append($0)
             if batch.count == size {
                 result.append(batch)
                 batch = []
