@@ -28,12 +28,6 @@ This version adjusts the `UIView+Nib` extension, but leaves most of the external
 apis unaltered.
 
 
-## 2.1.0
-
-This version adjusts the `UIView+Nib` extension, but leaves most of the external
-apis unaltered.
-
-
 ## 2.0.1
 
 This version adds a `Parsing` namespace to iExtra, with a very simple CSV parser.
