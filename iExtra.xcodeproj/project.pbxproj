@@ -263,6 +263,7 @@
 		842386ED21F916420045F121 /* BatchSequenceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386EC21F916420045F121 /* BatchSequenceOperation.swift */; };
 		842386F021F916770045F121 /* SequenceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386EF21F916770045F121 /* SequenceOperationTests.swift */; };
 		842386F221F923D80045F121 /* BatchSequenceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */; };
+		842386F421F927B50045F121 /* Int+IsEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386F321F927B50045F121 /* Int+IsEven.swift */; };
 		844B8AA4219DC107005AB15D /* UIView+ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */; };
 		8488054D214083EA00C18688 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054C214083EA00C18688 /* DateFormatters.swift */; };
 		84880550214084D000C18688 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054F214084CF00C18688 /* DateFormattersTests.swift */; };
@@ -610,6 +611,7 @@
 		842386EC21F916420045F121 /* BatchSequenceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSequenceOperation.swift; sourceTree = "<group>"; };
 		842386EF21F916770045F121 /* SequenceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperationTests.swift; sourceTree = "<group>"; };
 		842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSequenceOperationTests.swift; sourceTree = "<group>"; };
+		842386F321F927B50045F121 /* Int+IsEven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+IsEven.swift"; sourceTree = "<group>"; };
 		844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParallaxEffect.swift"; sourceTree = "<group>"; };
 		8488054C214083EA00C18688 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		8488054F214084CF00C18688 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
@@ -950,6 +952,7 @@
 			isa = PBXGroup;
 			children = (
 				452734151FD674F700418D93 /* Numeric+Format.swift */,
+				842386F321F927B50045F121 /* Int+IsEven.swift */,
 			);
 			path = Numerics;
 			sourceTree = "<group>";
@@ -1992,6 +1995,7 @@
 				452735A01FD674F900418D93 /* CLPlacemark+AddressDescription.swift in Sources */,
 				452735441FD674F900418D93 /* UIView+Frame.swift in Sources */,
 				45E04C2320C3D4A300A4FB2B /* UIView+TapAnimations.swift in Sources */,
+				842386F421F927B50045F121 /* Int+IsEven.swift in Sources */,
 				45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
 				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,

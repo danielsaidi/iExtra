@@ -29,25 +29,27 @@ import Foundation
 public protocol SequenceOperation: AnyObject {
     
     associatedtype T
-    typealias Completion = () -> ()
+    typealias Completion = (Error?) -> ()
+    typealias FinalCompletion = ([Error?]) -> ()
     
     func performOperation(on object: T, completion: @escaping Completion)
 }
 
 public extension SequenceOperation {
     
-    func startOperating(on objects: [T], completion: @escaping Completion) {
-        performOperation(at: 0, in: objects, completion: completion)
+    func startOperating(on objects: [T], completion: @escaping FinalCompletion) {
+        performOperation(at: 0, in: objects, errors: [], completion: completion)
     }
 }
 
 private extension SequenceOperation {
     
-    func performOperation(at index: Int, in objects: [T], completion: @escaping Completion) {
-        guard objects.count > index else { return completion() }
+    func performOperation(at index: Int, in objects: [T], errors: [Error?], completion: @escaping FinalCompletion) {
+        guard objects.count > index else { return completion(errors) }
         let object = objects[index]
-        performOperation(on: object) { [weak self] in
-            self?.performOperation(at: index + 1, in: objects, completion: completion)
+        performOperation(on: object) { [weak self] error in
+            let errors = errors + [error]
+            self?.performOperation(at: index + 1, in: objects, errors: errors, completion: completion)
         }
     }
 }

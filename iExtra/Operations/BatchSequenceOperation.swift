@@ -29,26 +29,28 @@ import Foundation
 public protocol BatchSequenceOperation: AnyObject {
     
     associatedtype T
-    typealias Completion = () -> ()
+    typealias Completion = (Error?) -> ()
+    typealias FinalCompletion = ([Error?]) -> ()
     
     func performOperation(on batch: [T], completion: @escaping Completion)
 }
 
 public extension BatchSequenceOperation {
     
-    func startOperating(on objects: [T], batchSize: Int, completion: @escaping Completion) {
+    func startOperating(on objects: [T], batchSize: Int, completion: @escaping FinalCompletion) {
         let batches = objects.batched(withBatchSize: batchSize)
-        performOperation(at: 0, in: batches, completion: completion)
+        performOperation(at: 0, in: batches, errors: [], completion: completion)
     }
 }
 
 private extension BatchSequenceOperation {
     
-    func performOperation(at index: Int, in batches: [[T]], completion: @escaping Completion) {
-        guard batches.count > index else { return completion() }
+    func performOperation(at index: Int, in batches: [[T]], errors: [Error?], completion: @escaping FinalCompletion) {
+        guard batches.count > index else { return completion(errors) }
         let batch = batches[index]
-        performOperation(on: batch) { [weak self] in
-            self?.performOperation(at: index + 1, in: batches, completion: completion)
+        performOperation(on: batch) { [weak self] error in
+            let errors = errors + [error]
+            self?.performOperation(at: index + 1, in: batches, errors: errors, completion: completion)
         }
     }
 }
