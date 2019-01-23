@@ -4,6 +4,12 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.4.0
+
+This version adds new sequence operation protocols: `BatchSequenceOperation` and
+`SequenceOperation`. They make it very easy to work with sequential async blocks.
+
+
 ## 2.3.0
 
 This version changes the structure of the `Parallax` protocol and extensions. It
