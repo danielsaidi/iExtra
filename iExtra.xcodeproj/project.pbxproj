@@ -703,8 +703,6 @@
 				452734E71FD674F900418D93 /* Geo */,
 				452734D21FD674F800418D93 /* i18n */,
 				452734221FD674F700418D93 /* Iap */,
-				4527336B1FD673E200418D93 /* iExtra.h */,
-				4527336C1FD673E200418D93 /* Info.plist */,
 				452734261FD674F700418D93 /* IoC */,
 				452734E01FD674F800418D93 /* Keychain */,
 				4527342F1FD674F800418D93 /* Map */,
@@ -712,6 +710,7 @@
 				4527342C1FD674F800418D93 /* Notifications */,
 				842386E921F916230045F121 /* Operations */,
 				84E8261D217E8BF100D1B73F /* Parsing */,
+				842386F521F92A510045F121 /* Supporting Files */,
 				452734041FD674F700418D93 /* System */,
 				452734291FD674F700418D93 /* Threading */,
 				4527343A1FD674F800418D93 /* UI */,
@@ -730,12 +729,12 @@
 				4527339C1FD674C400418D93 /* Extensions */,
 				452733C71FD674C500418D93 /* Files */,
 				848DB3DF217A2CB100CAFAB9 /* Geo */,
-				452733781FD673E200418D93 /* Info.plist */,
 				452733CF1FD674C500418D93 /* IoC */,
 				452733CD1FD674C500418D93 /* Keychain */,
 				84BA20F12135677F0040A20B /* Map */,
 				842386EE21F916680045F121 /* Operations */,
 				84E82622217E8C1C00D1B73F /* Parsing */,
+				842386F621F92A610045F121 /* Supporting Files */,
 				452733AE1FD674C400418D93 /* UI */,
 			);
 			path = iExtraTests;
@@ -1711,6 +1710,23 @@
 				842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		842386F521F92A510045F121 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4527336B1FD673E200418D93 /* iExtra.h */,
+				4527336C1FD673E200418D93 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		842386F621F92A610045F121 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				452733781FD673E200418D93 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		8488054E214084B600C18688 /* Date */ = {
