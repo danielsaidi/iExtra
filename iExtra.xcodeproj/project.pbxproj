@@ -259,10 +259,6 @@
 		45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517B220D1493B005A8029 /* UIView+AsyncTagTests.swift */; };
 		45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */; };
 		840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */; };
-		842386EB21F916340045F121 /* SequenceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386EA21F916340045F121 /* SequenceOperation.swift */; };
-		842386ED21F916420045F121 /* BatchSequenceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386EC21F916420045F121 /* BatchSequenceOperation.swift */; };
-		842386F021F916770045F121 /* SequenceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386EF21F916770045F121 /* SequenceOperationTests.swift */; };
-		842386F221F923D80045F121 /* BatchSequenceOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */; };
 		842386F421F927B50045F121 /* Int+IsEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386F321F927B50045F121 /* Int+IsEven.swift */; };
 		844B8AA4219DC107005AB15D /* UIView+ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */; };
 		8488054D214083EA00C18688 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054C214083EA00C18688 /* DateFormatters.swift */; };
@@ -290,6 +286,15 @@
 		84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */; };
 		84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */; };
 		84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5521479347005DEC41 /* StringDecoder.swift */; };
+		84F8D3C521F9F0EA00EC61F1 /* ParallellOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C021F9F0E900EC61F1 /* ParallellOperator.swift */; };
+		84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */; };
+		84F8D3C721F9F0EA00EC61F1 /* CollectionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */; };
+		84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */; };
+		84F8D3C921F9F0EA00EC61F1 /* SequentialOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C421F9F0EA00EC61F1 /* SequentialOperator.swift */; };
+		84F8D3CE21F9F12000EC61F1 /* SequentialOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CA21F9F12000EC61F1 /* SequentialOperatorTests.swift */; };
+		84F8D3CF21F9F12000EC61F1 /* ParallellOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CB21F9F12000EC61F1 /* ParallellOperatorTests.swift */; };
+		84F8D3D021F9F12000EC61F1 /* SequentialBatchOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */; };
+		84F8D3D121F9F12000EC61F1 /* ParallellBatchOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -607,10 +612,6 @@
 		45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
 		45E517C420D24201005A8029 /* iExtra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = iExtra.podspec; sourceTree = "<group>"; };
 		840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClosestAnnotation.swift"; sourceTree = "<group>"; };
-		842386EA21F916340045F121 /* SequenceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperation.swift; sourceTree = "<group>"; };
-		842386EC21F916420045F121 /* BatchSequenceOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSequenceOperation.swift; sourceTree = "<group>"; };
-		842386EF21F916770045F121 /* SequenceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOperationTests.swift; sourceTree = "<group>"; };
-		842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchSequenceOperationTests.swift; sourceTree = "<group>"; };
 		842386F321F927B50045F121 /* Int+IsEven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+IsEven.swift"; sourceTree = "<group>"; };
 		844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParallaxEffect.swift"; sourceTree = "<group>"; };
 		8488054C214083EA00C18688 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
@@ -638,6 +639,15 @@
 		84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringCoder.swift; sourceTree = "<group>"; };
 		84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderTests.swift; sourceTree = "<group>"; };
 		84F22D5521479347005DEC41 /* StringDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDecoder.swift; sourceTree = "<group>"; };
+		84F8D3C021F9F0E900EC61F1 /* ParallellOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellOperator.swift; sourceTree = "<group>"; };
+		84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperator.swift; sourceTree = "<group>"; };
+		84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperator.swift; sourceTree = "<group>"; };
+		84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperator.swift; sourceTree = "<group>"; };
+		84F8D3C421F9F0EA00EC61F1 /* SequentialOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialOperator.swift; sourceTree = "<group>"; };
+		84F8D3CA21F9F12000EC61F1 /* SequentialOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialOperatorTests.swift; sourceTree = "<group>"; };
+		84F8D3CB21F9F12000EC61F1 /* ParallellOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellOperatorTests.swift; sourceTree = "<group>"; };
+		84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperatorTests.swift; sourceTree = "<group>"; };
+		84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1697,8 +1707,11 @@
 		842386E921F916230045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				842386EC21F916420045F121 /* BatchSequenceOperation.swift */,
-				842386EA21F916340045F121 /* SequenceOperation.swift */,
+				84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */,
+				84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */,
+				84F8D3C021F9F0E900EC61F1 /* ParallellOperator.swift */,
+				84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */,
+				84F8D3C421F9F0EA00EC61F1 /* SequentialOperator.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -1706,8 +1719,10 @@
 		842386EE21F916680045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				842386EF21F916770045F121 /* SequenceOperationTests.swift */,
-				842386F121F923D80045F121 /* BatchSequenceOperationTests.swift */,
+				84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */,
+				84F8D3CB21F9F12000EC61F1 /* ParallellOperatorTests.swift */,
+				84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */,
+				84F8D3CA21F9F12000EC61F1 /* SequentialOperatorTests.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -2018,6 +2033,7 @@
 				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
+				84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperator.swift in Sources */,
 				452735551FD674F900418D93 /* UIView+Visibility.swift in Sources */,
 				84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */,
 				452735771FD674F900418D93 /* PannableDirection.swift in Sources */,
@@ -2033,10 +2049,12 @@
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
 				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
 				4527350C1FD674F900418D93 /* IoCContainer.swift in Sources */,
+				84F8D3C921F9F0EA00EC61F1 /* SequentialOperator.swift in Sources */,
 				848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */,
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
+				84F8D3C721F9F0EA00EC61F1 /* CollectionOperator.swift in Sources */,
 				452735801FD674F900418D93 /* AppFileManager.swift in Sources */,
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
@@ -2057,6 +2075,7 @@
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
 				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
+				84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperator.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
@@ -2105,7 +2124,6 @@
 				452735B71FD67EE400418D93 /* HapticFeedback.swift in Sources */,
 				4527358D1FD674F900418D93 /* EventTracker.swift in Sources */,
 				45883B9D20CF120C001C0E2F /* UIViewController+BackButton.swift in Sources */,
-				842386EB21F916340045F121 /* SequenceOperation.swift in Sources */,
 				452735761FD674F900418D93 /* Pannable.swift in Sources */,
 				4527359A1FD674F900418D93 /* KeychainReader.swift in Sources */,
 				452735261FD674F900418D93 /* UIEdgeInsets+Init.swift in Sources */,
@@ -2128,7 +2146,6 @@
 				452735751FD674F900418D93 /* AnimatedLabel.swift in Sources */,
 				458EEDCA2118741600774A79 /* UICollectionView+TableViewLayout.swift in Sources */,
 				452735701FD674F900418D93 /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
-				842386ED21F916420045F121 /* BatchSequenceOperation.swift in Sources */,
 				84E82621217E8C0F00D1B73F /* StandardCsvParser.swift in Sources */,
 				452735791FD674F900418D93 /* PannableView.swift in Sources */,
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
@@ -2146,6 +2163,7 @@
 				458EEC14210F354600774A79 /* UIDevice+UniqueId.swift in Sources */,
 				4527357E1FD674F900418D93 /* InputStepperToolbar.swift in Sources */,
 				45E517AF20D1485B005A8029 /* UIImage+AverageColor.swift in Sources */,
+				84F8D3C521F9F0EA00EC61F1 /* ParallellOperator.swift in Sources */,
 				452735711FD674F900418D93 /* FloatingSubmenu.swift in Sources */,
 				452735691FD674F900418D93 /* BottomGradientView.swift in Sources */,
 				452735151FD674F900418D93 /* MKAnnotationGeocoderDefault.swift in Sources */,
@@ -2207,11 +2225,13 @@
 			files = (
 				452733E21FD674C500418D93 /* String+UrlEncodeTests.swift in Sources */,
 				452733FB1FD674C500418D93 /* KeychainServiceTestClass.swift in Sources */,
+				84F8D3D121F9F12000EC61F1 /* ParallellBatchOperatorTests.swift in Sources */,
 				452733F41FD674C500418D93 /* UIView+RoundTests.swift in Sources */,
 				452733E81FD674C500418D93 /* UISlider+ButtonPositionTests.swift in Sources */,
 				452733D81FD674C500418D93 /* Array+RemoveObjectTests.swift in Sources */,
 				452733E31FD674C500418D93 /* Url_QueryParametersTests.swift in Sources */,
 				452733DE1FD674C500418D93 /* Sequence+BatchTests.swift in Sources */,
+				84F8D3CE21F9F12000EC61F1 /* SequentialOperatorTests.swift in Sources */,
 				452733DF1FD674C500418D93 /* Set+GroupTests.swift in Sources */,
 				848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */,
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
@@ -2222,7 +2242,6 @@
 				452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				452733D41FD674C500418D93 /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
-				842386F021F916770045F121 /* SequenceOperationTests.swift in Sources */,
 				452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */,
 				848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */,
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
@@ -2234,6 +2253,7 @@
 				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
+				84F8D3D021F9F12000EC61F1 /* SequentialBatchOperatorTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,
@@ -2250,9 +2270,9 @@
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84E82624217E8C3D00D1B73F /* StandardCsvParserTests.swift in Sources */,
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
-				842386F221F923D80045F121 /* BatchSequenceOperationTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
 				84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */,
+				84F8D3CF21F9F12000EC61F1 /* ParallellOperatorTests.swift in Sources */,
 				84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */,
 				848805542140863600C18688 /* DateDecodersTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,
