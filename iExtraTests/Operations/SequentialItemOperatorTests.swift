@@ -1,5 +1,5 @@
 //
-//  SequentialOperatorTests.swift
+//  SequentialItemOperatorTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class SequentialOperatorTests: QuickSpec {
+class SequentialItemOperatorTests: QuickSpec {
     
     override func spec() {
         
@@ -56,7 +56,7 @@ class SequentialOperatorTests: QuickSpec {
     }
 }
 
-private class TestClass: SequentialOperator {
+private class TestClass: SequentialItemOperator {
     
     typealias CollectionType = Int
     

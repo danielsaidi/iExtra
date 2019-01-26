@@ -1,5 +1,5 @@
 //
-//  ParallellOperator.swift
+//  ParallellItemOperator.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -14,25 +14,17 @@
  
  When implementing this protocol, you just have to implement
  `performOperation(onItem:completion:)` since the collection
- function is already implemented as a protocol extension. Do
- rememeber to call the item completion for every item, since
- all completion calls are required to complete the execution.
- 
- When the operation completely finishes, the completion will
- receive an error array, where every error is item-specific.
+ function is already implemented as a protocol extension. It
+ is very important to call the item completion for each item,
+ since all completions are needed to complete the execution.
  
  */
 
-public protocol ParallellOperator: CollectionOperator {
-    
-    typealias ItemCompletion = (Error?) -> ()
-    
-    func performOperation(onItem item: T, completion: @escaping ItemCompletion)
-}
+public protocol ParallellItemOperator: ItemOperator {}
 
-public extension ParallellOperator {
+public extension ParallellItemOperator {
     
-    public func performOperation(on collection: [T], completion: @escaping Completion) {
+    func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }
         var errors = [Error?]()
         collection.forEach {

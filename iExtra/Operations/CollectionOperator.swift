@@ -8,12 +8,10 @@
 
 /*
  
- This protocol can be implemented by classes that perform an
- operation on a collection.
- 
- When implementing this protocol, you just have to implement
- `performOperation(on:completion:)` and make sure to execute
- the completion once the operation is completely finished.
+ This protocol should be implemented by classes that perform
+ an operation on a typed collection. When you implement this
+ protocol, just implement `performOperation(on:completion:)`
+ and specify a typealias for `CollectionType`.
  
  */
 

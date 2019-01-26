@@ -14,30 +14,20 @@
  
  When implementing this protocol, you just have to implement
  `performOperation(onBatch:completion)` since the collection
- function is already implemented as a protocol extension. Do
- rememeber to call the batch completion for every batch. The
- completion call makes the execution proceed.
- 
- When the operation completely finishes, the completion will
- receive an error array, where every error is batch-specific.
+ function is already implemented as a protocol extension. It
+ is very important to call the batch completion every time a
+ batch operation completes, since all completions are needed
+ to complete the execution.
  
  */
 
 import Foundation
 
-public protocol ParallellBatchOperator: CollectionOperator {
-    
-    typealias BatchCompletion = (Error?) -> ()
-    
-    var batchSize: Int { get }
-    
-    func performOperation(onBatch batch: [T], completion: @escaping BatchCompletion)
-    
-}
+public protocol ParallellBatchOperator: BatchOperator {}
 
 public extension ParallellBatchOperator {
     
-    public func performOperation(on collection: [T], completion: @escaping Completion) {
+    func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }
         var errors = [Error?]()
         let batches = collection.batched(withBatchSize: batchSize)

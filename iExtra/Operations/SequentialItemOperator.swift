@@ -1,5 +1,5 @@
 //
-//  SequentialOperator.swift
+//  SequentialItemOperator.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -14,32 +14,22 @@
  
  When implementing this protocol, you just have to implement
  `performOperation(onItem:completion:)` since the collection
- function is already implemented as a protocol extension. Do
- rememeber to call the item completion for every item, since
- the completion call makes the execution proceed.
- 
- When the operation completely finishes, the completion will
- receive an error array, where every error is item-specific.
+ function is already implemented as a protocol extension. It
+ is very important to call the item completion every time an
+ item operation completes, since every item completion makes
+ the execution proceed.
  
  */
 
-public protocol SequentialOperator: CollectionOperator {
-    
-    typealias ItemCompletion = (Error?) -> ()
-    
-    func performOperation(onItem item: T, completion: @escaping ItemCompletion)
-}
+public protocol SequentialItemOperator: ItemOperator {}
 
-public extension SequentialOperator {
+public extension SequentialItemOperator {
     
-    public func performOperation(on collection: [T], completion: @escaping Completion) {
+    func performOperation(on collection: [T], completion: @escaping Completion) {
         performOperation(at: 0, in: collection, errors: [], completion: completion)
     }
-}
-
-private extension SequentialOperator {
     
-    func performOperation(at index: Int, in collection: [T], errors: [Error?], completion: @escaping Completion) {
+    private func performOperation(at index: Int, in collection: [T], errors: [Error?], completion: @escaping Completion) {
         guard collection.count > index else { return completion(errors) }
         let object = collection[index]
         performOperation(onItem: object) { [weak self] error in
