@@ -22,10 +22,15 @@ class ParallelBatchOperationTests: QuickSpec {
         
         describe("when performing operation") {
             
-            it("handles empty sequence") {
+            it("completes once for empty sequence") {
                 var counter = 0
-                obj.batchSize = 0
                 obj.performOperation(on: []) { _ in counter += 1 }
+                expect(counter).to(equal(1))
+            }
+            
+            it("completes once for non-empty sequence") {
+                var counter = 0
+                obj.performOperation(on: [1, 2, 3, 4, 5]) { _ in counter += 1 }
                 expect(counter).to(equal(1))
             }
             
@@ -52,13 +57,11 @@ class ParallelBatchOperationTests: QuickSpec {
                 let error = NSError(domain: "foo", code: 1, userInfo: nil )
                 obj.error = error
                 obj.batchSize = 2
-                var result = [Error?]()
-                obj.performOperation(on: [1, 2, 3, 4, 5]) { errors in
-                    result = errors
-                }
-                expect(result[0]).toEventually(be(error))
-                expect(result[1]).toEventually(be(error))
-                expect(result[2]).toEventually(beNil())
+                var errors = [Error?]()
+                obj.performOperation(on: [1, 2, 3, 4, 5]) { res in errors = res }
+                expect(errors[0]).to(be(error))
+                expect(errors[1]).to(be(error))
+                expect(errors[2]).to(beNil())
             }
         }
     }
