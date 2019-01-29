@@ -4,6 +4,11 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.5.0
+
+This version renames all operators to operations and add new operations as well.
+
+
 ## 2.4.0
 
 This version adds new sequence operation protocols: `BatchSequenceOperation` and
