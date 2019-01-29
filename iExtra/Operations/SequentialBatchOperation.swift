@@ -1,5 +1,5 @@
 //
-//  SequentialBatchOperator.swift
+//  SequentialBatchOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -8,24 +8,21 @@
 
 /*
  
- This protocol specializes the `CollectionOperator` protocol
- and can be implemented by classes that perform an operation
- in sequence on batches of items in a collection.
+ This protocol specializes the `BatchOperation` protocol. It
+ will perform its operation sequentially on every item batch
+ from the collection. This logic is already implemented as a
+ protocol extension.
  
- When implementing this protocol, you just have to implement
- `performOperation(onBatch:completion)` since the collection
- function is already implemented as a protocol extension. It
- is very important to call the batch completion every time a
- batch operation completes, since every completion makes the
- execution proceed.
+ When implementing this protocol, you therefore just have to
+ implement `performOperation(onBatch:completion:)`.
  
  */
 
 import Foundation
 
-public protocol SequentialBatchOperator: BatchOperator {}
+public protocol SequentialBatchOperation: BatchOperation {}
 
-public extension SequentialBatchOperator {
+public extension SequentialBatchOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         let batches = collection.batched(withBatchSize: batchSize)

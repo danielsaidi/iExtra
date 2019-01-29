@@ -1,5 +1,5 @@
 //
-//  ParallellBatchOperatorTests.swift
+//  ParallellBatchOperationTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class ParallellBatchOperatorTests: QuickSpec {
+class ParallellBatchOperationTests: QuickSpec {
     
     override func spec() {
         
@@ -64,7 +64,7 @@ class ParallellBatchOperatorTests: QuickSpec {
     }
 }
 
-private class TestClass: ParallellBatchOperator {
+private class TestClass: ParallellBatchOperation {
     
     typealias CollectionType = Int
     

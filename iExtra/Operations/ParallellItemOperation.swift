@@ -1,5 +1,5 @@
 //
-//  ParallellItemOperator.swift
+//  ParallellItemOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -8,21 +8,19 @@
 
 /*
  
- This protocol specializes the `CollectionOperator` protocol
- and can be implemented by classes that perform an operation
- in parallell on every item in a collection.
+ This protocol specializes the `ItemOperation` protocol, and
+ will perform its operation in parallell on each item in the
+ collection. This logic is already implemented as a protocol
+ extension.
  
- When implementing this protocol, you just have to implement
- `performOperation(onItem:completion:)` since the collection
- function is already implemented as a protocol extension. It
- is very important to call the item completion for each item,
- since all completions are needed to complete the execution.
+ When implementing this protocol, you therefore just have to
+ implement `performOperation(onItem:completion:)`.
  
  */
 
-public protocol ParallellItemOperator: ItemOperator {}
+public protocol ParallellItemOperation: ItemOperation {}
 
-public extension ParallellItemOperator {
+public extension ParallellItemOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }

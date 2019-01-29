@@ -8,20 +8,17 @@
 
 /*
  
- This protocol specializes the `CollectionOperator` protocol
- and can be implemented by classes that perform an operation
- in sequence on every item in a collection.
+ This protocol specializes the `ItemOperation` protocol, and
+ will perform its operation sequentially on each item in the
+ collection. This logic is already implemented as a protocol
+ extension.
  
- When implementing this protocol, you just have to implement
- `performOperation(onItem:completion:)` since the collection
- function is already implemented as a protocol extension. It
- is very important to call the item completion every time an
- item operation completes, since every item completion makes
- the execution proceed.
+ When implementing this protocol, you therefore just have to
+ implement `performOperation(onItem:completion:)`.
  
  */
 
-public protocol SequentialItemOperator: ItemOperator {}
+public protocol SequentialItemOperator: ItemOperation {}
 
 public extension SequentialItemOperator {
     

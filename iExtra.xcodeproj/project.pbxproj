@@ -286,17 +286,17 @@
 		84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */; };
 		84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */; };
 		84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5521479347005DEC41 /* StringDecoder.swift */; };
-		84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */; };
-		84F8D3C721F9F0EA00EC61F1 /* CollectionOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */; };
-		84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */; };
-		84F8D3CE21F9F12000EC61F1 /* SequentialItemOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CA21F9F12000EC61F1 /* SequentialItemOperatorTests.swift */; };
-		84F8D3CF21F9F12000EC61F1 /* ParallellItemOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CB21F9F12000EC61F1 /* ParallellItemOperatorTests.swift */; };
-		84F8D3D021F9F12000EC61F1 /* SequentialBatchOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */; };
-		84F8D3D121F9F12000EC61F1 /* ParallellBatchOperatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */; };
-		84F8D3EB21FC574A00EC61F1 /* ItemOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EA21FC574900EC61F1 /* ItemOperator.swift */; };
-		84F8D3ED21FC8D8E00EC61F1 /* BatchOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EC21FC8D8E00EC61F1 /* BatchOperator.swift */; };
-		84F8D3EF21FCA70300EC61F1 /* ParallellItemOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EE21FCA70200EC61F1 /* ParallellItemOperator.swift */; };
-		84F8D3F121FD23E000EC61F1 /* SequentialItemOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3F021FD23E000EC61F1 /* SequentialItemOperator.swift */; };
+		84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperation.swift */; };
+		84F8D3C721F9F0EA00EC61F1 /* CollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */; };
+		84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperation.swift */; };
+		84F8D3CE21F9F12000EC61F1 /* SequentialItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CA21F9F12000EC61F1 /* SequentialItemOperationTests.swift */; };
+		84F8D3CF21F9F12000EC61F1 /* ParallellItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CB21F9F12000EC61F1 /* ParallellItemOperationTests.swift */; };
+		84F8D3D021F9F12000EC61F1 /* SequentialBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperationTests.swift */; };
+		84F8D3D121F9F12000EC61F1 /* ParallellBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperationTests.swift */; };
+		84F8D3EB21FC574A00EC61F1 /* ItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */; };
+		84F8D3ED21FC8D8E00EC61F1 /* BatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */; };
+		84F8D3EF21FCA70300EC61F1 /* ParallellItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EE21FCA70200EC61F1 /* ParallellItemOperation.swift */; };
+		84F8D3F121FD23E000EC61F1 /* SequentialItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3F021FD23E000EC61F1 /* SequentialItemOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -641,17 +641,17 @@
 		84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringCoder.swift; sourceTree = "<group>"; };
 		84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderTests.swift; sourceTree = "<group>"; };
 		84F22D5521479347005DEC41 /* StringDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDecoder.swift; sourceTree = "<group>"; };
-		84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperator.swift; sourceTree = "<group>"; };
-		84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperator.swift; sourceTree = "<group>"; };
-		84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperator.swift; sourceTree = "<group>"; };
-		84F8D3CA21F9F12000EC61F1 /* SequentialItemOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialItemOperatorTests.swift; sourceTree = "<group>"; };
-		84F8D3CB21F9F12000EC61F1 /* ParallellItemOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellItemOperatorTests.swift; sourceTree = "<group>"; };
-		84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperatorTests.swift; sourceTree = "<group>"; };
-		84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperatorTests.swift; sourceTree = "<group>"; };
-		84F8D3EA21FC574900EC61F1 /* ItemOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOperator.swift; sourceTree = "<group>"; };
-		84F8D3EC21FC8D8E00EC61F1 /* BatchOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchOperator.swift; sourceTree = "<group>"; };
-		84F8D3EE21FCA70200EC61F1 /* ParallellItemOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellItemOperator.swift; sourceTree = "<group>"; };
-		84F8D3F021FD23E000EC61F1 /* SequentialItemOperator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialItemOperator.swift; sourceTree = "<group>"; };
+		84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperation.swift; sourceTree = "<group>"; };
+		84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperation.swift; sourceTree = "<group>"; };
+		84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperation.swift; sourceTree = "<group>"; };
+		84F8D3CA21F9F12000EC61F1 /* SequentialItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialItemOperationTests.swift; sourceTree = "<group>"; };
+		84F8D3CB21F9F12000EC61F1 /* ParallellItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellItemOperationTests.swift; sourceTree = "<group>"; };
+		84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialBatchOperationTests.swift; sourceTree = "<group>"; };
+		84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellBatchOperationTests.swift; sourceTree = "<group>"; };
+		84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOperation.swift; sourceTree = "<group>"; };
+		84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchOperation.swift; sourceTree = "<group>"; };
+		84F8D3EE21FCA70200EC61F1 /* ParallellItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallellItemOperation.swift; sourceTree = "<group>"; };
+		84F8D3F021FD23E000EC61F1 /* SequentialItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequentialItemOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1711,13 +1711,13 @@
 		842386E921F916230045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				84F8D3C221F9F0EA00EC61F1 /* CollectionOperator.swift */,
-				84F8D3EC21FC8D8E00EC61F1 /* BatchOperator.swift */,
-				84F8D3EA21FC574900EC61F1 /* ItemOperator.swift */,
-				84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperator.swift */,
-				84F8D3EE21FCA70200EC61F1 /* ParallellItemOperator.swift */,
-				84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperator.swift */,
-				84F8D3F021FD23E000EC61F1 /* SequentialItemOperator.swift */,
+				84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */,
+				84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */,
+				84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */,
+				84F8D3C321F9F0EA00EC61F1 /* ParallellBatchOperation.swift */,
+				84F8D3EE21FCA70200EC61F1 /* ParallellItemOperation.swift */,
+				84F8D3C121F9F0E900EC61F1 /* SequentialBatchOperation.swift */,
+				84F8D3F021FD23E000EC61F1 /* SequentialItemOperation.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -1725,10 +1725,10 @@
 		842386EE21F916680045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperatorTests.swift */,
-				84F8D3CB21F9F12000EC61F1 /* ParallellItemOperatorTests.swift */,
-				84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperatorTests.swift */,
-				84F8D3CA21F9F12000EC61F1 /* SequentialItemOperatorTests.swift */,
+				84F8D3CD21F9F12000EC61F1 /* ParallellBatchOperationTests.swift */,
+				84F8D3CB21F9F12000EC61F1 /* ParallellItemOperationTests.swift */,
+				84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperationTests.swift */,
+				84F8D3CA21F9F12000EC61F1 /* SequentialItemOperationTests.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -2039,7 +2039,7 @@
 				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
-				84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperator.swift in Sources */,
+				84F8D3C821F9F0EA00EC61F1 /* ParallellBatchOperation.swift in Sources */,
 				452735551FD674F900418D93 /* UIView+Visibility.swift in Sources */,
 				84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */,
 				452735771FD674F900418D93 /* PannableDirection.swift in Sources */,
@@ -2055,12 +2055,12 @@
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
 				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
 				4527350C1FD674F900418D93 /* IoCContainer.swift in Sources */,
-				84F8D3F121FD23E000EC61F1 /* SequentialItemOperator.swift in Sources */,
+				84F8D3F121FD23E000EC61F1 /* SequentialItemOperation.swift in Sources */,
 				848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */,
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
-				84F8D3C721F9F0EA00EC61F1 /* CollectionOperator.swift in Sources */,
+				84F8D3C721F9F0EA00EC61F1 /* CollectionOperation.swift in Sources */,
 				452735801FD674F900418D93 /* AppFileManager.swift in Sources */,
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
@@ -2081,7 +2081,7 @@
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
 				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
-				84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperator.swift in Sources */,
+				84F8D3C621F9F0EA00EC61F1 /* SequentialBatchOperation.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
@@ -2153,7 +2153,7 @@
 				458EEDCA2118741600774A79 /* UICollectionView+TableViewLayout.swift in Sources */,
 				452735701FD674F900418D93 /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
 				84E82621217E8C0F00D1B73F /* StandardCsvParser.swift in Sources */,
-				84F8D3EB21FC574A00EC61F1 /* ItemOperator.swift in Sources */,
+				84F8D3EB21FC574A00EC61F1 /* ItemOperation.swift in Sources */,
 				452735791FD674F900418D93 /* PannableView.swift in Sources */,
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,
@@ -2205,7 +2205,7 @@
 				4527350B1FD674F900418D93 /* IoC.swift in Sources */,
 				4527359D1FD674F900418D93 /* KeychainWrapper.swift in Sources */,
 				4527359C1FD674F900418D93 /* KeychainServiceDefault.swift in Sources */,
-				84F8D3ED21FC8D8E00EC61F1 /* BatchOperator.swift in Sources */,
+				84F8D3ED21FC8D8E00EC61F1 /* BatchOperation.swift in Sources */,
 				4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */,
 				452735241FD674F900418D93 /* UIColor+Hex.swift in Sources */,
 				4567E4E020A328FC008B7FE5 /* ThemedButton.swift in Sources */,
@@ -2215,7 +2215,7 @@
 				4527355F1FD674F900418D93 /* PannableModalPresenter.swift in Sources */,
 				4527352B1FD674F900418D93 /* UIImage+Padded.swift in Sources */,
 				452735901FD674F900418D93 /* LanguageService.swift in Sources */,
-				84F8D3EF21FCA70300EC61F1 /* ParallellItemOperator.swift in Sources */,
+				84F8D3EF21FCA70300EC61F1 /* ParallellItemOperation.swift in Sources */,
 				452735A31FD674F900418D93 /* UuidGenerator.swift in Sources */,
 				4527353F1FD674F900418D93 /* UIView+Distance.swift in Sources */,
 				45E517B120D14901005A8029 /* UIView+AsyncTag.swift in Sources */,
@@ -2233,13 +2233,13 @@
 			files = (
 				452733E21FD674C500418D93 /* String+UrlEncodeTests.swift in Sources */,
 				452733FB1FD674C500418D93 /* KeychainServiceTestClass.swift in Sources */,
-				84F8D3D121F9F12000EC61F1 /* ParallellBatchOperatorTests.swift in Sources */,
+				84F8D3D121F9F12000EC61F1 /* ParallellBatchOperationTests.swift in Sources */,
 				452733F41FD674C500418D93 /* UIView+RoundTests.swift in Sources */,
 				452733E81FD674C500418D93 /* UISlider+ButtonPositionTests.swift in Sources */,
 				452733D81FD674C500418D93 /* Array+RemoveObjectTests.swift in Sources */,
 				452733E31FD674C500418D93 /* Url_QueryParametersTests.swift in Sources */,
 				452733DE1FD674C500418D93 /* Sequence+BatchTests.swift in Sources */,
-				84F8D3CE21F9F12000EC61F1 /* SequentialItemOperatorTests.swift in Sources */,
+				84F8D3CE21F9F12000EC61F1 /* SequentialItemOperationTests.swift in Sources */,
 				452733DF1FD674C500418D93 /* Set+GroupTests.swift in Sources */,
 				848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */,
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
@@ -2261,7 +2261,7 @@
 				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
-				84F8D3D021F9F12000EC61F1 /* SequentialBatchOperatorTests.swift in Sources */,
+				84F8D3D021F9F12000EC61F1 /* SequentialBatchOperationTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,
@@ -2280,7 +2280,7 @@
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
 				84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */,
-				84F8D3CF21F9F12000EC61F1 /* ParallellItemOperatorTests.swift in Sources */,
+				84F8D3CF21F9F12000EC61F1 /* ParallellItemOperationTests.swift in Sources */,
 				84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */,
 				848805542140863600C18688 /* DateDecodersTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,

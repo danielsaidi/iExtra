@@ -1,5 +1,5 @@
 //
-//  ParallellItemOperatorTests.swift
+//  ParallellItemOperationTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class ParallellItemOperatorTests: QuickSpec {
+class ParallellItemOperationTests: QuickSpec {
     
     override func spec() {
         
@@ -56,7 +56,7 @@ class ParallellItemOperatorTests: QuickSpec {
     }
 }
 
-private class TestClass: ParallellItemOperator {
+private class TestClass: ParallellItemOperation {
     
     typealias CollectionType = Int
     

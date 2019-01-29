@@ -1,5 +1,5 @@
 //
-//  CollectionOperator.swift
+//  CollectionOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -8,16 +8,16 @@
 
 /*
  
- This protocol should be implemented by classes that perform
- an operation on a typed collection. When you implement this
- protocol, just implement `performOperation(on:completion:)`
- and specify a typealias for `CollectionType`.
+ This protocol can be implemented by classes that perform an
+ operation on a typed collection. When implementing it, just
+ implement `performOperation(on:completion:)` and define the
+ `CollectionType` as a typealias.
  
  */
 
 import Foundation
 
-public protocol CollectionOperator: AnyObject {
+public protocol CollectionOperation: AnyObject {
     
     associatedtype CollectionType
     typealias T = CollectionType
