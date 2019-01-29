@@ -282,6 +282,7 @@
 		84C8C1FD2200DE9200BFA792 /* OperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1FC2200DE9200BFA792 /* OperationCoordinator.swift */; };
 		84C8C1FF2200E04900BFA792 /* SequentialOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1FE2200E04900BFA792 /* SequentialOperationCoordinator.swift */; };
 		84C8C2012200E11A00BFA792 /* ParallellOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C2002200E11A00BFA792 /* ParallellOperationCoordinatorTests.swift */; };
+		84C8C2032200E6A900BFA792 /* SequentialOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C2022200E6A900BFA792 /* SequentialOperationCoordinatorTests.swift */; };
 		84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8261E217E8C0000D1B73F /* CsvParser.swift */; };
 		84E82621217E8C0F00D1B73F /* StandardCsvParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E82620217E8C0F00D1B73F /* StandardCsvParser.swift */; };
 		84E82624217E8C3D00D1B73F /* StandardCsvParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E82623217E8C3D00D1B73F /* StandardCsvParserTests.swift */; };
@@ -642,6 +643,7 @@
 		84C8C1FC2200DE9200BFA792 /* OperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCoordinator.swift; sourceTree = "<group>"; };
 		84C8C1FE2200E04900BFA792 /* SequentialOperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialOperationCoordinator.swift; sourceTree = "<group>"; };
 		84C8C2002200E11A00BFA792 /* ParallellOperationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallellOperationCoordinatorTests.swift; sourceTree = "<group>"; };
+		84C8C2022200E6A900BFA792 /* SequentialOperationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequentialOperationCoordinatorTests.swift; sourceTree = "<group>"; };
 		84E8261E217E8C0000D1B73F /* CsvParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvParser.swift; sourceTree = "<group>"; };
 		84E82620217E8C0F00D1B73F /* StandardCsvParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParser.swift; sourceTree = "<group>"; };
 		84E82623217E8C3D00D1B73F /* StandardCsvParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParserTests.swift; sourceTree = "<group>"; };
@@ -1744,6 +1746,7 @@
 				84C8C2002200E11A00BFA792 /* ParallellOperationCoordinatorTests.swift */,
 				84F8D3CC21F9F12000EC61F1 /* SequentialBatchOperationTests.swift */,
 				84F8D3CA21F9F12000EC61F1 /* SequentialItemOperationTests.swift */,
+				84C8C2022200E6A900BFA792 /* SequentialOperationCoordinatorTests.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -2289,6 +2292,7 @@
 				452733F21FD674C500418D93 /* UIView+NibTests.swift in Sources */,
 				452733E61FD674C500418D93 /* UIColor+HexTests.swift in Sources */,
 				452733FC1FD674C500418D93 /* IoCTests.swift in Sources */,
+				84C8C2032200E6A900BFA792 /* SequentialOperationCoordinatorTests.swift in Sources */,
 				452733EE1FD674C500418D93 /* UITableView_DefaultNibTests.swift in Sources */,
 				452733E71FD674C500418D93 /* UINavigationBar+TransparentTests.swift in Sources */,
 				452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */,

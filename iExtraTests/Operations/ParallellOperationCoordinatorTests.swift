@@ -47,25 +47,33 @@ class ParallellOperationCoordinatorTests: QuickSpec {
                 expect(counter.count).to(equal(2))
             }
 
-            it("performs operation in parallell and is unaffected by halt") {
-                let operation1 = TestOperation(counter: counter, performCompletion: true)
-                let operation2 = TestOperation(counter: counter, performCompletion: false)
+            it("performs operation on each item even if one operation does not complete") {
+                let operation1 = TestOperation(counter: counter, performCompletion: false)
+                let operation2 = TestOperation(counter: counter, performCompletion: true)
                 let operations = [operation1, operation2]
                 coordinator.performOperations(operations) { _ in }
                 expect(counter.count).to(equal(2))
             }
+            
+            it("does not complete if one operation does not complete") {
+                var count = 0
+                let operation1 = TestOperation(counter: counter, performCompletion: true)
+                let operation2 = TestOperation(counter: counter, performCompletion: false)
+                let operations = [operation1, operation2]
+                coordinator.performOperations(operations) { _ in count += 1 }
+                expect(count).to(equal(0))
+            }
 
-            it("completes with resulting errors") {
-//                let error = NSError(domain: "foo", code: 1, userInfo: nil )
-//                let operation1 = TestOperation(counter: counter, performCompletion: true)
-//                let operation2 = TestOperation(counter: counter, performCompletion: false)
-//                operation2.error = error
-//                let operations = [operation1, operation2]
-//                var errors = [Error?]()
-//                coordinator.performOperations(operations) { err in errors = err }
-//                expect(errors.count).to(equal(2))
-//                expect(errors[0]).to(beNil())
-//                expect(errors[1]).to(be(error))
+            it("completes with returned errors") {
+                let error = NSError(domain: "foo", code: 1, userInfo: nil )
+                let operation1 = TestOperation(counter: counter, performCompletion: true)
+                let operation2 = TestOperation(counter: counter, performCompletion: true)
+                let operations = [operation1, operation2]
+                operation2.error = error
+                var errors = [Error?]()
+                coordinator.performOperations(operations) { res in errors = res }
+                expect(errors[0]).to(beNil())
+                expect(errors[1]).to(be(error))
             }
         }
     }
