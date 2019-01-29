@@ -1,5 +1,5 @@
 //
-//  SequentialItemOperator.swift
+//  SequentialItemOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -18,9 +18,11 @@
  
  */
 
-public protocol SequentialItemOperator: ItemOperation {}
+import Foundation
 
-public extension SequentialItemOperator {
+public protocol SequentialItemOperation: ItemOperation {}
+
+public extension SequentialItemOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         performOperation(at: 0, in: collection, errors: [], completion: completion)

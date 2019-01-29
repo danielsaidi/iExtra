@@ -18,6 +18,8 @@
  
  */
 
+import Foundation
+
 public protocol ParallellItemOperation: ItemOperation {}
 
 public extension ParallellItemOperation {

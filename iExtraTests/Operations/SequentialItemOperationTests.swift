@@ -56,7 +56,7 @@ class SequentialItemOperationTests: QuickSpec {
     }
 }
 
-private class TestClass: SequentialItemOperator {
+private class TestClass: SequentialItemOperation {
     
     typealias CollectionType = Int
     
