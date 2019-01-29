@@ -8,34 +8,29 @@
 
 /*
  
- This protocol specializes `OperationCoordinator` and has an
- auto-implemented `performOperations(:completion:) that will
- perform all operations in parallel.
+ This protocol specializes `OperationCoordinator` as well as
+ `ParallelItemOperation` and therefore provides a complete
+ implementation to perform multiple operations sequentially.
  
  When you implement this protocol, you therefore do not have
- to implement any functionality at all except to either call
- `performOperations` with a set of operations or simply make
- your implementation provide its own operations and keep the
- `ParallelOperationCoordinator` implementation private.
+ to implement any functionality at all. If you implement the
+ protocol publicly, you just have to call `performOperations`.
+ If you implement it privately, you can have any class logic
+ make use of the functionality it provides.
  
  */
 
 import Foundation
 
-public protocol ParallelOperationCoordinator: OperationCoordinator {}
+public protocol ParallelOperationCoordinator: OperationCoordinator, ParallelItemOperation where CollectionType == Operation {}
 
 public extension ParallelOperationCoordinator {
     
+    func performOperation(onItem item: iExtra.Operation, completion: @escaping ItemCompletion) {
+        item.perform(completion: completion)
+    }
+    
     func performOperations(_ operations: [Operation], completion: @escaping Completion) {
-        guard operations.count > 0 else { return completion([]) }
-        var errors = [Error?]()
-        operations.forEach {
-            $0.perform { error in
-                errors.append(error)
-                let isComplete = errors.count == operations.count
-                guard isComplete else { return }
-                completion(errors)
-            }
-        }
+        performOperation(on: operations, completion: completion)
     }
 }
