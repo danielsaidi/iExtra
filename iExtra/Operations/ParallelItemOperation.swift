@@ -1,5 +1,5 @@
 //
-//  ParallellItemOperation.swift
+//  ParallelItemOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,7 +9,7 @@
 /*
  
  This protocol specializes the `ItemOperation` protocol, and
- will perform its operation in parallell on each item in the
+ will perform its operation in parallel on every item in the
  collection. This logic is already implemented as a protocol
  extension.
  
@@ -20,9 +20,9 @@
 
 import Foundation
 
-public protocol ParallellItemOperation: ItemOperation {}
+public protocol ParallelItemOperation: ItemOperation {}
 
-public extension ParallellItemOperation {
+public extension ParallelItemOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }

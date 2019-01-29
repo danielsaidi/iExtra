@@ -1,5 +1,5 @@
 //
-//  ParallellBatchOperation.swift
+//  ParallelBatchOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,7 +9,7 @@
 /*
  
  This protocol specializes the `BatchOperation` protocol. It
- will perform its operation in parallell on every item batch
+ will perform its operation in parallel, on every item batch
  from the collection. This logic is already implemented as a
  protocol extension.
  
@@ -20,9 +20,9 @@
 
 import Foundation
 
-public protocol ParallellBatchOperation: BatchOperation {}
+public protocol ParallelBatchOperation: BatchOperation {}
 
-public extension ParallellBatchOperation {
+public extension ParallelBatchOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }
