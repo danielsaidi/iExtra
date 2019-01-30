@@ -31,9 +31,9 @@ public extension SequentialItemOperation {
     private func performOperation(at index: Int, in collection: [T], errors: [Error?], completion: @escaping Completion) {
         guard collection.count > index else { return completion(errors) }
         let object = collection[index]
-        performOperation(onItem: object) { [weak self] error in
+        performOperation(onItem: object) { error in
             let errors = errors + [error]
-            self?.performOperation(at: index + 1, in: collection, errors: errors, completion: completion)
+            self.performOperation(at: index + 1, in: collection, errors: errors, completion: completion)
         }
     }
 }

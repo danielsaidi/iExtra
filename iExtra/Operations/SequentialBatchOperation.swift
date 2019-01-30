@@ -32,9 +32,9 @@ public extension SequentialBatchOperation {
     private func performOperation(at index: Int, in batches: [[T]], errors: [Error?], completion: @escaping Completion) {
         guard batches.count > index else { return completion(errors) }
         let batch = batches[index]
-        performOperation(onBatch: batch) { [weak self] error in
+        performOperation(onBatch: batch) { error in
             let errors = errors + [error]
-            self?.performOperation(at: index + 1, in: batches, errors: errors, completion: completion)
+            self.performOperation(at: index + 1, in: batches, errors: errors, completion: completion)
         }
     }
 }
