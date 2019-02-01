@@ -4,6 +4,11 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.6.0
+
+This version adds a new overlay view model, which allows you to create overlays.
+
+
 ## 2.5.2
 
 This version adds more operations and coordinators and also adds new layouts and

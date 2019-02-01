@@ -288,6 +288,11 @@
 		84C8C27222047A3100BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */; };
 		84C8C27322047A3100BFA792 /* UICollectionViewFlowLayout+LayoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C27122047A3100BFA792 /* UICollectionViewFlowLayout+LayoutsTests.swift */; };
 		84C8C27522047AB000BFA792 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C27422047AB000BFA792 /* GridLayout.swift */; };
+		84C8C2912204B3B000BFA792 /* UIView+Overlays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C28B2204B3B000BFA792 /* UIView+Overlays.swift */; };
+		84C8C2922204B3B000BFA792 /* OverlayBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C28C2204B3B000BFA792 /* OverlayBadgeView.swift */; };
+		84C8C2932204B3B000BFA792 /* OverlayCheckmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C28D2204B3B000BFA792 /* OverlayCheckmark.swift */; };
+		84C8C2942204B3B000BFA792 /* OverlayViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C28E2204B3B000BFA792 /* OverlayViewContainer.swift */; };
+		84C8C2962204B3B000BFA792 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C2902204B3B000BFA792 /* OverlayView.swift */; };
 		84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E8261E217E8C0000D1B73F /* CsvParser.swift */; };
 		84E82621217E8C0F00D1B73F /* StandardCsvParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E82620217E8C0F00D1B73F /* StandardCsvParser.swift */; };
 		84E82624217E8C3D00D1B73F /* StandardCsvParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E82623217E8C3D00D1B73F /* StandardCsvParserTests.swift */; };
@@ -654,6 +659,11 @@
 		84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+InsetsTests.swift"; sourceTree = "<group>"; };
 		84C8C27122047A3100BFA792 /* UICollectionViewFlowLayout+LayoutsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+LayoutsTests.swift"; sourceTree = "<group>"; };
 		84C8C27422047AB000BFA792 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		84C8C28B2204B3B000BFA792 /* UIView+Overlays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Overlays.swift"; sourceTree = "<group>"; };
+		84C8C28C2204B3B000BFA792 /* OverlayBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayBadgeView.swift; sourceTree = "<group>"; };
+		84C8C28D2204B3B000BFA792 /* OverlayCheckmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayCheckmark.swift; sourceTree = "<group>"; };
+		84C8C28E2204B3B000BFA792 /* OverlayViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayViewContainer.swift; sourceTree = "<group>"; };
+		84C8C2902204B3B000BFA792 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		84E8261E217E8C0000D1B73F /* CsvParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CsvParser.swift; sourceTree = "<group>"; };
 		84E82620217E8C0F00D1B73F /* StandardCsvParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParser.swift; sourceTree = "<group>"; };
 		84E82623217E8C3D00D1B73F /* StandardCsvParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardCsvParserTests.swift; sourceTree = "<group>"; };
@@ -1070,6 +1080,7 @@
 		4527343A1FD674F800418D93 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				84C8C28A2204B3A100BFA792 /* Overlays */,
 				45883BA820CF1853001C0E2F /* CornerRadius */,
 				4527343E1FD674F800418D93 /* Extensions */,
 				4535AE2F20205A28006E5408 /* Gestures */,
@@ -1842,6 +1853,18 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
+		84C8C28A2204B3A100BFA792 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				84C8C28C2204B3B000BFA792 /* OverlayBadgeView.swift */,
+				84C8C28D2204B3B000BFA792 /* OverlayCheckmark.swift */,
+				84C8C2902204B3B000BFA792 /* OverlayView.swift */,
+				84C8C28E2204B3B000BFA792 /* OverlayViewContainer.swift */,
+				84C8C28B2204B3B000BFA792 /* UIView+Overlays.swift */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
 		84E8261D217E8BF100D1B73F /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
@@ -2115,6 +2138,7 @@
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
 				452735621FD674F900418D93 /* BlurredNavigationSearchController.swift in Sources */,
 				848DB3E5217A7C0E00CAFAB9 /* MKMapView+NavigationBarStyle.swift in Sources */,
+				84C8C2942204B3B000BFA792 /* OverlayViewContainer.swift in Sources */,
 				452735821FD674F900418D93 /* DirectoryFileManager.swift in Sources */,
 				452735461FD674F900418D93 /* UIView+HitTest.swift in Sources */,
 				452734EE1FD674F900418D93 /* Date+Adding.swift in Sources */,
@@ -2147,6 +2171,7 @@
 				4527353A1FD674F900418D93 /* UITableView+DefaultCell.swift in Sources */,
 				4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */,
 				452735111FD674F900418D93 /* LinearTravellingMapCamera.swift in Sources */,
+				84C8C2922204B3B000BFA792 /* OverlayBadgeView.swift in Sources */,
 				452735131FD674F900418D93 /* MapBadgeView.swift in Sources */,
 				45CE0722204C048D00A93175 /* UIViewAutoresizing+Extras.swift in Sources */,
 				452735071FD674F900418D93 /* KeychainBasedDeviceIdentifier.swift in Sources */,
@@ -2187,6 +2212,7 @@
 				4527356F1FD674F900418D93 /* FloatingMenuPresenter.swift in Sources */,
 				452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */,
 				45883BB120CF1853001C0E2F /* Shadow.swift in Sources */,
+				84C8C2912204B3B000BFA792 /* UIView+Overlays.swift in Sources */,
 				452735211FD674F900418D93 /* UIButton+Init.swift in Sources */,
 				452735191FD674F900418D93 /* MKMapView+StatusBarStyle.swift in Sources */,
 				452735391FD674F900418D93 /* UISlider+HitTest.swift in Sources */,
@@ -2196,6 +2222,7 @@
 				452735081FD674F900418D93 /* IapManager.swift in Sources */,
 				452735931FD674F900418D93 /* ExternalMapService.swift in Sources */,
 				452735341FD674F900418D93 /* UINavigationBar+TitleAlpha.swift in Sources */,
+				84C8C2932204B3B000BFA792 /* OverlayCheckmark.swift in Sources */,
 				84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */,
 				452735731FD674F900418D93 /* LinearFloatingSubmenuPresenter.swift in Sources */,
 				452735A11FD674F900418D93 /* WorldCoordinate.swift in Sources */,
@@ -2242,6 +2269,7 @@
 				45883BB020CF1853001C0E2F /* UIView+Shadow.swift in Sources */,
 				452735051FD674F900418D93 /* Url+QueryParameters.swift in Sources */,
 				452735571FD674F900418D93 /* UIViewController+Alert.swift in Sources */,
+				84C8C2962204B3B000BFA792 /* OverlayView.swift in Sources */,
 				452735311FD674F900418D93 /* UIImageView+FadeInImage.swift in Sources */,
 				4527354C1FD674F900418D93 /* UIView+Scale.swift in Sources */,
 				4527354B1FD674F900418D93 /* UIView+Round.swift in Sources */,
