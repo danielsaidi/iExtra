@@ -4,6 +4,17 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 2.5.2
+
+This version adds more operations and coordinators and also adds new layouts and
+extensions for collection views.
+
+
+## 2.5.1
+
+This version renames operator to operation.
+
+
 ## 2.5.0
 
 This version renames all operators to operations and add new operations as well.
