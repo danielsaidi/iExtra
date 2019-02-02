@@ -1,5 +1,5 @@
 //
-//  SequentialOperationCoordinatorTests.swift
+//  SerialOperationCoordinatorTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-29.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class SequentialOperationCoordinatorTests: QuickSpec {
+class SerialOperationCoordinatorTests: QuickSpec {
     
     override func spec() {
         
@@ -76,7 +76,7 @@ class SequentialOperationCoordinatorTests: QuickSpec {
     }
 }
 
-private class TestCoordinator: SequentialOperationCoordinator {}
+private class TestCoordinator: SerialOperationCoordinator {}
 
 private class TestCounter {
     

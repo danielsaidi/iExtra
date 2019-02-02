@@ -1,5 +1,5 @@
 //
-//  SequentialItemOperation.swift
+//  SerialItemOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,20 +9,18 @@
 /*
  
  This protocol specializes the `ItemOperation` protocol, and
- will perform its operation sequentially on each item in the
- collection. This logic is already implemented as a protocol
- extension.
- 
- When implementing this protocol, you therefore just have to
+ performs its operation in serial on individual items from a
+ typed collection. This is already implemented as a protocol
+ extension, so you just have to specify `CollectionType` and
  implement `performOperation(onItem:completion:)`.
  
  */
 
 import Foundation
 
-public protocol SequentialItemOperation: ItemOperation {}
+public protocol SerialItemOperation: ItemOperation {}
 
-public extension SequentialItemOperation {
+public extension SerialItemOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         performOperation(at: 0, in: collection, errors: [], completion: completion)

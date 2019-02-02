@@ -6,7 +6,9 @@ version bumps, but not on revision bumps.
 
 ## 2.6.0
 
-This version adds a new overlay view model, which allows you to create overlays.
+This version adds a new overlay model, which allows you to create fancy overlays.
+It also renames the previoulsy created operations, from sequantial to serial and
+from parallel to concurrent.
 
 
 ## 2.5.2

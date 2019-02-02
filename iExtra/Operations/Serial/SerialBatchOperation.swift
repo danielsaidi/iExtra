@@ -1,5 +1,5 @@
 //
-//  SequentialBatchOperation.swift
+//  SerialBatchOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,20 +9,18 @@
 /*
  
  This protocol specializes the `BatchOperation` protocol. It
- will perform its operation sequentially on every item batch
- from the collection. This logic is already implemented as a
- protocol extension.
- 
- When implementing this protocol, you therefore just have to
+ performs its operation in serial on batches of items from a
+ typed collection. This is already implemented as a protocol
+ extension, so you just have to specify `CollectionType` and
  implement `performOperation(onBatch:completion:)`.
  
  */
 
 import Foundation
 
-public protocol SequentialBatchOperation: BatchOperation {}
+public protocol SerialBatchOperation: BatchOperation {}
 
-public extension SequentialBatchOperation {
+public extension SerialBatchOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         let batches = collection.batched(withBatchSize: batchSize)

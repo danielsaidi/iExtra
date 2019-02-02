@@ -1,5 +1,5 @@
 //
-//  SequentialItemOperationTests.swift
+//  ConcurrentBatchOperationTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class SequentialItemOperationTests: QuickSpec {
+class ConcurrentBatchOperationTests: QuickSpec {
     
     override func spec() {
         
@@ -34,45 +34,53 @@ class SequentialItemOperationTests: QuickSpec {
                 expect(counter).to(equal(1))
             }
             
-            it("performs operation on each item") {
-                obj.performOperation(on: [1, 2, 3, 4, 5]) { _ in }
-                expect(obj.result).to(equal([2, 4, 6, 8, 10]))
+            it("performs operation in batches") {
+                obj.batchSize = 2
+                obj.performOperation(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
+                expect(obj.result).to(equal([[2, 3], [5, 6], [8, 9], [11, 12], [14, 15]]))
             }
             
-            it("performs operation sequentially and is affected by halt") {
+            it("performs operation in parallell and is unaffected by halt") {
+                obj.batchSize = 2
                 obj.performCompletion = false
                 obj.performOperation(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
-                expect(obj.result).to(equal([2]))
+                expect(obj.result).to(equal([[2, 3], [5, 6], [8, 9], [11, 12], [14, 15]]))
+            }
+            
+            it("ignores invalid batch size") {
+                obj.batchSize = 0
+                obj.performOperation(on: [1, 2, 3, 4, 5]) { _ in }
+                expect(obj.result).to(equal([[2, 3, 4, 5, 6]]))
             }
             
             it("completes with resulting errors") {
                 let error = NSError(domain: "foo", code: 1, userInfo: nil )
                 obj.error = error
+                obj.batchSize = 2
                 var errors = [Error?]()
                 obj.performOperation(on: [1, 2, 3, 4, 5]) { res in errors = res }
-                expect(errors[0]).to(beNil())
+                expect(errors[0]).to(be(error))
                 expect(errors[1]).to(be(error))
                 expect(errors[2]).to(beNil())
-                expect(errors[3]).to(be(error))
-                expect(errors[4]).to(beNil())
             }
         }
     }
 }
 
-private class TestClass: SequentialItemOperation {
+private class TestClass: ConcurrentBatchOperation {
     
     typealias CollectionType = Int
     
     var error: Error?
+    var batchSize = 2
     var performCompletion = true
-    private(set) var result = [Int]()
+    private(set) var result = [[Int]]()
     private var addon = 1
     
-    func performOperation(onItem item: Int, completion: @escaping ItemCompletion) {
-        result.append(item + addon)
+    func performOperation(onBatch batch: [Int], completion: @escaping BatchCompletion) {
+        result.append(batch.map { $0 + addon })
         addon += 1
         guard performCompletion else { return }
-        completion(item % 2 == 0 ? error : nil)
+        completion(batch.count == 2 ? error: nil)
     }
 }

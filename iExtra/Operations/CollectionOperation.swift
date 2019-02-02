@@ -9,9 +9,10 @@
 /*
  
  This protocol can be implemented by classes that perform an
- operation on a typed collection. When implementing it, just
- implement `performOperation(on:completion:)` and define the
- `CollectionType` as a typealias.
+ operation on a typed collection.
+ 
+ When implementing it, just implement `performOperation(...)`
+ and define the `CollectionType` as a typealias.
  
  */
 

@@ -1,5 +1,5 @@
 //
-//  SequentialBatchOperationTests.swift
+//  SerialBatchOperationTests.swift
 //  iExtraTests
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class SequentialBatchOperationTests: QuickSpec {
+class SerialBatchOperationTests: QuickSpec {
     
     override func spec() {
         
@@ -67,7 +67,7 @@ class SequentialBatchOperationTests: QuickSpec {
     }
 }
 
-private class TestClass: SequentialBatchOperation {
+private class TestClass: SerialBatchOperation {
     
     typealias CollectionType = Int
     

@@ -11,12 +11,13 @@
  This protocol can be implemented by classes that perform an
  operation on individual items in a typed collection.
  
- When you implement this protocol, implement everything that
- is required by `CollectionOperation` and also implement the
- `performOperation(onItem:completion:)` function, which will
- be called for every item. It is also very important to call
- the item completion, since item operations may rely on this
- completion coordinate their execution.
+ When you implement this protocol, just implement everything
+ that is required by `CollectionOperation` and implement the
+ `performOperation(onItem:completion:)` function as well.
+ 
+ It is important to call the item completion when every item
+ is processes, since operations may rely on it completion to
+ coordinate their executions.
  
  */
 

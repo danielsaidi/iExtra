@@ -11,7 +11,7 @@
  This protocol can be implemented by classes that perform an
  operation in any kind of way. It's the most basic operation
  and basically just an abstract description that can be used
- to coordinate many parameterless operations.
+ when coordinating operations.
  
  */
 

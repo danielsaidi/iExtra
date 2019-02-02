@@ -1,5 +1,5 @@
 //
-//  ParallelBatchOperation.swift
+//  ConcurrentBatchOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,20 +9,18 @@
 /*
  
  This protocol specializes the `BatchOperation` protocol. It
- will perform its operation in parallel, on every item batch
- from the collection. This logic is already implemented as a
- protocol extension.
- 
- When implementing this protocol, you therefore just have to
+ performs an operation concurrently on batches of items from
+ a typed collection. This logic is already implemented as an
+ extension, so you just have to specify `CollectionType` and
  implement `performOperation(onBatch:completion:)`.
  
  */
 
 import Foundation
 
-public protocol ParallelBatchOperation: BatchOperation {}
+public protocol ConcurrentBatchOperation: BatchOperation {}
 
-public extension ParallelBatchOperation {
+public extension ConcurrentBatchOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }

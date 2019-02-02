@@ -11,12 +11,13 @@
  This protocol can be implemented by classes that perform an
  operation on batches of items from a typed collection.
  
- When you implement this protocol, implement everything that
- is required by `CollectionOperation` and also implement the
- `performOperation(onBatch:completion:)` function. This will
- be called for every item batch. It's also important to call
- the batch completion when each batch completes, since batch
- operations may rely on it to coordinate their execution.
+ When you implement this protocol, just implement everything
+ that is required by `CollectionOperation` and implement the
+ `performOperation(onBatch:completion:)` function as well.
+ 
+ It's important to call the batch completion when each batch
+ is processes, since operations may rely on it completion to
+ coordinate their executions.
  
  */
 

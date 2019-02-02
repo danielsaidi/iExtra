@@ -1,5 +1,5 @@
 //
-//  ParallelItemOperation.swift
+//  ConcurrentItemOperation.swift
 //  iExtra
 //
 //  Created by Daniel Saidi on 2019-01-23.
@@ -9,20 +9,18 @@
 /*
  
  This protocol specializes the `ItemOperation` protocol, and
- will perform its operation in parallel on every item in the
- collection. This logic is already implemented as a protocol
- extension.
- 
- When implementing this protocol, you therefore just have to
+ performs an operation concurrently on batches of items from
+ a typed collection. This logic is already implemented as an
+ extension, so you just have to specify `CollectionType` and
  implement `performOperation(onItem:completion:)`.
  
  */
 
 import Foundation
 
-public protocol ParallelItemOperation: ItemOperation {}
+public protocol ConcurrentItemOperation: ItemOperation {}
 
-public extension ParallelItemOperation {
+public extension ConcurrentItemOperation {
     
     func performOperation(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }
