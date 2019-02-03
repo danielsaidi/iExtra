@@ -22,6 +22,8 @@ import Foundation
 
 public class ConcurrentOperationCoordinator: OperationCoordinator, ConcurrentItemOperation {
     
+    public init() {}
+    
     public typealias CollectionType = Operation
     
     public func perform(operations: [Operation], completion: @escaping Completion) {

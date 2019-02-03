@@ -22,6 +22,8 @@ import Foundation
 
 public class SerialOperationCoordinator: OperationCoordinator, SerialItemOperation {
     
+    public init() {}
+    
     public typealias CollectionType = Operation
     
     public func perform(operations: [Operation], completion: @escaping Completion) {
