@@ -1746,8 +1746,8 @@
 		842386E921F916230045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				84F744DD22059EDA002B8A79 /* Serial */,
 				84F744DC22059E74002B8A79 /* Concurrent */,
+				84F744DD22059EDA002B8A79 /* Serial */,
 				84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */,
 				84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */,
 				84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */,
