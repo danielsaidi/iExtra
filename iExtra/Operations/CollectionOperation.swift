@@ -11,8 +11,8 @@
  This protocol can be implemented by classes that perform an
  operation on a typed collection.
  
- When implementing it, just implement `performOperation(...)`
- and define the `CollectionType` as a typealias.
+ When implementing this protocol, you just have to implement
+ `perform(on:completion:)` and define `CollectionType`.
  
  */
 
@@ -24,5 +24,5 @@ public protocol CollectionOperation: AnyObject {
     typealias T = CollectionType
     typealias Completion = ([Error?]) -> ()
     
-    func performOperation(on collection: [T], completion: @escaping Completion)
+    func perform(on collection: [T], completion: @escaping Completion)
 }

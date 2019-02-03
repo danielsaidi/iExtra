@@ -24,32 +24,32 @@ class SerialBatchOperationTests: QuickSpec {
             
             it("completes once for empty sequence") {
                 var counter = 0
-                obj.performOperation(on: []) { _ in counter += 1 }
+                obj.perform(on: []) { _ in counter += 1 }
                 expect(counter).to(equal(1))
             }
             
             it("completes once for non-empty sequence") {
                 var counter = 0
-                obj.performOperation(on: [1, 2, 3, 4, 5]) { _ in counter += 1 }
+                obj.perform(on: [1, 2, 3, 4, 5]) { _ in counter += 1 }
                 expect(counter).to(equal(1))
             }
             
             it("performs operation in batches") {
                 obj.batchSize = 2
-                obj.performOperation(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
+                obj.perform(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
                 expect(obj.result).to(equal([[2, 3], [5, 6], [8, 9], [11, 12], [14, 15]]))
             }
             
             it("performs operation sequentially and is affected by halt") {
                 obj.batchSize = 2
                 obj.performCompletion = false
-                obj.performOperation(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
+                obj.perform(on: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]) { _ in }
                 expect(obj.result).to(equal([[2, 3]]))
             }
             
             it("ignores invalid batch size") {
                 obj.batchSize = 0
-                obj.performOperation(on: [1, 2, 3, 4, 5]) { _ in }
+                obj.perform(on: [1, 2, 3, 4, 5]) { _ in }
                 expect(obj.result).to(equal([[2, 3, 4, 5, 6]]))
             }
             
@@ -58,7 +58,7 @@ class SerialBatchOperationTests: QuickSpec {
                 obj.error = error
                 obj.batchSize = 2
                 var errors = [Error?]()
-                obj.performOperation(on: [1, 2, 3, 4, 5]) { res in errors = res }
+                obj.perform(on: [1, 2, 3, 4, 5]) { res in errors = res }
                 expect(errors[0]).to(be(error))
                 expect(errors[1]).to(be(error))
                 expect(errors[2]).to(beNil())
@@ -77,7 +77,7 @@ private class TestClass: SerialBatchOperation {
     private(set) var result = [[Int]]()
     private var addon = 1
     
-    func performOperation(onBatch batch: [Int], completion: @escaping BatchCompletion) {
+    func perform(onBatch batch: [Int], completion: @escaping BatchCompletion) {
         result.append(batch.map { $0 + addon })
         addon += 1
         guard performCompletion else { return }

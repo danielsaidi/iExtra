@@ -19,5 +19,5 @@ public protocol OperationCoordinator {
     
     typealias Completion = ([Error?]) -> ()
     
-    func performOperations(_ operations: [Operation], completion: @escaping Completion)
+    func perform(operations: [Operation], completion: @escaping Completion)
 }

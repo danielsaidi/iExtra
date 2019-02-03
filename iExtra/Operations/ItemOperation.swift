@@ -13,7 +13,7 @@
  
  When you implement this protocol, just implement everything
  that is required by `CollectionOperation` and implement the
- `performOperation(onItem:completion:)` function as well.
+ `perform(onItem:completion:)` function as well.
  
  It is important to call the item completion when every item
  is processes, since operations may rely on it completion to
@@ -27,5 +27,5 @@ public protocol ItemOperation: CollectionOperation {
     
     typealias ItemCompletion = (Error?) -> ()
     
-    func performOperation(onItem item: T, completion: @escaping ItemCompletion)
+    func perform(onItem item: T, completion: @escaping ItemCompletion)
 }

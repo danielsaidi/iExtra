@@ -12,7 +12,7 @@
  performs its operation in serial on individual items from a
  typed collection. This is already implemented as a protocol
  extension, so you just have to specify `CollectionType` and
- implement `performOperation(onItem:completion:)`.
+ implement `perform(onItem:completion:)`.
  
  */
 
@@ -22,16 +22,16 @@ public protocol SerialItemOperation: ItemOperation {}
 
 public extension SerialItemOperation {
     
-    func performOperation(on collection: [T], completion: @escaping Completion) {
-        performOperation(at: 0, in: collection, errors: [], completion: completion)
+    func perform(on collection: [T], completion: @escaping Completion) {
+        perform(at: 0, in: collection, errors: [], completion: completion)
     }
     
-    private func performOperation(at index: Int, in collection: [T], errors: [Error?], completion: @escaping Completion) {
+    private func perform(at index: Int, in collection: [T], errors: [Error?], completion: @escaping Completion) {
         guard collection.count > index else { return completion(errors) }
         let object = collection[index]
-        performOperation(onItem: object) { error in
+        perform(onItem: object) { error in
             let errors = errors + [error]
-            self.performOperation(at: index + 1, in: collection, errors: errors, completion: completion)
+            self.perform(at: index + 1, in: collection, errors: errors, completion: completion)
         }
     }
 }

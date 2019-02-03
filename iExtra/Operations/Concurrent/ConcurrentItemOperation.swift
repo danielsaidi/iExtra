@@ -12,7 +12,7 @@
  performs an operation concurrently on batches of items from
  a typed collection. This logic is already implemented as an
  extension, so you just have to specify `CollectionType` and
- implement `performOperation(onItem:completion:)`.
+ implement `perform(onItem:completion:)`.
  
  */
 
@@ -22,11 +22,11 @@ public protocol ConcurrentItemOperation: ItemOperation {}
 
 public extension ConcurrentItemOperation {
     
-    func performOperation(on collection: [T], completion: @escaping Completion) {
+    func perform(on collection: [T], completion: @escaping Completion) {
         guard collection.count > 0 else { return completion([]) }
         var errors = [Error?]()
         collection.forEach {
-            performOperation(onItem: $0) { error in
+            perform(onItem: $0) { error in
                 errors.append(error)
                 let isComplete = errors.count == collection.count
                 guard isComplete else { return }

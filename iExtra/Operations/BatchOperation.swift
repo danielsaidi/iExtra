@@ -13,7 +13,7 @@
  
  When you implement this protocol, just implement everything
  that is required by `CollectionOperation` and implement the
- `performOperation(onBatch:completion:)` function as well.
+ `perform(onBatch:completion:)` function as well.
  
  It's important to call the batch completion when each batch
  is processes, since operations may rely on it completion to
@@ -29,5 +29,5 @@ public protocol BatchOperation: CollectionOperation {
     
     var batchSize: Int { get }
     
-    func performOperation(onBatch batch: [T], completion: @escaping BatchCompletion)
+    func perform(onBatch batch: [T], completion: @escaping BatchCompletion)
 }
