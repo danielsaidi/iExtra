@@ -24,7 +24,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
         
         it("completes once for empty sequence") {
             var count = 0
-            coordinator.perform(operations: []) { _ in count += 1 }
+            coordinator.perform([]) { _ in count += 1 }
             expect(count).to(equal(1))
         }
         
@@ -33,7 +33,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
             let operation1 = TestOperation(counter: counter, performCompletion: true)
             let operation2 = TestOperation(counter: counter, performCompletion: true)
             let operations = [operation1, operation2]
-            coordinator.perform(operations: operations) { _ in count += 1 }
+            coordinator.perform(operations) { _ in count += 1 }
             expect(count).to(equal(1))
         }
         
@@ -41,7 +41,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
             let operation1 = TestOperation(counter: counter, performCompletion: true)
             let operation2 = TestOperation(counter: counter, performCompletion: true)
             let operations = [operation1, operation2]
-            coordinator.perform(operations: operations) { _ in }
+            coordinator.perform(operations) { _ in }
             expect(counter.count).to(equal(2))
         }
         
@@ -49,7 +49,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
             let operation1 = TestOperation(counter: counter, performCompletion: false)
             let operation2 = TestOperation(counter: counter, performCompletion: true)
             let operations = [operation1, operation2]
-            coordinator.perform(operations: operations) { _ in }
+            coordinator.perform(operations) { _ in }
             expect(counter.count).to(equal(1))
         }
         
@@ -58,7 +58,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
             let operation1 = TestOperation(counter: counter, performCompletion: true)
             let operation2 = TestOperation(counter: counter, performCompletion: false)
             let operations = [operation1, operation2]
-            coordinator.perform(operations: operations) { _ in count += 1 }
+            coordinator.perform(operations) { _ in count += 1 }
             expect(count).to(equal(0))
         }
         
@@ -69,7 +69,7 @@ class SerialOperationCoordinatorTests: QuickSpec {
             let operations = [operation1, operation2]
             operation2.error = error
             var errors = [Error?]()
-            coordinator.perform(operations: operations) { res in errors = res }
+            coordinator.perform(operations) { res in errors = res }
             expect(errors[0]).to(beNil())
             expect(errors[1]).to(be(error))
         }
