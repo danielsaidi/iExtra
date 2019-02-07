@@ -4,6 +4,12 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+
+## 2.7.0
+
+This version changes the operation coordinator protocol signature.
+
+
 ## 2.6.0
 
 This version adds a new overlay model, which allows you to create fancy overlays.
