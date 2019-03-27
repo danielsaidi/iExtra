@@ -5,6 +5,11 @@ version bumps, but not on revision bumps.
 
 
 
+## 3.0.0
+
+This version upgrades to Swift 5 and removes some unneeded and unwanted code.
+
+
 ## 2.7.0
 
 This version changes the operation coordinator protocol signature.
