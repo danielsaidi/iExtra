@@ -71,7 +71,7 @@ open class MapBadgeView: UIView {
 
 public extension MapBadgeView {
     
-    public func prepareForNavigationController(in vc: UIViewController) {
+    func prepareForNavigationController(in vc: UIViewController) {
         vc.edgesForExtendedLayout = .top
     }
 }

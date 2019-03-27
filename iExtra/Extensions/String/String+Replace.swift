@@ -10,11 +10,11 @@ import Foundation
 
 public extension String {
     
-    public func replacing(_ string: String, with: String) -> String {
+    func replacing(_ string: String, with: String) -> String {
         return replacingOccurrences(of: string, with: with)
     }
     
-    public func replacing(_ string: String, with: String, caseSensitive: Bool) -> String {
+    func replacing(_ string: String, with: String, caseSensitive: Bool) -> String {
         return caseSensitive
             ? replacing(string, with: with)
             : replacingOccurrences(of: string, with: with, options: .caseInsensitive, range: nil)

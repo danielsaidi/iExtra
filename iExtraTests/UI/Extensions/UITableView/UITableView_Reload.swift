@@ -10,7 +10,7 @@ import UIKit
 
 public extension UITableView {
 
-    public func reloadData(with animation: UITableView.RowAnimation = .automatic) {
+    func reloadData(with animation: UITableView.RowAnimation = .automatic) {
         let range: Range = 0..<numberOfSections
         let sections = IndexSet(integersIn: range)
         reloadSections(sections, with: animation)

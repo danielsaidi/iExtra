@@ -93,4 +93,3 @@ private extension OverlayBadgeView {
         frame.size = frameSize
     }
 }
-

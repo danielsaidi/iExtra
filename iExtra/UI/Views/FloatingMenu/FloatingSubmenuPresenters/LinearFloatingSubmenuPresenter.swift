@@ -58,7 +58,7 @@ open class LinearFloatingSubMenuPresenter: NSObject, FloatingSubmenuPresenter {
         let offsets = getPresentationOffsets(forButtons: buttons, inMenu: menu)
         for button in buttons {
             button.isHidden = false
-            guard let offsetIndex = buttons.index(of: button) else { break }
+            guard let offsetIndex = buttons.firstIndex(of: button) else { break }
             let offset = offsets[offsetIndex]
             presentButton(button, usingOffset: offset)
         }

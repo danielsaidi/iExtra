@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIView {
     
-    public func applyShadow(_ shadow: Shadow) {
+    func applyShadow(_ shadow: Shadow) {
         clipsToBounds = false
         layer.applyShadow(
             color: shadow.color,

@@ -28,6 +28,8 @@ public extension UISearchBar {
             textField.layer.cornerRadius = 6
         case .prominent, .default:
             textField.backgroundColor = color
+        @unknown default:
+            assert(false, "Unsupported case")
         }
     }
     

@@ -32,11 +32,11 @@ public extension Drippable where Self: UIView {
         layer.add(group, forKey: key)
     }
     
-    public func startDripPulse(fromScale: Double, toScale: Double, withDuration duration: Double, delay: Double) {
+    func startDripPulse(fromScale: Double, toScale: Double, withDuration duration: Double, delay: Double) {
         startDripPulse(fromScale: fromScale, toScale: toScale, withDuration: duration, delay: delay, times: Int.max)
     }
     
-    public func stopDripPulse() {
+    func stopDripPulse() {
         layer.removeAnimation(forKey: key)
     }
 }

@@ -55,7 +55,7 @@ private extension PannableModalPresenter {
     static func destroy(presenter: PannableModalPresenter?) {
         guard let presenter = presenter else { return }
         presenter.destroyPanGesture()
-        guard let index = cache.index(of: presenter) else { return }
+        guard let index = cache.firstIndex(of: presenter) else { return }
         cache.remove(at: index)
     }
     

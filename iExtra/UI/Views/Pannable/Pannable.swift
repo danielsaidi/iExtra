@@ -34,11 +34,11 @@ public protocol Pannable: class {
 
 public extension Pannable {
     
-    public var canPanHorizontally: Bool {
+    var canPanHorizontally: Bool {
         return panDirections.contains(.horizontal)
     }
     
-    public var canPanVertically: Bool {
+    var canPanVertically: Bool {
         return panDirections.contains(.vertical)
     }
 }

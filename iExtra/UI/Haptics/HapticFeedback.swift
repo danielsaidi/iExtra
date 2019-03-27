@@ -34,7 +34,7 @@ public enum HapticFeedback: String {
 
 public extension HapticFeedback {
     
-    public func trigger() {
+    func trigger() {
         switch self {
         case .error: trigger(feedbackType: .error)
         case .success: trigger(feedbackType: .success)

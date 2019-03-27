@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIColor {
     
-    public class var random: UIColor {
+    class var random: UIColor {
         let red = CGFloat(drand48())
         let green = CGFloat(drand48())
         let blue = CGFloat(drand48())

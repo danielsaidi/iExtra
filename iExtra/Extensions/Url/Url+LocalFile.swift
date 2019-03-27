@@ -10,7 +10,7 @@ import Foundation
 
 public extension URL {
     
-    public var localFileExists: Bool {
+    var localFileExists: Bool {
         do {
             return try checkPromisedItemIsReachable()
         } catch {

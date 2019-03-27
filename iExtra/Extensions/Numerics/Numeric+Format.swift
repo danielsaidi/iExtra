@@ -10,7 +10,7 @@ import UIKit
 
 public extension CGFloat {
     
-    public func format(withDecimals decimals: Int) -> String {
+    func format(withDecimals decimals: Int) -> String {
         let format = "0.\(decimals)"
         return String(format: "%\(format)f", self)
     }
@@ -19,7 +19,7 @@ public extension CGFloat {
 
 public extension Double {
     
-    public func format(withDecimals decimals: Int) -> String {
+    func format(withDecimals decimals: Int) -> String {
         let format = "0.\(decimals)"
         return String(format: "%\(format)f", self)
     }
@@ -28,7 +28,7 @@ public extension Double {
 
 public extension Float {
     
-    public func format(withDecimals decimals: Int) -> String {
+    func format(withDecimals decimals: Int) -> String {
         let format = "0.\(decimals)"
         return String(format: "%\(format)f", self)
     }

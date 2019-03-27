@@ -10,7 +10,7 @@ import StoreKit
 
 public extension SKProduct {
     
-    public var priceDescription: String {
+    var priceDescription: String {
         let formatter = NumberFormatter()
         formatter.formatterBehavior = .behavior10_4
         formatter.numberStyle = .currency
