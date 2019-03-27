@@ -10,7 +10,7 @@ import Foundation
 
 public extension Notification.Name {
     
-    public static var languageChanged: Notification.Name {
+    static var languageChanged: Notification.Name {
         return Notification.Name(rawValue: "com.danielsaidi.iExtra.languageChanged")
     }
 }

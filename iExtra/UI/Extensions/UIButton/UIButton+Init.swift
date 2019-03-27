@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIButton {
     
-    public convenience init(image: UIImage) {
+    convenience init(image: UIImage) {
         self.init(type: .custom)
         let size = image.size
         frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)

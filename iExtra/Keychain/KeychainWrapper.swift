@@ -44,9 +44,6 @@ private let paramSecReturnAttributes = kSecReturnAttributes as String
 /// KeychainWrapper is a class to help make Keychain access in Swift more straightforward. It is designed to make accessing the Keychain services more like using NSUserDefaults, which is much more familiar to people.
 open class KeychainWrapper {
     
-    @available(*, deprecated: 2.2.1, message: "KeychainWrapper.defaultKeychainWrapper is deprecated, use KeychainWrapper.standard instead")
-    public static let defaultKeychainWrapper = KeychainWrapper.standard
-    
     /// Default keychain wrapper access
     public static let standard = KeychainWrapper()
     
@@ -270,11 +267,6 @@ open class KeychainWrapper {
         } else {
             return false
         }
-    }
-    
-    @available(*, deprecated: 2.2.1, message: "remove is deprecated, use removeObject instead")
-    @discardableResult open func remove(key: String, withAccessibility accessibility: KeychainItemAccessibility? = nil) -> Bool {
-        return removeObject(forKey: key, withAccessibility: accessibility)
     }
     
     /// Remove an object associated with a specified key. If re-using a key but with a different accessibility, first remove the previous key value using removeObjectForKey(:withAccessibility) using the same accessibilty it was saved with.

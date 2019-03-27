@@ -19,7 +19,7 @@ import UIKit
 
 public extension UIViewController {
     
-    public var navigationBarBackground: UIView? {
+    var navigationBarBackground: UIView? {
         let tag = navBarBackgroundTag
         return getBackground(tag) ?? createBackground(tag)
     }

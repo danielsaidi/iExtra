@@ -10,7 +10,7 @@ import UIKit
 
 public extension UITextView {
     
-    public func removePadding() {
+    func removePadding() {
         contentInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
     }
 }

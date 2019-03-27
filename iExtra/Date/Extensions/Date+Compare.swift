@@ -10,15 +10,15 @@ import Foundation
 
 public extension Date {
     
-    public func isAfter(_ date: Date) -> Bool {
+    func isAfter(_ date: Date) -> Bool {
         return compare(date) == .orderedDescending
     }
     
-    public func isBefore(_ date: Date) -> Bool {
+    func isBefore(_ date: Date) -> Bool {
         return compare(date) == .orderedAscending
     }
     
-    public func isSameAs(_ date: Date) -> Bool {
+    func isSameAs(_ date: Date) -> Bool {
         return compare(date) == .orderedSame
     }
 }

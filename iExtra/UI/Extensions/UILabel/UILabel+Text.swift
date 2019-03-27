@@ -10,11 +10,11 @@ import UIKit
 
 public extension UILabel {
     
-    public var hasText: Bool {
+    var hasText: Bool {
         return text?.count ?? 0 > 0
     }
     
-    public var hasTrimmedText: Bool {
+    var hasTrimmedText: Bool {
         return text?.trimmingCharacters(in: .whitespaces).count ?? 0 > 0
     }
 }

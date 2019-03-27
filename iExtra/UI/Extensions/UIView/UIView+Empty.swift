@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
     
-    public static var empty: UIView {
+    static var empty: UIView {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: 0.01, height: 0.01))
         view.backgroundColor = UIColor.clear
         return view

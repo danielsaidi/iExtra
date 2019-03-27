@@ -10,7 +10,7 @@ import Foundation
 
 public extension String {
     
-    public func urlEncoded() -> String {
+    func urlEncoded() -> String {
         let url = addingPercentEncoding(withAllowedCharacters: .urlPathAllowed) ?? ""
         return url.replacingOccurrences(of: "&", with: "%26")
     }

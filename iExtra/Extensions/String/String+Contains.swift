@@ -10,7 +10,7 @@ import Foundation
 
 public extension String {
     
-    public func contains(_ string: String, caseSensitive: Bool) -> Bool {
+    func contains(_ string: String, caseSensitive: Bool) -> Bool {
         return caseSensitive
             ? contains(string)
             : lowercased().contains(string.lowercased())

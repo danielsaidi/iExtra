@@ -10,7 +10,7 @@ import Foundation
 
 public extension Array {
     
-    public func group<T>(_ grouper: (Element) -> T) -> [T: [Element]] {
+    func group<T>(_ grouper: (Element) -> T) -> [T: [Element]] {
         var result = [T: [Element]]()
         for obj in self {
             let index = grouper(obj)

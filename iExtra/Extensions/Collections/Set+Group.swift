@@ -10,7 +10,7 @@ import Foundation
 
 public extension Set {
     
-    public func group<T>(_ grouper: (Element) -> T) -> [T: [Element]] {
+    func group<T>(_ grouper: (Element) -> T) -> [T: [Element]] {
         return Array(self).group(grouper)
     }
 }

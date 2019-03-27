@@ -12,22 +12,22 @@ import Foundation
 
 public extension Date {
     
-    public func adding(days: Int) -> Date {
+    func adding(days: Int) -> Date {
         let seconds = Double(days) * 60 * 60 * 24
         return addingTimeInterval(seconds)
     }
     
-    public func adding(hours: Int) -> Date {
+    func adding(hours: Int) -> Date {
         let seconds = Double(hours) * 60 * 60
         return addingTimeInterval(seconds)
     }
     
-    public func adding(minutes: Int) -> Date {
+    func adding(minutes: Int) -> Date {
         let seconds = Double(minutes) * 60
         return addingTimeInterval(seconds)
     }
     
-    public func adding(seconds: Int) -> Date {
+    func adding(seconds: Int) -> Date {
         return addingTimeInterval(Double(seconds))
     }
 }

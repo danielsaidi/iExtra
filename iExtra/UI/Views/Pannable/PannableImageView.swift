@@ -45,7 +45,7 @@ open class PannableImageView: UIImageView, Pannable {
 
 @objc public extension PannableImageView {
     
-    public func triggerPan(_ pan: UIPanGestureRecognizer) {
+    func triggerPan(_ pan: UIPanGestureRecognizer) {
         handlePan(pan)
     }
 }

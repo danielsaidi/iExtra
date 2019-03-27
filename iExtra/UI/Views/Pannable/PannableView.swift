@@ -50,7 +50,7 @@ open class PannableView: UIView, Pannable {
 
 @objc public extension PannableView {
     
-    public func triggerPan(_ pan: UIPanGestureRecognizer) {
+    func triggerPan(_ pan: UIPanGestureRecognizer) {
         handlePan(pan)
     }
 }

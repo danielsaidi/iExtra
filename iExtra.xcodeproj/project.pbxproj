@@ -240,8 +240,6 @@
 		458EEDCC2118768C00774A79 /* UIApplication+ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDCB2118768C00774A79 /* UIApplication+ActiveViewController.swift */; };
 		458EEDCE211876BF00774A79 /* UIViewController+ActiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDCD211876BF00774A79 /* UIViewController+ActiveViewController.swift */; };
 		458EEDD221187A3700774A79 /* UICollectionViewCell+BackgroundColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDD121187A3700774A79 /* UICollectionViewCell+BackgroundColor.swift */; };
-		458EEDDB21187C6900774A79 /* UILabel+NumberOfLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDD821187C6900774A79 /* UILabel+NumberOfLines.swift */; };
-		458EEDDC21187C6900774A79 /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDD921187C6900774A79 /* UILabel+Size.swift */; };
 		458EEDDD21187C6900774A79 /* UILabel+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDDA21187C6900774A79 /* UILabel+Text.swift */; };
 		458EEDE321187EE300774A79 /* UIStackView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEDE221187EE300774A79 /* UIStackView+Subviews.swift */; };
 		459E62C6210F258E006253F0 /* UINavigationController+StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459E62C5210F258E006253F0 /* UINavigationController+StatusBar.swift */; };
@@ -610,8 +608,6 @@
 		458EEDCB2118768C00774A79 /* UIApplication+ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+ActiveViewController.swift"; sourceTree = "<group>"; };
 		458EEDCD211876BF00774A79 /* UIViewController+ActiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+ActiveViewController.swift"; sourceTree = "<group>"; };
 		458EEDD121187A3700774A79 /* UICollectionViewCell+BackgroundColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+BackgroundColor.swift"; sourceTree = "<group>"; };
-		458EEDD821187C6900774A79 /* UILabel+NumberOfLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+NumberOfLines.swift"; sourceTree = "<group>"; };
-		458EEDD921187C6900774A79 /* UILabel+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
 		458EEDDA21187C6900774A79 /* UILabel+Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Text.swift"; sourceTree = "<group>"; };
 		458EEDE221187EE300774A79 /* UIStackView+Subviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Subviews.swift"; sourceTree = "<group>"; };
 		459E62C5210F258E006253F0 /* UINavigationController+StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+StatusBar.swift"; sourceTree = "<group>"; };
@@ -1600,8 +1596,6 @@
 		458EEDD721187C4D00774A79 /* UILabel */ = {
 			isa = PBXGroup;
 			children = (
-				458EEDD821187C6900774A79 /* UILabel+NumberOfLines.swift */,
-				458EEDD921187C6900774A79 /* UILabel+Size.swift */,
 				458EEDDA21187C6900774A79 /* UILabel+Text.swift */,
 			);
 			path = UILabel;
@@ -2026,18 +2020,18 @@
 				TargetAttributes = {
 					452733671FD673E200418D93 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					452733701FD673E200418D93 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 452733851FD6740F00418D93;
 					};
 					452733851FD6740F00418D93 = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2123,7 +2117,6 @@
 				452735271FD674F900418D93 /* UIImage+Async.swift in Sources */,
 				459E62C6210F258E006253F0 /* UINavigationController+StatusBar.swift in Sources */,
 				452735061FD674F900418D93 /* DeviceIdentifier.swift in Sources */,
-				458EEDDB21187C6900774A79 /* UILabel+NumberOfLines.swift in Sources */,
 				4527355D1FD674F900418D93 /* InteractiveModalTransition.swift in Sources */,
 				452734F31FD674F900418D93 /* SystemUrl.swift in Sources */,
 				452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */,
@@ -2202,7 +2195,6 @@
 				45CE0717204C030600A93175 /* UIImage+Pasteboard.swift in Sources */,
 				4527353B1FD674F900418D93 /* UITextView+Padding.swift in Sources */,
 				452734FC1FD674F900418D93 /* NSObject+ClassName.swift in Sources */,
-				458EEDDC21187C6900774A79 /* UILabel+Size.swift in Sources */,
 				84F22D50214791A2005DEC41 /* StringEncoder.swift in Sources */,
 				4527353D1FD674F900418D93 /* UIView+Bounce.swift in Sources */,
 				4527351E1FD674F900418D93 /* UIApplication+Version.swift in Sources */,
@@ -2597,7 +2589,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2617,7 +2609,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtra;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2636,7 +2628,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iExtraExample.app/iExtraExample";
 			};
@@ -2656,7 +2648,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iExtraExample.app/iExtraExample";
 			};
@@ -2673,7 +2665,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2689,7 +2681,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danielsaidi.iExtraExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

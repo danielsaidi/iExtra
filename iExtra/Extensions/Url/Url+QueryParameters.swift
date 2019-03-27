@@ -13,11 +13,11 @@ public extension URL {
     
     // MARK: - Public Properties
     
-    public var queryParameters: [URLQueryItem] {
+    var queryParameters: [URLQueryItem] {
         return URLComponents(string: absoluteString)?.queryItems ?? [URLQueryItem]()
     }
     
-    public var queryParametersDictionary: [String: String] {
+    var queryParametersDictionary: [String: String] {
         var result = [String: String]()
         queryParameters.forEach { result[$0.name] = $0.value ?? "" }
         return result
@@ -26,11 +26,11 @@ public extension URL {
     
     // MARK: - Public Functions
     
-    public func getQueryParameter(named name: String) -> URLQueryItem? {
+    func getQueryParameter(named name: String) -> URLQueryItem? {
         return queryParameters.first { $0.isNamed(name) }
     }
     
-    public func setQueryParameter(name: String, value: String) -> URL? {
+    func setQueryParameter(name: String, value: String) -> URL? {
         guard let urlString = absoluteString.components(separatedBy: "?").first else { return self }
         let param = getQueryParameter(named: name)
         let name = param?.name ?? name
@@ -40,7 +40,7 @@ public extension URL {
         return URL(string: "\(urlString)?\(queryString)")
     }
     
-    public func setQueryParameters(_ dict: [String: String]) -> URL? {
+    func setQueryParameters(_ dict: [String: String]) -> URL? {
         var result = self
         dict.forEach {
             result = result.setQueryParameter(name: $0, value: $1) ?? result

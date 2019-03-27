@@ -12,7 +12,7 @@ import UIKit
 
 public extension UIApplication {
 
-    public func refreshAppearance() {
+    func refreshAppearance() {
         for window in windows {
             window.subviews.forEach {
                 $0.removeFromSuperview()
