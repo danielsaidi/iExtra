@@ -8,24 +8,19 @@
 
 /*
  
- This protocol can be implemented by classes that perform an
- operation on individual items in a typed collection.
+ An item operation can be performed on individual items of a
+ certain type.
  
- When you implement this protocol, just implement everything
- that is required by `CollectionOperation` and implement the
- `perform(onItem:completion:)` function as well.
- 
- It is important to call the item completion when every item
- is processes, since operations may rely on it completion to
- coordinate their executions.
+ When implementing this protocol, specify `OperationItemType`
+ by creating a typealias in your implementation.
  
  */
 
 import Foundation
 
-public protocol ItemOperation: CollectionOperation {
+public protocol ItemOperation: OperationItemTypeProvider {
     
     typealias ItemCompletion = (Error?) -> ()
     
-    func perform(onItem item: T, completion: @escaping ItemCompletion)
+    func perform(onItem item: OperationItemType, completion: @escaping ItemCompletion)
 }

@@ -1,8 +1,8 @@
 //
 //  ConcurrentOperationCoordinatorTests.swift
-//  iExtraTests
+//  iExtra
 //
-//  Created by Daniel Saidi on 2019-01-29.
+//  Created by Daniel Saidi on 2019-01-26.
 //  Copyright © 2019 Daniel Saidi. All rights reserved.
 //
 
@@ -72,8 +72,8 @@ class ConcurrentOperationCoordinatorTests: QuickSpec {
                 operation2.error = error
                 var errors = [Error?]()
                 coordinator.perform(operations) { res in errors = res }
-                expect(errors[0]).to(beNil())
-                expect(errors[1]).to(be(error))
+                expect(errors.count).to(equal(1))
+                expect(errors[0]).to(be(error))
             }
         }
     }
@@ -95,7 +95,7 @@ private class TestOperation: iExtra.Operation {
     private var counter: TestCounter
     private var performCompletion: Bool
     
-    func perform(completion: @escaping Completion) {
+    func perform(completion: @escaping OperationCompletion) {
         counter.count += 1
         guard performCompletion else { return }
         completion(error)

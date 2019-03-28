@@ -257,7 +257,24 @@
 		45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517B220D1493B005A8029 /* UIView+AsyncTagTests.swift */; };
 		45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */; };
 		840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */; };
-		842386F421F927B50045F121 /* Int+IsEven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842386F321F927B50045F121 /* Int+IsEven.swift */; };
+		84346654224CCB6900C9AFA6 /* ConcurrentOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346648224CCB6800C9AFA6 /* ConcurrentOperationCoordinator.swift */; };
+		84346655224CCB6900C9AFA6 /* SerialOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346649224CCB6800C9AFA6 /* SerialOperationCoordinator.swift */; };
+		84346656224CCB6900C9AFA6 /* OperationItemTypeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664A224CCB6800C9AFA6 /* OperationItemTypeProvider.swift */; };
+		84346657224CCB6900C9AFA6 /* ConcurrentCollectionItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664B224CCB6800C9AFA6 /* ConcurrentCollectionItemOperation.swift */; };
+		84346658224CCB6900C9AFA6 /* OperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664C224CCB6800C9AFA6 /* OperationCoordinator.swift */; };
+		84346659224CCB6900C9AFA6 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664D224CCB6800C9AFA6 /* Operation.swift */; };
+		8434665B224CCB6900C9AFA6 /* ItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664F224CCB6800C9AFA6 /* ItemOperation.swift */; };
+		8434665C224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346650224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift */; };
+		8434665D224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346651224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift */; };
+		8434665E224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346652224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift */; };
+		8434665F224CCB6900C9AFA6 /* CollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346653224CCB6900C9AFA6 /* CollectionOperation.swift */; };
+		84346668224CCC0B00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346660224CCC0A00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift */; };
+		84346669224CCC0B00C9AFA6 /* MockOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346662224CCC0A00C9AFA6 /* MockOperationCoordinator.swift */; };
+		8434666A224CCC0B00C9AFA6 /* ConcurrentCollectionItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346663224CCC0B00C9AFA6 /* ConcurrentCollectionItemOperationTests.swift */; };
+		8434666B224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346664224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift */; };
+		8434666C224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346665224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift */; };
+		8434666D224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346666224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift */; };
+		8434666E224CCC0B00C9AFA6 /* SerialCollectionBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346667224CCC0B00C9AFA6 /* SerialCollectionBatchOperationTests.swift */; };
 		844B8AA4219DC107005AB15D /* UIView+ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */; };
 		8488054D214083EA00C18688 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054C214083EA00C18688 /* DateFormatters.swift */; };
 		84880550214084D000C18688 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054F214084CF00C18688 /* DateFormattersTests.swift */; };
@@ -275,12 +292,6 @@
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
-		84C8C1F92200D9EE00BFA792 /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1F82200D9EE00BFA792 /* Operation.swift */; };
-		84C8C1FB2200DDE100BFA792 /* ConcurrentOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1FA2200DDE100BFA792 /* ConcurrentOperationCoordinator.swift */; };
-		84C8C1FD2200DE9200BFA792 /* OperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1FC2200DE9200BFA792 /* OperationCoordinator.swift */; };
-		84C8C1FF2200E04900BFA792 /* SerialOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C1FE2200E04900BFA792 /* SerialOperationCoordinator.swift */; };
-		84C8C2012200E11A00BFA792 /* ConcurrentOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C2002200E11A00BFA792 /* ConcurrentOperationCoordinatorTests.swift */; };
-		84C8C2032200E6A900BFA792 /* SerialOperationCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C2022200E6A900BFA792 /* SerialOperationCoordinatorTests.swift */; };
 		84C8C26D220479D700BFA792 /* UICollectionViewFlowLayout+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C26B220479D400BFA792 /* UICollectionViewFlowLayout+Layouts.swift */; };
 		84C8C26E220479D700BFA792 /* UICollectionViewFlowLayout+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C26C220479D600BFA792 /* UICollectionViewFlowLayout+Insets.swift */; };
 		84C8C27222047A3100BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */; };
@@ -300,17 +311,7 @@
 		84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */; };
 		84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */; };
 		84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F22D5521479347005DEC41 /* StringDecoder.swift */; };
-		84F8D3C621F9F0EA00EC61F1 /* SerialBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C121F9F0E900EC61F1 /* SerialBatchOperation.swift */; };
-		84F8D3C721F9F0EA00EC61F1 /* CollectionOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */; };
-		84F8D3C821F9F0EA00EC61F1 /* ConcurrentBatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3C321F9F0EA00EC61F1 /* ConcurrentBatchOperation.swift */; };
-		84F8D3CE21F9F12000EC61F1 /* SerialItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CA21F9F12000EC61F1 /* SerialItemOperationTests.swift */; };
-		84F8D3CF21F9F12000EC61F1 /* ConcurrentItemOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CB21F9F12000EC61F1 /* ConcurrentItemOperationTests.swift */; };
-		84F8D3D021F9F12000EC61F1 /* SerialBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CC21F9F12000EC61F1 /* SerialBatchOperationTests.swift */; };
-		84F8D3D121F9F12000EC61F1 /* ConcurrentBatchOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3CD21F9F12000EC61F1 /* ConcurrentBatchOperationTests.swift */; };
-		84F8D3EB21FC574A00EC61F1 /* ItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */; };
 		84F8D3ED21FC8D8E00EC61F1 /* BatchOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */; };
-		84F8D3EF21FCA70300EC61F1 /* ConcurrentItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3EE21FCA70200EC61F1 /* ConcurrentItemOperation.swift */; };
-		84F8D3F121FD23E000EC61F1 /* SerialItemOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8D3F021FD23E000EC61F1 /* SerialItemOperation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -626,7 +627,24 @@
 		45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
 		45E517C420D24201005A8029 /* iExtra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = iExtra.podspec; sourceTree = "<group>"; };
 		840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClosestAnnotation.swift"; sourceTree = "<group>"; };
-		842386F321F927B50045F121 /* Int+IsEven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+IsEven.swift"; sourceTree = "<group>"; };
+		84346648224CCB6800C9AFA6 /* ConcurrentOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperationCoordinator.swift; sourceTree = "<group>"; };
+		84346649224CCB6800C9AFA6 /* SerialOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOperationCoordinator.swift; sourceTree = "<group>"; };
+		8434664A224CCB6800C9AFA6 /* OperationItemTypeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationItemTypeProvider.swift; sourceTree = "<group>"; };
+		8434664B224CCB6800C9AFA6 /* ConcurrentCollectionItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentCollectionItemOperation.swift; sourceTree = "<group>"; };
+		8434664C224CCB6800C9AFA6 /* OperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationCoordinator.swift; sourceTree = "<group>"; };
+		8434664D224CCB6800C9AFA6 /* Operation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		8434664F224CCB6800C9AFA6 /* ItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemOperation.swift; sourceTree = "<group>"; };
+		84346650224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialCollectionItemOperation.swift; sourceTree = "<group>"; };
+		84346651224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialCollectionBatchOperation.swift; sourceTree = "<group>"; };
+		84346652224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentCollectionBatchOperation.swift; sourceTree = "<group>"; };
+		84346653224CCB6900C9AFA6 /* CollectionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperation.swift; sourceTree = "<group>"; };
+		84346660224CCC0A00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperationCoordinatorTests.swift; sourceTree = "<group>"; };
+		84346662224CCC0A00C9AFA6 /* MockOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockOperationCoordinator.swift; sourceTree = "<group>"; };
+		84346663224CCC0B00C9AFA6 /* ConcurrentCollectionItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentCollectionItemOperationTests.swift; sourceTree = "<group>"; };
+		84346664224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOperationCoordinatorTests.swift; sourceTree = "<group>"; };
+		84346665224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialCollectionItemOperationTests.swift; sourceTree = "<group>"; };
+		84346666224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentCollectionBatchOperationTests.swift; sourceTree = "<group>"; };
+		84346667224CCC0B00C9AFA6 /* SerialCollectionBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialCollectionBatchOperationTests.swift; sourceTree = "<group>"; };
 		844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParallaxEffect.swift"; sourceTree = "<group>"; };
 		8488054C214083EA00C18688 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		8488054F214084CF00C18688 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
@@ -644,12 +662,6 @@
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
-		84C8C1F82200D9EE00BFA792 /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
-		84C8C1FA2200DDE100BFA792 /* ConcurrentOperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperationCoordinator.swift; sourceTree = "<group>"; };
-		84C8C1FC2200DE9200BFA792 /* OperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCoordinator.swift; sourceTree = "<group>"; };
-		84C8C1FE2200E04900BFA792 /* SerialOperationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialOperationCoordinator.swift; sourceTree = "<group>"; };
-		84C8C2002200E11A00BFA792 /* ConcurrentOperationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrentOperationCoordinatorTests.swift; sourceTree = "<group>"; };
-		84C8C2022200E6A900BFA792 /* SerialOperationCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialOperationCoordinatorTests.swift; sourceTree = "<group>"; };
 		84C8C26B220479D400BFA792 /* UICollectionViewFlowLayout+Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Layouts.swift"; sourceTree = "<group>"; };
 		84C8C26C220479D600BFA792 /* UICollectionViewFlowLayout+Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Insets.swift"; sourceTree = "<group>"; };
 		84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+InsetsTests.swift"; sourceTree = "<group>"; };
@@ -669,17 +681,7 @@
 		84F22D4F214791A2005DEC41 /* Base64StringCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Base64StringCoder.swift; sourceTree = "<group>"; };
 		84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64StringCoderTests.swift; sourceTree = "<group>"; };
 		84F22D5521479347005DEC41 /* StringDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringDecoder.swift; sourceTree = "<group>"; };
-		84F8D3C121F9F0E900EC61F1 /* SerialBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialBatchOperation.swift; sourceTree = "<group>"; };
-		84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionOperation.swift; sourceTree = "<group>"; };
-		84F8D3C321F9F0EA00EC61F1 /* ConcurrentBatchOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentBatchOperation.swift; sourceTree = "<group>"; };
-		84F8D3CA21F9F12000EC61F1 /* SerialItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialItemOperationTests.swift; sourceTree = "<group>"; };
-		84F8D3CB21F9F12000EC61F1 /* ConcurrentItemOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentItemOperationTests.swift; sourceTree = "<group>"; };
-		84F8D3CC21F9F12000EC61F1 /* SerialBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialBatchOperationTests.swift; sourceTree = "<group>"; };
-		84F8D3CD21F9F12000EC61F1 /* ConcurrentBatchOperationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentBatchOperationTests.swift; sourceTree = "<group>"; };
-		84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemOperation.swift; sourceTree = "<group>"; };
 		84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchOperation.swift; sourceTree = "<group>"; };
-		84F8D3EE21FCA70200EC61F1 /* ConcurrentItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentItemOperation.swift; sourceTree = "<group>"; };
-		84F8D3F021FD23E000EC61F1 /* SerialItemOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialItemOperation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -994,7 +996,6 @@
 			isa = PBXGroup;
 			children = (
 				452734151FD674F700418D93 /* Numeric+Format.swift */,
-				842386F321F927B50045F121 /* Int+IsEven.swift */,
 			);
 			path = Numerics;
 			sourceTree = "<group>";
@@ -1740,13 +1741,18 @@
 		842386E921F916230045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				84F745A9220CD302002B8A79 /* Coordinators */,
-				84F744DC22059E74002B8A79 /* Items */,
-				84F744DD22059EDA002B8A79 /* Serial */,
 				84F8D3EC21FC8D8E00EC61F1 /* BatchOperation.swift */,
-				84F8D3C221F9F0EA00EC61F1 /* CollectionOperation.swift */,
-				84F8D3EA21FC574900EC61F1 /* ItemOperation.swift */,
-				84C8C1F82200D9EE00BFA792 /* Operation.swift */,
+				84346653224CCB6900C9AFA6 /* CollectionOperation.swift */,
+				84346652224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift */,
+				8434664B224CCB6800C9AFA6 /* ConcurrentCollectionItemOperation.swift */,
+				84346648224CCB6800C9AFA6 /* ConcurrentOperationCoordinator.swift */,
+				8434664F224CCB6800C9AFA6 /* ItemOperation.swift */,
+				8434664D224CCB6800C9AFA6 /* Operation.swift */,
+				8434664C224CCB6800C9AFA6 /* OperationCoordinator.swift */,
+				8434664A224CCB6800C9AFA6 /* OperationItemTypeProvider.swift */,
+				84346651224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift */,
+				84346650224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift */,
+				84346649224CCB6800C9AFA6 /* SerialOperationCoordinator.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -1754,8 +1760,13 @@
 		842386EE21F916680045F121 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				84F744DF22059EEF002B8A79 /* Concurrent */,
-				84F744DE22059EE9002B8A79 /* Serial */,
+				84346661224CCC0A00C9AFA6 /* Mocks */,
+				84346666224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift */,
+				84346663224CCC0B00C9AFA6 /* ConcurrentCollectionItemOperationTests.swift */,
+				84346660224CCC0A00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift */,
+				84346667224CCC0B00C9AFA6 /* SerialCollectionBatchOperationTests.swift */,
+				84346665224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift */,
+				84346664224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -1775,6 +1786,14 @@
 				452733781FD673E200418D93 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84346661224CCC0A00C9AFA6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				84346662224CCC0A00C9AFA6 /* MockOperationCoordinator.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		8488054E214084B600C18688 /* Date */ = {
@@ -1886,54 +1905,6 @@
 				84F22D5321479224005DEC41 /* Base64StringCoderTests.swift */,
 			);
 			path = Encoding;
-			sourceTree = "<group>";
-		};
-		84F744DC22059E74002B8A79 /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				84F8D3EE21FCA70200EC61F1 /* ConcurrentItemOperation.swift */,
-				84F8D3F021FD23E000EC61F1 /* SerialItemOperation.swift */,
-			);
-			path = Items;
-			sourceTree = "<group>";
-		};
-		84F744DD22059EDA002B8A79 /* Serial */ = {
-			isa = PBXGroup;
-			children = (
-				84F8D3C321F9F0EA00EC61F1 /* ConcurrentBatchOperation.swift */,
-				84F8D3C121F9F0E900EC61F1 /* SerialBatchOperation.swift */,
-			);
-			path = Serial;
-			sourceTree = "<group>";
-		};
-		84F744DE22059EE9002B8A79 /* Serial */ = {
-			isa = PBXGroup;
-			children = (
-				84F8D3CC21F9F12000EC61F1 /* SerialBatchOperationTests.swift */,
-				84F8D3CA21F9F12000EC61F1 /* SerialItemOperationTests.swift */,
-				84C8C2022200E6A900BFA792 /* SerialOperationCoordinatorTests.swift */,
-			);
-			path = Serial;
-			sourceTree = "<group>";
-		};
-		84F744DF22059EEF002B8A79 /* Concurrent */ = {
-			isa = PBXGroup;
-			children = (
-				84F8D3CD21F9F12000EC61F1 /* ConcurrentBatchOperationTests.swift */,
-				84F8D3CB21F9F12000EC61F1 /* ConcurrentItemOperationTests.swift */,
-				84C8C2002200E11A00BFA792 /* ConcurrentOperationCoordinatorTests.swift */,
-			);
-			path = Concurrent;
-			sourceTree = "<group>";
-		};
-		84F745A9220CD302002B8A79 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				84C8C1FC2200DE9200BFA792 /* OperationCoordinator.swift */,
-				84C8C1FA2200DDE100BFA792 /* ConcurrentOperationCoordinator.swift */,
-				84C8C1FE2200E04900BFA792 /* SerialOperationCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2137,17 +2108,16 @@
 				452735A01FD674F900418D93 /* CLPlacemark+AddressDescription.swift in Sources */,
 				452735441FD674F900418D93 /* UIView+Frame.swift in Sources */,
 				45E04C2320C3D4A300A4FB2B /* UIView+TapAnimations.swift in Sources */,
-				842386F421F927B50045F121 /* Int+IsEven.swift in Sources */,
 				45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
 				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,
 				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
-				84F8D3C821F9F0EA00EC61F1 /* ConcurrentBatchOperation.swift in Sources */,
 				452735551FD674F900418D93 /* UIView+Visibility.swift in Sources */,
 				84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */,
 				452735771FD674F900418D93 /* PannableDirection.swift in Sources */,
+				8434665E224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift in Sources */,
 				4527352E1FD674F900418D93 /* UIImage+Shadow.swift in Sources */,
 				4527352C1FD674F900418D93 /* UIImage+Resized.swift in Sources */,
 				4527350E1FD674F900418D93 /* ThreadingOperator.swift in Sources */,
@@ -2160,12 +2130,11 @@
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
 				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
 				4527350C1FD674F900418D93 /* IoCContainer.swift in Sources */,
-				84F8D3F121FD23E000EC61F1 /* SerialItemOperation.swift in Sources */,
 				848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */,
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
-				84F8D3C721F9F0EA00EC61F1 /* CollectionOperation.swift in Sources */,
+				84346656224CCB6900C9AFA6 /* OperationItemTypeProvider.swift in Sources */,
 				452735801FD674F900418D93 /* AppFileManager.swift in Sources */,
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
@@ -2187,7 +2156,6 @@
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
 				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
-				84F8D3C621F9F0EA00EC61F1 /* SerialBatchOperation.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
@@ -2201,6 +2169,7 @@
 				452735991FD674F900418D93 /* KeychainItemAccessibility.swift in Sources */,
 				452735431FD674F900418D93 /* UIView+Fade.swift in Sources */,
 				4527353A1FD674F900418D93 /* UITableView+DefaultCell.swift in Sources */,
+				8434665C224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift in Sources */,
 				4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */,
 				452735111FD674F900418D93 /* LinearTravellingMapCamera.swift in Sources */,
 				84C8C2922204B3B000BFA792 /* OverlayBadgeView.swift in Sources */,
@@ -2213,7 +2182,6 @@
 				452735511FD674F900418D93 /* UIView+Shake.swift in Sources */,
 				4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */,
 				452735641FD674F900418D93 /* NoCancellingSearchBar.swift in Sources */,
-				84C8C1FD2200DE9200BFA792 /* OperationCoordinator.swift in Sources */,
 				45883BAF20CF1853001C0E2F /* CornerRadius.swift in Sources */,
 				452735491FD674F900418D93 /* UIView+ReuseIdentifier.swift in Sources */,
 				4527357F1FD674F900418D93 /* AdaptiveFileSizePresenter.swift in Sources */,
@@ -2256,16 +2224,15 @@
 				452735341FD674F900418D93 /* UINavigationBar+TitleAlpha.swift in Sources */,
 				84C8C2932204B3B000BFA792 /* OverlayCheckmark.swift in Sources */,
 				84F22D51214791A2005DEC41 /* Base64StringCoder.swift in Sources */,
+				84346658224CCB6900C9AFA6 /* OperationCoordinator.swift in Sources */,
 				452735731FD674F900418D93 /* LinearFloatingSubmenuPresenter.swift in Sources */,
 				452735A11FD674F900418D93 /* WorldCoordinate.swift in Sources */,
 				452735751FD674F900418D93 /* AnimatedLabel.swift in Sources */,
 				458EEDCA2118741600774A79 /* UICollectionView+TableViewLayout.swift in Sources */,
 				452735701FD674F900418D93 /* SlowPulsingFloatingMenuPresenter.swift in Sources */,
 				84E82621217E8C0F00D1B73F /* StandardCsvParser.swift in Sources */,
-				84F8D3EB21FC574A00EC61F1 /* ItemOperation.swift in Sources */,
 				452735791FD674F900418D93 /* PannableView.swift in Sources */,
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
-				84C8C1F92200D9EE00BFA792 /* Operation.swift in Sources */,
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,
 				452735841FD674F900418D93 /* FileFinder.swift in Sources */,
 				4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */,
@@ -2287,11 +2254,15 @@
 				4527351D1FD674F900418D93 /* UIApplication+Review.swift in Sources */,
 				4527354F1FD674F900418D93 /* UIView+Snapshot.swift in Sources */,
 				840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */,
+				8434665F224CCB6900C9AFA6 /* CollectionOperation.swift in Sources */,
 				452735361FD674F900418D93 /* UIScrollView+Scroll.swift in Sources */,
+				8434665B224CCB6900C9AFA6 /* ItemOperation.swift in Sources */,
 				4527352D1FD674F900418D93 /* UIImage+Rotated.swift in Sources */,
 				8488054D214083EA00C18688 /* DateFormatters.swift in Sources */,
 				458EEC13210F354600774A79 /* UIDevice+Properties.swift in Sources */,
 				452734F01FD674F900418D93 /* DateSerializer.swift in Sources */,
+				8434665D224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift in Sources */,
+				84346659224CCB6900C9AFA6 /* Operation.swift in Sources */,
 				452734F71FD674F900418D93 /* Array+RemoveObject.swift in Sources */,
 				452735041FD674F900418D93 /* String+UrlEncode.swift in Sources */,
 				452734EF1FD674F900418D93 /* Date+Compare.swift in Sources */,
@@ -2305,11 +2276,12 @@
 				452735311FD674F900418D93 /* UIImageView+FadeInImage.swift in Sources */,
 				4527354C1FD674F900418D93 /* UIView+Scale.swift in Sources */,
 				4527354B1FD674F900418D93 /* UIView+Round.swift in Sources */,
+				84346654224CCB6900C9AFA6 /* ConcurrentOperationCoordinator.swift in Sources */,
 				452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */,
+				84346655224CCB6900C9AFA6 /* SerialOperationCoordinator.swift in Sources */,
 				452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */,
+				84346657224CCB6900C9AFA6 /* ConcurrentCollectionItemOperation.swift in Sources */,
 				4567E4E820A32E94008B7FE5 /* DipIoCContainer.swift in Sources */,
-				84C8C1FB2200DDE100BFA792 /* ConcurrentOperationCoordinator.swift in Sources */,
-				84C8C1FF2200E04900BFA792 /* SerialOperationCoordinator.swift in Sources */,
 				848DB3E7217A865000CAFAB9 /* ParallaxEffect.swift in Sources */,
 				452735011FD674F900418D93 /* String+Base64.swift in Sources */,
 				452735881FD674F900418D93 /* MainBundleFileFinder.swift in Sources */,
@@ -2330,7 +2302,6 @@
 				84C8C27522047AB000BFA792 /* GridLayout.swift in Sources */,
 				4527352B1FD674F900418D93 /* UIImage+Padded.swift in Sources */,
 				452735901FD674F900418D93 /* LanguageService.swift in Sources */,
-				84F8D3EF21FCA70300EC61F1 /* ConcurrentItemOperation.swift in Sources */,
 				452735A31FD674F900418D93 /* UuidGenerator.swift in Sources */,
 				84C8C26E220479D700BFA792 /* UICollectionViewFlowLayout+Insets.swift in Sources */,
 				4527353F1FD674F900418D93 /* UIView+Distance.swift in Sources */,
@@ -2347,28 +2318,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8434666A224CCC0B00C9AFA6 /* ConcurrentCollectionItemOperationTests.swift in Sources */,
 				452733E21FD674C500418D93 /* String+UrlEncodeTests.swift in Sources */,
 				452733FB1FD674C500418D93 /* KeychainServiceTestClass.swift in Sources */,
-				84F8D3D121F9F12000EC61F1 /* ConcurrentBatchOperationTests.swift in Sources */,
 				452733F41FD674C500418D93 /* UIView+RoundTests.swift in Sources */,
 				452733E81FD674C500418D93 /* UISlider+ButtonPositionTests.swift in Sources */,
 				452733D81FD674C500418D93 /* Array+RemoveObjectTests.swift in Sources */,
 				452733E31FD674C500418D93 /* Url_QueryParametersTests.swift in Sources */,
 				84C8C27222047A3100BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift in Sources */,
 				452733DE1FD674C500418D93 /* Sequence+BatchTests.swift in Sources */,
-				84F8D3CE21F9F12000EC61F1 /* SerialItemOperationTests.swift in Sources */,
-				84C8C2012200E11A00BFA792 /* ConcurrentOperationCoordinatorTests.swift in Sources */,
 				452733DF1FD674C500418D93 /* Set+GroupTests.swift in Sources */,
 				848DB3E1217A2CBE00CAFAB9 /* WorldCoordinateTests.swift in Sources */,
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
 				452733E91FD674C500418D93 /* UISlider+ButtonSizeTests.swift in Sources */,
+				8434666D224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift in Sources */,
 				452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */,
 				452733E51FD674C500418D93 /* UICollectionView_DefaultNibTests.swift in Sources */,
 				452733ED1FD674C500418D93 /* UISlider+HitTests.swift in Sources */,
+				8434666E224CCC0B00C9AFA6 /* SerialCollectionBatchOperationTests.swift in Sources */,
+				8434666B224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift in Sources */,
 				452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				452733D41FD674C500418D93 /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
 				452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */,
+				84346668224CCC0B00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift in Sources */,
 				848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */,
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				452733F01FD674C500418D93 /* UIView+EmptyTests.swift in Sources */,
@@ -2380,7 +2353,6 @@
 				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
-				84F8D3D021F9F12000EC61F1 /* SerialBatchOperationTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,
@@ -2388,7 +2360,6 @@
 				452733F21FD674C500418D93 /* UIView+NibTests.swift in Sources */,
 				452733E61FD674C500418D93 /* UIColor+HexTests.swift in Sources */,
 				452733FC1FD674C500418D93 /* IoCTests.swift in Sources */,
-				84C8C2032200E6A900BFA792 /* SerialOperationCoordinatorTests.swift in Sources */,
 				452733EE1FD674C500418D93 /* UITableView_DefaultNibTests.swift in Sources */,
 				452733E71FD674C500418D93 /* UINavigationBar+TransparentTests.swift in Sources */,
 				452733E11FD674C500418D93 /* String+ContainsTests.swift in Sources */,
@@ -2397,10 +2368,11 @@
 				452733F11FD674C500418D93 /* UIView+HitTests.swift in Sources */,
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84E82624217E8C3D00D1B73F /* StandardCsvParserTests.swift in Sources */,
+				84346669224CCC0B00C9AFA6 /* MockOperationCoordinator.swift in Sources */,
+				8434666C224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift in Sources */,
 				84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */,
 				452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */,
 				84F22D5421479224005DEC41 /* Base64StringCoderTests.swift in Sources */,
-				84F8D3CF21F9F12000EC61F1 /* ConcurrentItemOperationTests.swift in Sources */,
 				84880558214089AA00C18688 /* DateEncodersTests.swift in Sources */,
 				848805542140863600C18688 /* DateDecodersTests.swift in Sources */,
 				452733EB1FD674C500418D93 /* UISlider+ValueAtPointTests.swift in Sources */,

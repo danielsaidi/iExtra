@@ -1,8 +1,8 @@
 //
-//  ConcurrentItemOperationTests.swift
-//  iExtraTests
+//  ConcurrentCollectionItemOperationTests.swift
+//  iExtra
 //
-//  Created by Daniel Saidi on 2019-01-23.
+//  Created by Daniel Saidi on 2019-01-26.
 //  Copyright © 2019 Daniel Saidi. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import iExtra
 
-class ConcurrentItemOperationTests: QuickSpec {
+class ConcurrentCollectionItemOperationTests: QuickSpec {
     
     override func spec() {
         
@@ -24,24 +24,24 @@ class ConcurrentItemOperationTests: QuickSpec {
             
             it("completes once for empty sequence") {
                 var counter = 0
-                obj.perform(on: []) { _ in counter += 1 }
+                obj.perform(onCollection: []) { _ in counter += 1 }
                 expect(counter).to(equal(1))
             }
             
             it("completes once for non-empty sequence") {
                 var counter = 0
-                obj.perform(on: [1, 2, 3, 4, 5]) { _ in counter += 1 }
+                obj.perform(onCollection: [1, 2, 3, 4, 5]) { _ in counter += 1 }
                 expect(counter).to(equal(1))
             }
             
             it("performs operation on each item") {
-                obj.perform(on: [1, 2, 3, 4, 5]) { _ in }
+                obj.perform(onCollection: [1, 2, 3, 4, 5]) { _ in }
                 expect(obj.result).to(equal([2, 4, 6, 8, 10]))
             }
             
             it("performs operation in parallell and is unaffected by halt") {
                 obj.performCompletion = false
-                obj.perform(on: [1, 2, 3, 4, 5]) { _ in }
+                obj.perform(onCollection: [1, 2, 3, 4, 5]) { _ in }
                 expect(obj.result).to(equal([2, 4, 6, 8, 10]))
             }
             
@@ -49,20 +49,18 @@ class ConcurrentItemOperationTests: QuickSpec {
                 let error = NSError(domain: "foo", code: 1, userInfo: nil )
                 obj.error = error
                 var errors = [Error?]()
-                obj.perform(on: [1, 2, 3, 4, 5]) { res in errors = res }
-                expect(errors[0]).to(beNil())
+                obj.perform(onCollection: [1, 2, 3, 4, 5]) { res in errors = res }
+                expect(errors.count).to(equal(2))
+                expect(errors[0]).to(be(error))
                 expect(errors[1]).to(be(error))
-                expect(errors[2]).to(beNil())
-                expect(errors[3]).to(be(error))
-                expect(errors[4]).to(beNil())
             }
         }
     }
 }
 
-private class TestClass: ConcurrentItemOperation {
+private class TestClass: ConcurrentCollectionItemOperation {
     
-    typealias CollectionType = Int
+    typealias OperationItemType = Int
     
     var error: Error?
     var performCompletion = true

@@ -2,16 +2,16 @@
 //  Operation.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2019-01-29.
+//  Created by Daniel Saidi on 2019-01-26.
 //  Copyright © 2019 Daniel Saidi. All rights reserved.
 //
 
 /*
  
- This protocol can be implemented by classes that perform an
- operation in any kind of way. It's the most basic operation
- and basically just an abstract description that can be used
- when coordinating operations.
+ This protocol can be implemented by any operation that does
+ not require any parameters. It's basically just an abstract
+ description of "any" kind of anonymous operation, which can
+ be composed in various ways.
  
  */
 
@@ -19,7 +19,7 @@ import Foundation
 
 public protocol Operation {
     
-    typealias Completion = (Error?) -> ()
+    typealias OperationCompletion = (Error?) -> ()
     
-    func perform(completion: @escaping Completion)
+    func perform(completion: @escaping OperationCompletion)
 }

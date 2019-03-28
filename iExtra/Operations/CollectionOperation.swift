@@ -2,27 +2,25 @@
 //  CollectionOperation.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2019-01-23.
+//  Created by Daniel Saidi on 2019-01-26.
 //  Copyright © 2019 Daniel Saidi. All rights reserved.
 //
 
 /*
  
- This protocol can be implemented by classes that perform an
- operation on a typed collection.
+ A collection operation can be performed on item collections
+ of a certain type.
  
- When implementing this protocol, you just have to implement
- `perform(on:completion:)` and define `CollectionType`.
+ When implementing this protocol, specify `OperationItemType`
+ by creating a typealias in your implementation.
  
  */
 
 import Foundation
 
-public protocol CollectionOperation: AnyObject {
+public protocol CollectionOperation: OperationItemTypeProvider {
     
-    associatedtype CollectionType
-    typealias T = CollectionType
-    typealias Completion = ([Error?]) -> ()
+    typealias CollectionCompletion = ([Error]) -> ()
     
-    func perform(on collection: [T], completion: @escaping Completion)
+    func perform(onCollection collection: [OperationItemType], completion: @escaping CollectionCompletion)
 }
