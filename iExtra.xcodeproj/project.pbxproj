@@ -20,7 +20,6 @@
 		452733D81FD674C500418D93 /* Array+RemoveObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A11FD674C400418D93 /* Array+RemoveObjectTests.swift */; };
 		452733DB1FD674C500418D93 /* NSObject+ClassNameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */; };
 		452733DC1FD674C500418D93 /* Numeric+FormatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A51FD674C400418D93 /* Numeric+FormatTests.swift */; };
-		452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A61FD674C400418D93 /* Numeric+RandomTests.swift */; };
 		452733DE1FD674C500418D93 /* Sequence+BatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A71FD674C400418D93 /* Sequence+BatchTests.swift */; };
 		452733DF1FD674C500418D93 /* Set+GroupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733A81FD674C400418D93 /* Set+GroupTests.swift */; };
 		452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733AA1FD674C400418D93 /* String+Base64Tests.swift */; };
@@ -297,6 +296,8 @@
 		843466A8224CCD8700C9AFA6 /* AnyMultipleIdObjectStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346698224CCD8700C9AFA6 /* AnyMultipleIdObjectStoreTests.swift */; };
 		843466A9224CCD8700C9AFA6 /* AnyReferenceObjectStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346699224CCD8700C9AFA6 /* AnyReferenceObjectStoreTests.swift */; };
 		844B8AA4219DC107005AB15D /* UIView+ParallaxEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */; };
+		845D6BD9224D78B50025B6C4 /* Comparable+Limit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D6BD8224D78B50025B6C4 /* Comparable+Limit.swift */; };
+		845D6BDB224D78D20025B6C4 /* Comparable+LimitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845D6BDA224D78D20025B6C4 /* Comparable+LimitTests.swift */; };
 		8488054D214083EA00C18688 /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054C214083EA00C18688 /* DateFormatters.swift */; };
 		84880550214084D000C18688 /* DateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8488054F214084CF00C18688 /* DateFormattersTests.swift */; };
 		84880552214085B000C18688 /* DateDecoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84880551214085B000C18688 /* DateDecoders.swift */; };
@@ -403,7 +404,6 @@
 		452733A11FD674C400418D93 /* Array+RemoveObjectTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+RemoveObjectTests.swift"; sourceTree = "<group>"; };
 		452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassNameTests.swift"; sourceTree = "<group>"; };
 		452733A51FD674C400418D93 /* Numeric+FormatTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+FormatTests.swift"; sourceTree = "<group>"; };
-		452733A61FD674C400418D93 /* Numeric+RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Numeric+RandomTests.swift"; sourceTree = "<group>"; };
 		452733A71FD674C400418D93 /* Sequence+BatchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Sequence+BatchTests.swift"; sourceTree = "<group>"; };
 		452733A81FD674C400418D93 /* Set+GroupTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Set+GroupTests.swift"; sourceTree = "<group>"; };
 		452733AA1FD674C400418D93 /* String+Base64Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Base64Tests.swift"; sourceTree = "<group>"; };
@@ -688,6 +688,8 @@
 		84346698224CCD8700C9AFA6 /* AnyMultipleIdObjectStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyMultipleIdObjectStoreTests.swift; sourceTree = "<group>"; };
 		84346699224CCD8700C9AFA6 /* AnyReferenceObjectStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyReferenceObjectStoreTests.swift; sourceTree = "<group>"; };
 		844B8AA3219DC107005AB15D /* UIView+ParallaxEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ParallaxEffect.swift"; sourceTree = "<group>"; };
+		845D6BD8224D78B50025B6C4 /* Comparable+Limit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+Limit.swift"; sourceTree = "<group>"; };
+		845D6BDA224D78D20025B6C4 /* Comparable+LimitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Comparable+LimitTests.swift"; sourceTree = "<group>"; };
 		8488054C214083EA00C18688 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		8488054F214084CF00C18688 /* DateFormattersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormattersTests.swift; sourceTree = "<group>"; };
 		84880551214085B000C18688 /* DateDecoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateDecoders.swift; sourceTree = "<group>"; };
@@ -860,9 +862,10 @@
 		4527339C1FD674C400418D93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				845D6BDA224D78D20025B6C4 /* Comparable+LimitTests.swift */,
 				840176DD2122AEA800FE86B7 /* Collections */,
 				452733A41FD674C400418D93 /* NSObject+ClassNameTests.swift */,
-				840176DF2122AEE300FE86B7 /* Numerics */,
+				452733A51FD674C400418D93 /* Numeric+FormatTests.swift */,
 				452733A91FD674C400418D93 /* String */,
 				45D17F2321188CCF00A02318 /* Url */,
 			);
@@ -1017,10 +1020,11 @@
 		452734061FD674F700418D93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				845D6BD8224D78B50025B6C4 /* Comparable+Limit.swift */,
 				840176DC2122AE8500FE86B7 /* Collections */,
 				4527340E1FD674F700418D93 /* CGRect */,
 				452734131FD674F700418D93 /* NSObject+ClassName.swift */,
-				452734141FD674F700418D93 /* Numerics */,
+				452734151FD674F700418D93 /* Numeric+Format.swift */,
 				452734191FD674F700418D93 /* String */,
 				45D17F2221188CB700A02318 /* Url */,
 			);
@@ -1034,14 +1038,6 @@
 				452734101FD674F700418D93 /* CGRect+Rects.swift */,
 			);
 			path = CGRect;
-			sourceTree = "<group>";
-		};
-		452734141FD674F700418D93 /* Numerics */ = {
-			isa = PBXGroup;
-			children = (
-				452734151FD674F700418D93 /* Numeric+Format.swift */,
-			);
-			path = Numerics;
 			sourceTree = "<group>";
 		};
 		452734191FD674F700418D93 /* String */ = {
@@ -1759,15 +1755,6 @@
 			path = Collections;
 			sourceTree = "<group>";
 		};
-		840176DF2122AEE300FE86B7 /* Numerics */ = {
-			isa = PBXGroup;
-			children = (
-				452733A51FD674C400418D93 /* Numeric+FormatTests.swift */,
-				452733A61FD674C400418D93 /* Numeric+RandomTests.swift */,
-			);
-			path = Numerics;
-			sourceTree = "<group>";
-		};
 		840176E02122AFAA00FE86B7 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -2261,6 +2248,7 @@
 				452735031FD674F900418D93 /* String+Replace.swift in Sources */,
 				452734F51FD674F900418D93 /* Array+Group.swift in Sources */,
 				84F22D5621479347005DEC41 /* StringDecoder.swift in Sources */,
+				845D6BD9224D78B50025B6C4 /* Comparable+Limit.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
 				4527358C1FD674F900418D93 /* BiometricsAuthorizationService.swift in Sources */,
 				452735911FD674F900418D93 /* Translator.swift in Sources */,
@@ -2461,6 +2449,7 @@
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
 				452733F01FD674C500418D93 /* UIView+EmptyTests.swift in Sources */,
 				843466A1224CCD8700C9AFA6 /* MockObjectStore.swift in Sources */,
+				845D6BDB224D78D20025B6C4 /* Comparable+LimitTests.swift in Sources */,
 				452733DB1FD674C500418D93 /* NSObject+ClassNameTests.swift in Sources */,
 				84C8C27322047A3100BFA792 /* UICollectionViewFlowLayout+LayoutsTests.swift in Sources */,
 				45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */,
@@ -2469,7 +2458,6 @@
 				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				8434669C224CCD8700C9AFA6 /* MultipleIdObjectStoreTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
-				452733DD1FD674C500418D93 /* Numeric+RandomTests.swift in Sources */,
 				452733FD1FD674C500418D93 /* UuidGeneratorTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,

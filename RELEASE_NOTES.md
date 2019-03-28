@@ -4,6 +4,13 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 3.1.1
+
+This version adds some new extensions:
+
+ * `Comparable+Limit` - Limit any comparable between a min and a max value.
+
+
 ## 3.1.0
 
 This version refactors the operation setup and adds a new Storage namespace that
