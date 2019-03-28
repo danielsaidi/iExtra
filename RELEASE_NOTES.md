@@ -4,6 +4,11 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 version bumps, but not on revision bumps.
 
 
+## 3.1.0
+
+This version refactors the operation setup and adds a new Storage namespace that
+contains various storage descriptions and type erasing classes.
+
 
 ## 3.0.0
 
