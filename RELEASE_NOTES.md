@@ -10,6 +10,9 @@ This version adds some new extensions:
 
  * `Comparable+Limit` - Limit any comparable between a min and a max value.
 
+It also improves the `HapticFeedback` enum to use static generator instances and
+adds a `prepare` function to it as well.
+
 
 ## 3.1.0
 

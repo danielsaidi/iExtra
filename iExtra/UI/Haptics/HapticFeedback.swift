@@ -2,8 +2,8 @@
 //  HapticFeedback.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2017-12-05.
-//  Copyright © 2017 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2019-04-26.
+//  Copyright © 2019 Daniel Saidi. All rights reserved.
 //
 
 import UIKit
@@ -34,18 +34,34 @@ public enum HapticFeedback: String {
 
 public extension HapticFeedback {
     
-    func trigger() {
-        switch self {
-        case .error: trigger(feedbackType: .error)
-        case .success: trigger(feedbackType: .success)
-        case .warning: trigger(feedbackType: .warning)
-        
-        case .lightImpact: trigger(impactStyle: .light)
-        case .mediumImpact: trigger(impactStyle: .medium)
-        case .heavyImpact: trigger(impactStyle: .heavy)
-            
-        case .selectionChanged: triggerSelectionChanged()
+    static func prepare(_ feedback: HapticFeedback) {
+        switch feedback {
+        case .error, .success, .warning: notificationGenerator.prepare()
+        case .lightImpact: lightImpactGenerator.prepare()
+        case .mediumImpact: mediumImpactGenerator.prepare()
+        case .heavyImpact: heavyImpactGenerator.prepare()
+        case .selectionChanged: selectionGenerator.prepare()
         }
+    }
+    
+    func prepare() {
+        HapticFeedback.prepare(self)
+    }
+    
+    static func trigger(_ feedback: HapticFeedback) {
+        switch feedback {
+        case .error: triggerNotification(.error)
+        case .success: triggerNotification(.success)
+        case .warning: triggerNotification(.warning)
+        case .lightImpact: lightImpactGenerator.impactOccurred()
+        case .mediumImpact: mediumImpactGenerator.impactOccurred()
+        case .heavyImpact: heavyImpactGenerator.impactOccurred()
+        case .selectionChanged: selectionGenerator.selectionChanged()
+        }
+    }
+    
+    func trigger() {
+        HapticFeedback.trigger(self)
     }
 }
 
@@ -54,24 +70,19 @@ public extension HapticFeedback {
 
 private extension HapticFeedback {
     
-    func trigger(feedbackType: UINotificationFeedbackGenerator.FeedbackType) {
-        if #available(iOS 10.0, *) {
-            let generator = UINotificationFeedbackGenerator()
-            generator.notificationOccurred(feedbackType)
-        }
+    static func triggerNotification(_ notification: UINotificationFeedbackGenerator.FeedbackType) {
+        notificationGenerator.notificationOccurred(notification)
     }
+}
+
+
+// MARK: - Private Generators
+
+private extension HapticFeedback {
     
-    func trigger(impactStyle: UIImpactFeedbackGenerator.FeedbackStyle) {
-        if #available(iOS 10.0, *) {
-            let generator = UIImpactFeedbackGenerator(style: impactStyle)
-            generator.impactOccurred()
-        }
-    }
-    
-    func triggerSelectionChanged() {
-        if #available(iOS 10.0, *) {
-            let generator = UISelectionFeedbackGenerator()
-            generator.selectionChanged()
-        }
-    }
+    private static var notificationGenerator = UINotificationFeedbackGenerator()
+    private static var lightImpactGenerator = UIImpactFeedbackGenerator(style: .light)
+    private static var mediumImpactGenerator = UIImpactFeedbackGenerator(style: .medium)
+    private static var heavyImpactGenerator = UIImpactFeedbackGenerator(style: .heavy)
+    private static var selectionGenerator = UISelectionFeedbackGenerator()
 }
