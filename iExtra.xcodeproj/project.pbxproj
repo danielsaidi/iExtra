@@ -219,8 +219,6 @@
 		452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452AB7AF20CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift */; };
 		452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452AB7B120CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift */; };
 		4530CC0B2079E87300481162 /* UIImage+Tinted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4530CC0A2079E87200481162 /* UIImage+Tinted.swift */; };
-		4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */; };
-		4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */; };
 		4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D720A328FC008B7FE5 /* Theme.swift */; };
 		4567E4E020A328FC008B7FE5 /* ThemedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4D820A328FC008B7FE5 /* ThemedButton.swift */; };
 		4567E4E620A32B23008B7FE5 /* UIApplication+RefreshApperance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567E4E520A32B22008B7FE5 /* UIApplication+RefreshApperance.swift */; };
@@ -314,6 +312,14 @@
 		84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */; };
 		84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */; };
 		84BA20F4213567980040A20B /* MKAnnotation+DefaultViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */; };
+		84BBD01A229D2B0A009ED851 /* UIView+LongPressActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD018229D2B0A009ED851 /* UIView+LongPressActionTests.swift */; };
+		84BBD01B229D2B0A009ED851 /* UIView+TapActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD019229D2B0A009ED851 /* UIView+TapActionTests.swift */; };
+		84BBD023229D496E009ED851 /* MockNRoll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BBD022229D496E009ED851 /* MockNRoll.framework */; };
+		84BBD024229D4976009ED851 /* MockNRoll.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 84BBD022229D496E009ED851 /* MockNRoll.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		84BBD027229D49AD009ED851 /* UIImage+PasteboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD026229D49AD009ED851 /* UIImage+PasteboardTests.swift */; };
+		84BBD02A229D49CD009ED851 /* MockPasteboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD029229D49CD009ED851 /* MockPasteboard.swift */; };
+		84BBD02D229D4A01009ED851 /* UIView+TapAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD02B229D4A01009ED851 /* UIView+TapAction.swift */; };
+		84BBD02E229D4A01009ED851 /* UIView+LongPressAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BBD02C229D4A01009ED851 /* UIView+LongPressAction.swift */; };
 		84C8C26D220479D700BFA792 /* UICollectionViewFlowLayout+Layouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C26B220479D400BFA792 /* UICollectionViewFlowLayout+Layouts.swift */; };
 		84C8C26E220479D700BFA792 /* UICollectionViewFlowLayout+Insets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C26C220479D600BFA792 /* UICollectionViewFlowLayout+Insets.swift */; };
 		84C8C27222047A3100BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */; };
@@ -378,6 +384,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				84BBD024229D4976009ED851 /* MockNRoll.framework in CopyFiles */,
 				452735AF1FD6783500418D93 /* Nimble.framework in CopyFiles */,
 				452735B01FD6783500418D93 /* Quick.framework in CopyFiles */,
 			);
@@ -601,11 +608,8 @@
 		452AB7AF20CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+CapitalizedFirst.swift"; sourceTree = "<group>"; };
 		452AB7B120CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StringProtocol+CapitalizedFirstTests.swift"; sourceTree = "<group>"; };
 		4530CC0A2079E87200481162 /* UIImage+Tinted.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Tinted.swift"; sourceTree = "<group>"; };
-		4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TapGestureAction.swift"; sourceTree = "<group>"; };
-		4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+LongPressGestureAction.swift"; sourceTree = "<group>"; };
 		4567E4CA20A32762008B7FE5 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		4567E4CB20A32762008B7FE5 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		4567E4CC20A32762008B7FE5 /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		4567E4CD20A32763008B7FE5 /* Cartfile.private */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile.private; sourceTree = "<group>"; };
 		4567E4CE20A32763008B7FE5 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4567E4CF20A32763008B7FE5 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
@@ -706,6 +710,13 @@
 		84914CBA212233B6004C8C2C /* UINavigationController+Completions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Completions.swift"; sourceTree = "<group>"; };
 		84BA20EF213567010040A20B /* MKAnnotation+DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultView.swift"; sourceTree = "<group>"; };
 		84BA20F3213567980040A20B /* MKAnnotation+DefaultViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKAnnotation+DefaultViewTests.swift"; sourceTree = "<group>"; };
+		84BBD018229D2B0A009ED851 /* UIView+LongPressActionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LongPressActionTests.swift"; sourceTree = "<group>"; };
+		84BBD019229D2B0A009ED851 /* UIView+TapActionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TapActionTests.swift"; sourceTree = "<group>"; };
+		84BBD022229D496E009ED851 /* MockNRoll.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MockNRoll.framework; path = Carthage/Build/iOS/MockNRoll.framework; sourceTree = "<group>"; };
+		84BBD026229D49AD009ED851 /* UIImage+PasteboardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+PasteboardTests.swift"; sourceTree = "<group>"; };
+		84BBD029229D49CD009ED851 /* MockPasteboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPasteboard.swift; sourceTree = "<group>"; };
+		84BBD02B229D4A01009ED851 /* UIView+TapAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+TapAction.swift"; sourceTree = "<group>"; };
+		84BBD02C229D4A01009ED851 /* UIView+LongPressAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+LongPressAction.swift"; sourceTree = "<group>"; };
 		84C8C26B220479D400BFA792 /* UICollectionViewFlowLayout+Layouts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Layouts.swift"; sourceTree = "<group>"; };
 		84C8C26C220479D600BFA792 /* UICollectionViewFlowLayout+Insets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+Insets.swift"; sourceTree = "<group>"; };
 		84C8C27022047A3000BFA792 /* UICollectionViewFlowLayout+InsetsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewFlowLayout+InsetsTests.swift"; sourceTree = "<group>"; };
@@ -740,6 +751,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84BBD023229D496E009ED851 /* MockNRoll.framework in Frameworks */,
 				452733721FD673E200418D93 /* iExtra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -888,6 +900,7 @@
 			children = (
 				452733AF1FD674C400418D93 /* Extensions */,
 				84C8C26F22047A2400BFA792 /* Layout */,
+				84BBD028229D49C3009ED851 /* Mocks */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -895,6 +908,7 @@
 		452733AF1FD674C400418D93 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				84BBD025229D499E009ED851 /* UIImage */,
 				452733B01FD674C400418D93 /* UIButton */,
 				452733B21FD674C400418D93 /* UICollectionView */,
 				452733B41FD674C400418D93 /* UIColor+HexTests.swift */,
@@ -951,9 +965,11 @@
 				45E517B220D1493B005A8029 /* UIView+AsyncTagTests.swift */,
 				452733C11FD674C400418D93 /* UIView+EmptyTests.swift */,
 				452733C21FD674C400418D93 /* UIView+HitTests.swift */,
+				84BBD018229D2B0A009ED851 /* UIView+LongPressActionTests.swift */,
 				452733C31FD674C400418D93 /* UIView+NibTests.swift */,
 				452733C41FD674C400418D93 /* UIView+ReuseIdentifierTests.swift */,
 				452733C51FD674C400418D93 /* UIView+RoundTests.swift */,
+				84BBD019229D2B0A009ED851 /* UIView+TapActionTests.swift */,
 				452733C61FD674C400418D93 /* UIView+VisibilityTests.swift */,
 			);
 			path = UIView;
@@ -1120,7 +1136,6 @@
 				84C8C28A2204B3A100BFA792 /* Overlays */,
 				45883BA820CF1853001C0E2F /* CornerRadius */,
 				4527343E1FD674F800418D93 /* Extensions */,
-				4535AE2F20205A28006E5408 /* Gestures */,
 				452735B51FD67EC100418D93 /* Haptics */,
 				84C8C26A220479C100BFA792 /* Layout */,
 				4527348F1FD674F800418D93 /* Modals */,
@@ -1281,7 +1296,6 @@
 		4527346C1FD674F800418D93 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				45E04C2220C3D4A300A4FB2B /* UIView+TapAnimations.swift */,
 				45E517B020D14901005A8029 /* UIView+AsyncTag.swift */,
 				4527346D1FD674F800418D93 /* UIView+Bounce.swift */,
 				4527346E1FD674F800418D93 /* UIView+Copy.swift */,
@@ -1291,17 +1305,20 @@
 				452734731FD674F800418D93 /* UIView+Fade.swift */,
 				452734741FD674F800418D93 /* UIView+Frame.swift */,
 				452734761FD674F800418D93 /* UIView+HitTest.swift */,
+				84BBD02C229D4A01009ED851 /* UIView+LongPressAction.swift */,
 				452734771FD674F800418D93 /* UIView+Move.swift */,
 				452734781FD674F800418D93 /* UIView+Nib.swift */,
 				452734791FD674F800418D93 /* UIView+ReuseIdentifier.swift */,
 				4527347A1FD674F800418D93 /* UIView+Rotate.swift */,
 				4527347B1FD674F800418D93 /* UIView+Round.swift */,
 				4527347C1FD674F800418D93 /* UIView+Scale.swift */,
-				4527347F1FD674F800418D93 /* UIView+Snapshot.swift */,
 				452734811FD674F800418D93 /* UIView+Shake.swift */,
 				452734821FD674F800418D93 /* UIView+SizeToFit.swift */,
+				4527347F1FD674F800418D93 /* UIView+Snapshot.swift */,
 				452734831FD674F800418D93 /* UIView+Subviews.swift */,
 				452734841FD674F800418D93 /* UIView+SubviewsOfType.swift */,
+				84BBD02B229D4A01009ED851 /* UIView+TapAction.swift */,
+				45E04C2220C3D4A300A4FB2B /* UIView+TapAnimations.swift */,
 				452734851FD674F800418D93 /* UIView+Visibility.swift */,
 				452734861FD674F800418D93 /* UIView+Wobble.swift */,
 			);
@@ -1546,6 +1563,7 @@
 		452735A91FD6782000418D93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84BBD022229D496E009ED851 /* MockNRoll.framework */,
 				452735AA1FD6782000418D93 /* Nimble.framework */,
 				452735AB1FD6782100418D93 /* Quick.framework */,
 			);
@@ -1569,15 +1587,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		4535AE2F20205A28006E5408 /* Gestures */ = {
-			isa = PBXGroup;
-			children = (
-				4535AE3220205E60006E5408 /* UIView+LongPressGestureAction.swift */,
-				4535AE3020205E51006E5408 /* UIView+TapGestureAction.swift */,
-			);
-			path = Gestures;
-			sourceTree = "<group>";
-		};
 		4567E4C920A3273A008B7FE5 /* Project Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -1585,7 +1594,6 @@
 				4567E4D020A32763008B7FE5 /* .swift-version */,
 				4567E4CA20A32762008B7FE5 /* .swiftlint.yml */,
 				4567E4CF20A32763008B7FE5 /* .travis.yml */,
-				4567E4CC20A32762008B7FE5 /* Cartfile */,
 				4567E4CD20A32763008B7FE5 /* Cartfile.private */,
 				4567E4D120A3276F008B7FE5 /* Fastfile */,
 				45E517C420D24201005A8029 /* iExtra.podspec */,
@@ -1929,6 +1937,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		84BBD025229D499E009ED851 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				84BBD026229D49AD009ED851 /* UIImage+PasteboardTests.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		84BBD028229D49C3009ED851 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				84BBD029229D49CD009ED851 /* MockPasteboard.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		84C8C26A220479C100BFA792 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
@@ -2189,6 +2213,7 @@
 				458EEDD221187A3700774A79 /* UICollectionViewCell+BackgroundColor.swift in Sources */,
 				4527355E1FD674F900418D93 /* PannableModalDismissAnimator.swift in Sources */,
 				84BA20F0213567010040A20B /* MKAnnotation+DefaultView.swift in Sources */,
+				84BBD02E229D4A01009ED851 /* UIView+LongPressAction.swift in Sources */,
 				452735321FD674F900418D93 /* UINavigationBar+BackButton.swift in Sources */,
 				452735531FD674F900418D93 /* UIView+Subviews.swift in Sources */,
 				452735521FD674F900418D93 /* UIView+SizeToFit.swift in Sources */,
@@ -2201,7 +2226,6 @@
 				45E04C2320C3D4A300A4FB2B /* UIView+TapAnimations.swift in Sources */,
 				45D17F2521188CF900A02318 /* Url+LocalFile.swift in Sources */,
 				452735161FD674F900418D93 /* MKMapView+Annotations.swift in Sources */,
-				4535AE3120205E51006E5408 /* UIView+TapGestureAction.swift in Sources */,
 				452735171FD674F900418D93 /* MKMapView+Center.swift in Sources */,
 				452735651FD674F900418D93 /* NoCancellingSearchController.swift in Sources */,
 				452735721FD674F900418D93 /* FloatingSubmenuPresenter.swift in Sources */,
@@ -2331,7 +2355,6 @@
 				452735781FD674F900418D93 /* PannableImageView.swift in Sources */,
 				452735661FD674F900418D93 /* FadingViewControllerTransition.swift in Sources */,
 				452735841FD674F900418D93 /* FileFinder.swift in Sources */,
-				4535AE3320205E60006E5408 /* UIView+LongPressGestureAction.swift in Sources */,
 				452735101FD674F900418D93 /* RemoteNotificationServiceDefault.swift in Sources */,
 				452735371FD674F900418D93 /* UISearchBar+Style.swift in Sources */,
 				84346682224CCCEF00C9AFA6 /* AnySingleObjectStore.swift in Sources */,
@@ -2376,6 +2399,7 @@
 				4527354B1FD674F900418D93 /* UIView+Round.swift in Sources */,
 				84346654224CCB6900C9AFA6 /* ConcurrentOperationCoordinator.swift in Sources */,
 				452735951FD674F900418D93 /* GoogleMapsService.swift in Sources */,
+				84BBD02D229D4A01009ED851 /* UIView+TapAction.swift in Sources */,
 				84346655224CCB6900C9AFA6 /* SerialOperationCoordinator.swift in Sources */,
 				452AB7B020CFF21F0001AEF3 /* StringProtocol+CapitalizedFirst.swift in Sources */,
 				84346657224CCB6900C9AFA6 /* ConcurrentCollectionItemOperation.swift in Sources */,
@@ -2432,6 +2456,7 @@
 				452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */,
 				452733E91FD674C500418D93 /* UISlider+ButtonSizeTests.swift in Sources */,
 				8434666D224CCC0B00C9AFA6 /* ConcurrentCollectionBatchOperationTests.swift in Sources */,
+				84BBD027229D49AD009ED851 /* UIImage+PasteboardTests.swift in Sources */,
 				452733E01FD674C500418D93 /* String+Base64Tests.swift in Sources */,
 				452733E51FD674C500418D93 /* UICollectionView_DefaultNibTests.swift in Sources */,
 				452733ED1FD674C500418D93 /* UISlider+HitTests.swift in Sources */,
@@ -2444,6 +2469,7 @@
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
 				452AB7B220CFF2910001AEF3 /* StringProtocol+CapitalizedFirstTests.swift in Sources */,
 				843466A2224CCD8700C9AFA6 /* MockReferenceObjectStore.swift in Sources */,
+				84BBD01A229D2B0A009ED851 /* UIView+LongPressActionTests.swift in Sources */,
 				84346668224CCC0B00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift in Sources */,
 				848DB3E3217A6F1700CAFAB9 /* CLLocationCoordinate2D+ValidTests.swift in Sources */,
 				452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */,
@@ -2455,6 +2481,7 @@
 				45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */,
 				452733D31FD674C500418D93 /* BiometricsAuthorizationServiceTests.swift in Sources */,
 				452733E41FD674C500418D93 /* UIButton_ImageMarginTests.swift in Sources */,
+				84BBD01B229D2B0A009ED851 /* UIView+TapActionTests.swift in Sources */,
 				84880550214084D000C18688 /* DateFormattersTests.swift in Sources */,
 				8434669C224CCD8700C9AFA6 /* MultipleIdObjectStoreTests.swift in Sources */,
 				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
@@ -2478,6 +2505,7 @@
 				452733F11FD674C500418D93 /* UIView+HitTests.swift in Sources */,
 				452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */,
 				84E82624217E8C3D00D1B73F /* StandardCsvParserTests.swift in Sources */,
+				84BBD02A229D49CD009ED851 /* MockPasteboard.swift in Sources */,
 				84346669224CCC0B00C9AFA6 /* MockOperationCoordinator.swift in Sources */,
 				8434666C224CCC0B00C9AFA6 /* SerialCollectionItemOperationTests.swift in Sources */,
 				8434669A224CCD8700C9AFA6 /* MultipleObjectStoreTests.swift in Sources */,

@@ -8,7 +8,10 @@
 
 /*
  
- This extension can be used to copy images to the pasteboard.
+ This extension copies images to the pasteboard. If you have
+ transparent images, consider applying background colors and
+ (maybe) a corner radius to them before you copy them, using
+ the `UIImage+Tinted` extension.
  
  */
 
@@ -16,13 +19,9 @@ import UIKit
 
 public extension UIImage {
     
-    func copyToPasteboard() -> Bool {
-        guard
-            let image = badged(withBackgroundColor: .white),
-            let data = image.pngData()
-            else { return false }
-        let pasteBoard = UIPasteboard.general
-        pasteBoard.setData(data, forPasteboardType: "public.png")
+    func copyToPasteboard(_ pasteboard: UIPasteboard = .general) -> Bool {
+        guard let data = pngData() else { return false }
+        pasteboard.setData(data, forPasteboardType: "public.png")
         return true
     }
 }

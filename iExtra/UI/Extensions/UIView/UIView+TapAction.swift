@@ -2,27 +2,40 @@
 //  UIView+ActionTapGesture.swift
 //  iExtra
 //
-//  Created by Daniel Saidi on 2016-12-12.
-//  Copyright © 2016 Daniel Saidi. All rights reserved.
+//  Created by Daniel Saidi on 2017-12-12.
+//  Copyright © 2017 Daniel Saidi. All rights reserved.
 //
 //  Reference: https://medium.com/@sdrzn/adding-gesture-recognizers-with-closures-instead-of-selectors-9fb3e09a8f0b
 //
+
+/*
+ 
+ This extension applies tap gesture recognizers using action
+ blocks instead of the target/selector pattern.
+ 
+ */
 
 import UIKit
 
 public extension UIView {
     
-    typealias TapAction = ((UITapGestureRecognizer) -> ())
+    typealias TapAction = (() -> Void)
     
-    func addTapGestureRecognizer(action: TapAction?) {
+    func addTapAction(numberOfTapsRequired: Int = 1, action: TapAction?) {
         tapAction = action
         isUserInteractionEnabled = true
         let selector = #selector(handleTap)
         let recognizer = UITapGestureRecognizer(target: self, action: selector)
+        recognizer.numberOfTapsRequired = numberOfTapsRequired
         addGestureRecognizer(recognizer)
     }
+    
+    func removeTapAction() {
+        guard let gestures = gestureRecognizers else { return }
+        let taps = gestures.filter { $0 is UITapGestureRecognizer }
+        taps.forEach { removeGestureRecognizer($0) }
+    }
 }
-
 
 private extension UIView {
     
@@ -40,6 +53,6 @@ private extension UIView {
     }
 
     @objc func handleTap(sender: UITapGestureRecognizer) {
-        tapAction?(sender)
+        tapAction?()
     }
 }

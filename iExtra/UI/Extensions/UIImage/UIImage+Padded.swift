@@ -18,10 +18,8 @@ public extension UIImage {
         let topSizeWidthDiff = size.width - topSize.width
         let topRect = bottomRect.insetBy(dx: topSizeHeightDiff / 2, dy: topSizeWidthDiff / 2)
         draw(in: topRect, blendMode: .normal, alpha: 1)
-        
         let result = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
         return result ?? UIImage()
     }
 }
