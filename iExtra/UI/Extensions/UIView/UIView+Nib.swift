@@ -10,31 +10,31 @@ import UIKit
 
 public extension UIView {
     
-    
-    // MARK: - Properties
-    
     static var defaultNib: UINib {
-        return defaultNib(in: Bundle.main)
+        return defaultNib()
     }
     
     static var defaultNibName: String {
         return String(describing: self)
     }
     
-    
-    // MARK: - Functions
-    
-    static func defaultNib(in bundle: Bundle) -> UINib {
+    static func defaultNib(in bundle: Bundle = .main) -> UINib {
         return UINib(nibName: defaultNibName, bundle: bundle)
     }
     
-    static func initWithDefaultNib(owner: Any?, in bundle: Bundle = Bundle.main) -> Self {
-        return initWithNib(named: defaultNibName, owner: owner, in: bundle)
+    static func fromNib(
+        owner: Any,
+        named nibName: String = defaultNibName,
+        in bundle: Bundle = .main) -> Self {
+        return fromNibTyped(owner: owner)
     }
     
-    static func initWithNib<T>(named nibName: String, owner: Any?, in bundle: Bundle = Bundle.main) -> T {
+    static func fromNibTyped<T: UIView>(
+        owner: Any,
+        named nibName: String = T.defaultNibName,
+        in bundle: Bundle = .main) -> T {
         let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)
-        guard let nib = nibs?[0] as? T else { fatalError("initWithDefaultNibTyped: Invalid class") }
+        guard let nib = nibs?[0] as? T else { fatalError("initWithDefaultNib failed") }
         return nib
     }
 }

@@ -15,8 +15,8 @@ public extension UIView {
     }
     
     func addSubview(_ subview: UIView, fill: Bool) {
-        return addSubview(subview)
-        guard fill == true else { return }
+        addSubview(subview)
+        guard fill else { return }
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.topAnchor.constraint(equalTo: topAnchor).isActive = true
         subview.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
