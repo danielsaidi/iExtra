@@ -254,9 +254,10 @@
 		45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517B220D1493B005A8029 /* UIView+AsyncTagTests.swift */; };
 		45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */; };
 		840176E22122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */; };
-		8425F2E222A154370095C598 /* UIView+RepeatingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F2E022A154370095C598 /* UIView+RepeatingAction.swift */; };
-		8425F2E322A154370095C598 /* RepeatingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F2E122A154370095C598 /* RepeatingGestureRecognizer.swift */; };
-		8425F2E622A154700095C598 /* UIView+RepeatingActionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F2E522A154700095C598 /* UIView+RepeatingActionTests.swift */; };
+		8425F2E822A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F2E722A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift */; };
+		8425F2EA22A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425F2E922A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift */; };
+		84289ECA22DFD47200D9B2AC /* RepeatingGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84289EC922DFD47200D9B2AC /* RepeatingGestureRecognizer.swift */; };
+		84289ECC22DFDA5400D9B2AC /* UIView+RepeatingAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84289ECB22DFDA5400D9B2AC /* UIView+RepeatingAction.swift */; };
 		84346654224CCB6900C9AFA6 /* ConcurrentOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346648224CCB6800C9AFA6 /* ConcurrentOperationCoordinator.swift */; };
 		84346655224CCB6900C9AFA6 /* SerialOperationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84346649224CCB6800C9AFA6 /* SerialOperationCoordinator.swift */; };
 		84346656224CCB6900C9AFA6 /* OperationItemTypeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8434664A224CCB6800C9AFA6 /* OperationItemTypeProvider.swift */; };
@@ -661,9 +662,10 @@
 		45E517C220D23EF4005A8029 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
 		45E517C420D24201005A8029 /* iExtra.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = iExtra.podspec; sourceTree = "<group>"; };
 		840176E12122AFDA00FE86B7 /* MKMapView+ClosestAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+ClosestAnnotation.swift"; sourceTree = "<group>"; };
-		8425F2E022A154370095C598 /* UIView+RepeatingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+RepeatingAction.swift"; path = "../../../../KeyboardKit/KeyboardKit/Gestures/UIView+RepeatingAction.swift"; sourceTree = "<group>"; };
-		8425F2E122A154370095C598 /* RepeatingGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RepeatingGestureRecognizer.swift; path = ../../../../KeyboardKit/KeyboardKit/Gestures/RepeatingGestureRecognizer.swift; sourceTree = "<group>"; };
-		8425F2E522A154700095C598 /* UIView+RepeatingActionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+RepeatingActionTests.swift"; path = "../../../../KeyboardKit/KeyboardKitTests/Gestures/UIView+RepeatingActionTests.swift"; sourceTree = "<group>"; };
+		8425F2E722A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurboButtonGestureRecognizer.swift; sourceTree = "<group>"; };
+		8425F2E922A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatingGestureRecognizerTests.swift; sourceTree = "<group>"; };
+		84289EC922DFD47200D9B2AC /* RepeatingGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepeatingGestureRecognizer.swift; sourceTree = "<group>"; };
+		84289ECB22DFDA5400D9B2AC /* UIView+RepeatingAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RepeatingAction.swift"; sourceTree = "<group>"; };
 		84346648224CCB6800C9AFA6 /* ConcurrentOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConcurrentOperationCoordinator.swift; sourceTree = "<group>"; };
 		84346649224CCB6800C9AFA6 /* SerialOperationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerialOperationCoordinator.swift; sourceTree = "<group>"; };
 		8434664A224CCB6800C9AFA6 /* OperationItemTypeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationItemTypeProvider.swift; sourceTree = "<group>"; };
@@ -1842,9 +1844,10 @@
 		8425F2DF22A152140095C598 /* Gestures */ = {
 			isa = PBXGroup;
 			children = (
-				8425F2E122A154370095C598 /* RepeatingGestureRecognizer.swift */,
+				84289EC922DFD47200D9B2AC /* RepeatingGestureRecognizer.swift */,
+				8425F2E722A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift */,
+				84289ECB22DFDA5400D9B2AC /* UIView+RepeatingAction.swift */,
 				84BBD02C229D4A01009ED851 /* UIView+LongPressAction.swift */,
-				8425F2E022A154370095C598 /* UIView+RepeatingAction.swift */,
 				84BBD02B229D4A01009ED851 /* UIView+TapAction.swift */,
 			);
 			path = Gestures;
@@ -1854,8 +1857,8 @@
 			isa = PBXGroup;
 			children = (
 				84BBD018229D2B0A009ED851 /* UIView+LongPressActionTests.swift */,
-				8425F2E522A154700095C598 /* UIView+RepeatingActionTests.swift */,
 				84BBD019229D2B0A009ED851 /* UIView+TapActionTests.swift */,
+				8425F2E922A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift */,
 			);
 			path = Gestures;
 			sourceTree = "<group>";
@@ -2276,7 +2279,6 @@
 				84E8261F217E8C0000D1B73F /* CsvParser.swift in Sources */,
 				452735771FD674F900418D93 /* PannableDirection.swift in Sources */,
 				8434665E224CCB6900C9AFA6 /* ConcurrentCollectionBatchOperation.swift in Sources */,
-				8425F2E322A154370095C598 /* RepeatingGestureRecognizer.swift in Sources */,
 				4527352E1FD674F900418D93 /* UIImage+Shadow.swift in Sources */,
 				4527352C1FD674F900418D93 /* UIImage+Resized.swift in Sources */,
 				4527350E1FD674F900418D93 /* ThreadingOperator.swift in Sources */,
@@ -2332,6 +2334,7 @@
 				4527353A1FD674F900418D93 /* UITableView+DefaultCell.swift in Sources */,
 				8434665C224CCB6900C9AFA6 /* SerialCollectionItemOperation.swift in Sources */,
 				84346680224CCCEF00C9AFA6 /* ObjectStore.swift in Sources */,
+				84289ECC22DFDA5400D9B2AC /* UIView+RepeatingAction.swift in Sources */,
 				4567E4DF20A328FC008B7FE5 /* Theme.swift in Sources */,
 				452735111FD674F900418D93 /* LinearTravellingMapCamera.swift in Sources */,
 				84C8C2922204B3B000BFA792 /* OverlayBadgeView.swift in Sources */,
@@ -2353,6 +2356,7 @@
 				452735891FD674F900418D93 /* MainBundleImageFileFinder.swift in Sources */,
 				4527358E1FD674F900418D93 /* LanguageNotifications.swift in Sources */,
 				4527356E1FD674F900418D93 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
+				8425F2E822A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift in Sources */,
 				452735001FD674F900418D93 /* Set+Group.swift in Sources */,
 				45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */,
 				4527350F1FD674F900418D93 /* RemoteNotificationService.swift in Sources */,
@@ -2424,7 +2428,6 @@
 				8434665B224CCB6900C9AFA6 /* ItemOperation.swift in Sources */,
 				4527352D1FD674F900418D93 /* UIImage+Rotated.swift in Sources */,
 				8488054D214083EA00C18688 /* DateFormatters.swift in Sources */,
-				8425F2E222A154370095C598 /* UIView+RepeatingAction.swift in Sources */,
 				458EEC13210F354600774A79 /* UIDevice+Properties.swift in Sources */,
 				452734F01FD674F900418D93 /* DateSerializer.swift in Sources */,
 				8434665D224CCB6900C9AFA6 /* SerialCollectionBatchOperation.swift in Sources */,
@@ -2457,6 +2460,7 @@
 				4527350B1FD674F900418D93 /* IoC.swift in Sources */,
 				4527359D1FD674F900418D93 /* KeychainWrapper.swift in Sources */,
 				4527359C1FD674F900418D93 /* KeychainServiceDefault.swift in Sources */,
+				84289ECA22DFD47200D9B2AC /* RepeatingGestureRecognizer.swift in Sources */,
 				84F8D3ED21FC8D8E00EC61F1 /* BatchOperation.swift in Sources */,
 				4527355B1FD674F900418D93 /* UIViewController+Root.swift in Sources */,
 				84C8C26D220479D700BFA792 /* UICollectionViewFlowLayout+Layouts.swift in Sources */,
@@ -2513,6 +2517,7 @@
 				843466A6224CCD8700C9AFA6 /* AnyMultipleObjectStoreTests.swift in Sources */,
 				843466A0224CCD8700C9AFA6 /* MockSingleObjectStore.swift in Sources */,
 				8434666B224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift in Sources */,
+				8425F2EA22A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift in Sources */,
 				452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				452733D41FD674C500418D93 /* KeychainBasedDeviceIdentifierTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
@@ -2541,7 +2546,6 @@
 				843466A7224CCD8700C9AFA6 /* AnySingleObjectStoreTests.swift in Sources */,
 				452733EF1FD674C500418D93 /* UITableView_Reload.swift in Sources */,
 				452733F21FD674C500418D93 /* UIView+NibTests.swift in Sources */,
-				8425F2E622A154700095C598 /* UIView+RepeatingActionTests.swift in Sources */,
 				843466A9224CCD8700C9AFA6 /* AnyReferenceObjectStoreTests.swift in Sources */,
 				843466A8224CCD8700C9AFA6 /* AnyMultipleIdObjectStoreTests.swift in Sources */,
 				452733E61FD674C500418D93 /* UIColor+HexTests.swift in Sources */,

@@ -3,11 +3,16 @@
 Please note that iExtra does not use semver. Breaking changes can occur on minor version bumps, but not on revision bumps.
 
 
+## 3.2.1
+
+This version fixes major bugs in the repeating gesture recognizer logic. 3.2.0 accidentally used files from another project, which caused the project top not build on any other machine than mine.
+
+
 ## 3.2.0
 
 This version adds some new extensions and more unit tests. It also improves `HapticFeedback` to use static generator instances and adds `prepare` logic as well.
 
-
+The gesture extensions have been moved to `UI/Gestures`. There's also a new `RepeatingGestureRecognizer` gesture that will trigger an action as long as the user keeps pressing the view.
 
 
 ## 3.1.0
