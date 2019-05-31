@@ -5,7 +5,9 @@ Please note that iExtra does not use semver. Breaking changes can occur on minor
 
 ## 3.2.0
 
-This version adds some new extensions and unit tests more extensions. It also improves `HapticFeedback` to use static generator instances and adds a `prepare` function to it as well.
+This version adds some new extensions and more unit tests. It also improves `HapticFeedback` to use static generator instances and adds `prepare` logic as well.
+
+
 
 
 ## 3.1.0
