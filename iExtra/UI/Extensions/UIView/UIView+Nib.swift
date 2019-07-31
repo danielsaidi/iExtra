@@ -30,7 +30,7 @@ public extension UIView {
     }
     
     static func fromNibTyped<T: UIView>(
-        named nibName: String = T.defaultNibName,
+        named nibName: String,
         in bundle: Bundle = .main,
         owner: Any? = nil) -> T {
         let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)
