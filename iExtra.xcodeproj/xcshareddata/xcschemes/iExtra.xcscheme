@@ -20,6 +20,20 @@
                ReferencedContainer = "container:iExtra.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "452733851FD6740F00418D93"
+               BuildableName = "iExtraExample.app"
+               BlueprintName = "iExtraExample"
+               ReferencedContainer = "container:iExtra.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
