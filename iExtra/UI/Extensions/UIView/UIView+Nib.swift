@@ -23,14 +23,14 @@ public extension UIView {
     }
     
     static func fromNib(
-        owner: Any,
+        owner: Any?,
         named nibName: String = defaultNibName,
         in bundle: Bundle = .main) -> Self {
         return fromNibTyped(owner: owner)
     }
     
     static func fromNibTyped<T: UIView>(
-        owner: Any,
+        owner: Any?,
         named nibName: String = T.defaultNibName,
         in bundle: Bundle = .main) -> T {
         let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)

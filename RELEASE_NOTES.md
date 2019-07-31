@@ -3,6 +3,11 @@
 Please note that iExtra does not use semver. Breaking changes can occur on minor version bumps, but not on revision bumps.
 
 
+## 3.2.2
+
+This version makes the `UIView+Nib` owner parameters optional and defaultable to `nil`.
+
+
 ## 3.2.1
 
 This version fixes major bugs in the repeating gesture recognizer logic. 3.2.0 accidentally used files from another project, which caused the project top not build on any other machine than mine.
