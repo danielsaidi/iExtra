@@ -3,6 +3,11 @@
 Please note that iExtra does not use semver. Breaking changes can occur on minor version bumps, but not on revision bumps.
 
 
+## 3.2.3
+
+This version rearranges the `UIView+Nib` parameters.
+
+
 ## 3.2.2
 
 This version makes the `UIView+Nib` owner parameters optional and defaultable to `nil`.

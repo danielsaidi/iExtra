@@ -23,16 +23,16 @@ public extension UIView {
     }
     
     static func fromNib(
-        owner: Any?,
         named nibName: String = defaultNibName,
-        in bundle: Bundle = .main) -> Self {
-        return fromNibTyped(owner: owner)
+        in bundle: Bundle = .main,
+        owner: Any? = nil) -> Self {
+        return fromNibTyped(named: nibName, in: bundle, owner: owner)
     }
     
     static func fromNibTyped<T: UIView>(
-        owner: Any?,
         named nibName: String = T.defaultNibName,
-        in bundle: Bundle = .main) -> T {
+        in bundle: Bundle = .main,
+        owner: Any? = nil) -> T {
         let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)
         guard let nib = nibs?[0] as? T else { fatalError("initWithDefaultNib failed") }
         return nib
