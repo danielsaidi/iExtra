@@ -15,7 +15,7 @@ public extension UIView {
     }
     
     static var defaultNibName: String {
-        return String(describing: self)
+        return className
     }
     
     static func defaultNib(in bundle: Bundle = .main) -> UINib {
@@ -30,11 +30,11 @@ public extension UIView {
     }
     
     static func fromNibTyped<T: UIView>(
-        named nibName: String,
+        named nibName: String = T.defaultNibName,
         in bundle: Bundle = .main,
         owner: Any? = nil) -> T {
         let nibs = bundle.loadNibNamed(nibName, owner: owner, options: nil)
-        guard let nib = nibs?[0] as? T else { fatalError("initWithDefaultNib failed") }
+        guard let nib = nibs?[0] as? T else { fatalError("fromNibTyped failed to create a view of correct type") }
         return nib
     }
 }
