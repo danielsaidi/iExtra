@@ -4,7 +4,6 @@
     <a href="https://github.com/danielsaidi/iExtra">
         <img src="https://badge.fury.io/gh/danielsaidi%2FiExtra.svg?style=flat" alt="Version" />
     </a>
-    <img src="https://api.travis-ci.org/danielsaidi/iExtra.svg" alt="Build Status" />
     <a href="https://cocoapods.org/pods/iExtra">
         <img src="https://img.shields.io/cocoapods/v/iExtra.svg?style=flat" alt="CocoaPods" />
     </a>
@@ -12,13 +11,19 @@
         <img src="https://img.shields.io/badge/carthage-supported-green.svg?style=flat" alt="Carthage" />
     </a>
     <img src="https://img.shields.io/cocoapods/p/iExtra.svg?style=flat" alt="Platform" />
-    <img src="https://img.shields.io/badge/Swift-4.2-orange.svg" alt="Swift 4.2" />
+    <img src="https://img.shields.io/badge/Swift-5.2-orange.svg" alt="Swift 5.2" />
     <img src="https://badges.frapsoft.com/os/mit/mit.svg?style=flat&v=102" alt="License" />
     <a href="https://twitter.com/danielsaidi">
         <img src="https://img.shields.io/badge/contact-@danielsaidi-blue.svg?style=flat" alt="Twitter: @danielsaidi" />
     </a>
 </p>
 
+
+## Important!
+
+This repository is moving to [SwiftKit](https://github.com/danielsaidi/SwiftKit),
+piece by piece, step by step. There will be no new versions, so please switch to
+SwiftKit if a feature you are using suddenly disappears.
 
 ## About iExtra
 

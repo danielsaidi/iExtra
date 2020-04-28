@@ -8,11 +8,16 @@
 
 import Foundation
 
+/**
+ This protocol can be implemented by keychain-based services
+ that can write to the user's keychain.
+ */
 public protocol KeychainWriter: AnyObject {
 
     @discardableResult
     func removeObject(for key: String, with accessibility: KeychainItemAccessibility?) -> Bool
     
+    @discardableResult
     func removeAllKeys() -> Bool
     
     @discardableResult

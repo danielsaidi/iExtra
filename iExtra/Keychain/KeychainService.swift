@@ -8,4 +8,8 @@
 
 import Foundation
 
+/**
+ This protocol can be implemented by keychain-based services
+ that can read from and write to the user's keychain.
+ */
 public protocol KeychainService: KeychainReader, KeychainWriter { }

@@ -8,6 +8,10 @@
 
 import Foundation
 
+/**
+ This protocol can be implemented by keychain-based services
+ that can read from the user's keychain.
+ */
 public protocol KeychainReader: class {
 
     func accessibility(for key: String) -> KeychainItemAccessibility?
