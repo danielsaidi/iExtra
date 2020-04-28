@@ -10,8 +10,8 @@ import MapKit
 
 public extension MKMapView {
     
-    func getAnnotations<T>(ofType type: T.Type) -> [T] {
-        return annotations.compactMap { $0 as? T }
+    func getAnnotations<T: MKAnnotation>(ofType type: T.Type) -> [T] {
+        annotations.compactMap { $0 as? T }
     }
     
     func removeAllAnnotations() {

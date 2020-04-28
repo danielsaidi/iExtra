@@ -72,7 +72,7 @@ open class FloatingMenu: UIView {
             submenu.handleMenuDidClose(self)
         }
         backgroundPresenter.hideBackground(for: self)
-        delay (seconds: 0.2) { self.primaryButton.isEnabled = true }
+        delay(seconds: 0.2) { self.primaryButton.isEnabled = true }
     }
     
     open func open() {
@@ -83,7 +83,7 @@ open class FloatingMenu: UIView {
             submenu.handleMenuDidOpen(self)
         }
         backgroundPresenter.presentBackground(for: self)
-        delay (seconds: 0.2) { self.primaryButton.isEnabled = true }
+        delay(seconds: 0.2) { self.primaryButton.isEnabled = true }
     }
     
     open func present() {
