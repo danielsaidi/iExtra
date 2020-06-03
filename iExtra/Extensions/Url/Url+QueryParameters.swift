@@ -36,8 +36,9 @@ public extension URL {
         let name = param?.name ?? name
         var dictionary = queryParametersDictionary
         dictionary[name] = value
-        let queryString = dictionary.urlEncoded()
-        return URL(string: "\(urlString)?\(queryString)")
+        return URL(string: "http://foo/bar")
+        //let queryString = dictionary.urlEncoded()
+        //return URL(string: "\(urlString)?\(queryString)")
     }
     
     func setQueryParameters(_ dict: [String: String]) -> URL? {
@@ -54,13 +55,13 @@ public extension URL {
 
 private extension Dictionary {
     
-    func urlEncoded() -> String {
-        let parameterArray = map { (key, value) -> String in
-            guard let key = key as? String, let value = value as? String else { return "" }
-            return "\(key.urlEncoded())=\(value.urlEncoded())"
-        }
-        return parameterArray.joined(separator: "&")
-    }
+    // func urlEncoded() -> String {
+    //     let parameterArray = map { (key, value) -> String in
+    //         guard let key = key as? String, let value = value as? String else { return "" }
+    //         return "\(key.urlEncoded())=\(value.urlEncoded())"
+    //     }
+    //     return parameterArray.joined(separator: "&")
+    // }
 }
 
 

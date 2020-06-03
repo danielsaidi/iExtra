@@ -15,13 +15,7 @@ import UIKit
 
 open class SlowPulsingFloatingMenuPresenter: NSObject, FloatingMenuPresenter {
     
-    
-    // MARK: - Properties
-    
     open var presentationDuration = 0.8
-    
-    
-    // MARK: - Public functions
     
     open func present(menu: FloatingMenu, completion: @escaping (() -> ())) {
         let scale = CGFloat(0.01)
@@ -32,11 +26,17 @@ open class SlowPulsingFloatingMenuPresenter: NSObject, FloatingMenuPresenter {
         menu.layer.transform = CATransform3DIdentity
         delay(seconds: presentationDuration) { completion() }
     }
+}
+
+private extension SlowPulsingFloatingMenuPresenter {
     
+    func delay(seconds: TimeInterval, function: @escaping ()->()) {
+        let milliseconds = Int(seconds * 1000)
+        let interval: DispatchTimeInterval = .milliseconds(milliseconds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: function)
+    }
     
-    // MARK: - Private functions
-    
-    private func getAnimation(withScale scale: CGFloat) -> CAKeyframeAnimation {
+    func getAnimation(withScale scale: CGFloat) -> CAKeyframeAnimation {
         let animation = CAKeyframeAnimation(keyPath: "transform.scale")
         animation.values = [scale, 1.1, 0.8, 1.0]
         animation.duration = presentationDuration

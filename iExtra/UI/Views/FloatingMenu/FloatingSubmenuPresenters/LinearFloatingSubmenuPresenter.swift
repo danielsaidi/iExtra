@@ -78,6 +78,12 @@ private extension LinearFloatingSubMenuPresenter {
         label.layer.rasterizationScale = button.layer.rasterizationScale
     }
     
+    func delay(seconds: TimeInterval, function: @escaping ()->()) {
+        let milliseconds = Int(seconds * 1000)
+        let interval: DispatchTimeInterval = .milliseconds(milliseconds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: function)
+    }
+    
     func presentButton(_ button: UIButton, usingOffset offset: CGFloat) {
         let center = button.center
         let animation = CAKeyframeAnimation()

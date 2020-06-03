@@ -11,6 +11,8 @@
  This extension can be used to get/set the current page of a
  paged UIScrollView.
  
+ TODO: Get this from KeyboardKit instead.
+ 
  */
 
 import UIKit

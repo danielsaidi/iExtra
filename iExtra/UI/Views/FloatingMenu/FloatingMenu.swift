@@ -120,6 +120,12 @@ open class FloatingMenu: UIView {
 
 private extension FloatingMenu {
     
+    func delay(seconds: TimeInterval, function: @escaping ()->()) {
+        let milliseconds = Int(seconds * 1000)
+        let interval: DispatchTimeInterval = .milliseconds(milliseconds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: function)
+    }
+    
     func setupPrimaryButton(_ button: UIButton) {
         addSubview(button)
         let size = button.frame.size

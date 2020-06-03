@@ -47,6 +47,12 @@ public class LinearTravellingMapCamera: MKMapCamera, TravellingMapCamera {
 
 private extension LinearTravellingMapCamera {
     
+    func delay(seconds: TimeInterval, function: @escaping ()->()) {
+        let milliseconds = Int(seconds * 1000)
+        let interval: DispatchTimeInterval = .milliseconds(milliseconds)
+        DispatchQueue.main.asyncAfter(deadline: .now() + interval, execute: function)
+    }
+    
     func travel(inDirection vector: CGPoint) {
         guard let mapView = mapView else { return }
         guard !isTravelling else { return }
