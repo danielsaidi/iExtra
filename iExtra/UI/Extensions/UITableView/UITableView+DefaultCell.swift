@@ -45,7 +45,12 @@ public protocol ReusableTableViewCell {
     static var defaultReuseIdentifier: String { get }
 }
 
-extension UITableViewCell: ReusableTableViewCell {}
+extension UITableViewCell: ReusableTableViewCell {
+    
+    public static var defaultReuseIdentifier: String {
+        String(describing: self)
+    }
+}
 
 
 // MARK: - ReusableTableViewHeaderFooterView
@@ -54,4 +59,9 @@ public protocol ReusableTableViewHeaderFooterView {
     static var defaultReuseIdentifier: String { get }
 }
 
-extension UITableViewHeaderFooterView: ReusableTableViewHeaderFooterView {}
+extension UITableViewHeaderFooterView: ReusableTableViewHeaderFooterView {
+    
+    public static var defaultReuseIdentifier: String {
+        String(describing: self)
+    }
+}

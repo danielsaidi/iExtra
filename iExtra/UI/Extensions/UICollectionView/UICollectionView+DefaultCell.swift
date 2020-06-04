@@ -9,10 +9,16 @@
 import UIKit
 
 public protocol ReusableCollectionViewCell {
+    
     static var defaultReuseIdentifier: String { get }
 }
 
-extension UICollectionViewCell: ReusableCollectionViewCell {}
+extension UICollectionViewCell: ReusableCollectionViewCell {
+    
+    public static var defaultReuseIdentifier: String {
+        String(describing: self)
+    }
+}
 
 
 public extension UICollectionView {
@@ -25,7 +31,7 @@ public extension UICollectionView {
     }
     
     func registerDefaultCell(for type: UICollectionViewCell.Type) {
-        let id = type.defaultReuseIdentifier
+        let id = String(describing: self)
         register(type.defaultNib, forCellWithReuseIdentifier: id)
     }
 }

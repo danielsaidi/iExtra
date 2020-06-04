@@ -39,3 +39,28 @@ public extension ConcurrentCollectionBatchOperation {
         }
     }
 }
+
+private extension Sequence {
+  
+    /**
+     Batch the sequence into groups of a certain max size.
+     */
+    func batched(withBatchSize size: Int) -> [[Element]] {
+        var result: [[Element]] = []
+        var batch: [Element] = []
+        
+        forEach {
+            batch.append($0)
+            if batch.count == size {
+                result.append(batch)
+                batch = []
+            }
+        }
+        
+        if !batch.isEmpty {
+            result.append(batch)
+        }
+        
+        return result
+    }
+}

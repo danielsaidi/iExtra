@@ -11,15 +11,15 @@ import UIKit
 public extension UIView {
     
     static var defaultNib: UINib {
-        return defaultNib()
+        defaultNib()
     }
     
     static var defaultNibName: String {
-        return className
+        String(describing: self)
     }
     
     static func defaultNib(in bundle: Bundle = .main) -> UINib {
-        return UINib(nibName: defaultNibName, bundle: bundle)
+        UINib(nibName: defaultNibName, bundle: bundle)
     }
     
     static func fromNib(
