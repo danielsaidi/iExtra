@@ -32,10 +32,8 @@
 		452733F31FD674C500418D93 /* UIView+ReuseIdentifierTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733C41FD674C400418D93 /* UIView+ReuseIdentifierTests.swift */; };
 		452733F41FD674C500418D93 /* UIView+RoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733C51FD674C400418D93 /* UIView+RoundTests.swift */; };
 		452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733C61FD674C400418D93 /* UIView+VisibilityTests.swift */; };
-		452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733C81FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift */; };
 		452733F71FD674C500418D93 /* AppFileManagerDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733C91FD674C500418D93 /* AppFileManagerDefaultTests.swift */; };
 		452733F81FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733CA1FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift */; };
-		452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733CB1FD674C500418D93 /* FileSizeBytesPresenterTests.swift */; };
 		452733FA1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452733CC1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift */; };
 		452734F91FD674F900418D93 /* CGRect+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4527340F1FD674F700418D93 /* CGRect+Center.swift */; };
 		452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734101FD674F700418D93 /* CGRect+Rects.swift */; };
@@ -127,22 +125,13 @@
 		452735791FD674F900418D93 /* PannableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734B81FD674F800418D93 /* PannableView.swift */; };
 		4527357D1FD674F900418D93 /* ThinSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734BD1FD674F800418D93 /* ThinSeparator.swift */; };
 		4527357E1FD674F900418D93 /* InputStepperToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734BF1FD674F800418D93 /* InputStepperToolbar.swift */; };
-		4527357F1FD674F900418D93 /* AdaptiveFileSizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C11FD674F800418D93 /* AdaptiveFileSizePresenter.swift */; };
-		452735801FD674F900418D93 /* AppFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C21FD674F800418D93 /* AppFileManager.swift */; };
-		452735811FD674F900418D93 /* AppFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C31FD674F800418D93 /* AppFileManagerDefault.swift */; };
 		452735821FD674F900418D93 /* DirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C41FD674F800418D93 /* DirectoryFileManager.swift */; };
 		452735831FD674F900418D93 /* DirectoryFileManagerDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C51FD674F800418D93 /* DirectoryFileManagerDefault.swift */; };
 		452735841FD674F900418D93 /* FileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C61FD674F800418D93 /* FileFinder.swift */; };
-		452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C71FD674F800418D93 /* FileSizeBytesPresenter.swift */; };
-		452735861FD674F900418D93 /* FileSizePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C81FD674F800418D93 /* FileSizePresenter.swift */; };
 		452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734C91FD674F800418D93 /* FilteredDirectoryFileManager.swift */; };
 		452735881FD674F900418D93 /* MainBundleFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734CA1FD674F800418D93 /* MainBundleFileFinder.swift */; };
 		452735891FD674F900418D93 /* MainBundleImageFileFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734CB1FD674F800418D93 /* MainBundleImageFileFinder.swift */; };
 		4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734CC1FD674F800418D93 /* SequenceAssetFinder.swift */; };
-		4527358E1FD674F900418D93 /* LanguageNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D31FD674F800418D93 /* LanguageNotifications.swift */; };
-		4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D41FD674F800418D93 /* InstantLanguageService.swift */; };
-		452735901FD674F900418D93 /* LanguageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D51FD674F800418D93 /* LanguageService.swift */; };
-		452735911FD674F900418D93 /* Translator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D61FD674F800418D93 /* Translator.swift */; };
 		452735921FD674F900418D93 /* AppleMapsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D81FD674F800418D93 /* AppleMapsService.swift */; };
 		452735931FD674F900418D93 /* ExternalMapService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734D91FD674F800418D93 /* ExternalMapService.swift */; };
 		452735941FD674F900418D93 /* ExternalMapServiceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */; };
@@ -329,10 +318,8 @@
 		452733C41FD674C400418D93 /* UIView+ReuseIdentifierTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ReuseIdentifierTests.swift"; sourceTree = "<group>"; };
 		452733C51FD674C400418D93 /* UIView+RoundTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RoundTests.swift"; sourceTree = "<group>"; };
 		452733C61FD674C400418D93 /* UIView+VisibilityTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+VisibilityTests.swift"; sourceTree = "<group>"; };
-		452733C81FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveFileSizePresenterTests.swift; sourceTree = "<group>"; };
 		452733C91FD674C500418D93 /* AppFileManagerDefaultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFileManagerDefaultTests.swift; sourceTree = "<group>"; };
 		452733CA1FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefaultTests.swift; sourceTree = "<group>"; };
-		452733CB1FD674C500418D93 /* FileSizeBytesPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizeBytesPresenterTests.swift; sourceTree = "<group>"; };
 		452733CC1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredDirectoryFileManagerTests.swift; sourceTree = "<group>"; };
 		4527340F1FD674F700418D93 /* CGRect+Center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Center.swift"; sourceTree = "<group>"; };
 		452734101FD674F700418D93 /* CGRect+Rects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Rects.swift"; sourceTree = "<group>"; };
@@ -424,22 +411,13 @@
 		452734B81FD674F800418D93 /* PannableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PannableView.swift; sourceTree = "<group>"; };
 		452734BD1FD674F800418D93 /* ThinSeparator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThinSeparator.swift; sourceTree = "<group>"; };
 		452734BF1FD674F800418D93 /* InputStepperToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputStepperToolbar.swift; sourceTree = "<group>"; };
-		452734C11FD674F800418D93 /* AdaptiveFileSizePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdaptiveFileSizePresenter.swift; sourceTree = "<group>"; };
-		452734C21FD674F800418D93 /* AppFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFileManager.swift; sourceTree = "<group>"; };
-		452734C31FD674F800418D93 /* AppFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppFileManagerDefault.swift; sourceTree = "<group>"; };
 		452734C41FD674F800418D93 /* DirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManager.swift; sourceTree = "<group>"; };
 		452734C51FD674F800418D93 /* DirectoryFileManagerDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectoryFileManagerDefault.swift; sourceTree = "<group>"; };
 		452734C61FD674F800418D93 /* FileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileFinder.swift; sourceTree = "<group>"; };
-		452734C71FD674F800418D93 /* FileSizeBytesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizeBytesPresenter.swift; sourceTree = "<group>"; };
-		452734C81FD674F800418D93 /* FileSizePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileSizePresenter.swift; sourceTree = "<group>"; };
 		452734C91FD674F800418D93 /* FilteredDirectoryFileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredDirectoryFileManager.swift; sourceTree = "<group>"; };
 		452734CA1FD674F800418D93 /* MainBundleFileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainBundleFileFinder.swift; sourceTree = "<group>"; };
 		452734CB1FD674F800418D93 /* MainBundleImageFileFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainBundleImageFileFinder.swift; sourceTree = "<group>"; };
 		452734CC1FD674F800418D93 /* SequenceAssetFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceAssetFinder.swift; sourceTree = "<group>"; };
-		452734D31FD674F800418D93 /* LanguageNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageNotifications.swift; sourceTree = "<group>"; };
-		452734D41FD674F800418D93 /* InstantLanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstantLanguageService.swift; sourceTree = "<group>"; };
-		452734D51FD674F800418D93 /* LanguageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageService.swift; sourceTree = "<group>"; };
-		452734D61FD674F800418D93 /* Translator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translator.swift; sourceTree = "<group>"; };
 		452734D81FD674F800418D93 /* AppleMapsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMapsService.swift; sourceTree = "<group>"; };
 		452734D91FD674F800418D93 /* ExternalMapService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapService.swift; sourceTree = "<group>"; };
 		452734DA1FD674F800418D93 /* ExternalMapServiceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalMapServiceBase.swift; sourceTree = "<group>"; };
@@ -606,7 +584,6 @@
 			children = (
 				452734C01FD674F800418D93 /* Files */,
 				A9AE2D102487FD2E00D9BC2A /* Geo */,
-				452734D21FD674F800418D93 /* i18n */,
 				4527342F1FD674F800418D93 /* Map */,
 				452734D71FD674F800418D93 /* Navigation */,
 				842386E921F916230045F121 /* Operations */,
@@ -728,10 +705,8 @@
 		452733C71FD674C500418D93 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				452733C81FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift */,
 				452733C91FD674C500418D93 /* AppFileManagerDefaultTests.swift */,
 				452733CA1FD674C500418D93 /* DirectoryFileManagerDefaultTests.swift */,
-				452733CB1FD674C500418D93 /* FileSizeBytesPresenterTests.swift */,
 				452733CC1FD674C500418D93 /* FilteredDirectoryFileManagerTests.swift */,
 			);
 			path = Files;
@@ -1089,31 +1064,15 @@
 		452734C01FD674F800418D93 /* Files */ = {
 			isa = PBXGroup;
 			children = (
-				452734C11FD674F800418D93 /* AdaptiveFileSizePresenter.swift */,
-				452734C21FD674F800418D93 /* AppFileManager.swift */,
-				452734C31FD674F800418D93 /* AppFileManagerDefault.swift */,
 				452734C41FD674F800418D93 /* DirectoryFileManager.swift */,
 				452734C51FD674F800418D93 /* DirectoryFileManagerDefault.swift */,
 				452734C61FD674F800418D93 /* FileFinder.swift */,
-				452734C71FD674F800418D93 /* FileSizeBytesPresenter.swift */,
-				452734C81FD674F800418D93 /* FileSizePresenter.swift */,
 				452734C91FD674F800418D93 /* FilteredDirectoryFileManager.swift */,
 				452734CA1FD674F800418D93 /* MainBundleFileFinder.swift */,
 				452734CB1FD674F800418D93 /* MainBundleImageFileFinder.swift */,
 				452734CC1FD674F800418D93 /* SequenceAssetFinder.swift */,
 			);
 			path = Files;
-			sourceTree = "<group>";
-		};
-		452734D21FD674F800418D93 /* i18n */ = {
-			isa = PBXGroup;
-			children = (
-				452734D31FD674F800418D93 /* LanguageNotifications.swift */,
-				452734D41FD674F800418D93 /* InstantLanguageService.swift */,
-				452734D51FD674F800418D93 /* LanguageService.swift */,
-				452734D61FD674F800418D93 /* Translator.swift */,
-			);
-			path = i18n;
 			sourceTree = "<group>";
 		};
 		452734D71FD674F800418D93 /* Navigation */ = {
@@ -1674,14 +1633,12 @@
 				4527355A1FD674F900418D93 /* UIViewController+RequiredTextField.swift in Sources */,
 				45CE0715204C02D100A93175 /* UIImage+Badged.swift in Sources */,
 				452735871FD674F900418D93 /* FilteredDirectoryFileManager.swift in Sources */,
-				4527358F1FD674F900418D93 /* InstantLanguageService.swift in Sources */,
 				848DB3DB217A204700CAFAB9 /* UIViewController+RootViewController.swift in Sources */,
 				A9AE2D152487FD2E00D9BC2A /* CLLocationCoordinate2D+Valid.swift in Sources */,
 				459E62C9210F25AE006253F0 /* UITabBarController+StatusBar.swift in Sources */,
 				4527353E1FD674F900418D93 /* UIView+Copy.swift in Sources */,
 				84914CBB212233B6004C8C2C /* UINavigationController+Completions.swift in Sources */,
 				84346656224CCB6900C9AFA6 /* OperationItemTypeProvider.swift in Sources */,
-				452735801FD674F900418D93 /* AppFileManager.swift in Sources */,
 				4527356D1FD674F900418D93 /* FloatingMenuBackgroundPresenter.swift in Sources */,
 				452734FA1FD674F900418D93 /* CGRect+Rects.swift in Sources */,
 				A953CA5A2457356200013375 /* UIView+Gestures.swift in Sources */,
@@ -1690,12 +1647,10 @@
 				452735821FD674F900418D93 /* DirectoryFileManager.swift in Sources */,
 				452735461FD674F900418D93 /* UIView+HitTest.swift in Sources */,
 				4527356C1FD674F900418D93 /* FloatingMenu.swift in Sources */,
-				452735861FD674F900418D93 /* FileSizePresenter.swift in Sources */,
 				844B8AA4219DC107005AB15D /* UIView+ParallaxEffect.swift in Sources */,
 				452735181FD674F900418D93 /* MKMapView+LegalLabel.swift in Sources */,
 				452735281FD674F900418D93 /* UIImage+Color.swift in Sources */,
 				4527353C1FD674F900418D93 /* UITextView+Placeholder.swift in Sources */,
-				452735911FD674F900418D93 /* Translator.swift in Sources */,
 				452735291FD674F900418D93 /* UIImage+Combine.swift in Sources */,
 				45CE0717204C030600A93175 /* UIImage+Pasteboard.swift in Sources */,
 				4527353B1FD674F900418D93 /* UITextView+Padding.swift in Sources */,
@@ -1717,14 +1672,11 @@
 				452735511FD674F900418D93 /* UIView+Shake.swift in Sources */,
 				4527358A1FD674F900418D93 /* SequenceAssetFinder.swift in Sources */,
 				45883BAF20CF1853001C0E2F /* CornerRadius.swift in Sources */,
-				4527357F1FD674F900418D93 /* AdaptiveFileSizePresenter.swift in Sources */,
 				452735421FD674F900418D93 /* UIView+Empty.swift in Sources */,
 				452735891FD674F900418D93 /* MainBundleImageFileFinder.swift in Sources */,
-				4527358E1FD674F900418D93 /* LanguageNotifications.swift in Sources */,
 				4527356E1FD674F900418D93 /* RadialFloatingMenuBackgroundPresenter.swift in Sources */,
 				8425F2E822A1CD6A0095C598 /* TurboButtonGestureRecognizer.swift in Sources */,
 				45CE0719204C038500A93175 /* UIImage+Photos.swift in Sources */,
-				452735811FD674F900418D93 /* AppFileManagerDefault.swift in Sources */,
 				45E517C320D23EF4005A8029 /* UITextField+Placeholder.swift in Sources */,
 				4527351C1FD674F900418D93 /* UIApplication+Name.swift in Sources */,
 				4527356B1FD674F900418D93 /* RoundButton.swift in Sources */,
@@ -1736,7 +1688,6 @@
 				452735261FD674F900418D93 /* UIEdgeInsets+Init.swift in Sources */,
 				848DB3E9217A8C4C00CAFAB9 /* ThinBorderLineView.swift in Sources */,
 				4527356F1FD674F900418D93 /* FloatingMenuPresenter.swift in Sources */,
-				452735851FD674F900418D93 /* FileSizeBytesPresenter.swift in Sources */,
 				45883BB120CF1853001C0E2F /* Shadow.swift in Sources */,
 				84C8C2912204B3B000BFA792 /* UIView+Overlays.swift in Sources */,
 				452735211FD674F900418D93 /* UIButton+Init.swift in Sources */,
@@ -1807,7 +1758,6 @@
 				4527355F1FD674F900418D93 /* PannableModalPresenter.swift in Sources */,
 				84C8C27522047AB000BFA792 /* GridLayout.swift in Sources */,
 				4527352B1FD674F900418D93 /* UIImage+Padded.swift in Sources */,
-				452735901FD674F900418D93 /* LanguageService.swift in Sources */,
 				84C8C26E220479D700BFA792 /* UICollectionViewFlowLayout+Insets.swift in Sources */,
 				4527353F1FD674F900418D93 /* UIView+Distance.swift in Sources */,
 				45E517B120D14901005A8029 /* UIView+AsyncTag.swift in Sources */,
@@ -1839,7 +1789,6 @@
 				84BBD034229D94EB009ED851 /* UIImage+TintedTests.swift in Sources */,
 				8434666B224CCC0B00C9AFA6 /* SerialOperationCoordinatorTests.swift in Sources */,
 				8425F2EA22A1CDC50095C598 /* RepeatingGestureRecognizerTests.swift in Sources */,
-				452733F61FD674C500418D93 /* AdaptiveFileSizePresenterTests.swift in Sources */,
 				452733EA1FD674C500418D93 /* UISlider+PercentageAtPointTests.swift in Sources */,
 				84BBD01A229D2B0A009ED851 /* UIView+LongPressActionTests.swift in Sources */,
 				84346668224CCC0B00C9AFA6 /* ConcurrentOperationCoordinatorTests.swift in Sources */,
@@ -1851,7 +1800,6 @@
 				45E517B320D1493B005A8029 /* UIView+AsyncTagTests.swift in Sources */,
 				452733E41FD674C500418D93 /* UIButton_ImageMarginTests.swift in Sources */,
 				84BBD01B229D2B0A009ED851 /* UIView+TapActionTests.swift in Sources */,
-				452733F91FD674C500418D93 /* FileSizeBytesPresenterTests.swift in Sources */,
 				452733F51FD674C500418D93 /* UIView+VisibilityTests.swift in Sources */,
 				452733EC1FD674C500418D93 /* UISlider+ValuePercentageTests.swift in Sources */,
 				452733EF1FD674C500418D93 /* UITableView_Reload.swift in Sources */,

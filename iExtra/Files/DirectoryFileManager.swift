@@ -17,10 +17,8 @@ public protocol DirectoryFileManager: class {
     func getExistingFileNames(in collection: [String]) -> [String]
     func getFileNames() -> [String]
     func getFileNames(matching fileNamePatterns: [String]) -> [String]
-    func getNonExistingFileNames(in collection: [String]) -> [String]
+    func getSizeOfAllFiles() -> UInt64
     func getSizeOfFile(named name: String) -> UInt64?
-    func getSizeOfFiles() -> UInt64
     func getUrlForFile(named name: String) -> URL?
-    func getUnreferencedFileNames(forReferences refs: [String]) -> [String]
     func removeFile(named name: String) -> Bool
 }
