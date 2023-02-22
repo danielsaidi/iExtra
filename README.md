@@ -18,7 +18,7 @@
     </a>
 </p>
 
-  <a href="url"><img src="[https://desmond75.github.io/img/IMG_20171214_095012.jpg](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlV6-sZjaOJUTRskSnXhJ_Nb68Ao0vjzmBDw&usqp=CAU)" height="auto" width="200" style="border-radius:50%"></a>
+  <a href="url"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlV6-sZjaOJUTRskSnXhJ_Nb68Ao0vjzmBDw&usqp=CAU" height="auto" width="200" style="border-radius:50%"></a>
 
 ## Important!
 
