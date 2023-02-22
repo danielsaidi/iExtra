@@ -18,6 +18,7 @@
     </a>
 </p>
 
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlV6-sZjaOJUTRskSnXhJ_Nb68Ao0vjzmBDw&usqp=CAU" style="border-radius: 20px" />
 
 ## Important!
 
